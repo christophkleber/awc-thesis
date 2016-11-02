@@ -1,17 +1,18 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
 [0] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[55] biber-MSWIN64:302> INFO - === 
-[95] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[238] Biber.pm:823> INFO - Found 9 citekeys in bib section 0
-[255] Biber.pm:3658> INFO - Processing section 0
-[285] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
-[288] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[291] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
-[339] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\ouXcF2vjzC\library.bib_7828.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[356] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[357] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[357] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
-[357] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
-[367] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[369] bbl.pm:701> INFO - Output to thesis.bbl
-[369] Biber.pm:109> INFO - WARNINGS: 1
+[38] biber-MSWIN64:302> INFO - === 
+[67] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[176] Biber.pm:823> INFO - Found 10 citekeys in bib section 0
+[192] Biber.pm:3658> INFO - Processing section 0
+[216] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
+[219] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[221] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
+[223] Utils.pm:164> WARN - Duplicate entry key: 'Bidelman2016' in file 'library.bib', skipping ...
+[272] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\JCjDv8p3Mp\library.bib_9956.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[291] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[292] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[292] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[292] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
+[303] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[305] bbl.pm:701> INFO - Output to thesis.bbl
+[305] Biber.pm:109> INFO - WARNINGS: 2

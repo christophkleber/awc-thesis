@@ -73,7 +73,7 @@
       \verb http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api
       \endverb
     \endentry
-    \entry{Bidelman2016}{misc}{}
+    \entry{Bidelman2016}{article}{}
       \name{author}{1}{}{%
         {{hash=f0463ecc380e3472cc150fa09daf4c78}{%
            family={Bidelman},
@@ -89,14 +89,10 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Shadow DOM v1: Self-Contained Web Components}}
-      \field{urlday}{2}
-      \field{urlmonth}{11}
-      \field{urlyear}{2016}
+      \field{title}{{Custom Elements v1: Reusable Web Components}}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \verb{url}
-      \verb https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
+      \verb https://developers.google.com/web/fundamentals/getting-started/primers/customelements
       \endverb
     \endentry
     \entry{Cameron2015}{book}{}
@@ -117,6 +113,37 @@
       \field{labeltitlesource}{title}
       \field{title}{{HTML5, JavaScript, and jQuery 24-Hour Trainer}}
       \field{year}{2015}
+    \endentry
+    \entry{Cooney2012}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=8a8336fa3ab2577d3ba1ad036cf2926f}{%
+           family={Cooney},
+           familyi={C\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+        {{hash=df232c5c0ed92f46eebe11c7fba2dbbf}{%
+           family={Glazkov},
+           familyi={G\bibinitperiod},
+           given={Dimitri},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{fullhash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{authornamehash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{authorfullhash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Introduction to Web Components}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/TR/2012/WD-components-intro-20120522/
+      \endverb
     \endentry
     \entry{Denicola2016}{misc}{}
       \name{author}{1}{}{%

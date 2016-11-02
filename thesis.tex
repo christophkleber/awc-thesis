@@ -95,6 +95,7 @@
 		\acro{div}[div]{division}
 		\acro{HTML5}[HTML5]{Hypertext Markup Language Version 5}
 		\acro{CSS}[CSS]{Cascading Style Sheets}
+		\acro{W3C}{World Wide Web Consortium}
 	\end{acronym}
 
 	\tableofcontents
@@ -109,9 +110,12 @@
 		\section{Adaptivität bei User Interfaces}
 	\chapter{Web Components}
 		\section{Was sind Web Components}
-		
+		\emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen. \smfootcite[ vgl.][S. 1]{patel2015learning} Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \emph{\ac{HTML} Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen.\smfootcite[ vgl.][S. 2]{patel2015learning}
 		\section{Geschichte von Web Components}
-		\section{Gegenüberstellung Webentwicklung ohne und mit Web Components}
+		\emph{Web Components} werden vom \ac{W3C} das erste Mal im Jahr 2012 erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet und stattdessen wird die \emph{\ac{HTML} Import} Technologie verwendet.\smfootcite[ vgl.][]{Cooney2012} Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen, um einen Überblick zu verschaffen.
+		\subsection{Custom Elements}
+		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wird jedoch heutzutage als veraltet angesehen.\smfootcite[ vgl.][]{Bidelman2016}
+		\section{Vor- und Nachteile der Webentwicklung mit Web Components}
 		\section{Technik der Web Components}
 			\subsection{Custom Elements}
 			Das \emph{Custom Element} ist eine \emph{\ac{API}}, welches das Bilden eigener, voll funktionstüchtiger \emph{\ac{DOM}} Elemente ermöglicht.\smfootcite[ vgl. ][]{Denicola2016} Die \emph{\ac{API}} beschreibt in diesem Zusammenhang eine Schnittstelle, welche einem anderen Programm ein Tool zur Verfügung stellt, um sich an das eigene Softwaresystem anbinden zu können.\smfootcite[ vgl.][]{Behrendt2016} Somit ermöglicht eine \emph{\ac{API}} einen Austausch von Informationen zwischen verschiedenen Programmen oder Systemen.	
@@ -158,15 +162,15 @@ var elem = importedDocument.querySelector('div.element');
 			\subsection{Templates}
 			\label{subsec:Templates}
 			Das \ac{HTML5} Feature \emph{Templates} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden.\smfootcite[ vgl.][ S. 177]{Cameron2015} Dies bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt.\smfootcite[ vgl.][]{Potschien2013} 
-					\begin{listing}
+			\begin{listing}
 				\begin{JavaScriptcode*}{}
 var inhalt = document.querySelector("template").content;
 document.querySelector("body").appendChild(inhalt);
 				\end{JavaScriptcode*}
-				\caption{JavaScript Code für dem hinzufügen eines Templates in das DOM}
+				\caption{JavaScript Code für das Hinzufügen eines Templates in das DOM}
 				\label{lst:htmTem}
 			\end{listing}
-			In \ref{lst:htmTem} sieht man den \emph{JavaScript} Code um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur \emph{JavaScript} Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und die Skripte ausgeführt.
+			In \ref{lst:htmTem} sieht man den \emph{JavaScript} Code um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur \emph{JavaScript} Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
 			\subsection{Shadow DOM}
 			\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\smfootcite[ ][Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, wessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}. Dies ist in Abbildung \ref{img:shaDom} dargestellt.\smfootcite[ vgl.][S. 22]{patel2015learning} 
 			\begin{figure}[ht]
@@ -176,9 +180,21 @@ document.querySelector("body").appendChild(inhalt);
 				\label{img:shaDom}
 			\end{figure}
 			Die Folge dieser Kapselung ist, dass alles was dem \emph{Shadow tree} hinzugefügt wird, nur lokal Einfluss auf diesen hat. Die Gestaltung von Webelementen im \emph{Shadow root} wird dadurch vereinfacht.
-			\ac{CSS} Selektoren können somit nicht von außerhalb des \emph{Shadow roots} auf dieses Zugreifen und Selektoren, welche innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}.\smfootcite{Bidelman2016}
-			
-				
+			\ac{CSS} Selektoren können nicht von außerhalb des \emph{Shadow roots} auf dieses Zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}.\smfootcite{Bidelman2016}
+			\begin{listing}
+				\begin{JavaScriptcode*}{}
+var header = document.createElement('header');
+var shadowRoot = header.attachShadow({mode: 'open'});
+var headline = document.createElement("h1");
+var headlineText = document.createTextNode("headline");
+headline.appendChild(headlineText);
+shadowRoot.appendChild(headline);
+					
+				\end{JavaScriptcode*}
+				\caption{JavaScript Code für das Erstellen eines Shadow DOM}
+				\label{lst:javShaDom}
+			\end{listing}
+			In Listing \ref{lst:javShaDom} ist dargestellt, wie Mithilfe von JavaScript ein \emph{Shadow \ac{DOM}} erstellt wird. In Zeile zwei wird zuerst einem bestehendem Element ein \emph{Shadow root} hinzugefügt. Daraufhin wird eine Überschrift und deren Text erstellt und zusammengefügt. Zuletzt wird in Zeile sechs die Überschrift in den \emph{Shadow \ac{DOM}} eingefügt.
 	\chapter{Methodik dieser Arbeit}
 	\chapter{Adaptive Web Components}
 		\section{Identifikation passender Web Components}

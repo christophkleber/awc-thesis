@@ -26,44 +26,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Geschichte von Web Components}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Gegen\IeC {\"u}berstellung Webentwicklung ohne und mit Web Components}{10}
+\contentsline {subsection}{\numberline {3.2.1}Custom Elements}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Technik der Web Components}{10}
+\contentsline {section}{\numberline {3.3}Vor- und Nachteile der Webentwicklung mit Web Components}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Custom Elements}{10}
+\contentsline {section}{\numberline {3.4}Technik der Web Components}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}HTML Imports}{11}
+\contentsline {subsection}{\numberline {3.4.1}Custom Elements}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Templates}{12}
+\contentsline {subsection}{\numberline {3.4.2}HTML Imports}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Templates}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.4}Shadow DOM}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{14}
+\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Adaptive Web Components}{15}
+\contentsline {chapter}{\numberline {5}Adaptive Web Components}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{15}
+\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{15}
+\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{15}
+\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{15}
+\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{15}
+\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{15}
+\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{15}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{15}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{15}
+\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{15}
+\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Vergleich}{16}
+\contentsline {chapter}{\numberline {6}Vergleich}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{16}
+\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{17}
+\contentsline {chapter}{\nonumberline Literatur}{18}
