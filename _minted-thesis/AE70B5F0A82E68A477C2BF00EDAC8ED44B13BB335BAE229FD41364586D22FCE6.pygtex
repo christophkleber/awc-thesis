@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kr}{class} \PYG{n+nx}{NewCustomElement} \PYG{k+kr}{extends} \PYG{n+nx}{HTMLElement} \PYG{p}{\PYGZob{}}
+	\PYG{n+nx}{constructor}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+		\PYG{k+kr}{super}\PYG{p}{();}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{n+nx}{customElements}\PYG{p}{.}\PYG{n+nx}{define}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}new\PYGZhy{}custom\PYGZhy{}element\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{NewCustomElement}\PYG{p}{);}
+\end{Verbatim}

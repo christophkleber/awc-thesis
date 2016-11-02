@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{var} \PYG{n+nx}{link} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{querySelector}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}link[rel=import]\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{importedDocument} \PYG{o}{=} \PYG{n+nx}{link}\PYG{p}{.}\PYG{k+kr}{import}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{elem} \PYG{o}{=} \PYG{n+nx}{importedDocument}\PYG{p}{.}\PYG{n+nx}{querySelector}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}div.element\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}

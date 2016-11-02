@@ -1,0 +1,255 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Argelius2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=95db8d4ce171623075908cb1e5eb8f5d}{%
+           family={Argelius},
+           familyi={A\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{95db8d4ce171623075908cb1e5eb8f5d}
+      \strng{fullhash}{95db8d4ce171623075908cb1e5eb8f5d}
+      \strng{authornamehash}{95db8d4ce171623075908cb1e5eb8f5d}
+      \strng{authorfullhash}{95db8d4ce171623075908cb1e5eb8f5d}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Onsen UI}
+      \field{title}{{Create reusable and future-proof UI components with Custom Elements v1 and Web Components}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://onsen.io/blog/create-reusable-future-proof-ui-components-with-custom-elements-v1-web-components/
+      \endverb
+    \endentry
+    \entry{Behrendt2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e2bc71bd9996611a146e9f37d5157e35}{%
+           family={Behrendt},
+           familyi={B\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2bc71bd9996611a146e9f37d5157e35}
+      \strng{fullhash}{e2bc71bd9996611a146e9f37d5157e35}
+      \strng{authornamehash}{e2bc71bd9996611a146e9f37d5157e35}
+      \strng{authorfullhash}{e2bc71bd9996611a146e9f37d5157e35}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Gründerszene Magazin}
+      \field{title}{{Application-Programming-Interface (API) Definition}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api
+      \endverb
+    \endentry
+    \entry{Bidelman2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f0463ecc380e3472cc150fa09daf4c78}{%
+           family={Bidelman},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{fullhash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{authornamehash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{authorfullhash}{f0463ecc380e3472cc150fa09daf4c78}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Shadow DOM v1: Self-Contained Web Components}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
+      \endverb
+    \endentry
+    \entry{Cameron2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e90e46e5f9d1154bc21acc5623159c21}{%
+           family={Cameron},
+           familyi={C\bibinitperiod},
+           given={Dane},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e90e46e5f9d1154bc21acc5623159c21}
+      \strng{fullhash}{e90e46e5f9d1154bc21acc5623159c21}
+      \strng{authornamehash}{e90e46e5f9d1154bc21acc5623159c21}
+      \strng{authorfullhash}{e90e46e5f9d1154bc21acc5623159c21}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML5, JavaScript, and jQuery 24-Hour Trainer}}
+      \field{year}{2015}
+    \endentry
+    \entry{Denicola2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=29a4d916b527725d8985086ccc01fde0}{%
+           family={Denicola},
+           familyi={D\bibinitperiod},
+           given={Domenic},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{29a4d916b527725d8985086ccc01fde0}
+      \strng{fullhash}{29a4d916b527725d8985086ccc01fde0}
+      \strng{authornamehash}{29a4d916b527725d8985086ccc01fde0}
+      \strng{authorfullhash}{29a4d916b527725d8985086ccc01fde0}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{W3C}
+      \field{title}{{Custom Elements}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/TR/2016/WD-custom-elements-20161013/
+      \endverb
+    \endentry
+    \entry{gasston2014moderne}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6388eb363f4abbf4ff715ec0d3c4bedc}{%
+           family={Gasston},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
+      \strng{namehash}{6388eb363f4abbf4ff715ec0d3c4bedc}
+      \strng{fullhash}{6388eb363f4abbf4ff715ec0d3c4bedc}
+      \strng{authornamehash}{6388eb363f4abbf4ff715ec0d3c4bedc}
+      \strng{authorfullhash}{6388eb363f4abbf4ff715ec0d3c4bedc}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783864914652}
+      \field{title}{{Moderne Webentwicklung: Geräteunabhängige Entwicklung -- Techniken und Trends in HTML5, CSS3 und JavaScript}}
+      \field{year}{2014}
+    \endentry
+    \entry{Glazkov2016}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=df232c5c0ed92f46eebe11c7fba2dbbf}{%
+           family={Glazkov},
+           familyi={G\bibinitperiod},
+           given={Dimitri},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e27fe2739c81a90cfa44550b560451a6}{%
+           family={Morrita},
+           familyi={M\bibinitperiod},
+           given={Hajime},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd798a6b26fd0c3ca9f67110310beb75}
+      \strng{fullhash}{fd798a6b26fd0c3ca9f67110310beb75}
+      \strng{authornamehash}{fd798a6b26fd0c3ca9f67110310beb75}
+      \strng{authorfullhash}{fd798a6b26fd0c3ca9f67110310beb75}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML Imports}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/TR/html-imports/
+      \endverb
+    \endentry
+    \entry{patel2015learning}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b79b0c40c8709b2ce4a53c2dff02fb53}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Sandeep\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{b79b0c40c8709b2ce4a53c2dff02fb53}
+      \strng{fullhash}{b79b0c40c8709b2ce4a53c2dff02fb53}
+      \strng{authornamehash}{b79b0c40c8709b2ce4a53c2dff02fb53}
+      \strng{authorfullhash}{b79b0c40c8709b2ce4a53c2dff02fb53}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781784395568}
+      \field{series}{Community experience distilled}
+      \field{title}{{Learning Web Component Development}}
+      \field{year}{2015}
+    \endentry
+    \entry{Potschien2013}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=68a875a1da0c5d1b7283ef972c9b1980}{%
+           family={Potschien},
+           familyi={P\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{68a875a1da0c5d1b7283ef972c9b1980}
+      \strng{fullhash}{68a875a1da0c5d1b7283ef972c9b1980}
+      \strng{authornamehash}{68a875a1da0c5d1b7283ef972c9b1980}
+      \strng{authorfullhash}{68a875a1da0c5d1b7283ef972c9b1980}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML5: Wie das Template-Element komplexe Vorlagen ermöglicht}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.drweb.de/magazin/html5-wie-das-template-element-komplexe-html-vorlagen-ermoeglicht-40414/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
