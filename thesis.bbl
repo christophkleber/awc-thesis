@@ -19,6 +19,54 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{firefox}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=85ea3fa9fc02e26876a8210076efb597}{%
+           family={ACHTUNGfirefox},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{fullhash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{authornamehash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{authorfullhash}{85ea3fa9fc02e26876a8210076efb597}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Firefox Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://platform-status.mozilla.org/%7B%5C#%7Dcustom-elements
+      \endverb
+    \endentry
+    \entry{WebComCur2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ab5b0e55dc6cfd9966994691f14709db}{%
+           family={ACHTUNGw3c},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab5b0e55dc6cfd9966994691f14709db}
+      \strng{fullhash}{ab5b0e55dc6cfd9966994691f14709db}
+      \strng{authornamehash}{ab5b0e55dc6cfd9966994691f14709db}
+      \strng{authorfullhash}{ab5b0e55dc6cfd9966994691f14709db}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{WEB COMPONENTS CURRENT STATUS}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/standards/techs/components%7B%5C#%7Dw3c%7B%5C_%7Dall
+      \endverb
+    \endentry
     \entry{Argelius2016}{misc}{}
       \name{author}{1}{}{%
         {{hash=95db8d4ce171623075908cb1e5eb8f5d}{%
@@ -95,6 +143,58 @@
       \verb https://developers.google.com/web/fundamentals/getting-started/primers/customelements
       \endverb
     \endentry
+    \entry{C2015}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a15301d10c334813e7537173ca2f839b}{%
+           family={C},
+           familyi={C\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a15301d10c334813e7537173ca2f839b}
+      \strng{fullhash}{a15301d10c334813e7537173ca2f839b}
+      \strng{authornamehash}{a15301d10c334813e7537173ca2f839b}
+      \strng{authorfullhash}{a15301d10c334813e7537173ca2f839b}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Custom Elements v0 - Chrome Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/4642138092470272
+      \endverb
+    \endentry
+    \entry{C2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a15301d10c334813e7537173ca2f839b}{%
+           family={C},
+           familyi={C\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a15301d10c334813e7537173ca2f839b}
+      \strng{fullhash}{a15301d10c334813e7537173ca2f839b}
+      \strng{authornamehash}{a15301d10c334813e7537173ca2f839b}
+      \strng{authorfullhash}{a15301d10c334813e7537173ca2f839b}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Custom Elements v1 - Chrome Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/4696261944934400
+      \endverb
+    \endentry
     \entry{Cameron2015}{book}{}
       \name{author}{1}{}{%
         {{hash=e90e46e5f9d1154bc21acc5623159c21}{%
@@ -143,6 +243,37 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://www.w3.org/TR/2012/WD-components-intro-20120522/
+      \endverb
+    \endentry
+    \entry{Cooney2013}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=8a8336fa3ab2577d3ba1ad036cf2926f}{%
+           family={Cooney},
+           familyi={C\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+        {{hash=df232c5c0ed92f46eebe11c7fba2dbbf}{%
+           family={Glazkov},
+           familyi={G\bibinitperiod},
+           given={Dimitri},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{fullhash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{authornamehash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \strng{authorfullhash}{d5c5e1c1d3e550795620eedf6f5a141e}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Introduction to Web Components}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/TR/2013/WD-components-intro-20130606/%7B%5C#%7Ddecorator-section
       \endverb
     \endentry
     \entry{Denicola2016}{misc}{}
@@ -226,6 +357,30 @@
       \verb https://www.w3.org/TR/html-imports/
       \endverb
     \endentry
+    \entry{Morrita2015}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4a267e79621708d0a7ea5ab5c9aa9fe1}{%
+           family={Morrita},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a267e79621708d0a7ea5ab5c9aa9fe1}
+      \strng{fullhash}{4a267e79621708d0a7ea5ab5c9aa9fe1}
+      \strng{authornamehash}{4a267e79621708d0a7ea5ab5c9aa9fe1}
+      \strng{authorfullhash}{4a267e79621708d0a7ea5ab5c9aa9fe1}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML Imports - Chrome Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/5144752345317376
+      \endverb
+    \endentry
     \entry{patel2015learning}{book}{}
       \name{author}{1}{}{%
         {{hash=b79b0c40c8709b2ce4a53c2dff02fb53}{%
@@ -275,6 +430,34 @@
       \verb{url}
       \verb https://www.drweb.de/magazin/html5-wie-das-template-element-komplexe-html-vorlagen-ermoeglicht-40414/
       \endverb
+    \endentry
+    \entry{W2015}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=c1021eba3b12b8d845f9771686254ad5}{%
+           family={W},
+           familyi={W\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=65ed9ef4c9cdd6c9d9aee05d34fad08c}{%
+           family={K},
+           familyi={K\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{caacb2dfecdfcff56a00feac25b94af1}
+      \strng{fullhash}{caacb2dfecdfcff56a00feac25b94af1}
+      \strng{authornamehash}{caacb2dfecdfcff56a00feac25b94af1}
+      \strng{authorfullhash}{caacb2dfecdfcff56a00feac25b94af1}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{<}template{>} Element - Chrome Platform Status}}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/5207287069147136
+      \endverb
+      \warn{\item Entry 'W2015' (library.bib): Invalid format '03.11.2016' of date field 'urldate' - ignoring}
     \endentry
   \endsortlist
 \endrefsection
