@@ -26,52 +26,66 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Geschichte von Web Components}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Custom Elements}{10}
+\contentsline {subsection}{\numberline {3.2.1}Custom Elements !v0 und v1!!Samsung Internet!}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}HTML Imports}{11}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.3}Decorators}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Templates}{11}
+\contentsline {subsection}{\numberline {3.2.4}Templates}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Vor- und Nachteile der Webentwicklung mit Web Components}{12}
+\contentsline {subsection}{\numberline {3.2.5}Shadow DOM !v0 und v1!}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Technik der Web Components}{12}
+\contentsline {section}{\numberline {3.3}Vergleich Webentwicklung mit Web Components und ohne}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Custom Elements}{12}
+\contentsline {subsection}{\numberline {3.3.1}Beispiel}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}HTML Imports}{13}
+\contentsline {subsection}{\numberline {3.3.2}Vorteil: Wenn Browserunterst\IeC {\"u}tzung gegeben: native, kein Framework}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Templates}{14}
+\contentsline {subsection}{\numberline {3.3.3}Kapselung}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Shadow DOM}{14}
+\contentsline {subsection}{\numberline {3.3.4}Wiederverwendung}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{16}
+\contentsline {subsection}{\numberline {3.3.5}Wartbarkeit}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Adaptive Web Components}{17}
+\contentsline {subsection}{\numberline {3.3.6}Nachteil: Browserunterst\IeC {\"u}tzung}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{17}
+\contentsline {section}{\numberline {3.4}Technik der Web Components}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{17}
+\contentsline {subsection}{\numberline {3.4.1}Custom Elements}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{17}
+\contentsline {subsection}{\numberline {3.4.2}HTML Imports}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{17}
+\contentsline {subsection}{\numberline {3.4.3}Templates}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{17}
+\contentsline {subsection}{\numberline {3.4.4}Shadow DOM}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{17}
+\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{17}
+\contentsline {chapter}{\numberline {5}Adaptive Web Components}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{17}
+\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{17}
+\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{17}
+\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Vergleich}{18}
+\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{18}
+\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{19}
+\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Vergleich}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{22}

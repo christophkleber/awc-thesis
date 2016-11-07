@@ -19,6 +19,54 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{cusEleCanIUse}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dcb827bde08b639b1eb094aa19956bf7}{%
+           family={ACHTUNGcaniuse},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{fullhash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{authornamehash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{authorfullhash}{dcb827bde08b639b1eb094aa19956bf7}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Custom Elements v0}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://caniuse.com/%7B%5C#%7Dfeat=custom-elements
+      \endverb
+    \endentry
+    \entry{htmlTemplCaniuse}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dcb827bde08b639b1eb094aa19956bf7}{%
+           family={ACHTUNGcaniuse},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{fullhash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{authornamehash}{dcb827bde08b639b1eb094aa19956bf7}
+      \strng{authorfullhash}{dcb827bde08b639b1eb094aa19956bf7}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML templates}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://caniuse.com/%7B%5C#%7Dsearch=templates
+      \endverb
+    \endentry
     \entry{firefox}{misc}{}
       \name{author}{1}{}{%
         {{hash=85ea3fa9fc02e26876a8210076efb597}{%
@@ -41,6 +89,54 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://platform-status.mozilla.org/%7B%5C#%7Dcustom-elements
+      \endverb
+    \endentry
+    \entry{htmlTemFire}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=85ea3fa9fc02e26876a8210076efb597}{%
+           family={ACHTUNGfirefox},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{fullhash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{authornamehash}{85ea3fa9fc02e26876a8210076efb597}
+      \strng{authorfullhash}{85ea3fa9fc02e26876a8210076efb597}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Firefox Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://platform-status.mozilla.org/%7B%5C#%7Dhtml-templates
+      \endverb
+    \endentry
+    \entry{build10547}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=eb809603e3f4c8e59b104939656702fe}{%
+           family={ACHTUNGmicrosoft},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb809603e3f4c8e59b104939656702fe}
+      \strng{fullhash}{eb809603e3f4c8e59b104939656702fe}
+      \strng{authornamehash}{eb809603e3f4c8e59b104939656702fe}
+      \strng{authorfullhash}{eb809603e3f4c8e59b104939656702fe}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Windows 10 build 10547}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/10547/
       \endverb
     \endentry
     \entry{WebComCur2016}{misc}{}
@@ -121,7 +217,7 @@
       \verb http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api
       \endverb
     \endentry
-    \entry{Bidelman2016}{article}{}
+    \entry{Bidelman2016}{misc}{}
       \name{author}{1}{}{%
         {{hash=f0463ecc380e3472cc150fa09daf4c78}{%
            family={Bidelman},
@@ -137,10 +233,14 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Custom Elements v1: Reusable Web Components}}
+      \field{title}{{Shadow DOM v1: Self-Contained Web Components}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
       \field{year}{2016}
+      \field{urldateera}{ce}
       \verb{url}
-      \verb https://developers.google.com/web/fundamentals/getting-started/primers/customelements
+      \verb https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
       \endverb
     \endentry
     \entry{C2015}{misc}{}
@@ -357,6 +457,48 @@
       \verb https://www.w3.org/TR/html-imports/
       \endverb
     \endentry
+    \entry{Hayato2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bcb6fbb008a303e551f5b6e7a541bfba}{%
+           family={Hayato},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{fullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{authornamehash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{authorfullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Shadow DOM v0}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/4507242028072960
+      \endverb
+      \warn{\item Entry 'Hayato2016' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Hayato2016a}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bcb6fbb008a303e551f5b6e7a541bfba}{%
+           family={Hayato},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{fullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{authornamehash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \strng{authorfullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Shadow DOM v1}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.chromestatus.com/feature/4667415417847808
+      \endverb
+      \warn{\item Entry 'Hayato2016a' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Morrita2015}{misc}{}
       \name{author}{1}{}{%
         {{hash=4a267e79621708d0a7ea5ab5c9aa9fe1}{%
@@ -379,6 +521,32 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://www.chromestatus.com/feature/5144752345317376
+      \endverb
+    \endentry
+    \entry{NiwaShaDom}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cef91fe734826267f764cac4be29d4c6}{%
+           family={Niwa},
+           familyi={N\bibinitperiod},
+           given={Ryosuke},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{cef91fe734826267f764cac4be29d4c6}
+      \strng{fullhash}{cef91fe734826267f764cac4be29d4c6}
+      \strng{authornamehash}{cef91fe734826267f764cac4be29d4c6}
+      \strng{authorfullhash}{cef91fe734826267f764cac4be29d4c6}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Webkit Feature Status}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{9999}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://webkit.org/status/%7B%5C#%7Dfeature-shadow-dom
       \endverb
     \endentry
     \entry{patel2015learning}{book}{}
@@ -431,6 +599,57 @@
       \verb https://www.drweb.de/magazin/html5-wie-das-template-element-komplexe-html-vorlagen-ermoeglicht-40414/
       \endverb
     \endentry
+    \entry{satrom2014building}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ef431ae593c0d05646bb71a68c951afc}{%
+           family={Satrom},
+           familyi={S\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{ef431ae593c0d05646bb71a68c951afc}
+      \strng{fullhash}{ef431ae593c0d05646bb71a68c951afc}
+      \strng{authornamehash}{ef431ae593c0d05646bb71a68c951afc}
+      \strng{authorfullhash}{ef431ae593c0d05646bb71a68c951afc}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781449370718}
+      \field{title}{{Building Polyfills}}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://books.google.de/books?id=PpbiAgAAQBAJ
+      \endverb
+    \endentry
+    \entry{webComJs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9530de0d45ac9acefa391671545e83b0}{%
+           family={V},
+           familyi={V\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{fullhash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authornamehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authorfullhash}{9530de0d45ac9acefa391671545e83b0}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Polyfills}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://webcomponents.org/polyfills/
+      \endverb
+    \endentry
     \entry{W2015}{misc}{}
       \name{author}{2}{}{%
         {{hash=c1021eba3b12b8d845f9771686254ad5}{%
@@ -453,11 +672,14 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{{<}template{>} Element - Chrome Platform Status}}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
       \field{year}{2015}
+      \field{urldateera}{ce}
       \verb{url}
       \verb https://www.chromestatus.com/feature/5207287069147136
       \endverb
-      \warn{\item Entry 'W2015' (library.bib): Invalid format '03.11.2016' of date field 'urldate' - ignoring}
     \endentry
   \endsortlist
 \endrefsection

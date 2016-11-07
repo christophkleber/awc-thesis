@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  3 NOV 2016 12:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  7 NOV 2016 18:57
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1174,9 +1174,15 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 (thesis.bbl
 
 Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'W2015':
-(biblatex)                - Entry 'W2015' (library.bib): Invalid format '03.11.
-2016' of date field 'urldate' - ignoring.
+(biblatex)                with 'Hayato2016':
+(biblatex)                - Entry 'Hayato2016' (library.bib): Invalid format '0
+7.11.2016' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Hayato2016a':
+(biblatex)                - Entry 'Hayato2016a' (library.bib): Invalid format '
+07.11.2016' of date field 'urldate' - ignoring.
 
 )
 Package biblatex Info: Reference section=0 on input line 74.
@@ -1279,12 +1285,12 @@ Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
 
 although it is yet undefined on input line 113.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 116.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 117.
 [10
 
-]
+] [11] [12] [13]
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 128.
+although it is yet undefined on input line 147.
 \openout3 = `thesis.pyg'.
 
  (_minted-thesis/default-pyg-prefix.pygstyle)
@@ -1297,32 +1303,31 @@ LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 7.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Overfull \hbox (2.36774pt too wide) in paragraph at lines 128--143
+Overfull \hbox (2.36774pt too wide) in paragraph at lines 147--162
 \T1/phv/m/n/12 Bil-den ei-ge-ner, voll funk-ti-ons-tüch-ti-ger [][] Ele-men-te 
 er-mög-licht.[] Die [][] be-schreibt
  []
 
 
-Overfull \hbox (6.50908pt too wide) in paragraph at lines 128--143
+Overfull \hbox (6.50908pt too wide) in paragraph at lines 147--162
 \T1/phv/m/n/12 Nut-zern die Aus-zeich-nungs-pra-che [][] zu er-wei-tern.[] Es k
 ön-nen be-ste-hen-de [][]
  []
 
-[11]
+[14]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 144.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 163.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 144.
- [12]
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 163.
 Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
-although it is yet undefined on input line 149.
+although it is yet undefined on input line 168.
 \openout3 = `thesis.pyg'.
 
 
 (_minted-thesis/AEF917AF41750DA08BBD11C9BDAE875ED302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 Package acronym Info: Label `acro:div' newly defined as it shall be overridden
-although it is yet undefined on input line 158.
+although it is yet undefined on input line 177.
 \openout3 = `thesis.pyg'.
 
 
@@ -1331,59 +1336,75 @@ although it is yet undefined on input line 158.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[15]
 Package acronym Info: Label `acro:HTML5' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 171.
-\openout3 = `thesis.pyg'.
-
-
-(_minted-thesis/4723A54A92C678A42748EB33FB235FB74B13BB335BAE229FD41364586D22FCE
-6.pygtex) [13] <shaDom.png, id=49, 337.86224pt x 183.084pt>
-File: shaDom.png Graphic file (type png)
- <use shaDom.png>
-Package pdftex.def Info: shaDom.png used on input line 185.
-(pdftex.def)             Requested size: 337.8614pt x 183.08354pt.
-Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
 although it is yet undefined on input line 190.
 \openout3 = `thesis.pyg'.
 
 
+(_minted-thesis/4723A54A92C678A42748EB33FB235FB74B13BB335BAE229FD41364586D22FCE
+6.pygtex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<shaDom.png, id=55, 337.86224pt x 183.084pt>
+File: shaDom.png Graphic file (type png)
+ <use shaDom.png>
+Package pdftex.def Info: shaDom.png used on input line 204.
+(pdftex.def)             Requested size: 337.8614pt x 183.08354pt.
+Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
+although it is yet undefined on input line 209.
+\openout3 = `thesis.pyg'.
+
+
 (_minted-thesis/C5FA6722D0154202D3E312408CB251E94B13BB335BAE229FD41364586D22FCE
-6.pygtex) [14] [15 <./shaDom.png>]
+6.pygtex) [16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./shaDom.png>] [18]
 chapter 4.
-[16
+[19
 
 ]
 chapter 5.
-[17
+[20
 
 ]
 chapter 6.
-[18
+[21
 
 ]
 chapter without number
 
-Overfull \hbox (10.6055pt too wide) in paragraph at lines 221--221
+Overfull \hbox (1.52835pt too wide) in paragraph at lines 240--240
+[]\T1/phv/m/n/12 ACHTUNGmicrosoft. \T1/phv/m/sl/12 Win-dows 10 build 10547\T1/p
+hv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : 
+/ / developer .
+ []
+
+
+Overfull \hbox (10.6055pt too wide) in paragraph at lines 240--240
 \T1/cmtt/m/n/12 http : / / www . gruenderszene . de / lexikon / begriffe / appl
 ication -[] programming -[]
  []
 
 
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 221--221
+Overfull \hbox (15.4871pt too wide) in paragraph at lines 240--240
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4642138092470272$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
 
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 221--221
+Overfull \hbox (15.4871pt too wide) in paragraph at lines 240--240
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4696261944934400$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
-[19
+[22
 
-] [20] (thesis.aux)
+] [23] [24] (thesis.aux)
 runsystem(del thesis.pyg)...executed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1391,10 +1412,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16346 strings out of 493334
- 290663 string characters out of 3139239
- 862727 words of memory out of 3000000
- 19604 multiletter control sequences out of 15000+200000
+ 16365 strings out of 493334
+ 291354 string characters out of 3139239
+ 864157 words of memory out of 3000000
+ 19623 multiletter control sequences out of 15000+200000
  45074 words of font info for 53 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  49i,8n,78p,8874b,1717s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1405,9 +1426,9 @@ ectt1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (20 pages, 136358 bytes).
+Output written on thesis.pdf (24 pages, 146971 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
