@@ -217,6 +217,28 @@
       \verb http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api
       \endverb
     \endentry
+    \entry{Bidelman2016cusElev1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f0463ecc380e3472cc150fa09daf4c78}{%
+           family={Bidelman},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{fullhash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{authornamehash}{f0463ecc380e3472cc150fa09daf4c78}
+      \strng{authorfullhash}{f0463ecc380e3472cc150fa09daf4c78}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Custom Elements v1: Reusable Web Components}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://developers.google.com/web/fundamentals/getting-started/primers/customelements
+      \endverb
+    \endentry
     \entry{Bidelman2016}{misc}{}
       \name{author}{1}{}{%
         {{hash=f0463ecc380e3472cc150fa09daf4c78}{%
@@ -472,11 +494,14 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Shadow DOM v0}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
       \field{year}{2016}
+      \field{urldateera}{ce}
       \verb{url}
       \verb https://www.chromestatus.com/feature/4507242028072960
       \endverb
-      \warn{\item Entry 'Hayato2016' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring}
     \endentry
     \entry{Hayato2016a}{misc}{}
       \name{author}{1}{}{%
@@ -498,6 +523,32 @@
       \verb https://www.chromestatus.com/feature/4667415417847808
       \endverb
       \warn{\item Entry 'Hayato2016a' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Ito2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f1d2795d173fdb9c5022a15a0095e900}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Hayato},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1d2795d173fdb9c5022a15a0095e900}
+      \strng{fullhash}{f1d2795d173fdb9c5022a15a0095e900}
+      \strng{authornamehash}{f1d2795d173fdb9c5022a15a0095e900}
+      \strng{authorfullhash}{f1d2795d173fdb9c5022a15a0095e900}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{What's New in Shadow DOM v1 (by examples)}}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://hayato.io/2016/shadowdomv1/
+      \endverb
     \endentry
     \entry{Morrita2015}{misc}{}
       \name{author}{1}{}{%
@@ -623,6 +674,32 @@
       \field{year}{2014}
       \verb{url}
       \verb https://books.google.de/books?id=PpbiAgAAQBAJ
+      \endverb
+    \endentry
+    \entry{stuart2013roadmap}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ebca4a3511cd985e40d97c1568702931}{%
+           family={{Stuart Brunt}},
+           familyi={S\bibinitperiod},
+           given={P.M.P.P.M.P.P.M.I.R.M.P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Trafford Publishing}%
+      }
+      \strng{namehash}{ebca4a3511cd985e40d97c1568702931}
+      \strng{fullhash}{ebca4a3511cd985e40d97c1568702931}
+      \strng{authornamehash}{ebca4a3511cd985e40d97c1568702931}
+      \strng{authorfullhash}{ebca4a3511cd985e40d97c1568702931}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781466985209}
+      \field{title}{{A Roadmap to Cracking the PMP{\{}{®}{\}} Exam: A PMP Exam Preparation Study Guide}}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://books.google.de/books?id=6nsNsUH6EBgC
       \endverb
     \endentry
     \entry{webComJs}{misc}{}

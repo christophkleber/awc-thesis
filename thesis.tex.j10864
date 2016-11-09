@@ -114,8 +114,8 @@
 		\section{Geschichte von Web Components}
 		\label{ref:gesVonWebCom}
 		\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet und stattdessen wird die \emph{\ac{HTML} Import} Technologie verwendet.\smfootcite[ vgl.][]{Cooney2012} Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen, um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern eingegangen.
-		\subsection{Custom Elements !v0 und v1!}
-		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \emph{Chrome} in der Version 33 und \emph{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \emph{Opera for Android} in der Version 37 und von \emph{Chrome for Android} in der Version 53 unterstützt.\smfootcite[ vgl.][]{C2015} Im \emph{Android} Browser wird diese Version schon seit 2014 unterstützt, in der \emph{Android} Version 4.4.4. Im \emph{Samsung Internet} werden sie seit 2016 in der Version 4 genutzt.\smfootcite[ vgl.][]{cusEleCanIUse} Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API}.\smfootcite[ vgl.][]{Bidelman2016cusElev1} Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt.\smfootcite[ vgl.][]{firefox} Die Version v1 wird derzeit nur von den Browsern \emph{Chrome} und \emph{Opera} unterstützt. Das erste mal wurde sie im Jahr 2016 in der \emph{Chrome} Version 54 und in der \emph{Opera} Version 41 genutzt. \smfootcite[ vgl.][]{C2016}
+		\subsection{Custom Elements !v0 und v1!!Samsung Internet!}
+		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \emph{Chrome} in der Version 33 und \emph{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \emph{Opera for Android} in der Version 37 und von \emph{Chrome for Android} in der Version 53 unterstützt.\smfootcite[ vgl.][]{C2015} Im \emph{Android} Browser wird diese Version schon seit 2014 unterstützt, in der \emph{Android} Version 4.4.4. Im \emph{Samsung Internet} werden sie seit 2016 in der Version 4 genutzt.\smfootcite[ vgl.][]{cusEleCanIUse} Die Version v0 wird jedoch heutzutage als veraltet angesehen.\smfootcite[ vgl.][]{Bidelman2016cusElev1} Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt.\smfootcite[ vgl.][]{firefox} Die Version v1 wird derzeit nur von den Browsern \emph{Chrome} und \emph{Opera} unterstützt. Das erste mal wurde sie im Jahr 2016 in der \emph{Chrome} Version 54 und in der \emph{Opera} Version 41 genutzt. \smfootcite[ vgl.][]{C2016}
 		\subsection{HTML Imports}
 		HTML Imports wurden in den Browsern \emph{Chrome} und \emph{Opera} zuerst 2014 unterstützt. Die Imports wurden als Erstes in der \emph{Chrome} Version 36 und in der \emph{Opera} Version 23 genutzt. Gegenwärtig wird die Technologie von den zuvor erwähnten Browsern auch in den mobilen Browser-Varianten unterstützt, in den Versionen 53 des \emph{Chromium} und 37 des \emph{Opera for Android}.\smfootcite[ vgl.][]{Morrita2015} Der \emph{Android} Browser unterstützt \emph{HTML Imports} seit 2016 in der Version 53. Der Browser des \emph{Android} Betriebssystems ist ab dem Jahr 2016 in der Version 53 kongruent mit dem Chromium Browser. \emph{Samsung Internet} unterstützt die Imports seit 2016 in der Version 4.\smfootcite[ vgl.][]{htmlTemplCaniuse}
 		\subsection{Decorators}
@@ -207,7 +207,7 @@ document.querySelector("body").appendChild(inhalt);
 				\label{img:shaDom}
 			\end{figure}
 			Die Folge dieser Kapselung ist, dass alles was dem \emph{Shadow tree} hinzugefügt wird, nur lokal Einfluss auf diesen hat. Die Gestaltung von Webelementen im \emph{Shadow root} wird dadurch vereinfacht.
-			\ac{CSS} Selektoren können nicht von außerhalb des \emph{Shadow roots} auf diesen zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}. Genauso verhält es sich mit dem Zugriff auf die \ac{DOM} Elemente des \emph{Shadow root}. Sie können nicht von außerhalb angesprochen werden, beispielsweise durch die Funktion \emph{document.querySelector()}, sondern können nur von Funktionen innerhalb des \emph{Shadow root} angesprochen werden.\smfootcite{Bidelman2016}
+			\ac{CSS} Selektoren können nicht von außerhalb des \emph{Shadow roots} auf dieses Zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}.\smfootcite{Bidelman2016}
 			\begin{listing}
 				\begin{JavaScriptcode*}{}
 var header = document.createElement('header');
@@ -216,29 +216,12 @@ var headline = document.createElement("h1");
 var headlineText = document.createTextNode("headline");
 headline.appendChild(headlineText);
 shadowRoot.appendChild(headline);
+					
 				\end{JavaScriptcode*}
 				\caption{JavaScript Code für das Erstellen eines Shadow DOM}
 				\label{lst:javShaDom}
 			\end{listing}
 			In Listing \ref{lst:javShaDom} ist dargestellt, wie Mithilfe von JavaScript ein \emph{Shadow \ac{DOM}} erstellt wird. In Zeile zwei wird zuerst einem bestehendem Element ein \emph{Shadow root} hinzugefügt. Daraufhin wird eine Überschrift und deren Text erstellt und zusammengefügt. Zuletzt wird in Zeile sechs die Überschrift in den \emph{Shadow \ac{DOM}} eingefügt.
-			\subsubsection{Slots}
-			\emph{Shadow \ac{DOM}} kann auch mit anderen \ac{DOM} erweitert werden. Der Entwickler kann hier gestatten, dass sein \emph{Web Component} mit Elementen, welche der Nutzer seines \emph{Web Component} definiert, erweitert wird. Hierfür werden \emph{Slots} verwendet. 
-			\begin{listing}
-			\begin{HTMLcode*}{}
-<ul id="contacts">
-   <li>
-      <slot name="name">
-         <p>Achtung<p>
-         <h1>Kein Name<h1>
-      </slot>
-      <slot name="title">Kein Titel</slot>
-   </li>
-</ul>
-			\end{HTMLcode*}
-			\caption{Nutzung von Slot im Shadow DOM}
-			\label{lst:sloNutShaDom}
-			\end{listing}
-			In Listing \ref{lst:sloNutShaDom} ist \ac{HTML} Code des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Element nicht befüllt, wird das \emph{Fallback}, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Das \emph{Fallback} kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\smfootcite{Bidelman2016}
 	\chapter{Methodik dieser Arbeit}
 	\chapter{Adaptive Web Components}
 		\section{Identifikation passender Web Components}

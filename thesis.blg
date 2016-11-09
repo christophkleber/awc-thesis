@@ -1,20 +1,18 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
-[1] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[55] biber-MSWIN64:302> INFO - === 
-[88] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[217] Biber.pm:823> INFO - Found 26 citekeys in bib section 0
-[235] Biber.pm:3658> INFO - Processing section 0
-[261] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
-[265] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[268] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
-[271] Utils.pm:164> WARN - Duplicate entry key: 'Bidelman2016' in file 'library.bib', skipping ...
-[325] Utils.pm:164> WARN - Entry 'Hayato2016' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring
-[327] Utils.pm:164> WARN - Entry 'Hayato2016a' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring
-[341] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\gRsscLakyN\library.bib_11624.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[377] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[377] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[377] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
-[377] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
-[401] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[405] bbl.pm:701> INFO - Output to thesis.bbl
-[406] Biber.pm:109> INFO - WARNINGS: 4
+[0] Config.pm:357> INFO - Logfile is 'thesis.blg'
+[48] biber-MSWIN64:302> INFO - === 
+[82] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[206] Biber.pm:823> INFO - Found 29 citekeys in bib section 0
+[223] Biber.pm:3658> INFO - Processing section 0
+[254] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
+[257] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[260] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
+[332] Utils.pm:164> WARN - Entry 'Hayato2016a' (library.bib): Invalid format '07.11.2016' of date field 'urldate' - ignoring
+[356] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\LbFOTAD6hx\library.bib_10772.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[395] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[395] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[395] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[395] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
+[424] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[429] bbl.pm:701> INFO - Output to thesis.bbl
+[430] Biber.pm:109> INFO - WARNINGS: 2
