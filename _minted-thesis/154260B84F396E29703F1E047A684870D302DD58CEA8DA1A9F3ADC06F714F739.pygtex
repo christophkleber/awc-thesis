@@ -1,11 +1,11 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZlt{}}\PYG{n+nt}{ul} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}contacts\PYGZdq{}}\PYG{p}{\PYGZgt{}}
    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{li}\PYG{p}{\PYGZgt{}}
+      \PYG{p}{\PYGZlt{}}\PYG{n+nt}{slot} \PYG{n+na}{name}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}title\PYGZdq{}}\PYG{p}{\PYGZgt{}}Kein Titel\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{slot}\PYG{p}{\PYGZgt{}}
       \PYG{p}{\PYGZlt{}}\PYG{n+nt}{slot} \PYG{n+na}{name}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{\PYGZgt{}}
          \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Achtung\PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
          \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}Kein Name\PYG{p}{\PYGZlt{}}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}
       \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{slot}\PYG{p}{\PYGZgt{}}
-      \PYG{p}{\PYGZlt{}}\PYG{n+nt}{slot} \PYG{n+na}{name}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}title\PYGZdq{}}\PYG{p}{\PYGZgt{}}Kein Titel\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{slot}\PYG{p}{\PYGZgt{}}
    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{li}\PYG{p}{\PYGZgt{}}
 \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{ul}\PYG{p}{\PYGZgt{}}
 \end{Verbatim}

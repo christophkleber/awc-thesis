@@ -18,35 +18,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Begriffskl\IeC {\"a}rung}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Adaptivit\IeC {\"a}t bei User Interfaces}{9}
+\contentsline {section}{\numberline {2.2}Adaptivit\IeC {\"a}t bei User Interfaces}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Web Components}{10}
+\contentsline {subsection}{\numberline {2.2.1}Nutzungskontext}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Was sind Web Components}{10}
+\contentsline {subsection}{\numberline {2.2.2}Anpassung an Nutzer}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Geschichte von Web Components}{10}
+\contentsline {subsection}{\numberline {2.2.3}Anpassung an Vorlieben}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Custom Elements !v0 und v1!}{10}
+\contentsline {chapter}{\numberline {3}Web Components}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}HTML Imports}{11}
+\contentsline {section}{\numberline {3.1}Was sind Web Components}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Decorators}{11}
+\contentsline {section}{\numberline {3.2}Geschichte von Web Components !Auch Entwicklung zu den Web Components!)}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Templates}{12}
+\contentsline {subsection}{\numberline {3.2.1}Custom Elements !v0 und v1!}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Shadow DOM}{12}
+\contentsline {subsection}{\numberline {3.2.2}HTML Imports}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Vergleich Webentwicklung mit Web Components und ohne}{13}
+\contentsline {subsection}{\numberline {3.2.3}Decorators}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}Templates}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.5}Shadow DOM}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Vergleich Webentwicklung mit Web Components und ohne}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.1}Vorteil: Wenn Browserunterst\IeC {\"u}tzung gegeben: native, kein Framework}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Kapselung}{14}
+\contentsline {subsection}{\numberline {3.3.2}Kapselung}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.3}Wiederverwendung}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Wartbarkeit}{15}
+\contentsline {subsection}{\numberline {3.3.4}Wartbarkeit}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.5}Nachteil: Browserunterst\IeC {\"u}tzung}{15}
+\contentsline {subsection}{\numberline {3.3.5}Nachteil: Browserunterst\IeC {\"u}tzung}{16}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Technik der Web Components}{16}
 \defcounter {refsection}{0}\relax 
@@ -56,36 +62,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.3}Templates}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Shadow DOM !SLOTS!}{18}
+\contentsline {subsection}{\numberline {3.4.4}Shadow DOM}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4.1}Slots}{19}
+\contentsline {subsubsection}{\numberline {3.4.4.1}Slots}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{21}
+\contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Adaptive Web Components}{22}
+\contentsline {chapter}{\numberline {5}Adaptive Web Components}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{22}
+\contentsline {section}{\numberline {5.1}Identifikation passender Web Components}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{22}
+\contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{22}
+\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{22}
+\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{22}
+\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{22}
+\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{22}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{22}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{22}
+\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{22}
+\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Vergleich}{23}
+\contentsline {chapter}{\numberline {6}Vergleich}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{23}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{24}
+\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{24}

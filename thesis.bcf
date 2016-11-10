@@ -2142,46 +2142,6 @@
     <bcf:datasource type="file" datatype="bibtex">library.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">patel2015learning</bcf:citekey>
-    <bcf:citekey order="2">patel2015learning</bcf:citekey>
-    <bcf:citekey order="3">Cooney2012</bcf:citekey>
-    <bcf:citekey order="4">C2015</bcf:citekey>
-    <bcf:citekey order="5">cusEleCanIUse</bcf:citekey>
-    <bcf:citekey order="6">Bidelman2016cusElev1</bcf:citekey>
-    <bcf:citekey order="7">firefox</bcf:citekey>
-    <bcf:citekey order="8">C2016</bcf:citekey>
-    <bcf:citekey order="9">Morrita2015</bcf:citekey>
-    <bcf:citekey order="10">htmlTemplCaniuse</bcf:citekey>
-    <bcf:citekey order="11">Cooney2012</bcf:citekey>
-    <bcf:citekey order="12">Cooney2013</bcf:citekey>
-    <bcf:citekey order="13">WebComCur2016</bcf:citekey>
-    <bcf:citekey order="14">W2015</bcf:citekey>
-    <bcf:citekey order="15">htmlTemFire</bcf:citekey>
-    <bcf:citekey order="16">build10547</bcf:citekey>
-    <bcf:citekey order="17">htmlTemplCaniuse</bcf:citekey>
-    <bcf:citekey order="18">htmlTemplCaniuse</bcf:citekey>
-    <bcf:citekey order="19">NiwaShaDom</bcf:citekey>
-    <bcf:citekey order="20">Hayato2016</bcf:citekey>
-    <bcf:citekey order="21">Ito2016</bcf:citekey>
-    <bcf:citekey order="22">Hayato2016a</bcf:citekey>
-    <bcf:citekey order="23">stuart2013roadmap</bcf:citekey>
-    <bcf:citekey order="24">patel2015learning</bcf:citekey>
-    <bcf:citekey order="25">Bidelman2016</bcf:citekey>
-    <bcf:citekey order="26">patel2015learning</bcf:citekey>
-    <bcf:citekey order="27">patel2015learning</bcf:citekey>
-    <bcf:citekey order="28">satrom2014building</bcf:citekey>
-    <bcf:citekey order="29">webComJs</bcf:citekey>
-    <bcf:citekey order="30">Denicola2016</bcf:citekey>
-    <bcf:citekey order="31">Behrendt2016</bcf:citekey>
-    <bcf:citekey order="32">Argelius2016</bcf:citekey>
-    <bcf:citekey order="33">Argelius2016</bcf:citekey>
-    <bcf:citekey order="34">Glazkov2016</bcf:citekey>
-    <bcf:citekey order="35">Cameron2015</bcf:citekey>
-    <bcf:citekey order="36">Potschien2013</bcf:citekey>
-    <bcf:citekey order="37">gasston2014moderne</bcf:citekey>
-    <bcf:citekey order="38">patel2015learning</bcf:citekey>
-    <bcf:citekey order="39">Bidelman2016</bcf:citekey>
-    <bcf:citekey order="40">Bidelman2016</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

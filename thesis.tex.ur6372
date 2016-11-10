@@ -52,17 +52,6 @@
 
 \usepackage{acronym}
 
-%\DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
-%{\usebibmacro{prenote}}                                 
-%{\usebibmacro{citeindex}%
-%	\setunit{\addnbspace}
-%	\printnames{labelname}%
-%	\setunit{\labelnamepunct}
-%	\newunit
-%	\printfield{year}
-%}
-%{\addsemicolon\space}
-%{\usebibmacro{postnote}}
 
 % Neues cite-Kommando oder altes \footcite-Kommando überschreiben
 \DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
@@ -76,12 +65,6 @@
 }
 {\addsemicolon\space}
 {\usebibmacro{postnote}}
-
-
-\renewcommand{\smfootcite}[2][2]{\relax}
-
-
-
 
 
 \title{Erstellung von adaptiven Web Components}
@@ -120,20 +103,17 @@
 
 	\chapter{Adaptivität}
 		\section{Begriffsklärung}
-		Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\smfootcite[][S. 45]{wöller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\smfootcite[][S. 112]{loeser2013web}
-		In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\smfootcite[S. 1]{Kobsa1993} \newline In all den Bedeutungen des Wortes ist ein Muster zu erkennen. Adaptivität beschreibt die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\smfootcite[ vgl.][]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise seine Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenz eine weiße Schrift auf dunklem Hintergrund oder umgekehrt erhalten.
+			Das ist erster Text
+			Test
+	
+
 		\section{Adaptivität bei User Interfaces}
-			Der Adaptivität von Benutzeroberflächen wird heutzutage ein hoher Stellenwert zugeschrieben. Benutzeroberflächen können sich an verschiedene äußere Gegebenheiten anpassen. So können sie sich an den Kontext der Nutzung, an den Nutzer selbst und an dessen Vorlieben anpassen. Im folgenden wird genauer auf diese Anpassungen eingegangen. 
-			\subsection{Nutzungskontext}
-			\smfootcite[ vgl.][S. 19]{balzert2009webdesign}
-			\subsection{Anpassung an Nutzer}
-			\subsection{Anpassung an Vorlieben}
 	\chapter{Web Components}
 		\section{Was sind Web Components}
 		\emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen. \smfootcite[ vgl.][S. 1]{patel2015learning} Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \emph{\ac{HTML} Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen.\smfootcite[ vgl.][S. 2]{patel2015learning}
-		\section{Geschichte von Web Components !Auch Entwicklung zu den Web Components!)}
+		\section{Geschichte von Web Components}
 		\label{ref:gesVonWebCom}
-		\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \emph{\ac{HTML} Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt.\smfootcite[ vgl.][]{Cooney2012} Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen, um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browserkompatibilität eingegangen.
+		\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet und stattdessen wird die \emph{\ac{HTML} Import} Technologie verwendet.\smfootcite[ vgl.][]{Cooney2012} Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen, um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern eingegangen.
 		\subsection{Custom Elements !v0 und v1!}
 		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \emph{Chrome} in der Version 33 und \emph{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \emph{Opera for Android} in der Version 37 und von \emph{Chrome for Android} in der Version 53 unterstützt.\smfootcite[ vgl.][]{C2015} Im \emph{Android} Browser wird diese Version schon seit 2014 unterstützt, in der \emph{Android} Version 4.4.4. Im \emph{Samsung Internet} werden sie seit 2016 in der Version 4 genutzt.\smfootcite[ vgl.][]{cusEleCanIUse} Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API}.\smfootcite[ vgl.][]{Bidelman2016cusElev1} Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt.\smfootcite[ vgl.][]{firefox} Die Version v1 wird derzeit nur von den Browsern \emph{Chrome} und \emph{Opera} unterstützt. Das erste mal wurde sie im Jahr 2016 in der \emph{Chrome} Version 54 und in der \emph{Opera} Version 41 genutzt. \smfootcite[ vgl.][]{C2016}
 		\subsection{HTML Imports}
@@ -149,7 +129,7 @@
 		Der \emph{Shadow \ac{DOM}} existiert in der Version v0 und in der Version v1. Die Version v0 wird seit 2014 vom \emph{Chrome} in der Version 35 und \emph{Opera} Browser in der Version 21 unterstützt. Mit Safari Version 10 kann der \emph{Shadom \ac{DOM}} seit 2016  genutzt werden.\smfootcite[ vgl.][]{NiwaShaDom} Die mobilen Varianten der Browser unterstützen das \emph{Shadow \ac{DOM}} seit 2016, \emph{Opera} in der Version 37 und \emph{Chrome} in der Version 53, somit auch der \emph{Android} Browser.\smfootcite[ vlg.][]{Hayato2016} Die Version v0 wird von der Version v1 abgelöst, welche verschiedene Neuerungen in der Syntax, aber auch in der Unterstützung von bestimmten Funktionen aufweist. So kann beispielsweise in der v0 ein \emph{shadow root} immer nur als \enquote{open} definiert werden, in der v1 kann er auch als \enquote{closed} \emph{shadow root} erstellt werden.\smfootcite[ vgl.][]{Ito2016}
 		Die Version v1 wird noch nicht so großem Ausmaß wie die Version v0 unterstützt. Vollständig wird sie nur vom \emph{Chrome} 53 und \emph{Opera} 40 Browser unterstützt, jeweils seit 2016. In den mobilen Versionen wird sie nur von dem \emph{Chromium} und somit auch auf \emph{Android} in der Version 53 unterstützt.\smfootcite[ vlg.][]{Hayato2016a}
 		\section{Vergleich Webentwicklung mit Web Components und ohne}
-			Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und \emph{JavaScript}. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms}.\smfootcite[][S. 15]{stuart2013roadmap} Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Diese können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das \emph{JavaScript Framework} \enquote{jQuery}, ein Slide-Element bereitstellen wie das \emph{Framework} \enquote{Slider} oder das Backend einer Webseite definieren wie das \emph{Framework} \enquote{TYP03 CMS}. Hier ergibt sich großes ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die \emph{Style} Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinflussen oder das \emph{JavaScript}, welches eine bestimmte Funktion hat, an einer anderen Stelle für welche es nicht programmiert wurde, Einfluss nehmen. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden können, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
+			Webapplikationen basieren auf vielen verschiedenen Technologien, beispielsweise \ac{HTML}, \ac{CSS} und \emph{JavaScript}. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms}.\smfootcite[][S. 15]{stuart2013roadmap} Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Diese können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das \emph{JavaScript Framework} \enquote{jQuery}, ein Slide-Element bereitstellen wie das \emph{Framework} \enquote{Slider} oder das Backend einer Webseite definieren wie das \emph{Framework} \enquote{TYP03 CMS}. Hier ergibt sich großes ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die \emph{Style} Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinflussen oder das \emph{JavaScript}, welches eine bestimmte Funktion hat, an einer anderen Stelle für welche es nicht programmiert wurde, Einfluss nehmen. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden können, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
 			Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft) native Implementierung verschiedener Techniken anzugehen, welche eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen.			
 			\subsection{Vorteil: Wenn Browserunterstützung gegeben: native, kein Framework}
 			Wenn es in der Zukunft der Fall sein wird, dass \emph{Web Components} nativ von allen Browsern unterstützt werden, ergibt sich daraus ein großer Vorteil. Es muss bei der Nutzung nativer, also von den Browsern implementierten Techniken, kein externer Programmcode genutzt werden um bestimmte Funktionen abzudecken. Viele Funktionalitäten können einfach über die Nutzung nativer Methoden abgebildet werden. Deshalb müssen weniger Funktionen selbst geschrieben werden und weniger, beziehungsweise unter Umständen keine \emph{Frameworks} genutzt werden. Dies verkleinert das Laden von externen Programmcode. Darüber hinaus ist die Syntax und Funktionsweise bei nativen Funktionen bekannt und eindeutig. Daraus ergeben sich weniger Inkonsistenzen in der Programmierung und eine leichtere Verständlichkeit. Im Gegensatz dazu muss bei vielen \emph{Frameworks} eine jeweils eigene Syntax benutzt werden.
@@ -218,11 +198,11 @@ document.querySelector("body").appendChild(inhalt);
 				\label{lst:htmTem}
 			\end{listing}
 			In \ref{lst:htmTem} sieht man den \emph{JavaScript} Code um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur \emph{JavaScript} Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
-			\subsection{Shadow DOM}
+			\subsection{Shadow DOM !SLOTS!}
 			\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\smfootcite[ ][Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, wessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}. Dies ist in Abbildung \ref{img:shaDom} dargestellt.\smfootcite[ vgl.][S. 22]{patel2015learning} 
-			\begin{figure}
+			\begin{figure}[ht]
 				\centering
-				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{shaDom.png}
+				\includegraphics{shaDom.png}
 				\caption{DOM und Shadow \ac{DOM} }
 				\label{img:shaDom}
 			\end{figure}
@@ -247,46 +227,27 @@ shadowRoot.appendChild(headline);
 			\begin{HTMLcode*}{}
 <ul id="contacts">
    <li>
-      <slot name="title">Kein Titel</slot>
       <slot name="name">
          <p>Achtung<p>
          <h1>Kein Name<h1>
       </slot>
+      <slot name="title">Kein Titel</slot>
    </li>
 </ul>
 			\end{HTMLcode*}
-			\caption{Nutzung von Slot Platzhalter-Elementen im Shadow DOM}
+			\caption{Nutzung von Slot im Shadow DOM}
 			\label{lst:sloNutShaDom}
 			\end{listing}
-			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Das \emph{Fallback} kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\smfootcite{Bidelman2016} In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt. Wie hier in Zeile fünf und sechs zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim rendern der Applikation werden alle Elemente, welche die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} gerendert. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \emph{DOM} geschrieben.
+			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Element nicht befüllt, wird das \emph{Fallback}, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Das \emph{Fallback} kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\smfootcite{Bidelman2016} In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom}
 			\begin{listing}
 				\begin{HTMLcode*}{}
+<span slot="name">Michael</span>
 <span slot="title">Dr.</span>
 <span slot="title">Phil.</span>
-<span slot="name">Michael</span>
 				\end{HTMLcode*}
-				\caption{Befüllen der Slot Elemente im DOM}
+				\caption{Befüllen des Slots im Light DOM}
 				\label{lst:sloNutLigDom}
-			\end{listing}
-			In Listing \ref{lst:renDom} ist der von den zwei vorhergehenden Listings kombinierte und gerenderte Inhalt zu sehen. Dies ist der \ac{DOM}, den man beispielsweise in einer Webseite sehen würde. Hier ist gut zu erkennen, wie die \emph{Slot} Elemente des \emph{Shadow \ac{DOM}} mit den später erstellten Elementen befüllt werden. Alle Elemente innerhalb des \emph{Web Component} mit dem Attribut \enquote{slot} werden in diesen gerendert.
-			\begin{listing}
-				\begin{HTMLcode*}{}
-<ul id="contacts">
-   <li>
-      <slot name="title">
-	     <span>Dr.</span>
-	     <span>Phil.</span>
-	  </slot>
-      <slot name="name">
-	     <span>Michael</span>
-      </slot>
-   </li>
-</ul>
-				\end{HTMLcode*}
-				\caption{Gerenderter DOM}
-				\label{lst:renDom}
-			\end{listing}
-		
+			\end{listing} 
 	\chapter{Methodik dieser Arbeit}
 	\chapter{Adaptive Web Components}
 		\section{Identifikation passender Web Components}
