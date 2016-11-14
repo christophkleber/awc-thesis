@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  10 NOV 2016 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  14 NOV 2016 19:21
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -126,7 +126,11 @@ LaTeX Info: Redefining \textsubscript on input line 4780.
 \c@table=\count88
 Class scrreprt Info: Redefining `\numberline' on input line 5801.
 \bibindent=\dimen102
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrpage2.sty"
+Package: scrpage2 2016/06/14 v3.21 KOMA-Script package (page head and foot)
+LaTeX Info: Redefining \pagemark on input line 174.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
 *************************************
@@ -1108,32 +1112,39 @@ File: german.lbx 2016/09/17 v3.6 biblatex localization (PK/JW/AB)
 )) (thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 95.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 91.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 95.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
+
+Package scrpage2 Warning: seems you are using a very small headheight.
+(scrpage2)                If you get overfull \vbox warnings at almost every
+(scrpage2)                page, you should increase headheight e.g. writing
+(scrpage2)                 \setlength{\headheight}{1.1\baselineskip}
+(scrpage2)                into the preamble of your document.
+(scrpage2)                A better solution would be to use typearea package.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count306
@@ -1172,16 +1183,16 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
 (thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 91.
-Package biblatex Info: Reference segment=0 on input line 91.
+Package biblatex Info: Reference section=0 on input line 95.
+Package biblatex Info: Reference segment=0 on input line 95.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 94.
+(Font)              <17.28> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 94.
+(Font)              <12> on input line 98.
  [1
 
 
@@ -1199,7 +1210,7 @@ Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              Loading of package `scrhack' may help to
 (scrreprt)              avoid this warning, if you are using a
 (scrreprt)              a package that still implements the
-(scrreprt)              deprecated \float@listhead interface  on input line 103
+(scrreprt)              deprecated \float@listhead interface  on input line 107
 .
 
 [3
@@ -1246,7 +1257,7 @@ although it is yet undefined on input line 13.
 ]
 chapter 1.
 (thesis.toc
-Overfull \hbox (2.80183pt too wide) in paragraph at lines 33--33
+Overfull \hbox (2.80183pt too wide) in paragraph at lines 27--27
  [][] []\T1/phv/m/n/12 Geschichte von Web Com-ponents !Auch Ent-wick-lung zu de
 n Web Com- 
  []
@@ -1260,36 +1271,35 @@ n Web Com-
  [8]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 122.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 126.
 [9
 
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
- [10]
+] [10] [11]
 chapter 3.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
-although it is yet undefined on input line 133.
+although it is yet undefined on input line 156.
 Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
 
-although it is yet undefined on input line 133.
+although it is yet undefined on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 160.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 138.
-[11
+although it is yet undefined on input line 161.
+[12
 
-] [12]
+] [13]
 Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
-although it is yet undefined on input line 152.
- [13] [14]
-Overfull \hbox (80.88287pt too wide) in paragraph at lines 160--161
+although it is yet undefined on input line 175.
+ [14] [15]
+Overfull \hbox (80.88287pt too wide) in paragraph at lines 183--184
 \T1/phv/m/n/12 groÿen Vor-teil, dass es ei-ne In-te-r-ope-ra-bi-li-tät zwi-sche
 n \T1/phv/m/sl/12 Fra-me-works \T1/phv/m/n/12 er-mög-licht.S.2]patel2015learnin
 g
  []
 
-[15]
+[16]
 \openout3 = `thesis.pyg'.
 
  (_minted-thesis/default-pyg-prefix.pygstyle)
@@ -1301,34 +1311,34 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 7.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [16]
+)) [17]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 184.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 207.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 184.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 207.
 Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
-although it is yet undefined on input line 189.
+although it is yet undefined on input line 212.
 \openout3 = `thesis.pyg'.
 
 
 (_minted-thesis/AEF917AF41750DA08BBD11C9BDAE875ED302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 Package acronym Info: Label `acro:div' newly defined as it shall be overridden
-although it is yet undefined on input line 198.
+although it is yet undefined on input line 221.
 \openout3 = `thesis.pyg'.
 
 
 (_minted-thesis/8B4D591886542F1386DF77DC47A8F0184B13BB335BAE229FD41364586D22FCE
 6.pygtex)
-Overfull \hbox (0.89212pt too wide) in paragraph at lines 189--208
+Overfull \hbox (0.89212pt too wide) in paragraph at lines 212--231
 \T1/phv/m/n/12 3.2[].]Glazkov2016 Die im-por-tier-ten Do-ku-men-te ha-ben kei-n
 en au-ÿer-ge-wöhn-li-chen Auf-
  []
 
-[17]
+[18]
 Package acronym Info: Label `acro:HTML5' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 211.
+although it is yet undefined on input line 234.
 \openout3 = `thesis.pyg'.
 
 
@@ -1337,22 +1347,22 @@ although it is yet undefined on input line 211.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<shaDom.png, id=61, 337.86224pt x 183.084pt>
+<shaDom.png, id=64, 337.86224pt x 183.084pt>
 File: shaDom.png Graphic file (type png)
  <use shaDom.png>
-Package pdftex.def Info: shaDom.png used on input line 225.
+Package pdftex.def Info: shaDom.png used on input line 248.
 (pdftex.def)             Requested size: 448.14993pt x 242.84773pt.
 \openout3 = `thesis.pyg'.
 
 
 (_minted-thesis/197B7A7FE87F3A89FA5E2783850A3F774B13BB335BAE229FD41364586D22FCE
 6.pygtex)
-Overfull \hbox (49.79126pt too wide) in paragraph at lines 222--244
+Overfull \hbox (49.79126pt too wide) in paragraph at lines 245--267
 \T1/phv/m/n/12 kap-sel-te Kno-ten-struk-tur im be-ste-hen-den [][] zu er-zeu-ge
 n.Kap. 11.1.4]gass-ton2014moderne
  []
 
-[18] [19 <./shaDom.png>]
+[19] [20 <./shaDom.png>]
 \openout3 = `thesis.pyg'.
 
 
@@ -1367,20 +1377,39 @@ n.Kap. 11.1.4]gass-ton2014moderne
 
 
 (_minted-thesis/9E7F0995A67514068581B6746C7F2951D302DD58CEA8DA1A9F3ADC06F714F73
-9.pygtex) [20] [21]
+9.pygtex) [21] [22]
 chapter 4.
-[22
-
-]
-chapter 5.
 [23
 
 ]
-chapter 6.
+chapter 5.
+Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
 
-LaTeX Warning: Empty bibliography on input line 305.
+although it is yet undefined on input line 323.
+
+Package acronym Warning: Acronym `REST' is not defined on input line 323.
+
+
+Package acronym Warning: Acronym `REST' is not defined on input line 323.
 
 [24
+
+]
+
+Package acronym Warning: Acronym `REST' is not defined on input line 328.
+
+
+Overfull \hbox (3.6717pt too wide) in paragraph at lines 330--331
+[]\T1/phv/m/n/12 Die Res-sour-cen kön-nen in ver-schie-de-nen For-men re-prä-se
+n-tiert wer-
+ []
+
+[25]
+chapter 6.
+
+LaTeX Warning: Empty bibliography on input line 344.
+
+[26
 
 ] (thesis.aux)
 runsystem(del thesis.pyg)...executed.
@@ -1390,13 +1419,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16147 strings out of 493334
- 287648 string characters out of 3139239
- 863278 words of memory out of 3000000
- 19399 multiletter control sequences out of 15000+200000
+ 16397 strings out of 493334
+ 291173 string characters out of 3139239
+ 869487 words of memory out of 3000000
+ 19645 multiletter control sequences out of 15000+200000
  34892 words of font info for 48 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 49i,7n,78p,8874b,1717s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,7n,78p,8840b,1717s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Christoph\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
 600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <
 C:\Users\Christoph\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1405,9 +1434,9 @@ pen\ec\dpi600\ectt1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (24 pages, 146078 bytes).
+Output written on thesis.pdf (26 pages, 151246 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
+ 183 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

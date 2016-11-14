@@ -3,10 +3,6 @@
 
 
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof]{scrreprt}
-\usepackage{scrpage2}
-
-
-
 \setcounter{tocdepth}{3}% Include \subsubsection in ToC
 \setcounter{secnumdepth}{3}% Number \subsubsection
 \setuptoc{toc}{numbered} % Adds ToC to ToC toDo: remove Pagenumber of ToC in ToC
@@ -316,22 +312,6 @@ shadowRoot.appendChild(headline);
 			\subsection{Identifikation Web Components}
 			\subsection{Identifikation passender Preference Terms}
 		\section{Preference Sets zur Adaptivität}
-		Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}). 
-		\section{REST-Client zum Download der Preferencte Sets}
-		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
-			\subsection{Was bedeutet REST}
-			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf folgenden Prinzipien.
-			\begin{description}  
-				\item  [Adressierbarkeit von Ressourcen]
-				Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
-				\item [Einfache und einheitliche Schnittstelle]
-				\ac{REST} basiert auf dem \ac{HTML} Protokoll. 
-				\item  [Repräsentation] 
-				Die Ressourcen können in verschiedenen Formen repräsentiert werden. Bei Änderung oder Anfrage der Ressource wird immer eine Repräsentation genutzt. Somit kann in einer Anfrage definiert werden, in welcher Form der Repräsentation die Antwort erfolgen soll.
-				\item [Zustandslos]
-				\item [Cashing möglich]
-			\end{description}
-			\smfootcite[ vgl.][S. 77]{chauhan2014asp} 
 		\section{Adaptivität der bestehenden Web Components}
 			\subsection{Web Component Eins}
 				\subsubsection{Konzeption zur Adaptivität}

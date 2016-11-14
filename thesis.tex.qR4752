@@ -3,10 +3,6 @@
 
 
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof]{scrreprt}
-\usepackage{scrpage2}
-
-
-
 \setcounter{tocdepth}{3}% Include \subsubsection in ToC
 \setcounter{secnumdepth}{3}% Number \subsubsection
 \setuptoc{toc}{numbered} % Adds ToC to ToC toDo: remove Pagenumber of ToC in ToC
@@ -125,30 +121,26 @@
 	\chapter{Adaptivität}
 		\section{Begriffsklärung}
 		Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\smfootcite[][S. 45]{wöller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\smfootcite[][S. 112]{loeser2013web}
-		In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\smfootcite[S. 1]{Kobsa1993}
-		\newline In all den Bedeutungen des Wortes ist ein Muster zu erkennen. Adaptivität beschreibt die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\smfootcite[ vgl.][]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise seine Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenz eine weiße Schrift auf dunklem Hintergrund oder umgekehrt erhalten.
-		\newline
-		Hier stellt sich jedoch die Frage, wie im Zusammenhang von Anwendungsentwicklung eine Adaptivität bereitgestellt werden kann und insbesondere, an welche Aspekte sie sich anpassen soll. Wie soll die Umgebung, der Nutzer und die Arbeitsaufgaben definiert werden, an welche sich adaptiv angepasst werden soll? Hierzu kann der Nutzungskontext verwendet werden.
-		\section{Nutzungskontext}
-		Der Nutzungskontext wird nach der DIN EN ISO 9241-210 von den Benutzermerkmalen, Arbeitsaufgaben und der organisatorischen, technischen und physischen Umgebung bestimmt. Im folgenden wird ein kleiner Überblick dieser  Beschreibung gegeben.
-		\begin{description}  
-			\item  [Nutzer und sonstige Interessengruppen] 
-			Zu Beginn sollten die Nutzergruppen und weitere Interessengruppen identifiziert und deren wesentliche Ziele und Einschränkungen beschrieben werden.
-			
-			\item [Merkmale der Nutzer oder Nutzergruppen]
-			Diese Merkmale können \enquote{Kenntnisse, Fertigkeiten, Erfahrung, Ausbildung, Übung, physische Merkmale, Gewohnheiten, Vorlieben und Fähigkeiten einschließen.}\smfootcite[][S.16 ]{hoffmann2014venus} Sie beschreiben also insgesamt den Nutzer, um diesen besser einordnen zu können.
-			
-			\item  [Ziele und Arbeitsaufgaben der Nutzer]
-			Auf der einen Seite sollten die Ziele der Nutzer beschrieben werden, auf der anderen Seite die Gesamtziele des Systems. Die Arbeitsaufgaben werden nach ihren Merkmalen untersucht, beispielsweise wie oft eine Aufgabe ausgeführt werden soll.
-			
-			\item [Umgebung(en) des Systems]
-			Die Umgebung lässt sich in die technische Umgebung, also die der Computerkomponenten und Anwendungen, die physikalische Umgebung, also Aspekte wie beispielsweise Beleuchtung und soziale und kulturelle Umgebung, somit beispielsweise die Arbeitsweise und Einstellungen der Umgebung des Systems, aufteilen.
-			\smfootcite[ vgl.][S.15 ff.]{hoffmann2014venus}
-			
-		\end{description}
-		Insgesamt lässt sich sagen, dass die Adaptivität an den Nutzungskontext ausgerichtet werden kann. Verschiedene Merkmale des Nutzungskontext haben Einfluss darauf, wie die Adaptivität, passend zur Situation, erfolgen sollte.
-	
-			
+		In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\smfootcite[S. 1]{Kobsa1993} \newline In all den Bedeutungen des Wortes ist ein Muster zu erkennen. Adaptivität beschreibt die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\smfootcite[ vgl.][]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise seine Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenz eine weiße Schrift auf dunklem Hintergrund oder umgekehrt erhalten.
+		\section{Adaptivität bei User Interfaces}
+			Der Adaptivität von Benutzeroberflächen wird heutzutage ein hoher Stellenwert zugeschrieben. Benutzeroberflächen können sich an verschiedene äußere Gegebenheiten anpassen. So können sie sich an den Kontext der Nutzung, an den Nutzer selbst und an dessen Vorlieben anpassen. Im folgenden wird genauer auf diese Anpassungen eingegangen. Hier wird der Begriff des Nutzungskontext genutzt. 
+			\subsection{Nutzungskontext}
+			Der Nutzungskontext wird nach der DIN EN ISO 9241-210 von den Benutzermerkmalen, Arbeitsaufgaben und der organisatorischen, technischen und physischen Umgebung bestimmt. Im folgenden wird ein kleiner Überblick dieser  Beschreibung gegeben.
+			\smfootcite[ vgl.][S.15 ]{hoffmann2014venus}
+			\begin{description}  
+				\item  [Nutzer und sonstige Interessengruppen] 
+				Zu Beginn sollten die Nutzergruppen und weitere Interessengruppen identifiziert und deren wesentliche Ziele und Einschränkungen beschrieben werden.
+				\item [Merkmale der Nutzer oder Nutzergruppen]
+				Diese Merkmale können \enquote{Kenntnisse, Fertigkeiten, Erfahrung, Ausbildung, Übung, physische Merkmale, Gewohnheiten, Vorlieben und Fähigkeiten einschließen.}\smfootcite[][S.16 ]{hoffmann2014venus} Sie beschreiben also insgesamt den Nutzer, um diesen besser einordnen zu können.
+				
+				\item  [Ziele und Arbeitsaufgaben der Nutzer]
+				Auf der einen Seite sollten die Ziele der Nutzer beschrieben werden, auf der anderen Seite die Gesamtziele des Systems. Die Arbeitsaufgaben werden nach ihren Merkmalen untersucht, beispielsweise wie oft eine Aufgabe ausgeführt werden soll.
+				
+				\item [Umgebung(en) des Systems]
+				Die Umgebung lässt sich in die technische Umgebung, also die der Computerkomponenten und Anwendungen, die physikalische Umgebung, also Aspekte wie beispielsweise Beleuchtung und soziale und kulturelle Umgebung, somit beispielsweise die Arbeitsweise und Einstellungen der Umgebung des Systems, aufteilen.
+				
+			\end{description}
+			Insgesamt lässt sich sagen, dass die Adaptivität an den Nutzungskontext ausgerichtet werden kann. Verschiedene Merkmale des Nutzungskontext haben Einfluss darauf, wie die Adaptivität, passend zur Situation, erfolgen sollte.
 			
 		
 	\chapter{Web Components}
@@ -316,22 +308,6 @@ shadowRoot.appendChild(headline);
 			\subsection{Identifikation Web Components}
 			\subsection{Identifikation passender Preference Terms}
 		\section{Preference Sets zur Adaptivität}
-		Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}). 
-		\section{REST-Client zum Download der Preferencte Sets}
-		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
-			\subsection{Was bedeutet REST}
-			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf folgenden Prinzipien.
-			\begin{description}  
-				\item  [Adressierbarkeit von Ressourcen]
-				Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
-				\item [Einfache und einheitliche Schnittstelle]
-				\ac{REST} basiert auf dem \ac{HTML} Protokoll. 
-				\item  [Repräsentation] 
-				Die Ressourcen können in verschiedenen Formen repräsentiert werden. Bei Änderung oder Anfrage der Ressource wird immer eine Repräsentation genutzt. Somit kann in einer Anfrage definiert werden, in welcher Form der Repräsentation die Antwort erfolgen soll.
-				\item [Zustandslos]
-				\item [Cashing möglich]
-			\end{description}
-			\smfootcite[ vgl.][S. 77]{chauhan2014asp} 
 		\section{Adaptivität der bestehenden Web Components}
 			\subsection{Web Component Eins}
 				\subsubsection{Konzeption zur Adaptivität}
