@@ -3,13 +3,8 @@
 
 
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof]{scrreprt}
-\usepackage[automark]{scrpage2}
-\pagestyle{scrheadings}
-\clearscrheadfoot
-\lehead{\leftmark}
-\rehead{\rightmark}
-\lohead{\leftmark}
-\rohead{\rightmark}
+\usepackage{scrpage2}
+
 
 
 \setcounter{tocdepth}{3}% Include \subsubsection in ToC
@@ -123,7 +118,6 @@
 		\acro{W3C}{World Wide Web Consortium}
 		\acro{REST}{Representational State Transfer}
 		\acro{HTTP}{Hypertext Transfer Protocol}
-		\acro{JSON}{JavaScript Object Notation}
 	\end{acronym}
 
 	\tableofcontents
@@ -131,7 +125,7 @@
 
 	\chapter{Adaptivität}
 		\section{Begriffsklärung}
-		Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\smfootcite[][S. 45]{wöller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\cite[][S. 112]{loeser2013web}
+		Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\smfootcite[][S. 45]{wöller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\smfootcite[][S. 112]{loeser2013web}
 		In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\smfootcite[S. 1]{Kobsa1993}
 		\newline In all den Bedeutungen des Wortes ist ein Muster zu erkennen. Adaptivität beschreibt die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\smfootcite[ vgl.][]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise seine Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenz eine weiße Schrift auf dunklem Hintergrund oder umgekehrt erhalten.
 		\newline
@@ -321,18 +315,12 @@ shadowRoot.appendChild(headline);
 	\chapter{Adaptive Web Components}
 		\section{Identifikation passender Web Components}
 			\subsection{Identifikation Web Components}
-			
-			
-		\section{Adaptivität an die Präferenzen der Nutzer}
-		Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}).
-		\subsection{Identifikation passender Preference Terms}
-		Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet.
-		\subsubsection{Kontrast}
-		Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für den Standard Nutzer sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite{balzert2009webdesign}
-		\subsubsection{Leserichtung}
-		\subsection{Herunterladen der Nutzer Präferenzen}
+			\subsection{Identifikation passender Preference Terms}
+		\section{Preference Sets zur Adaptivität}
+		Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}). 
+		\section{REST-Client zum Download der Preferencte Sets}
 		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
-			\subsubsection{Was bedeutet REST}
+			\subsection{Was bedeutet REST}
 			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien.
 			\begin{description}  
 				\item  [Adressierbarkeit von Ressourcen]
@@ -346,7 +334,7 @@ shadowRoot.appendChild(headline);
 				\item [Cashing möglich]
 				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	\smfootcite[ vgl.][S. 77]{chauhan2014asp} 
 			\end{description}
-		\subsubsection{Der Client}
+		\subsection{Der Client}
 		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf der \emph{jQuery.ajax()} Funktion. Dies ist eine Funktion des \emph{jQuery Frameworks} , welche eine asynchrone Anfrage an einen Ort stellt, basierend auf dem \ac{HTTP} Protokoll.\smfootcite[ vgl.][]{jquAja}
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
@@ -375,7 +363,7 @@ function restCall (url){
 			\caption{Programmcode zum Abfragen der Nutzerpräferenzen}
 			\label{lst:jquAja}
 		\end{listing}
-		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an.  In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
+		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. 
 		\section{Adaptivität der bestehenden Web Components}
 			\subsection{Web Component Eins}
 				\subsubsection{Konzeption zur Adaptivität}

@@ -27,4 +27,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {listing}{\numberline {5.1}{\ignorespaces Programmcode zum Abfragen der Nutzerpr\IeC {\"a}ferenzen\relax }}{26}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

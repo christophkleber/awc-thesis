@@ -68,26 +68,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1.1}Identifikation Web Components}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Identifikation passender Preference Terms}{24}
+\contentsline {section}{\numberline {5.2}Adaptivit\IeC {\"a}t an die Pr\IeC {\"a}ferenzen der Nutzer}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Preference Sets zur Adaptivit\IeC {\"a}t}{24}
+\contentsline {subsection}{\numberline {5.2.1}Identifikation passender Preference Terms}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}REST-Client zum Download der Preferencte Sets}{24}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Kontrast}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Was bedeutet REST}{25}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Leserichtung}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Adaptivit\IeC {\"a}t der bestehenden Web Components}{25}
+\contentsline {subsection}{\numberline {5.2.2}Herunterladen der Nutzer Pr\IeC {\"a}ferenzen}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Web Component Eins}{25}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Was bedeutet REST}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{25}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Der Client}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1.2}Umsetzung Programmierung}{25}
+\contentsline {section}{\numberline {5.3}Adaptivit\IeC {\"a}t der bestehenden Web Components}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Web Component Zwei}{25}
+\contentsline {subsection}{\numberline {5.3.1}Web Component Eins}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Web Component Drei}{25}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Vergleich}{26}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Umsetzung Programmierung}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{26}
+\contentsline {subsection}{\numberline {5.3.2}Web Component Zwei}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Web Component Drei}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Vergleich}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Vergleich mit Polymer}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{29}

@@ -16,5 +16,67 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{balzert2009webdesign}{book}{}
+      \name{author}{3}{}{%
+        {{hash=86d7a0764d52348a4cb8e6927b6517f9}{%
+           family={Balzert},
+           familyi={B\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7777e2d2a4960a708dec4c0e90a4e885}{%
+           family={Klug},
+           familyi={K\bibinitperiod},
+           given={U},
+           giveni={U\bibinitperiod}}}%
+        {{hash=ca9f4f141c987218f40b049cdbccc869}{%
+           family={Pampuch},
+           familyi={P\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W3L-Verlag}%
+      }
+      \strng{namehash}{d91c41ac4d72be2281efaf50ebcb981e}
+      \strng{fullhash}{d91c41ac4d72be2281efaf50ebcb981e}
+      \strng{authornamehash}{d91c41ac4d72be2281efaf50ebcb981e}
+      \strng{authorfullhash}{d91c41ac4d72be2281efaf50ebcb981e}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783868340112}
+      \field{title}{{Webdesign {\&} Web-Usability: Basiswissen für Web-Entwickler}}
+      \field{year}{2009}
+    \endentry
+    \entry{loeser2013web}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9524e972e2a644de41e31bc42256cacf}{%
+           family={Loeser},
+           familyi={L\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{9524e972e2a644de41e31bc42256cacf}
+      \strng{fullhash}{9524e972e2a644de41e31bc42256cacf}
+      \strng{authornamehash}{9524e972e2a644de41e31bc42256cacf}
+      \strng{authorfullhash}{9524e972e2a644de41e31bc42256cacf}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783642594908}
+      \field{series}{Informationstechnologien f{\{}ü{\}}r die Praxis}
+      \field{title}{{Web-Datenbanken: Einsatz objekt-relationaler Datenbanken f{\{}ü{\}}r Web-Informationssysteme}}
+      \field{year}{2013}
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 
