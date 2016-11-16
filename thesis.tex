@@ -2,14 +2,30 @@
 % !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
 
 
-\documentclass[12pt, paper=a4, bibtotoc, toc=listof]{scrreprt}
+\documentclass[12pt, paper=a4, bibtotoc, toc=listof, headsepline=true]{scrreprt}
+
+%Header
 \usepackage[automark]{scrpage2}
 \pagestyle{scrheadings}
 \clearscrheadfoot
-\lehead{\leftmark}
-\rehead{\rightmark}
-\lohead{\leftmark}
-\rohead{\rightmark}
+\ohead{\rightmark}
+\cfoot[\pagemark]{\pagemark}
+\renewcommand*{\chaptermarkformat}{}
+\renewcommand*{\headfont}{\normalfont}
+
+%\setlength{\headheight}{12mm} % Höhe der Kopfzeile 
+
+
+
+
+\setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile 
+%Abstand nach Header Trennlinie
+%\usepackage[headsep=5mm]{geometry}
+
+%\setfootsepline[text]{0.4pt} % Trennlinie unter Fußzeile
+
+
+
 
 
 \setcounter{tocdepth}{3}% Include \subsubsection in ToC
@@ -37,12 +53,18 @@
 
 
 \usepackage[chapter]{minted} %Code Formatierung
-\newminted{JavaScript}{frame=single,framesep=10pt, linenos}
-\newminted{HTML}{frame=single,framesep=10pt, linenos}
+\newminted{JavaScript}{frame=single,framesep=10pt, linenos, breaklines=true}
+\newminted{HTML}{frame=single,framesep=10pt, linenos, breaklines=true}
 
 \usepackage{caption}
-\DeclareCaptionFont{black}{\scriptsize\color{black}}
+\DeclareCaptionFont{black}{\footnotesize\color{black}}
 \DeclareCaptionFormat{listing}{{\parbox{\linewidth-2\fboxsep}{#1#2#3}}}
+\setkomafont{captionlabel}{\usekomafont{caption}}
+
+
+
+
+%Caption Listing, Figure Styling
 \captionsetup[listing]{labelfont=black,textfont=black} %Caption of Listing
 \captionsetup[figure]{labelfont=black,textfont=black} %Caption of Figure
 
@@ -60,18 +82,6 @@
 \addbibresource{library.bib}
 
 \usepackage{acronym}
-
-%\DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
-%{\usebibmacro{prenote}}                                 
-%{\usebibmacro{citeindex}%
-%	\setunit{\addnbspace}
-%	\printnames{labelname}%
-%	\setunit{\labelnamepunct}
-%	\newunit
-%	\printfield{year}
-%}
-%{\addsemicolon\space}
-%{\usebibmacro{postnote}}
 
 % Neues cite-Kommando oder altes \footcite-Kommando überschreiben
 \DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
@@ -124,6 +134,7 @@
 		\acro{REST}{Representational State Transfer}
 		\acro{HTTP}{Hypertext Transfer Protocol}
 		\acro{JSON}{JavaScript Object Notation}
+		\acro{WCAG 2.0}{Web Content Accessibility Guidelines 2.0}
 	\end{acronym}
 
 	\tableofcontents
@@ -225,7 +236,7 @@ customElements.define('new-custom-element', NewCustomElement);
 				\label{lst:htmImp}
 				\end{listing}
 			Die importierten Dokumente haben keinen außergewöhnlichen Aufbau im Vergleich zu normalen \ac{HTML} Dokumenten, sie können aus \ac{HTML}, \emph{Style} oder \emph{Script} Elementen bestehen. Es kann auch die \emph{Template} Technologie verwendet werden, dazu mehr in \ref{subsec:Templates}.
-			Um auf den Inhalt des importierten Dokuments zuzugreifen wird \emph{JavaScript} verwendet. Wie in Listing \ref{lst:htmImpJav} dargestellt, wird zuerst nach dem Link Element gesucht, welches die Eigenschaft \emph{rel=\enquote{import}} besitzt. Daraufhin wird dieses Dokument importiert und ein bestimmter Teil des Dokuments als \emph{JavaScript} Variable \emph{\enquote{elemt}} gespeichert. Hier wird ein \ac{div} Element, welches die Klasse \emph{\enquote{element}} besitzt gespeichert. Dieses kann dann in der importierenden Seite genutzt werden. 
+			Um auf den Inhalt des importierten Dokuments zuzugreifen wird \emph{JavaScript} verwendet. Wie in Listing \ref{lst:htmImpJav} dargestellt, wird zuerst nach dem Link Element gesucht, welches die Eigenschaft \emph{rel=\enquote{import}} besitzt. Daraufhin wird dieses Dokument importiert und ein bestimmter Teil des Dokuments als \emph{JavaScript} Variable \emph{\enquote{elemt}} gespeichert. Hier wird ein div Element, welches die Klasse \emph{\enquote{element}} besitzt gespeichert. Dieses kann dann in der importierenden Seite genutzt werden. 
 			\begin{listing}
 			\begin{JavaScriptcode*}{}
 var link = document.querySelector('link[rel=import]');
@@ -317,19 +328,41 @@ shadowRoot.appendChild(headline);
 				\label{lst:renDom}
 			\end{listing}
 		
-	\chapter{Methodik dieser Arbeit}
-	\chapter{Adaptive Web Components}
-		\section{Identifikation passender Web Components}
-			\subsection{Identifikation Web Components}
-			
-			
-		\section{Adaptivität an die Präferenzen der Nutzer}
-		Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}).
-		\subsection{Identifikation passender Preference Terms}
-		Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet.
-		\subsubsection{Kontrast}
-		Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für den Standard Nutzer sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite{balzert2009webdesign}
-		\subsubsection{Leserichtung}
+\chapter{Methodik dieser Arbeit}
+\chapter{Adaptivität an den Nutzer}
+	\section{Präferenzen von Nutzern}
+	Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}).
+	\section{Identifikation passender Preference Terms}
+	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Hier stellt sich die Frage, auf welcher Basis die Vorlieben und Einschränkungen definiert und organisiert werden.
+		\subsection{WCAG Guidelines}
+		Die \ac{WCAG 2.0} versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an den Nutzer anpassen sollten.
+			\subsubsection{Richtlinie 1.1 Text Alternativen}
+			Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können. 
+			\subsubsection{Richtlinie 1.2 zeitbasierte Medien}
+			Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
+			\subsubsection{Richtlinie 1.3 Anpassungsfähigkeit}
+			Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein sein.
+			\subsubsection{Richtlinie 1.4 Unterscheidbar}
+			Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
+			\subsubsection{Richtlinie 2.1 Zugänglichkeit mit der Tastatur}
+			Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.
+			\subsubsection{Richtilinie 2.2 Genügend Zeit}
+			Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
+			\subsubsection{Richtline 2.3 Anfälle}
+			Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
+			\subsubsection{Richtline 2.4 Navigierbar}
+			Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
+			\subsubsection{Richtline 3.1 Lesbarkeit}
+			Der textbasierte Inhalt sollte lesbar und verständlich sein.
+			\subsubsection{Richtline 3.2 Vorhersehbar}
+			Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und agieren.
+			\cite[vgl.]{wcag}
+		\subsection{Folgerung für Merkmale der Anwendung}
+			\subsubsection{Kontrast}
+			Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite{balzert2009webdesign}
+			\subsubsection{Leserichtung}
+
+		\subsection{Speichern der Nutzer Präferenzen}
 		\subsection{Herunterladen der Nutzer Präferenzen}
 		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
 			\subsubsection{Was bedeutet REST}
@@ -376,14 +409,17 @@ function restCall (url){
 			\label{lst:jquAja}
 		\end{listing}
 		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an.  In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
-		\section{Adaptivität der bestehenden Web Components}
-			\subsection{Web Component Eins}
-				\subsubsection{Konzeption zur Adaptivität}
-				\subsubsection{Umsetzung Programmierung}
-			\subsection{Web Component Zwei}
-			\subsection{Web Component Drei}
-	\chapter{Vergleich}
-		\section{Vergleich mit Polymer}
+\chapter{Adaptivität von bestehenden Web Components}
+	\section{Identifikation von Web Components}
+		\subsection{Die Components}
+	\section{Anpassung dieser Web Components}
+		\subsection{Web Component Eins}
+			\subsubsection{Konzeption zur Adaptivität}
+			\subsubsection{Umsetzung Programmierung}
+		\subsection{Web Component Zwei}
+		\subsection{Web Component Drei}
+\chapter{Vergleich}
+	\section{Vergleich mit Polymer}
 
 	\printbibliography
 

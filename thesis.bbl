@@ -52,6 +52,62 @@
       \field{title}{{Webdesign {\&} Web-Usability: Basiswissen für Web-Entwickler}}
       \field{year}{2009}
     \endentry
+    \entry{wcag}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=4c0e912f86c8be0e0e616d8d7fd40cae}{%
+           family={Caldwell},
+           familyi={C\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f46793724998f7dfd575a40c24d73f93}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=06e588bf427def9a215a6b6f59957319}{%
+           family={Reid},
+           familyi={R\bibinitperiod},
+           given={Loretta\bibnamedelima Guarino},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=82937d5d289a2e92a58c81cd379a32c1}{%
+           family={Vanderheiden},
+           familyi={V\bibinitperiod},
+           given={Gregg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=52e72d4345e394c303037e24f715b86e}{%
+           family={Chisholm},
+           familyi={C\bibinitperiod},
+           given={Wendy},
+           giveni={W\bibinitperiod}}}%
+        {{hash=852bed0bcad69cdac31f3f74e68963a7}{%
+           family={Slatin},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6d97832ec6782d4486258941a32894da}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Jason\bibnamedelimb (University\bibnamedelimb of\bibnamedelima Melbourne)},
+           giveni={J\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cef7b540168169c2e51b21dde83399d0}
+      \strng{fullhash}{df588e9d941a720cb01f1b4f33464940}
+      \strng{authornamehash}{cef7b540168169c2e51b21dde83399d0}
+      \strng{authorfullhash}{df588e9d941a720cb01f1b4f33464940}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Web Content Accessibility Guidelines (WCAG) 2.0}}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.w3.org/TR/WCAG20/
+      \endverb
+    \endentry
     \entry{loeser2013web}{book}{}
       \name{author}{1}{}{%
         {{hash=9524e972e2a644de41e31bc42256cacf}{%
