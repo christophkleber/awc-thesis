@@ -22,43 +22,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Web Components}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Was sind Web Components}{13}
+\contentsline {section}{\numberline {3.1}Geschichte der Web Components}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Geschichte von Web Components !Auch Entwicklung zu den Web Components!)}{13}
+\contentsline {subsection}{\numberline {3.1.1}Custom Elements !v0 und v1!}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Custom Elements !v0 und v1!}{14}
+\contentsline {subsection}{\numberline {3.1.2}HTML Imports}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}HTML Imports}{14}
+\contentsline {subsection}{\numberline {3.1.3}Decorators}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Decorators}{14}
+\contentsline {subsection}{\numberline {3.1.4}Templates}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Templates}{15}
+\contentsline {subsection}{\numberline {3.1.5}Shadow DOM}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Shadow DOM}{15}
+\contentsline {section}{\numberline {3.2}Vergleich Webentwicklung mit Web Components und ohne}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Vergleich Webentwicklung mit Web Components und ohne}{16}
+\contentsline {subsection}{\numberline {3.2.1}Vorteil: Wenn Browserunterst\IeC {\"u}tzung gegeben: native, kein Framework}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Vorteil: Wenn Browserunterst\IeC {\"u}tzung gegeben: native, kein Framework}{16}
+\contentsline {subsection}{\numberline {3.2.2}Kapselung}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Kapselung}{17}
+\contentsline {subsection}{\numberline {3.2.3}Wiederverwendung}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Wiederverwendung}{17}
+\contentsline {subsection}{\numberline {3.2.4}Wartbarkeit}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Wartbarkeit}{18}
+\contentsline {subsection}{\numberline {3.2.5}Browserunterst\IeC {\"u}tzung}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.5}Nachteil: Browserunterst\IeC {\"u}tzung}{18}
+\contentsline {section}{\numberline {3.3}Technik der Web Components}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Technik der Web Components}{18}
+\contentsline {subsection}{\numberline {3.3.1}Custom Elements}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Custom Elements}{18}
+\contentsline {subsection}{\numberline {3.3.2}HTML Imports}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}HTML Imports}{20}
+\contentsline {subsection}{\numberline {3.3.3}Templates}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Templates}{20}
+\contentsline {subsection}{\numberline {3.3.4}Shadow DOM}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Shadow DOM}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4.1}Slots}{22}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Slots}{23}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Methodik dieser Arbeit}{25}
 \defcounter {refsection}{0}\relax 
@@ -80,15 +78,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.5}Richtlinie 2.1 Zug\IeC {\"a}nglichkeit mit der Tastatur}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.6}Richtilinie 2.2 Gen\IeC {\"u}gend Zeit}{27}
+\contentsline {subsubsection}{\numberline {5.2.1.6}Richtlinie 2.2 Gen\IeC {\"u}gend Zeit}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.7}Richtline 2.3 Anf\IeC {\"a}lle}{27}
+\contentsline {subsubsection}{\numberline {5.2.1.7}Richtlinie 2.3 Anf\IeC {\"a}lle}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.8}Richtline 2.4 Navigierbar}{28}
+\contentsline {subsubsection}{\numberline {5.2.1.8}Richtlinie 2.4 Navigierbar}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.9}Richtline 3.1 Lesbarkeit}{28}
+\contentsline {subsubsection}{\numberline {5.2.1.9}Richtlinie 3.1 Lesbarkeit}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.10}Richtline 3.2 Vorhersehbar}{28}
+\contentsline {subsubsection}{\numberline {5.2.1.10}Richtlini e 3.2 Vorhersehbar}{28}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Folgerung f\IeC {\"u}r Merkmale der Anwendung}{28}
 \defcounter {refsection}{0}\relax 

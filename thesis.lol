@@ -15,7 +15,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {listing}{\numberline {3.4}{\ignorespaces JavaScript Code f\IeC {\"u}r das Hinzuf\IeC {\"u}gen eines Templates in das DOM\relax }}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {listing}{\numberline {3.5}{\ignorespaces JavaScript Code f\IeC {\"u}r das Erstellen eines Shadow DOM\relax }}{23}
+\contentsline {listing}{\numberline {3.5}{\ignorespaces JavaScript Code f\IeC {\"u}r das Erstellen eines Shadow DOM\relax }}{22}
 \defcounter {refsection}{0}\relax 
 \contentsline {listing}{\numberline {3.6}{\ignorespaces Nutzung von Slot Platzhalter-Elementen im Shadow DOM\relax }}{23}
 \defcounter {refsection}{0}\relax 

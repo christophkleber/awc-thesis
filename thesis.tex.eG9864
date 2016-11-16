@@ -77,8 +77,7 @@
 
 \usepackage[
 	backend=biber,
-	style=numeric,
-	sorting=none
+	style=numeric
 	]{biblatex}
 \addbibresource{library.bib}
 
@@ -245,7 +244,7 @@ var elem = importedDocument.querySelector('div.element');
 		\end{listing} 
 		\subsection{Templates}
 		\label{subsec:Templates}
-		Das \ac{HTML5} Feature \emph{Template} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden.\cite[vgl. S.177]{Cameron2015} Dies bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt.\cite[vgl.]{Potschien2013} 
+		Das \ac{HTML5} Feature \emph{Template} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden.\smfootcite[ vgl.][ S. 177]{Cameron2015} Dies bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt.\smfootcite[ vgl.][]{Potschien2013} 
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
 var inhalt = document.querySelector("template").content;
@@ -254,9 +253,9 @@ document.querySelector("body").appendChild(inhalt);
 			\caption{JavaScript Code für das Hinzufügen eines Templates in das DOM}
 			\label{lst:htmTem}
 		\end{listing}
-		In \ref{lst:htmTem} sieht man den \emph{JavaScript} Programmcode um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur JavaScript Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem eigentlichen Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
+		In \ref{lst:htmTem} sieht man den \emph{JavaScript} Code um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur \emph{JavaScript} Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
 		\subsection{Shadow DOM}
-		\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\cite[Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, dessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}. Dies ist in Abbildung \ref{img:shaDom} dargestellt.\cite[vgl. S.22]{patel2015learning} 
+		\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\smfootcite[ ][Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, wessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}. Dies ist in Abbildung \ref{img:shaDom} dargestellt.\smfootcite[ vgl.][S. 22]{patel2015learning} 
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{shaDom.png}
@@ -264,7 +263,7 @@ document.querySelector("body").appendChild(inhalt);
 			\label{img:shaDom}
 		\end{figure}
 		Die Folge dieser Kapselung ist, dass alles was dem \emph{Shadow tree} hinzugefügt wird, nur lokal Einfluss auf diesen hat. Die Gestaltung von Webelementen im \emph{Shadow root} wird dadurch vereinfacht.
-		\ac{CSS} Selektoren können dadurch nicht von außerhalb des \emph{Shadow roots} auf diesen zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}. Genauso verhält es sich mit dem Zugriff auf die \ac{DOM} Elemente des \emph{Shadow root}. Sie können nicht von außerhalb angesprochen werden, beispielsweise durch die Funktion \emph{document.querySelector()}, sondern können nur von Funktionen innerhalb des \emph{Shadow root} angesprochen werden.\cite[vgl.]{Bidelman2016}
+		\ac{CSS} Selektoren können nicht von außerhalb des \emph{Shadow roots} auf diesen zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}. Genauso verhält es sich mit dem Zugriff auf die \ac{DOM} Elemente des \emph{Shadow root}. Sie können nicht von außerhalb angesprochen werden, beispielsweise durch die Funktion \emph{document.querySelector()}, sondern können nur von Funktionen innerhalb des \emph{Shadow root} angesprochen werden.\smfootcite{Bidelman2016}
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
 var header = document.createElement('header');
@@ -295,7 +294,7 @@ shadowRoot.appendChild(headline);
 				\caption{Nutzung von Slot Platzhalter-Elementen im Shadow DOM}
 				\label{lst:sloNutShaDom}
 			\end{listing}
-			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, also die Ersatzfunktion, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Die Ersatzfunktion kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\cite[vgl.]{Bidelman2016} In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt. Wie hier in Zeile fünf und sechs zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim übersetzen des Programmcodes der Applikation werden alle Elemente, welche die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} übersetzt. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \emph{DOM} geschrieben.
+			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Das \emph{Fallback} kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\smfootcite{Bidelman2016} In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt. Wie hier in Zeile fünf und sechs zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim rendern der Applikation werden alle Elemente, welche die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} gerendert. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \emph{DOM} geschrieben.
 			\begin{listing}
 				\begin{HTMLcode*}{}
 <span slot="title">Dr.</span>
@@ -305,7 +304,7 @@ shadowRoot.appendChild(headline);
 				\caption{Befüllen der Slot Elemente im DOM}
 				\label{lst:sloNutLigDom}
 			\end{listing}
-			In Listing \ref{lst:renDom} ist der von den zwei vorhergehenden Listings kombinierte und gerenderte Inhalt zu sehen. Dies ist der \ac{DOM}, den man beispielsweise in einer Webseite sehen würde. Hier ist gut zu erkennen, wie die \emph{Slot} Elemente des \emph{Shadow \ac{DOM}} mit den später erstellten Elementen befüllt werden. Alle Elemente innerhalb des \emph{Web Component} mit dem Attribut \enquote{slot} werden in diesen übersetzt.
+			In Listing \ref{lst:renDom} ist der von den zwei vorhergehenden Listings kombinierte und gerenderte Inhalt zu sehen. Dies ist der \ac{DOM}, den man beispielsweise in einer Webseite sehen würde. Hier ist gut zu erkennen, wie die \emph{Slot} Elemente des \emph{Shadow \ac{DOM}} mit den später erstellten Elementen befüllt werden. Alle Elemente innerhalb des \emph{Web Component} mit dem Attribut \enquote{slot} werden in diesen gerendert.
 			\begin{listing}
 				\begin{HTMLcode*}{}
 <ul id="contacts">
@@ -327,11 +326,11 @@ shadowRoot.appendChild(headline);
 \chapter{Methodik dieser Arbeit}
 \chapter{Adaptivität an den Nutzer}
 	\section{Präferenzen von Nutzern}
-	Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Dazu mehr in Kapitel \ref{ref:konVonAda}. Vorher muss definiert werden, wie die Applikation insgesamt reagiert, also inwiefern sie ihren Zustand an den jeweiligen Nutzer anpasst. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
+	Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Nachdem das erfolgt ist muss definiert werden, wie diese dynamischen Elemente reagieren, also inwiefern sie ihren Zustand an den Nutzer anpassen. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Sets}).
 	\section{Identifikation passender Preference Terms}
 	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Hier stellt sich die Frage, auf welcher Basis die Vorlieben und Einschränkungen definiert und organisiert werden.
 		\subsection{WCAG Guidelines}
-		Die \ac{WCAG 2.0} versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten.
+		Die \ac{WCAG 2.0} versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an den Nutzer anpassen sollten.
 			\subsubsection{Richtlinie 1.1 Text Alternativen}
 			Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können. 
 			\subsubsection{Richtlinie 1.2 zeitbasierte Medien}
@@ -342,15 +341,15 @@ shadowRoot.appendChild(headline);
 			Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
 			\subsubsection{Richtlinie 2.1 Zugänglichkeit mit der Tastatur}
 			Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.
-			\subsubsection{Richtlinie 2.2 Genügend Zeit}
+			\subsubsection{Richtilinie 2.2 Genügend Zeit}
 			Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
-			\subsubsection{Richtlinie 2.3 Anfälle}
+			\subsubsection{Richtline 2.3 Anfälle}
 			Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
-			\subsubsection{Richtlinie 2.4 Navigierbar}
+			\subsubsection{Richtline 2.4 Navigierbar}
 			Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
-			\subsubsection{Richtlinie 3.1 Lesbarkeit}
+			\subsubsection{Richtline 3.1 Lesbarkeit}
 			Der textbasierte Inhalt sollte lesbar und verständlich sein.
-			\subsubsection{Richtlini	e 3.2 Vorhersehbar}
+			\subsubsection{Richtline 3.2 Vorhersehbar}
 			Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und agieren.
 			\cite[vgl.]{wcag}
 		\subsection{Folgerung für Merkmale der Anwendung}
@@ -378,10 +377,10 @@ shadowRoot.appendChild(headline);
 				Es werden keine Zustände auf dem \emph{Server} gespeichert. Zustandsinformationen werden vom \emph{Client} gehandhabt und bei Bedarf an den Server gesendet.
 				
 				\item [Cashing möglich]
-				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	\cite[vgl. S.77]{chauhan2014asp} 
+				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	\smfootcite[ vgl.][S. 77]{chauhan2014asp} 
 			\end{description}
 		\subsubsection{Der Client}
-		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf der \emph{jQuery.ajax()} Funktion. Dies ist eine Funktion des \emph{jQuery Frameworks} , welche eine asynchrone Anfrage an einen Ort stellt, basierend auf dem \ac{HTTP} Protokoll.\cite[vgl.]{jquAja}
+		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf der \emph{jQuery.ajax()} Funktion. Dies ist eine Funktion des \emph{jQuery Frameworks} , welche eine asynchrone Anfrage an einen Ort stellt, basierend auf dem \ac{HTTP} Protokoll.\smfootcite[ vgl.][]{jquAja}
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
 function restCall (url){
@@ -409,14 +408,13 @@ function restCall (url){
 			\caption{Programmcode zum Abfragen der Nutzerpräferenzen}
 			\label{lst:jquAja}
 		\end{listing}
-		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
+		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an.  In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
 \chapter{Adaptivität von bestehenden Web Components}
 	\section{Identifikation von Web Components}
 		\subsection{Die Components}
 	\section{Anpassung dieser Web Components}
 		\subsection{Web Component Eins}
 			\subsubsection{Konzeption zur Adaptivität}
-			\label{ref:konVonAda}
 			\subsubsection{Umsetzung Programmierung}
 		\subsection{Web Component Zwei}
 		\subsection{Web Component Drei}

@@ -131,7 +131,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortscheme</bcf:key>
-      <bcf:value>nty</bcf:value>
+      <bcf:value>none</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
@@ -709,30 +709,7 @@
   <bcf:sorting>
     <bcf:presort>mm</bcf:presort>
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   <!-- DATA MODEL -->
@@ -2142,37 +2119,61 @@
     <bcf:datasource type="file" datatype="bibtex">library.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">loeser2013web</bcf:citekey>
-    <bcf:citekey order="2">wcag</bcf:citekey>
-    <bcf:citekey order="3">balzert2009webdesign</bcf:citekey>
+    <bcf:citekey order="2">woeller2014tiefenpsychologisch</bcf:citekey>
+    <bcf:citekey order="3">loeser2013web</bcf:citekey>
+    <bcf:citekey order="4">Kobsa1993</bcf:citekey>
+    <bcf:citekey order="5">Rixecker2016</bcf:citekey>
+    <bcf:citekey order="6">hoffmann2014venus</bcf:citekey>
+    <bcf:citekey order="7">hoffmann2014venus</bcf:citekey>
+    <bcf:citekey order="8">patel2015learning</bcf:citekey>
+    <bcf:citekey order="9">patel2015learning</bcf:citekey>
+    <bcf:citekey order="10">Cooney2012</bcf:citekey>
+    <bcf:citekey order="11">C2015</bcf:citekey>
+    <bcf:citekey order="12">cusEleCanIUse</bcf:citekey>
+    <bcf:citekey order="13">Bidelman2016cusElev1</bcf:citekey>
+    <bcf:citekey order="14">firefox</bcf:citekey>
+    <bcf:citekey order="15">C2016</bcf:citekey>
+    <bcf:citekey order="16">Morrita2015</bcf:citekey>
+    <bcf:citekey order="17">htmlTemplCaniuse</bcf:citekey>
+    <bcf:citekey order="18">Cooney2012</bcf:citekey>
+    <bcf:citekey order="19">WebComCur2016</bcf:citekey>
+    <bcf:citekey order="20">W2015</bcf:citekey>
+    <bcf:citekey order="21">htmlTemFire</bcf:citekey>
+    <bcf:citekey order="22">build10547</bcf:citekey>
+    <bcf:citekey order="23">htmlTemplCaniuse</bcf:citekey>
+    <bcf:citekey order="24">htmlTemplCaniuse</bcf:citekey>
+    <bcf:citekey order="25">NiwaShaDom</bcf:citekey>
+    <bcf:citekey order="26">Hayato2016</bcf:citekey>
+    <bcf:citekey order="27">Ito2016</bcf:citekey>
+    <bcf:citekey order="28">Hayato2016a</bcf:citekey>
+    <bcf:citekey order="29">stuart2013roadmap</bcf:citekey>
+    <bcf:citekey order="30">patel2015learning</bcf:citekey>
+    <bcf:citekey order="31">Bidelman2016</bcf:citekey>
+    <bcf:citekey order="32">patel2015learning</bcf:citekey>
+    <bcf:citekey order="33">satrom2014building</bcf:citekey>
+    <bcf:citekey order="34">webComJs</bcf:citekey>
+    <bcf:citekey order="35">Denicola2016</bcf:citekey>
+    <bcf:citekey order="36">Behrendt2016</bcf:citekey>
+    <bcf:citekey order="37">Argelius2016</bcf:citekey>
+    <bcf:citekey order="38">Argelius2016</bcf:citekey>
+    <bcf:citekey order="39">Glazkov2016</bcf:citekey>
+    <bcf:citekey order="40">Cameron2015</bcf:citekey>
+    <bcf:citekey order="41">Potschien2013</bcf:citekey>
+    <bcf:citekey order="42">gasston2014moderne</bcf:citekey>
+    <bcf:citekey order="43">patel2015learning</bcf:citekey>
+    <bcf:citekey order="44">patel2015learning</bcf:citekey>
+    <bcf:citekey order="45">patel2015learning</bcf:citekey>
+    <bcf:citekey order="46">Bidelman2016</bcf:citekey>
+    <bcf:citekey order="47">Bidelman2016</bcf:citekey>
+    <bcf:citekey order="48">wcag</bcf:citekey>
+    <bcf:citekey order="49">balzert2009webdesign</bcf:citekey>
+    <bcf:citekey order="50">chauhan2014asp</bcf:citekey>
+    <bcf:citekey order="51">jquAja</bcf:citekey>
   </bcf:section>
-  <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
+  <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   </bcf:sortlist>
