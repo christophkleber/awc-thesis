@@ -39,8 +39,8 @@
       \strng{fullhash}{8576c81618392f1d55bfb1082cbd1e25}
       \strng{authornamehash}{8576c81618392f1d55bfb1082cbd1e25}
       \strng{authorfullhash}{8576c81618392f1d55bfb1082cbd1e25}
-      \field{sortinit}{2}
-      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783794530694}
@@ -62,8 +62,8 @@
       \strng{fullhash}{9524e972e2a644de41e31bc42256cacf}
       \strng{authornamehash}{9524e972e2a644de41e31bc42256cacf}
       \strng{authorfullhash}{9524e972e2a644de41e31bc42256cacf}
-      \field{sortinit}{3}
-      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783642594908}
@@ -108,8 +108,8 @@
       \strng{authorfullhash}{2bfb2fe6a8ac0c4a492cc26bf0ed3c50}
       \strng{editornamehash}{9bf5f6a2b888b76a8cb4f8f131ce5ed5}
       \strng{editorfullhash}{9bf5f6a2b888b76a8cb4f8f131ce5ed5}
-      \field{sortinit}{4}
-      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Grundlagen und Anwendungen der K{\{}ü{\}}nstlichen Intelligenz: 17. Fachtagung f{\{}ü{\}}r K{\{}ü{\}}nstliche Intelligenz Humboldt-Universit{\{}ä{\}}t zu Berlin 13.--16. September 1993}
@@ -137,8 +137,8 @@
       \strng{fullhash}{97c696d8a652e9f5f4d4874d920b3c1f}
       \strng{authornamehash}{97c696d8a652e9f5f4d4874d920b3c1f}
       \strng{authorfullhash}{97c696d8a652e9f5f4d4874d920b3c1f}
-      \field{sortinit}{5}
-      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{sortinit}{7}
+      \field{sortinithash}{63c57bf2a02e588d7b993c05d52e84f6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{So entsteht unser Newsfeed: Der Facebook-Algorithmus im Detail}}
@@ -171,8 +171,8 @@
       \strng{fullhash}{047ab1573946c72cb4844e0a572bec79}
       \strng{authornamehash}{047ab1573946c72cb4844e0a572bec79}
       \strng{authorfullhash}{047ab1573946c72cb4844e0a572bec79}
-      \field{sortinit}{6}
-      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{sortinit}{8}
+      \field{sortinithash}{ff392057b609ad7b4de0b8e2cc30b687}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783862195503}
@@ -195,8 +195,8 @@
       \strng{fullhash}{b79b0c40c8709b2ce4a53c2dff02fb53}
       \strng{authornamehash}{b79b0c40c8709b2ce4a53c2dff02fb53}
       \strng{authorfullhash}{b79b0c40c8709b2ce4a53c2dff02fb53}
-      \field{sortinit}{8}
-      \field{sortinithash}{ff392057b609ad7b4de0b8e2cc30b687}
+      \field{sortinit}{1}
+      \field{sortinithash}{53e85f4cf497d2a4e1d51786552bcbf1}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781784395568}
@@ -415,8 +415,8 @@
       \strng{fullhash}{ab5b0e55dc6cfd9966994691f14709db}
       \strng{authornamehash}{ab5b0e55dc6cfd9966994691f14709db}
       \strng{authorfullhash}{ab5b0e55dc6cfd9966994691f14709db}
-      \field{sortinit}{1}
-      \field{sortinithash}{53e85f4cf497d2a4e1d51786552bcbf1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{WEB COMPONENTS CURRENT STATUS}}
@@ -594,8 +594,8 @@
       \strng{fullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
       \strng{authornamehash}{bcb6fbb008a303e551f5b6e7a541bfba}
       \strng{authorfullhash}{bcb6fbb008a303e551f5b6e7a541bfba}
-      \field{sortinit}{2}
-      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Shadow DOM v1}}
@@ -623,8 +623,8 @@
       \strng{fullhash}{ebca4a3511cd985e40d97c1568702931}
       \strng{authornamehash}{ebca4a3511cd985e40d97c1568702931}
       \strng{authorfullhash}{ebca4a3511cd985e40d97c1568702931}
-      \field{sortinit}{2}
-      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781466985209}
@@ -803,8 +803,8 @@
       \strng{fullhash}{fd798a6b26fd0c3ca9f67110310beb75}
       \strng{authornamehash}{fd798a6b26fd0c3ca9f67110310beb75}
       \strng{authorfullhash}{fd798a6b26fd0c3ca9f67110310beb75}
-      \field{sortinit}{3}
-      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
+      \field{sortinit}{4}
+      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{HTML Imports}}
@@ -927,8 +927,8 @@
       \strng{fullhash}{df588e9d941a720cb01f1b4f33464940}
       \strng{authornamehash}{cef7b540168169c2e51b21dde83399d0}
       \strng{authorfullhash}{df588e9d941a720cb01f1b4f33464940}
-      \field{sortinit}{4}
-      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Web Content Accessibility Guidelines (WCAG) 2.0}}
@@ -966,13 +966,134 @@
       \strng{fullhash}{d91c41ac4d72be2281efaf50ebcb981e}
       \strng{authornamehash}{d91c41ac4d72be2281efaf50ebcb981e}
       \strng{authorfullhash}{d91c41ac4d72be2281efaf50ebcb981e}
-      \field{sortinit}{4}
-      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783868340112}
       \field{title}{{Webdesign {\&} Web-Usability: Basiswissen für Web-Entwickler}}
       \field{year}{2009}
+    \endentry
+    \entry{barrierefreiheit}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e6beb2cf802c9cfc64e2e989011c1702}{%
+           family={Bremus},
+           familyi={B\bibinitperiod},
+           given={Timm},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6beb2cf802c9cfc64e2e989011c1702}
+      \strng{fullhash}{e6beb2cf802c9cfc64e2e989011c1702}
+      \strng{authornamehash}{e6beb2cf802c9cfc64e2e989011c1702}
+      \strng{authorfullhash}{e6beb2cf802c9cfc64e2e989011c1702}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-86802-095-3}
+      \field{title}{{Barrierefreiheit}}
+      \field{year}{2013}
+    \endentry
+    \entry{emrich2013interkulturelles}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0a6bc4ce68ba05eea5cb6c69aecf6451}{%
+           family={Emrich},
+           familyi={E\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{0a6bc4ce68ba05eea5cb6c69aecf6451}
+      \strng{fullhash}{0a6bc4ce68ba05eea5cb6c69aecf6451}
+      \strng{authornamehash}{0a6bc4ce68ba05eea5cb6c69aecf6451}
+      \strng{authorfullhash}{0a6bc4ce68ba05eea5cb6c69aecf6451}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783658030339}
+      \field{title}{{Interkulturelles Marketing-Management: Erfolgsstrategien -- Konzepte -- Analysen}}
+      \field{year}{2013}
+    \endentry
+    \entry{meidl2013global}{book}{}
+      \name{author}{1}{}{%
+        {{hash=413e18035ad07d4d05218cbdecb9c79f}{%
+           family={Meidl},
+           familyi={M\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{413e18035ad07d4d05218cbdecb9c79f}
+      \strng{fullhash}{413e18035ad07d4d05218cbdecb9c79f}
+      \strng{authornamehash}{413e18035ad07d4d05218cbdecb9c79f}
+      \strng{authorfullhash}{413e18035ad07d4d05218cbdecb9c79f}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783658028671}
+      \field{title}{{Global Website: Webdesign im internationalen Umfeld}}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://books.google.de/books?id=stEwwZ71rWoC
+      \endverb
+    \endentry
+    \entry{elShaab}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9530de0d45ac9acefa391671545e83b0}{%
+           family={V},
+           familyi={V\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{fullhash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authornamehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authorfullhash}{9530de0d45ac9acefa391671545e83b0}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{El Shaab}}
+      \field{urlday}{17}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.elshaab.org/
+      \endverb
+    \endentry
+    \entry{zeitOnline}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9530de0d45ac9acefa391671545e83b0}{%
+           family={V},
+           familyi={V\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{fullhash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authornamehash}{9530de0d45ac9acefa391671545e83b0}
+      \strng{authorfullhash}{9530de0d45ac9acefa391671545e83b0}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Zeit Online}}
+      \field{urlday}{17}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.zeit.de/index
+      \endverb
     \endentry
     \entry{chauhan2014asp}{book}{}
       \name{author}{1}{}{%
@@ -1009,8 +1130,8 @@
       \strng{fullhash}{9530de0d45ac9acefa391671545e83b0}
       \strng{authornamehash}{9530de0d45ac9acefa391671545e83b0}
       \strng{authorfullhash}{9530de0d45ac9acefa391671545e83b0}
-      \field{sortinit}{5}
-      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{jQuery.ajax()}}

@@ -359,28 +359,13 @@ shadowRoot.appendChild(headline);
 			\cite[vgl.]{wcag}
 		\subsection{Folgerung für Merkmale der Anwendung}
 			\subsubsection{Kontrast}
-			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite[vgl S.234]{balzert2009webdesign}
-			\subsubsection{Schriftart}
-			Die Wahl einer serifen oder grotesken, also serifenlosen Schriftart hat, wenn davon ausgegangen wird eine als allgemein lesbar bekannte Schriftart zu verwenden, keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes.\cite[vgl. S.157-161]{barrierefreiheit} Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
-			\subsubsection{Schriftgröße}
-			Die Schriftgröße kann jedoch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert.\cite[vgl. S.152]{barrierefreiheit} Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
+			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite{balzert2009webdesign}
 			\subsubsection{Leserichtung}
 			\label{ref:lesRic}
-			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten, geschrieben  \cite[vgl S.148]{emrich2013interkulturelles}
+			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten, geschrieben  \cite[S.148]{emrich2013interkulturelles}
 			\subsubsection{Anordnung der Elemente}
-			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf.\cite[vgl. S.47 f.]{meidl2013global}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{leserichtung.png}
-				\caption{Einfluss der Leserichtung auf die Anordnung der Elemente\cite{elShaab}\cite{zeitOnline}}
-				\label{img:lesRic}
-			\end{figure}
-			Ein Beispiel dazu bilden die deutsche und ägyptische Nachrichtenseite \enquote{Zeit Online} und \enquote{Al Shaab}, dargestellt in Abbildung  \ref{img:lesRic}. Hier ist im oberen Bereich die Kopfzeile der arabischsprachigen und darunter die Kopfzeile der deutschsprachigen Internetseite abgebildet. Hier sieht man ganz klar, wie im arabischsprachigen Bereich die Elemente eher nach rechts ausgerichtet sind und wichtige Elemente, wie beispielsweise der Name der Zeitung ganz rechts oben angeordnet sind. Im deutschsprachigem Internetauftritt sind die Elemente nach links ausgerichtet und der Name der Webseite ist weit oben links.
-			\subsubsection{Geschwindigkeit}
-			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manchen Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen.
-		
-			
-		\subsection{Speichern der Nutzer Präferenzen}
+			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Leserichtung nicht nur einen Einfluss auf die ZITAT GLOBAL WEBSEITE
+%		\subsection{Speicwhern der Nutzer Präferenzen}
 		\subsection{Herunterladen der Nutzer Präferenzen}
 		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
 			\subsubsection{Was bedeutet REST}

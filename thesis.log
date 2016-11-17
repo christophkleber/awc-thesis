@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  16 NOV 2016 19:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  17 NOV 2016 14:21
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1367,26 +1367,32 @@ dden
 although it is yet undefined on input line 334.
 [26
 
-] [27] [28]
+] [27] [28] <leserichtung.png, id=100, 1002.74625pt x 443.6575pt>
+File: leserichtung.png Graphic file (type png)
+
+<use leserichtung.png>
+Package pdftex.def Info: leserichtung.png used on input line 374.
+(pdftex.def)             Requested size: 448.14091pt x 198.27655pt.
+ [29] [30 <./leserichtung.png>]
 Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
 
-although it is yet undefined on input line 365.
+although it is yet undefined on input line 387.
 Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 
-although it is yet undefined on input line 371.
+although it is yet undefined on input line 393.
 
-Overfull \hbox (0.99507pt too wide) in paragraph at lines 371--373
+Overfull \hbox (0.99507pt too wide) in paragraph at lines 393--395
 []\T1/phv/m/n/12 Das [][] Pro-to-koll ba-siert auf dem [][]
  []
 
 
-Overfull \hbox (5.01959pt too wide) in paragraph at lines 371--373
+Overfull \hbox (5.01959pt too wide) in paragraph at lines 393--395
 \T1/phv/m/n/12 Pro-to-koll. Es wer-den die von der [][]Hy-per-text Trans-fer Pr
 o-to-col ([])[]-Technologie
  []
 
 
-Overfull \hbox (3.6717pt too wide) in paragraph at lines 375--376
+Overfull \hbox (3.6717pt too wide) in paragraph at lines 397--398
 []\T1/phv/m/n/12 Die Res-sour-cen kön-nen in ver-schie-de-nen For-men re-prä-se
 n-tiert wer-
  []
@@ -1398,68 +1404,79 @@ n-tiert wer-
 6.pygtex)
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
-although it is yet undefined on input line 412.
+although it is yet undefined on input line 434.
 
-Overfull \hbox (185.44966pt too wide) in paragraph at lines 384--413
+Overfull \hbox (185.44966pt too wide) in paragraph at lines 406--435
 \T1/phv/m/n/12 wünsch-ten Nut-zer an-zu-fra-gen. Ein Bei-spiel die-ses Spei-che
 r-orts könn-te   http://www.speicherort.de/praeferenzen/nutzer1
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29] [30]
+[31] [32] [33]
 chapter 6.
-[31
+[34
 
 ]
 chapter 7.
-[32
+[35
 
 ]
 chapter without number
 
-Overfull \hbox (8.48656pt too wide) in paragraph at lines 427--427
+Overfull \hbox (8.48656pt too wide) in paragraph at lines 449--449
 []\T1/phv/m/n/12 H Loe-ser. \T1/phv/m/sl/12 Web-Datenbanken: Ein-satz objekt-re
 lationaler Da-ten-ban-ken f{ü}r Web-
  []
 
 
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 427--427
+Overfull \hbox (15.4871pt too wide) in paragraph at lines 449--449
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4642138092470272$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
-[33
+[36
 
 ]
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 427--427
+Overfull \hbox (15.4871pt too wide) in paragraph at lines 449--449
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4696261944934400$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
 
-Overfull \hbox (1.52835pt too wide) in paragraph at lines 427--427
+Overfull \hbox (1.52835pt too wide) in paragraph at lines 449--449
 []\T1/phv/m/n/12 ACHTUNGmicrosoft. \T1/phv/m/sl/12 Win-dows 10 build 10547\T1/p
 hv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : 
 / / developer .
  []
 
-[34]
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 426.
+[37]
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 448.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 426.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 448.
 
-Overfull \hbox (10.6055pt too wide) in paragraph at lines 427--427
+Overfull \hbox (10.6055pt too wide) in paragraph at lines 449--449
 \T1/cmtt/m/n/12 http : / / www . gruenderszene . de / lexikon / begriffe / appl
 ication -[] programming -[]
  []
 
-[35] [36] (thesis.aux)
+[38]
+Overfull \hbox (3.79002pt too wide) in paragraph at lines 449--449
+\T1/phv/m/n/12 me-di-en Wies-ba-den, 2013. \T1/phv/m/sc/12 isbn\T1/phv/m/n/12 :
+ 9783658028671. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / 
+/ books . google .
+ []
+
+
+Overfull \hbox (9.16905pt too wide) in paragraph at lines 449--449
+[]\T1/phv/m/n/12 O. V. \T1/phv/m/sl/12 El Shaab\T1/phv/m/n/12 . 2016. \T1/phv/m
+/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 http : / / www . elshaab . org/$ \T
+1/phv/m/n/12 (be-sucht am 17.11.2016). 
+ []
+
+[39] (thesis.aux)
 runsystem(del thesis.pyg)...executed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1467,10 +1484,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16735 strings out of 493334
- 299279 string characters out of 3139239
- 871956 words of memory out of 3000000
- 19972 multiletter control sequences out of 15000+200000
+ 16754 strings out of 493334
+ 299834 string characters out of 3139239
+ 872764 words of memory out of 3000000
+ 19990 multiletter control sequences out of 15000+200000
  40726 words of font info for 52 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  49i,10n,78p,8819b,3145s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1483,9 +1500,9 @@ k\ljfour\jknappen\ec\dpi600\ecrm0600.pk><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (36 pages, 194682 bytes).
+Output written on thesis.pdf (39 pages, 315919 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
+ 284 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

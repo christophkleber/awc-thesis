@@ -68,17 +68,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.1}WCAG Guidelines}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.1}Richtlinie 1.1 Text Alternativen}{27}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Richtlinie 1.1 Text-Alternativen}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.2}Richtlinie 1.2 zeitbasierte Medien}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.3}Richtlinie 1.3 Anpassungsf\IeC {\"a}higkeit}{27}
+\contentsline {subsubsection}{\numberline {5.2.1.3}Richtlinie 1.3 Anpassbar}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.4}Richtlinie 1.4 Unterscheidbar}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.5}Richtlinie 2.1 Zug\IeC {\"a}nglichkeit mit der Tastatur}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.6}Richtlinie 2.2 Gen\IeC {\"u}gend Zeit}{27}
+\contentsline {subsubsection}{\numberline {5.2.1.6}Richtlinie 2.2 Ausreichend Zeit}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.7}Richtlinie 2.3 Anf\IeC {\"a}lle}{27}
 \defcounter {refsection}{0}\relax 
@@ -86,42 +86,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1.9}Richtlinie 3.1 Lesbarkeit}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.10}Richtlini e 3.2 Vorhersehbar}{28}
+\contentsline {subsubsection}{\numberline {5.2.1.10}Richtlinie 3.2 Vorhersehbar}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.1.11}Richtlinie 3.3 Hilfestellung bei der Eingabe}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.1.12}Richtlinie 4.1 Kompatibel}{28}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Folgerung f\IeC {\"u}r Merkmale der Anwendung}{28}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.2.1}Kontrast}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2.2}Leserichtung}{28}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Schriftart}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Speichern der Nutzer Pr\IeC {\"a}ferenzen}{28}
+\contentsline {subsubsection}{\numberline {5.2.2.3}Schriftgr\IeC {\"o}\IeC {\ss }e}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.4}Herunterladen der Nutzer Pr\IeC {\"a}ferenzen}{28}
+\contentsline {subsubsection}{\numberline {5.2.2.4}Leserichtung}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4.1}Was bedeutet REST}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.5}Anordnung der Elemente}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4.2}Der Client}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.6}Geschwindigkeit}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Adaptivit\IeC {\"a}t von bestehenden Web Components}{31}
+\contentsline {subsection}{\numberline {5.2.3}Speichern der Nutzer Pr\IeC {\"a}ferenzen}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Identifikation von Web Components}{31}
+\contentsline {subsection}{\numberline {5.2.4}Herunterladen der Nutzer Pr\IeC {\"a}ferenzen}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Die Components}{31}
+\contentsline {subsubsection}{\numberline {5.2.4.1}Was bedeutet REST}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Anpassung dieser Web Components}{31}
+\contentsline {subsubsection}{\numberline {5.2.4.2}Der Client}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Web Component Eins}{31}
+\contentsline {chapter}{\numberline {6}Adaptivit\IeC {\"a}t von bestehenden Web Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{31}
+\contentsline {section}{\numberline {6.1}Identifikation von Web Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1.2}Umsetzung Programmierung}{31}
+\contentsline {subsection}{\numberline {6.1.1}Die Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{31}
+\contentsline {section}{\numberline {6.2}Anpassung dieser Web Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{31}
+\contentsline {subsection}{\numberline {6.2.1}Web Component Eins}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Vergleich}{32}
+\contentsline {subsubsection}{\numberline {6.2.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Vergleich mit Polymer}{32}
+\contentsline {subsubsection}{\numberline {6.2.1.2}Umsetzung Programmierung}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{33}
+\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Vergleich}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Vergleich mit Polymer}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{36}
