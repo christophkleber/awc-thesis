@@ -1110,8 +1110,8 @@
       \strng{fullhash}{a868bc05f8924bf415af296eee9e188a}
       \strng{authornamehash}{a868bc05f8924bf415af296eee9e188a}
       \strng{authorfullhash}{a868bc05f8924bf415af296eee9e188a}
-      \field{sortinit}{5}
-      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{ASP.NET MVC Interview Questions and Answers}
@@ -1141,6 +1141,42 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb http://api.jquery.com/jquery.ajax/
+      \endverb
+    \endentry
+    \entry{cusEleIo}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{labeltitlesource}{title}
+      \field{title}{{Custom Elements}}
+      \field{urlday}{21}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://customelements.io/
+      \endverb
+    \endentry
+    \entry{gooMap}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{labeltitlesource}{title}
+      \field{title}{google-map}
+      \verb{url}
+      \verb https://elements.polymer-project.org/elements/google-map
+      \endverb
+      \warn{\item Entry 'gooMap' (library.bib): Invalid format '21.11.2016' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{gooMapOri}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{labeltitlesource}{title}
+      \field{title}{{Google Maps}}
+      \field{urlday}{21}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.google.de/maps/@48.7791843,9.1780412,13z
       \endverb
     \endentry
   \endsortlist

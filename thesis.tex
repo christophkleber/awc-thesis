@@ -360,13 +360,13 @@ shadowRoot.appendChild(headline);
 		\subsection{Folgerung für Merkmale der Anwendung}
 			\subsubsection{Kontrast}
 			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite[vgl S.234]{balzert2009webdesign}
-			\subsubsection{Schriftart}
+			\subsubsection{Schrift}
 			Die Wahl einer serifen oder grotesken, also serifenlosen Schriftart hat, wenn davon ausgegangen wird eine als allgemein lesbar bekannte Schriftart zu verwenden, keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes.\cite[vgl. S.157-161]{barrierefreiheit} Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
-			\subsubsection{Schriftgröße}
-			Die Schriftgröße kann jedoch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert.\cite[vgl. S.152]{barrierefreiheit} Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
+			Die Schriftgröße kann jedoch auch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert.\cite[vgl. S.152]{barrierefreiheit} Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
 			\subsubsection{Leserichtung}
 			\label{ref:lesRic}
 			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten, geschrieben  \cite[vgl S.148]{emrich2013interkulturelles}
+			
 			\subsubsection{Anordnung der Elemente}
 			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf.\cite[vgl. S.47 f.]{meidl2013global}
 			\begin{figure}
@@ -376,11 +376,15 @@ shadowRoot.appendChild(headline);
 				\label{img:lesRic}
 			\end{figure}
 			Ein Beispiel dazu bilden die deutsche und ägyptische Nachrichtenseite \enquote{Zeit Online} und \enquote{Al Shaab}, dargestellt in Abbildung  \ref{img:lesRic}. Hier ist im oberen Bereich die Kopfzeile der arabischsprachigen und darunter die Kopfzeile der deutschsprachigen Internetseite abgebildet. Hier sieht man ganz klar, wie im arabischsprachigen Bereich die Elemente eher nach rechts ausgerichtet sind und wichtige Elemente, wie beispielsweise der Name der Zeitung ganz rechts oben angeordnet sind. Im deutschsprachigem Internetauftritt sind die Elemente nach links ausgerichtet und der Name der Webseite ist weit oben links.
+			\subsubsection{Text-Alternativen}
+			Die Richtlinie 1.1 definiert, dass zu jedem Text eine Alternative geboten wird. Darüber hinaus sollen die nicht textbasierten Inhalte nach Bedarf durch einen Text dargestellt werden können. Dem Nutzer sollte ermöglicht werden in seinen Präferenzen anzugeben, ob er den Text, oder dessen Alternativen angezeigt bekommen möchte.
 			\subsubsection{Geschwindigkeit}
-			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manchen Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen.
+			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manchen Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen. Beispielsweise werden bestimmte Navigationselemente durch ein Verweilen der Maus auf diesen ausgeklappt. Sobald die Maus nicht mehr auf dem Element verweilt wird es wieder eingeklappt. Hier sollte es dem Nutzer ermöglicht werden die Zeitspanne anzupassen bevor das Element wieder einklappt, da es ihm andernfalls nicht möglich sein könnte das Element schnell genug zu nutzen.
 		
 			
 		\subsection{Speichern der Nutzer Präferenzen}
+		Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen.
+		
 		\subsection{Herunterladen der Nutzer Präferenzen}
 		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
 			\subsubsection{Was bedeutet REST}
@@ -433,17 +437,27 @@ function restCall (url){
 		\end{listing}
 		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
 \chapter{Adaptivität von bestehenden Web Components}
-	\section{Identifikation von Web Components}
-		\subsection{Die Components}
+	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt.\cite{cusEleIo}
+	\section{Die Elemente}
+	Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, der die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht. Diese Karte kann personalisiert und durch Wegbeschreibungen oder Markierungen ergänzt werden.\cite{gooMap}
+	
 	\section{Anpassung dieser Web Components}
-		\subsection{Web Component Eins}
+		\subsection{google-map}
 			\subsubsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
+			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons und in der Suchleiste angleichen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Suchleiste inklusive der Einstellungen, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmap.png}
+				\caption{Google Map Ansicht\cite{gooMapOri}}
+				\label{img:gmap}
+			\end{figure}
 			\subsubsection{Umsetzung Programmierung}
 		\subsection{Web Component Zwei}
 		\subsection{Web Component Drei}
 \chapter{Vergleich}
 	\section{Vergleich mit Polymer}
+	
 
 	\printbibliography
 

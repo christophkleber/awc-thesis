@@ -96,13 +96,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.2.1}Kontrast}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2.2}Schriftart}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Schrift}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2.3}Schriftgr\IeC {\"o}\IeC {\ss }e}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.3}Leserichtung}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2.4}Leserichtung}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.4}Anordnung der Elemente}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2.5}Anordnung der Elemente}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.5}Text-Alternativen}{30}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.2.6}Geschwindigkeit}{30}
 \defcounter {refsection}{0}\relax 
@@ -116,24 +116,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Adaptivit\IeC {\"a}t von bestehenden Web Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Identifikation von Web Components}{34}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Die Components}{34}
+\contentsline {section}{\numberline {6.1}Die Elemente}{34}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Anpassung dieser Web Components}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Web Component Eins}{34}
+\contentsline {subsection}{\numberline {6.2.1}google-map}{34}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.2.1.1}Konzeption zur Adaptivit\IeC {\"a}t}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1.2}Umsetzung Programmierung}{34}
+\contentsline {subsubsection}{\numberline {6.2.1.2}Umsetzung Programmierung}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{34}
+\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{34}
+\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Vergleich}{35}
+\contentsline {chapter}{\numberline {7}Vergleich}{37}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Vergleich mit Polymer}{35}
+\contentsline {section}{\numberline {7.1}Vergleich mit Polymer}{37}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{36}
+\contentsline {chapter}{\nonumberline Literatur}{38}
