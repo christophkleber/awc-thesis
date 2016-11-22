@@ -39,8 +39,8 @@
       \strng{fullhash}{8576c81618392f1d55bfb1082cbd1e25}
       \strng{authornamehash}{8576c81618392f1d55bfb1082cbd1e25}
       \strng{authorfullhash}{8576c81618392f1d55bfb1082cbd1e25}
-      \field{sortinit}{4}
-      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
+      \field{sortinit}{5}
+      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783794530694}
@@ -62,8 +62,8 @@
       \strng{fullhash}{9524e972e2a644de41e31bc42256cacf}
       \strng{authornamehash}{9524e972e2a644de41e31bc42256cacf}
       \strng{authorfullhash}{9524e972e2a644de41e31bc42256cacf}
-      \field{sortinit}{5}
-      \field{sortinithash}{4110d28fc88fcc726350ba189d38fbca}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783642594908}
@@ -108,8 +108,8 @@
       \strng{authorfullhash}{2bfb2fe6a8ac0c4a492cc26bf0ed3c50}
       \strng{editornamehash}{9bf5f6a2b888b76a8cb4f8f131ce5ed5}
       \strng{editorfullhash}{9bf5f6a2b888b76a8cb4f8f131ce5ed5}
-      \field{sortinit}{6}
-      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{sortinit}{7}
+      \field{sortinithash}{63c57bf2a02e588d7b993c05d52e84f6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Grundlagen und Anwendungen der K{\{}ü{\}}nstlichen Intelligenz: 17. Fachtagung f{\{}ü{\}}r K{\{}ü{\}}nstliche Intelligenz Humboldt-Universit{\{}ä{\}}t zu Berlin 13.--16. September 1993}
@@ -137,8 +137,8 @@
       \strng{fullhash}{97c696d8a652e9f5f4d4874d920b3c1f}
       \strng{authornamehash}{97c696d8a652e9f5f4d4874d920b3c1f}
       \strng{authorfullhash}{97c696d8a652e9f5f4d4874d920b3c1f}
-      \field{sortinit}{7}
-      \field{sortinithash}{63c57bf2a02e588d7b993c05d52e84f6}
+      \field{sortinit}{8}
+      \field{sortinithash}{ff392057b609ad7b4de0b8e2cc30b687}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{So entsteht unser Newsfeed: Der Facebook-Algorithmus im Detail}}
@@ -171,8 +171,8 @@
       \strng{fullhash}{047ab1573946c72cb4844e0a572bec79}
       \strng{authornamehash}{047ab1573946c72cb4844e0a572bec79}
       \strng{authorfullhash}{047ab1573946c72cb4844e0a572bec79}
-      \field{sortinit}{8}
-      \field{sortinithash}{ff392057b609ad7b4de0b8e2cc30b687}
+      \field{sortinit}{9}
+      \field{sortinithash}{5a7694b2c36c7534b22948c31e4b7920}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783862195503}
@@ -391,8 +391,8 @@
       \strng{fullhash}{dcb827bde08b639b1eb094aa19956bf7}
       \strng{authornamehash}{dcb827bde08b639b1eb094aa19956bf7}
       \strng{authorfullhash}{dcb827bde08b639b1eb094aa19956bf7}
-      \field{sortinit}{1}
-      \field{sortinithash}{53e85f4cf497d2a4e1d51786552bcbf1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{HTML templates}}
@@ -570,8 +570,8 @@
       \strng{fullhash}{f1d2795d173fdb9c5022a15a0095e900}
       \strng{authornamehash}{f1d2795d173fdb9c5022a15a0095e900}
       \strng{authorfullhash}{f1d2795d173fdb9c5022a15a0095e900}
-      \field{sortinit}{2}
-      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{What's New in Shadow DOM v1 (by examples)}}
@@ -771,8 +771,8 @@
       \strng{fullhash}{95db8d4ce171623075908cb1e5eb8f5d}
       \strng{authornamehash}{95db8d4ce171623075908cb1e5eb8f5d}
       \strng{authorfullhash}{95db8d4ce171623075908cb1e5eb8f5d}
-      \field{sortinit}{3}
-      \field{sortinithash}{7e21a31d9ef6ddc352701d4fa590bfbc}
+      \field{sortinit}{4}
+      \field{sortinithash}{40dc985c6c644a6e943d835d2b663799}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Onsen UI}
@@ -971,7 +971,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783868340112}
-      \field{title}{{Webdesign {\&} Web-Usability: Basiswissen für Web-Entwickler}}
+      \field{title}{{Webdesign /{\&} Web-Usability: Basiswissen für Web-Entwickler}}
       \field{year}{2009}
     \endentry
     \entry{barrierefreiheit}{book}{}
@@ -1161,10 +1161,13 @@
       \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
       \field{labeltitlesource}{title}
       \field{title}{google-map}
+      \field{urlday}{21}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{urldateera}{ce}
       \verb{url}
       \verb https://elements.polymer-project.org/elements/google-map
       \endverb
-      \warn{\item Entry 'gooMap' (library.bib): Invalid format '21.11.2016' of date field 'urldate' - ignoring}
     \endentry
     \entry{gooMapOri}{misc}{}
       \field{sortinit}{6}

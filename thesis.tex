@@ -4,6 +4,9 @@
 
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof, headsepline=true]{scrreprt}
 
+\usepackage[a4paper, includeheadfoot, %bindingoffset=3cm, 
+left=2.7cm, right=2.7cm, top=2.5cm, bottom=3cm]{geometry}
+
 %Header
 \usepackage[automark]{scrpage2}
 \pagestyle{scrheadings}
@@ -12,6 +15,7 @@
 \cfoot[\pagemark]{\pagemark}
 \renewcommand*{\chaptermarkformat}{}
 \renewcommand*{\headfont}{\normalfont}
+
 
 %\setlength{\headheight}{12mm} % Höhe der Kopfzeile 
 
@@ -23,6 +27,7 @@
 %\usepackage[headsep=5mm]{geometry}
 
 %\setfootsepline[text]{0.4pt} % Trennlinie unter Fußzeile
+
 
 
 
@@ -326,6 +331,8 @@ shadowRoot.appendChild(headline);
 		
 \chapter{Methodik dieser Arbeit}
 \chapter{Adaptivität an den Nutzer}
+Das Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components} die sich adaptiv an den Nutzer anpassen basiert auf drei Schritten. Als erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität. \newline
+Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, adaptive Elemente von Webseiten, aussehen wird.
 	\section{Präferenzen von Nutzern}
 	Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Dazu mehr in Kapitel \ref{ref:konVonAda}. Vorher muss definiert werden, wie die Applikation insgesamt reagiert, also inwiefern sie ihren Zustand an den jeweiligen Nutzer anpasst. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
 	\section{Identifikation passender Preference Terms}
@@ -453,6 +460,7 @@ function restCall (url){
 				\label{img:gmap}
 			\end{figure}
 			\subsubsection{Umsetzung Programmierung}
+			Zuerst wird die Anpassung Kontrastwert vorgenommen. Hier sollte zu Beginn auf die Erstellung einer \enquote{Google Map} genauer eingegangen werden.
 		\subsection{Web Component Zwei}
 		\subsection{Web Component Drei}
 \chapter{Vergleich}
@@ -460,5 +468,4 @@ function restCall (url){
 	
 
 	\printbibliography
-
 \end{document}

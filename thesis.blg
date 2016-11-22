@@ -1,18 +1,17 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
-[1] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[71] biber-MSWIN64:302> INFO - === 
-[101] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[239] Biber.pm:823> INFO - Found 45 citekeys in bib section 0
-[256] Biber.pm:3658> INFO - Processing section 0
-[289] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
-[293] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[297] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
-[402] Utils.pm:164> WARN - Entry 'gooMap' (library.bib): Invalid format '21.11.2016' of date field 'urldate' - ignoring
-[404] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\TQ_TlDByou\library.bib_9896.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[437] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[437] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[437] Biber.pm:3487> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'de-DE'
-[437] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
-[467] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[473] bbl.pm:701> INFO - Output to thesis.bbl
-[474] Biber.pm:109> INFO - WARNINGS: 2
+[0] Config.pm:357> INFO - Logfile is 'thesis.blg'
+[50] biber-MSWIN64:302> INFO - === 
+[86] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[195] Biber.pm:823> INFO - Found 45 citekeys in bib section 0
+[211] Biber.pm:3658> INFO - Processing section 0
+[236] Biber.pm:3828> INFO - Looking for bibtex format file 'library.bib' for section 0
+[240] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[244] bibtex.pm:1282> INFO - Found BibTeX data source 'library.bib'
+[366] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\CHRIST~1\AppData\Local\Temp\5TWzPjbtNz\library.bib_236.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[405] Biber.pm:3487> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'de-DE'
+[405] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
+[442] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[450] bbl.pm:701> INFO - Output to thesis.bbl
+[450] Biber.pm:109> INFO - WARNINGS: 1

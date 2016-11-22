@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  21 NOV 2016 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  22 NOV 2016 18:13
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -126,7 +126,34 @@ LaTeX Info: Redefining \textsubscript on input line 4780.
 \c@table=\count88
 Class scrreprt Info: Redefining `\numberline' on input line 5801.
 \bibindent=\dimen102
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrpage2.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrpage2.sty"
 Package: scrpage2 2016/06/14 v3.21 KOMA-Script package (page head and foot)
 LaTeX Info: Redefining \pagemark on input line 174.
 )
@@ -148,8 +175,8 @@ Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count89
-\U@D=\dimen103
+\babel@savecnt=\count92
+\U@D=\dimen111
 )
 \l@naustrian = a dialect from \language\l@ngerman 
 \l@nswissgerman = a dialect from \language\l@ngerman 
@@ -157,8 +184,8 @@ Package babel Info: Making " an active character on input line 88.
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
@@ -481,14 +508,14 @@ Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count90
-\float@exts=\toks17
+\c@float@type=\count93
+\float@exts=\toks18
 \float@box=\box28
-\@float@everytoks=\toks18
+\@float@everytoks=\toks19
 \@floatcapt=\box29
 )
-\@float@every@listing=\toks19
-\c@listing=\count91
+\@float@every@listing=\toks20
+\c@listing=\count94
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
@@ -529,18 +556,18 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count92
+\etb@tempcnta=\count95
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count93
+\FV@CodeLineNo=\count96
 \FV@InFile=\read1
 \FV@TabBox=\box30
-\c@FancyVerbLine=\count94
-\FV@StepNumber=\count95
+\c@FancyVerbLine=\count97
+\FV@StepNumber=\count98
 \FV@OutFile=\write3
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -703,54 +730,54 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count96
-\output=\toks20
-\linenoprevgraf=\count97
-\linenumbersep=\dimen104
-\linenumberwidth=\dimen105
-\c@linenumber=\count98
-\c@pagewiselinenumber=\count99
-\c@LN@truepage=\count100
-\c@internallinenumber=\count101
-\c@internallinenumbers=\count102
-\quotelinenumbersep=\dimen106
-\bframerule=\dimen107
-\bframesep=\dimen108
+\linenopenalty=\count99
+\output=\toks21
+\linenoprevgraf=\count100
+\linenumbersep=\dimen112
+\linenumberwidth=\dimen113
+\c@linenumber=\count101
+\c@pagewiselinenumber=\count102
+\c@LN@truepage=\count103
+\c@internallinenumber=\count104
+\c@internallinenumbers=\count105
+\quotelinenumbersep=\dimen114
+\bframerule=\dimen115
+\bframesep=\dimen116
 \bframebox=\box31
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count103
-\c@FV@TrueTabCounter=\count104
+\c@FV@TrueTabGroupLevel=\count106
+\c@FV@TrueTabCounter=\count107
 \FV@TabBox@Group=\box32
 \FV@TmpLength=\skip56
-\c@FV@HighlightLinesStart=\count105
-\c@FV@HighlightLinesStop=\count106
-\FV@BreakIndent=\dimen109
-\FV@BreakSymbolSepLeft=\dimen110
-\FV@BreakSymbolSepRight=\dimen111
-\FV@BreakSymbolIndentLeft=\dimen112
+\c@FV@HighlightLinesStart=\count108
+\c@FV@HighlightLinesStop=\count109
+\FV@BreakIndent=\dimen117
+\FV@BreakSymbolSepLeft=\dimen118
+\FV@BreakSymbolSepRight=\dimen119
+\FV@BreakSymbolIndentLeft=\dimen120
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 562.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-\FV@BreakSymbolIndentRight=\dimen113
-\c@FancyVerbLineBreakLast=\count107
+\FV@BreakSymbolIndentRight=\dimen121
+\c@FancyVerbLineBreakLast=\count110
 \FV@LineBox=\box33
 \FV@LineIndentBox=\box34
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count108
-\calc@Bcount=\count109
-\calc@Adimen=\dimen114
-\calc@Bdimen=\dimen115
+\calc@Acount=\count111
+\calc@Bcount=\count112
+\calc@Adimen=\dimen122
+\calc@Bdimen=\dimen123
 \calc@Askip=\skip57
 \calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count110
+\calc@Ccount=\count113
 \calc@Cskip=\skip59
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\shellesc.sty"
@@ -763,10 +790,6 @@ Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -778,24 +801,24 @@ Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write4
-\integerpart=\count111
-\decimalpart=\count112
+\integerpart=\count114
+\decimalpart=\count115
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip60
-\fb@frw=\dimen116
-\fb@frh=\dimen117
-\FrameRule=\dimen118
-\FrameSep=\dimen119
+\fb@frw=\dimen124
+\fb@frh=\dimen125
+\FrameRule=\dimen126
+\FrameSep=\dimen127
 )
 \minted@appexistsfile=\read2
 \minted@bgbox=\box35
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count113
-\c@minted@pygmentizecounter=\count114
+\c@minted@FancyVerbLineTemp=\count116
+\c@minted@pygmentizecounter=\count117
 
 
 Package float Warning: Can't redefine counter variable for listing. on input li
@@ -810,16 +833,16 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen120
-\captionmargin@=\dimen121
-\captionwidth=\dimen122
-\caption@tempdima=\dimen123
-\caption@indent=\dimen124
-\caption@parindent=\dimen125
-\caption@hangindent=\dimen126
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@tempdima=\dimen131
+\caption@indent=\dimen132
+\caption@parindent=\dimen133
+\caption@hangindent=\dimen134
 )
 Package caption Info: KOMA-Script document class.
-\c@ContinuedFloat=\count115
+\c@ContinuedFloat=\count118
 Package caption Info: float package is loaded.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
@@ -838,20 +861,20 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
-\Gread@gobject=\count116
+\Gread@gobject=\count119
 ))
-\Gin@req@height=\dimen127
-\Gin@req@width=\dimen128
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2016/07/14 v5.1h context-sensitive quotations (JAW)
-\csq@reset=\count117
-\csq@gtype=\count118
-\csq@glevel=\count119
-\csq@qlevel=\count120
-\csq@maxlvl=\count121
-\csq@tshold=\count122
-\csq@ltx@everypar=\toks21
+\csq@reset=\count120
+\csq@gtype=\count121
+\csq@glevel=\count122
+\csq@qlevel=\count123
+\csq@maxlvl=\count124
+\csq@tshold=\count125
+\csq@ltx@everypar=\toks22
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
 File: csquotes.def 2016/07/14 v5.1h csquotes generic definitions (JAW)
@@ -870,7 +893,7 @@ Package: biblatex 2016/09/17 v3.6 programmable bibliographies (PK/JW/AB)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count123
+\lrq@indent=\count126
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -879,44 +902,44 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count124
-\c@listtotal=\count125
-\c@listcount=\count126
-\c@liststart=\count127
-\c@liststop=\count128
-\c@citecount=\count129
-\c@citetotal=\count130
-\c@multicitecount=\count131
-\c@multicitetotal=\count132
-\c@instcount=\count133
-\c@maxnames=\count134
-\c@minnames=\count135
-\c@maxitems=\count136
-\c@minitems=\count137
-\c@citecounter=\count138
-\c@savedcitecounter=\count139
-\c@uniquelist=\count140
-\c@uniquename=\count141
-\c@refsection=\count142
-\c@refsegment=\count143
-\c@maxextratitle=\count144
-\c@maxextratitleyear=\count145
-\c@maxextrayear=\count146
-\c@maxextraalpha=\count147
-\c@abbrvpenalty=\count148
-\c@highnamepenalty=\count149
-\c@lownamepenalty=\count150
-\c@maxparens=\count151
-\c@parenlevel=\count152
-\blx@tempcnta=\count153
-\blx@tempcntb=\count154
-\blx@tempcntc=\count155
-\blx@maxsection=\count156
-\blx@maxsegment@0=\count157
-\blx@notetype=\count158
-\blx@parenlevel@text=\count159
-\blx@parenlevel@foot=\count160
-\blx@sectionciteorder@0=\count161
+\c@tabx@nest=\count127
+\c@listtotal=\count128
+\c@listcount=\count129
+\c@liststart=\count130
+\c@liststop=\count131
+\c@citecount=\count132
+\c@citetotal=\count133
+\c@multicitecount=\count134
+\c@multicitetotal=\count135
+\c@instcount=\count136
+\c@maxnames=\count137
+\c@minnames=\count138
+\c@maxitems=\count139
+\c@minitems=\count140
+\c@citecounter=\count141
+\c@savedcitecounter=\count142
+\c@uniquelist=\count143
+\c@uniquename=\count144
+\c@refsection=\count145
+\c@refsegment=\count146
+\c@maxextratitle=\count147
+\c@maxextratitleyear=\count148
+\c@maxextrayear=\count149
+\c@maxextraalpha=\count150
+\c@abbrvpenalty=\count151
+\c@highnamepenalty=\count152
+\c@lownamepenalty=\count153
+\c@maxparens=\count154
+\c@parenlevel=\count155
+\blx@tempcnta=\count156
+\blx@tempcntb=\count157
+\blx@tempcntc=\count158
+\blx@maxsection=\count159
+\blx@maxsegment@0=\count160
+\blx@notetype=\count161
+\blx@parenlevel@text=\count162
+\blx@parenlevel@foot=\count163
+\blx@sectionciteorder@0=\count164
 \labelnumberwidth=\skip61
 \labelalphawidth=\skip62
 \biblabelsep=\skip63
@@ -927,9 +950,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip68
 \blx@bcfin=\read3
 \blx@bcfout=\write6
-\c@mincomprange=\count162
-\c@maxcomprange=\count163
-\c@mincompwidth=\count164
+\c@mincomprange=\count165
+\c@maxcomprange=\count166
+\c@mincompwidth=\count167
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -938,72 +961,72 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count165
-\c@savedafterword=\count166
-\c@annotator=\count167
-\c@savedannotator=\count168
-\c@author=\count169
-\c@savedauthor=\count170
-\c@bookauthor=\count171
-\c@savedbookauthor=\count172
-\c@commentator=\count173
-\c@savedcommentator=\count174
-\c@editor=\count175
-\c@savededitor=\count176
-\c@editora=\count177
-\c@savededitora=\count178
-\c@editorb=\count179
-\c@savededitorb=\count180
-\c@editorc=\count181
-\c@savededitorc=\count182
-\c@foreword=\count183
-\c@savedforeword=\count184
-\c@holder=\count185
-\c@savedholder=\count186
-\c@introduction=\count187
-\c@savedintroduction=\count188
-\c@namea=\count189
-\c@savednamea=\count190
-\c@nameb=\count191
-\c@savednameb=\count192
-\c@namec=\count193
-\c@savednamec=\count194
-\c@translator=\count195
-\c@savedtranslator=\count196
-\c@shortauthor=\count197
-\c@savedshortauthor=\count198
-\c@shorteditor=\count199
-\c@savedshorteditor=\count266
-\c@labelname=\count267
-\c@savedlabelname=\count268
-\c@institution=\count269
-\c@savedinstitution=\count270
-\c@lista=\count271
-\c@savedlista=\count272
-\c@listb=\count273
-\c@savedlistb=\count274
-\c@listc=\count275
-\c@savedlistc=\count276
-\c@listd=\count277
-\c@savedlistd=\count278
-\c@liste=\count279
-\c@savedliste=\count280
-\c@listf=\count281
-\c@savedlistf=\count282
-\c@location=\count283
-\c@savedlocation=\count284
-\c@organization=\count285
-\c@savedorganization=\count286
-\c@origlocation=\count287
-\c@savedoriglocation=\count288
-\c@origpublisher=\count289
-\c@savedorigpublisher=\count290
-\c@publisher=\count291
-\c@savedpublisher=\count292
-\c@language=\count293
-\c@savedlanguage=\count294
-\c@pageref=\count295
-\c@savedpageref=\count296
+\c@afterword=\count168
+\c@savedafterword=\count169
+\c@annotator=\count170
+\c@savedannotator=\count171
+\c@author=\count172
+\c@savedauthor=\count173
+\c@bookauthor=\count174
+\c@savedbookauthor=\count175
+\c@commentator=\count176
+\c@savedcommentator=\count177
+\c@editor=\count178
+\c@savededitor=\count179
+\c@editora=\count180
+\c@savededitora=\count181
+\c@editorb=\count182
+\c@savededitorb=\count183
+\c@editorc=\count184
+\c@savededitorc=\count185
+\c@foreword=\count186
+\c@savedforeword=\count187
+\c@holder=\count188
+\c@savedholder=\count189
+\c@introduction=\count190
+\c@savedintroduction=\count191
+\c@namea=\count192
+\c@savednamea=\count193
+\c@nameb=\count194
+\c@savednameb=\count195
+\c@namec=\count196
+\c@savednamec=\count197
+\c@translator=\count198
+\c@savedtranslator=\count199
+\c@shortauthor=\count266
+\c@savedshortauthor=\count267
+\c@shorteditor=\count268
+\c@savedshorteditor=\count269
+\c@labelname=\count270
+\c@savedlabelname=\count271
+\c@institution=\count272
+\c@savedinstitution=\count273
+\c@lista=\count274
+\c@savedlista=\count275
+\c@listb=\count276
+\c@savedlistb=\count277
+\c@listc=\count278
+\c@savedlistc=\count279
+\c@listd=\count280
+\c@savedlistd=\count281
+\c@liste=\count282
+\c@savedliste=\count283
+\c@listf=\count284
+\c@savedlistf=\count285
+\c@location=\count286
+\c@savedlocation=\count287
+\c@organization=\count288
+\c@savedorganization=\count289
+\c@origlocation=\count290
+\c@savedoriglocation=\count291
+\c@origpublisher=\count292
+\c@savedorigpublisher=\count293
+\c@publisher=\count294
+\c@savedpublisher=\count295
+\c@language=\count296
+\c@savedlanguage=\count297
+\c@pageref=\count298
+\c@savedpageref=\count299
 \shorthandwidth=\skip69
 \shortjournalwidth=\skip70
 \shortserieswidth=\skip71
@@ -1021,13 +1044,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 2016/09/17 v3.6 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count297
-\c@textcitetotal=\count298
-\c@textcitemaxnames=\count299
-\c@biburlnumpenalty=\count300
-\c@biburlucpenalty=\count301
-\c@biburllcpenalty=\count302
-\c@smartand=\count303
+\c@textcitecount=\count300
+\c@textcitetotal=\count301
+\c@textcitemaxnames=\count302
+\c@biburlnumpenalty=\count303
+\c@biburlucpenalty=\count304
+\c@biburllcpenalty=\count305
+\c@smartand=\count306
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1039,8 +1062,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2016/09/17 v3.6 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count304
-\c@bbx:relatedtotal=\count305
+\c@bbx:relatedcount=\count307
+\c@bbx:relatedtotal=\count308
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1071,7 +1094,7 @@ Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-\AC@clearlist=\toks22
+\AC@clearlist=\toks23
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1112,30 +1135,64 @@ File: german.lbx 2016/09/17 v3.6 biblatex localization (PK/JW/AB)
 )) (thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 111.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 116.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(76.82234pt, 443.86319pt, 76.82234pt)
+* v-part:(T,H,B)=(71.13188pt, 688.5567pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=443.86319pt
+* \textheight=597.9317pt
+* \oddsidemargin=4.55235pt
+* \evensidemargin=4.55235pt
+* \topmargin=-1.1381pt
+* \headheight=18.125pt
+* \headsep=21.75pt
+* \topskip=12.0pt
+* \footskip=50.75pt
+* \marginparwidth=49.79233pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 
 Package scrpage2 Warning: seems you are using a very small headheight.
 (scrpage2)                If you get overfull \vbox warnings at almost every
@@ -1148,17 +1205,17 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen129
+\scratchcounter=\count309
+\scratchdimen=\dimen137
 \scratchbox=\box36
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen130
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks24
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen138
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1183,34 +1240,26 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
-(thesis.bbl
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'gooMap':
-(biblatex)                - Entry 'gooMap' (library.bib): Invalid format '21.11
-.2016' of date field 'urldate' - ignoring.
-
-)
-Package biblatex Info: Reference section=0 on input line 111.
-Package biblatex Info: Reference segment=0 on input line 111.
+(thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 116.
+Package biblatex Info: Reference segment=0 on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 113.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 118.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 113.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 113.
+(Font)              <17.28> on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 113.
+(Font)              <12> on input line 118.
  [1
 
 
 {C:/Users/Christoph/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 118.
+(Font)              <8> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 118.
-
-[2
+(Font)              <6> on input line 123.
+ [2
 
 ]
 
@@ -1224,7 +1273,7 @@ Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              Loading of package `scrhack' may help to
 (scrreprt)              avoid this warning, if you are using a
 (scrreprt)              a package that still implements the
-(scrreprt)              deprecated \float@listhead interface  on input line 122
+(scrreprt)              deprecated \float@listhead interface  on input line 127
 .
 
 [3
@@ -1274,27 +1323,32 @@ chapter 1.
  [9]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 144.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 149.
 [10
 
-] [11] [12]
+]
+Overfull \hbox (2.98318pt too wide) in paragraph at lines 159--160
+[]\T1/phv/m/n/12 Zu Be-ginn soll-ten die Nut-zer-grup-pen und
+ []
+
+[11] [12]
 chapter 3.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 168.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 173.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
-although it is yet undefined on input line 168.
+although it is yet undefined on input line 173.
 Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
 
-although it is yet undefined on input line 168.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 172.
-Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 173.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 177.
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 178.
 [13
 
 ] [14]
 Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
-although it is yet undefined on input line 187.
+although it is yet undefined on input line 192.
  [15] [16] [17]
 \openout3 = `thesis.pyg'.
 
@@ -1309,13 +1363,17 @@ LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 7.
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )) [18]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 220.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 225.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 220.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 225.
+
+Overfull \hbox (1.5971pt too wide) in paragraph at lines 229--230
+[]\T1/phv/m/n/12 Diese Funk-ti-on wird auf-
+ []
 
 [19]
 Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
-although it is yet undefined on input line 227.
+although it is yet undefined on input line 232.
 \openout3 = `thesis.pyg'.
 
 
@@ -1326,9 +1384,12 @@ although it is yet undefined on input line 227.
 
 (_minted-thesis/8B4D591886542F1386DF77DC47A8F0184B13BB335BAE229FD41364586D22FCE
 6.pygtex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:HTML5' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 248.
+although it is yet undefined on input line 253.
 \openout3 = `thesis.pyg'.
 
 
@@ -1336,13 +1397,13 @@ although it is yet undefined on input line 248.
 6.pygtex) [20] <shaDom.png, id=72, 337.86224pt x 183.084pt>
 File: shaDom.png Graphic file (type png)
  <use shaDom.png>
-Package pdftex.def Info: shaDom.png used on input line 262.
-(pdftex.def)             Requested size: 448.14993pt x 242.84773pt.
+Package pdftex.def Info: shaDom.png used on input line 267.
+(pdftex.def)             Requested size: 443.88129pt x 240.5346pt.
 \openout3 = `thesis.pyg'.
 
 
 (_minted-thesis/197B7A7FE87F3A89FA5E2783850A3F774B13BB335BAE229FD41364586D22FCE
-6.pygtex) [21]
+6.pygtex) [21] [22 <./shaDom.png>]
 \openout3 = `thesis.pyg'.
 
 
@@ -1357,10 +1418,7 @@ Package pdftex.def Info: shaDom.png used on input line 262.
 
 
 (_minted-thesis/9E7F0995A67514068581B6746C7F2951D302DD58CEA8DA1A9F3ADC06F714F73
-9.pygtex) [22 <./shaDom.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+9.pygtex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1370,42 +1428,37 @@ chapter 4.
 
 ]
 chapter 5.
-Package acronym Info: Label `acro:WCAG 2.0' newly defined as it shall be overri
-dden
-although it is yet undefined on input line 334.
 [26
 
-] [27] [28] <leserichtung.png, id=100, 1002.74625pt x 443.6575pt>
+]
+Package acronym Info: Label `acro:WCAG 2.0' newly defined as it shall be overri
+dden
+although it is yet undefined on input line 341.
+ [27] [28] [29] <leserichtung.png, id=103, 1002.74625pt x 443.6575pt>
 File: leserichtung.png Graphic file (type png)
 
 <use leserichtung.png>
-Package pdftex.def Info: leserichtung.png used on input line 374.
-(pdftex.def)             Requested size: 448.14091pt x 198.27655pt.
- [29] [30 <./leserichtung.png>]
+Package pdftex.def Info: leserichtung.png used on input line 381.
+(pdftex.def)             Requested size: 443.87202pt x 196.38782pt.
+ [30] [31 <./leserichtung.png>]
 Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
 
-although it is yet undefined on input line 391.
+although it is yet undefined on input line 398.
 Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 
-although it is yet undefined on input line 397.
+although it is yet undefined on input line 404.
 
-Overfull \hbox (0.99507pt too wide) in paragraph at lines 397--399
+Overfull \hbox (5.26283pt too wide) in paragraph at lines 404--406
 []\T1/phv/m/n/12 Das [][] Pro-to-koll ba-siert auf dem [][]
  []
 
 
-Overfull \hbox (5.01959pt too wide) in paragraph at lines 397--399
+Overfull \hbox (9.28735pt too wide) in paragraph at lines 404--406
 \T1/phv/m/n/12 Pro-to-koll. Es wer-den die von der [][]Hy-per-text Trans-fer Pr
 o-to-col ([])[]-Technologie
  []
 
-
-Overfull \hbox (3.6717pt too wide) in paragraph at lines 401--402
-[]\T1/phv/m/n/12 Die Res-sour-cen kön-nen in ver-schie-de-nen For-men re-prä-se
-n-tiert wer-
- []
-
-[31]
+[32]
 \openout3 = `thesis.pyg'.
 
 
@@ -1413,100 +1466,135 @@ n-tiert wer-
 6.pygtex)
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
-although it is yet undefined on input line 438.
+although it is yet undefined on input line 445.
 
-Overfull \hbox (185.44966pt too wide) in paragraph at lines 410--439
-\T1/phv/m/n/12 wünsch-ten Nut-zer an-zu-fra-gen. Ein Bei-spiel die-ses Spei-che
-r-orts könn-te   http://www.speicherort.de/praeferenzen/nutzer1
+Overfull \hbox (1.6197pt too wide) in paragraph at lines 417--446
+\T1/phv/m/n/12 Spei-cher-orts, pas-siert. Bei er-folg-ter Ant-wort des Spei-che
+r-orts wird die   suc-ces Funk-
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[32] [33]
+[33] [34]
 chapter 6.
-<gmap.png, id=119, 783.52725pt x 550.4565pt>
+<gmap.png, id=122, 783.52725pt x 550.4565pt>
 File: gmap.png Graphic file (type png)
  <use gmap.png>
-Package pdftex.def Info: gmap.png used on input line 451.
-(pdftex.def)             Requested size: 448.13353pt x 314.83017pt.
+Package pdftex.def Info: gmap.png used on input line 458.
+(pdftex.def)             Requested size: 443.87732pt x 311.84003pt.
 
-Overfull \hbox (0.60355pt too wide) in paragraph at lines 448--455
+Overfull \hbox (4.8713pt too wide) in paragraph at lines 455--462
 \T1/phv/m/n/12 Schrift, die Le-se-rich-tung und da-mit die An-ord-nung der Ele-
 men-te und Text-Alternativen
  []
 
-[34
+[35
 
-] [35 <./gmap.png>] [36]
+] [36 <./gmap.png>] [37]
 chapter 7.
-[37
+[38
 
 ]
 chapter without number
 
-Overfull \hbox (8.48656pt too wide) in paragraph at lines 463--463
-[]\T1/phv/m/n/12 H Loe-ser. \T1/phv/m/sl/12 Web-Datenbanken: Ein-satz objekt-re
-lationaler Da-ten-ban-ken f{ü}r Web-
- []
-
-
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 463--463
+Overfull \hbox (19.75487pt too wide) in paragraph at lines 471--471
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4642138092470272$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
-[38
+[39
 
 ]
-Overfull \hbox (15.4871pt too wide) in paragraph at lines 463--463
+Overfull \hbox (4.1918pt too wide) in paragraph at lines 471--471
+\T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / / developers . g
+oogle . com / web / fundamentals / getting -[] started /
+ []
+
+
+Overfull \hbox (1.73439pt too wide) in paragraph at lines 471--471
+\T1/cmtt/m/n/12 status . mozilla . org / %7B % 5C # %7Dcustom -[] elements$ \T1
+/phv/m/n/12 (be-sucht am 03.11.2016). 
+ []
+
+
+Overfull \hbox (19.75487pt too wide) in paragraph at lines 471--471
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4696261944934400$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
 
-Overfull \hbox (1.52835pt too wide) in paragraph at lines 463--463
+Overfull \hbox (0.53418pt too wide) in paragraph at lines 471--471
+[]\T1/phv/m/n/12 ACHTUNGw3c. \T1/phv/m/sl/12 WEB COM-PONENTS CUR-RENT STA-TUS\T
+1/phv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https
+ :
+ []
+
+
+Overfull \hbox (5.79611pt too wide) in paragraph at lines 471--471
 []\T1/phv/m/n/12 ACHTUNGmicrosoft. \T1/phv/m/sl/12 Win-dows 10 build 10547\T1/p
 hv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : 
 / / developer .
  []
 
-[39]
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 462.
+[40]
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 470.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 462.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 470.
 
-Overfull \hbox (10.6055pt too wide) in paragraph at lines 463--463
+Overfull \hbox (4.1918pt too wide) in paragraph at lines 471--471
+\T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / / developers . g
+oogle . com / web / fundamentals / getting -[] started /
+ []
+
+
+Overfull \hbox (3.32715pt too wide) in paragraph at lines 471--471
+[]\T1/phv/m/n/12 Björn Beh-rendt. \T1/phv/m/sl/12 Application-Programming-Inter
+face (API) De-fi-ni-ti-on\T1/phv/m/n/12 . 2016. \T1/phv/m/sc/12 url\T1/phv/m/n/
+12 :
+ []
+
+
+Overfull \hbox (14.87326pt too wide) in paragraph at lines 471--471
 \T1/cmtt/m/n/12 http : / / www . gruenderszene . de / lexikon / begriffe / appl
 ication -[] programming -[]
  []
 
-[40]
-Overfull \hbox (3.79002pt too wide) in paragraph at lines 463--463
+[41]
+Overfull \hbox (19.32516pt too wide) in paragraph at lines 471--471
+\T1/phv/m/sl/12 zep-te -- Ana-ly-sen\T1/phv/m/n/12 . Sprin-ger Fach-me-di-en Wi
+es-ba-den, 2013. \T1/phv/m/sc/12 isbn\T1/phv/m/n/12 : 9783658030339. 
+ []
+
+
+Overfull \hbox (1.05899pt too wide) in paragraph at lines 471--471
+[]\T1/phv/m/n/12 O Meidl. \T1/phv/m/sl/12 Glo-bal Web-si-te: Web-de-sign im in-
+ter-na-tio-na-len Um-feld\T1/phv/m/n/12 . Sprin-ger Fach-
+ []
+
+
+Overfull \hbox (8.05779pt too wide) in paragraph at lines 471--471
 \T1/phv/m/n/12 me-di-en Wies-ba-den, 2013. \T1/phv/m/sc/12 isbn\T1/phv/m/n/12 :
  9783658028671. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / 
 / books . google .
  []
 
 
-Overfull \hbox (9.16905pt too wide) in paragraph at lines 463--463
+Overfull \hbox (13.43681pt too wide) in paragraph at lines 471--471
 []\T1/phv/m/n/12 O. V. \T1/phv/m/sl/12 El Shaab\T1/phv/m/n/12 . 2016. \T1/phv/m
 /sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 http : / / www . elshaab . org/$ \T
 1/phv/m/n/12 (be-sucht am 17.11.2016). 
  []
 
 
-Overfull \hbox (12.48694pt too wide) in paragraph at lines 463--463
+Overfull \hbox (16.7547pt too wide) in paragraph at lines 471--471
 []\T1/phv/m/sl/12 Custom Ele-ments\T1/phv/m/n/12 . \T1/phv/m/sc/12 url\T1/phv/m
 /n/12 : $\T1/cmtt/m/n/12 https : / / customelements . io/$ \T1/phv/m/n/12 (be-s
 ucht am 21.11.2016). 
  []
 
-[41] (thesis.aux)
+[42] (thesis.aux)
 runsystem(del thesis.pyg)...executed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1514,10 +1602,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16767 strings out of 493334
- 300115 string characters out of 3139239
- 872879 words of memory out of 3000000
- 20002 multiletter control sequences out of 15000+200000
+ 17260 strings out of 493334
+ 307557 string characters out of 3139239
+ 885010 words of memory out of 3000000
+ 20483 multiletter control sequences out of 15000+200000
  40726 words of font info for 52 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  49i,10n,78p,8819b,3145s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1530,9 +1618,9 @@ k\ljfour\jknappen\ec\dpi600\ecrm0600.pk><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (41 pages, 814064 bytes).
+Output written on thesis.pdf (42 pages, 816355 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
+ 296 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
