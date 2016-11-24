@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kd}{var} \PYG{n+nx}{header} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{createElement}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}header\PYGZsq{}}\PYG{p}{);}
-\PYG{k+kd}{var} \PYG{n+nx}{shadowRoot} \PYG{o}{=} \PYG{n+nx}{header}\PYG{p}{.}\PYG{n+nx}{attachShadow}\PYG{p}{(\PYGZob{}}\PYG{n+nx}{mode}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}open\PYGZsq{}}\PYG{p}{\PYGZcb{});}
-\PYG{k+kd}{var} \PYG{n+nx}{headline} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{createElement}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}h1\PYGZsq{}}\PYG{p}{);}
-\PYG{k+kd}{var} \PYG{n+nx}{headlineText} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{createTextNode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}headline\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nx}{headline}\PYG{p}{.}\PYG{n+nx}{appendChild}\PYG{p}{(}\PYG{n+nx}{headlineText}\PYG{p}{);}
-\PYG{n+nx}{shadowRoot}\PYG{p}{.}\PYG{n+nx}{appendChild}\PYG{p}{(}\PYG{n+nx}{headline}\PYG{p}{);}
-\end{Verbatim}
