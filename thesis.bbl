@@ -1182,6 +1182,30 @@
       \verb https://www.google.de/maps/@48.7791843,9.1780412,13z
       \endverb
     \endentry
+    \entry{gmapStyle}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{labeltitlesource}{title}
+      \field{title}{{Style Reference}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://developers.google.com/maps/documentation/javascript/style-reference%7B%5C#%7Dstyle-elements
+      \endverb
+      \warn{\item Entry 'gmapStyle' (library.bib): Invalid format '24.11.2016' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{polymer}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{98327ee6f7ac458993dfb781f9fb8713}
+      \field{labeltitlesource}{title}
+      \field{title}{{Polymer Library - Polymer Project}}
+      \field{urlday}{24}
+      \field{urlmonth}{11}
+      \field{urlyear}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.polymer-project.org/1.0/docs/devguide/feature-overview
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

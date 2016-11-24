@@ -31,6 +31,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {listing}{\numberline {6.1}{\ignorespaces Der Programmcode um die Gestaltung an einen erh\IeC {\"o}hten Kontrastwert anzupassen\relax }}{39}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

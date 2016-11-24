@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{var} \PYG{n+nx}{stylesArray} \PYG{o}{=} \PYG{p}{[\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}water\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}000000\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+   \PYG{p}{]\PYGZcb{},\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}landscape\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}000000\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+   \PYG{p}{]\PYGZcb{},\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}road\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}ffffff\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+   \PYG{p}{]\PYGZcb{},\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}transit\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}ffffff\PYGZsq{}} \PYG{p}{\PYGZcb{}}
+   \PYG{p}{]}
+   \PYG{p}{\PYGZcb{},\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}poi\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}visibility\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}off\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+   \PYG{p}{]\PYGZcb{},\PYGZob{}}
+   \PYG{n+nx}{featureType}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}administrative\PYGZsq{}}\PYG{p}{,}
+   \PYG{n+nx}{stylers}\PYG{o}{:} \PYG{p}{[}
+   \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}ffff00\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+   \PYG{p}{]\PYGZcb{}}
+\PYG{p}{];}
+\end{Verbatim}

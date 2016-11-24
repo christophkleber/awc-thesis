@@ -126,12 +126,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.2.1.2}Umsetzung Programmierung}{37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{37}
+\contentsline {subsection}{\numberline {6.2.2}Web Component Zwei}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{37}
+\contentsline {subsection}{\numberline {6.2.3}Web Component Drei}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Vergleich}{38}
+\contentsline {chapter}{\numberline {7}Vergleich}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Vergleich mit Polymer}{38}
+\contentsline {section}{\numberline {7.1}Polymer}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{39}
+\contentsline {subsection}{\numberline {7.1.1}Polymer Technologie}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{41}

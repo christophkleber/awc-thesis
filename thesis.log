@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  22 NOV 2016 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  24 NOV 2016 14:14
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1167,17 +1167,17 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(76.82234pt, 443.86319pt, 76.82234pt)
+* h-part:(L,W,R)=(78.24507pt, 441.01773pt, 78.24507pt)
 * v-part:(T,H,B)=(71.13188pt, 688.5567pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=443.86319pt
-* \textheight=597.9317pt
-* \oddsidemargin=4.55235pt
-* \evensidemargin=4.55235pt
+* \textwidth=441.01773pt
+* \textheight=596.91942pt
+* \oddsidemargin=5.97508pt
+* \evensidemargin=5.97508pt
 * \topmargin=-1.1381pt
 * \headheight=18.125pt
-* \headsep=21.75pt
+* \headsep=22.76228pt
 * \topskip=12.0pt
 * \footskip=50.75pt
 * \marginparwidth=49.79233pt
@@ -1240,7 +1240,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
-(thesis.bbl)
+(thesis.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'gmapStyle':
+(biblatex)                - Entry 'gmapStyle' (library.bib): Invalid format '24
+.11.2016' of date field 'urldate' - ignoring.
+
+)
 Package biblatex Info: Reference section=0 on input line 116.
 Package biblatex Info: Reference segment=0 on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
@@ -1259,7 +1266,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 123.
- [2
+
+[2
 
 ]
 
@@ -1314,7 +1322,13 @@ although it is yet undefined on input line 13.
 
 ]
 chapter 1.
-(thesis.toc [7
+(thesis.toc
+Overfull \hbox (1.41861pt too wide) in paragraph at lines 39--39
+ [][] []\T1/phv/m/n/12 Vorteil: Wenn Brow-ser-un-ter-stüt-zung ge-ge-ben: na-ti
+-ve, kein Fra- 
+ []
+
+[7
 
 ] [8])
 \tf@toc=\write9
@@ -1327,7 +1341,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 [10
 
 ]
-Overfull \hbox (2.98318pt too wide) in paragraph at lines 159--160
+Overfull \hbox (5.82864pt too wide) in paragraph at lines 159--160
 []\T1/phv/m/n/12 Zu Be-ginn soll-ten die Nut-zer-grup-pen und
  []
 
@@ -1367,7 +1381,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 225.
 
-Overfull \hbox (1.5971pt too wide) in paragraph at lines 229--230
+Overfull \hbox (4.44257pt too wide) in paragraph at lines 229--230
 []\T1/phv/m/n/12 Diese Funk-ti-on wird auf-
  []
 
@@ -1376,8 +1390,12 @@ Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
 although it is yet undefined on input line 232.
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l HTML -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-thesis/2686BF3E7643A00E38F4F4A7F50A74B2D302DD58CEA8DA1A9F3ADC06F714F739.py
+gtex thesis.pyg)...executed.
 
-(_minted-thesis/AEF917AF41750DA08BBD11C9BDAE875ED302DD58CEA8DA1A9F3ADC06F714F73
+
+(_minted-thesis/2686BF3E7643A00E38F4F4A7F50A74B2D302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 \openout3 = `thesis.pyg'.
 
@@ -1392,32 +1410,52 @@ n
 although it is yet undefined on input line 253.
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l JavaScript -f latex -P commandprefix=PYG -F tokenmerge 
+-o _minted-thesis/8C18CA20036254A31985A126235AE2F84B13BB335BAE229FD41364586D22F
+CE6.pygtex thesis.pyg)...executed.
 
-(_minted-thesis/4723A54A92C678A42748EB33FB235FB74B13BB335BAE229FD41364586D22FCE
+
+(_minted-thesis/8C18CA20036254A31985A126235AE2F84B13BB335BAE229FD41364586D22FCE
 6.pygtex) [20] <shaDom.png, id=72, 337.86224pt x 183.084pt>
 File: shaDom.png Graphic file (type png)
  <use shaDom.png>
 Package pdftex.def Info: shaDom.png used on input line 267.
-(pdftex.def)             Requested size: 443.88129pt x 240.5346pt.
+(pdftex.def)             Requested size: 441.0407pt x 238.99532pt.
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l JavaScript -f latex -P commandprefix=PYG -F tokenmerge 
+-o _minted-thesis/85C37912F080CBAC9827724E79F23D734B13BB335BAE229FD41364586D22F
+CE6.pygtex thesis.pyg)...executed.
 
-(_minted-thesis/197B7A7FE87F3A89FA5E2783850A3F774B13BB335BAE229FD41364586D22FCE
+
+(_minted-thesis/85C37912F080CBAC9827724E79F23D734B13BB335BAE229FD41364586D22FCE
 6.pygtex) [21] [22 <./shaDom.png>]
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l HTML -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-thesis/018958A4637CBAF20FF0F42733A180AED302DD58CEA8DA1A9F3ADC06F714F739.py
+gtex thesis.pyg)...executed.
 
-(_minted-thesis/154260B84F396E29703F1E047A684870D302DD58CEA8DA1A9F3ADC06F714F73
+
+(_minted-thesis/018958A4637CBAF20FF0F42733A180AED302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l HTML -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-thesis/12DF9477ECEC2CE8D9910E7246203EC5D302DD58CEA8DA1A9F3ADC06F714F739.py
+gtex thesis.pyg)...executed.
 
-(_minted-thesis/B8E312D7850F70D63821C3AC36ECE9B5D302DD58CEA8DA1A9F3ADC06F714F73
+
+(_minted-thesis/12DF9477ECEC2CE8D9910E7246203EC5D302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 \openout3 = `thesis.pyg'.
 
+runsystem(pygmentize -l HTML -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-thesis/C97183938AF5FAE6ED5D6B9CCBEB218BD302DD58CEA8DA1A9F3ADC06F714F739.py
+gtex thesis.pyg)...executed.
 
-(_minted-thesis/9E7F0995A67514068581B6746C7F2951D302DD58CEA8DA1A9F3ADC06F714F73
+
+(_minted-thesis/C97183938AF5FAE6ED5D6B9CCBEB218BD302DD58CEA8DA1A9F3ADC06F714F73
 9.pygtex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1439,7 +1477,7 @@ File: leserichtung.png Graphic file (type png)
 
 <use leserichtung.png>
 Package pdftex.def Info: leserichtung.png used on input line 381.
-(pdftex.def)             Requested size: 443.87202pt x 196.38782pt.
+(pdftex.def)             Requested size: 441.02611pt x 195.12866pt.
  [30] [31 <./leserichtung.png>]
 Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
 
@@ -1448,12 +1486,12 @@ Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 
 although it is yet undefined on input line 404.
 
-Overfull \hbox (5.26283pt too wide) in paragraph at lines 404--406
+Overfull \hbox (8.10829pt too wide) in paragraph at lines 404--406
 []\T1/phv/m/n/12 Das [][] Pro-to-koll ba-siert auf dem [][]
  []
 
 
-Overfull \hbox (9.28735pt too wide) in paragraph at lines 404--406
+Overfull \hbox (12.13281pt too wide) in paragraph at lines 404--406
 \T1/phv/m/n/12 Pro-to-koll. Es wer-den die von der [][]Hy-per-text Trans-fer Pr
 o-to-col ([])[]-Technologie
  []
@@ -1467,134 +1505,168 @@ o-to-col ([])[]-Technologie
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
 although it is yet undefined on input line 445.
-
-Overfull \hbox (1.6197pt too wide) in paragraph at lines 417--446
-\T1/phv/m/n/12 Spei-cher-orts, pas-siert. Bei er-folg-ter Ant-wort des Spei-che
-r-orts wird die   suc-ces Funk-
- []
-
-[33] [34]
+ [33] [34]
 chapter 6.
 <gmap.png, id=122, 783.52725pt x 550.4565pt>
 File: gmap.png Graphic file (type png)
  <use gmap.png>
-Package pdftex.def Info: gmap.png used on input line 458.
-(pdftex.def)             Requested size: 443.87732pt x 311.84003pt.
+Package pdftex.def Info: gmap.png used on input line 457.
+(pdftex.def)             Requested size: 441.03188pt x 309.841pt.
 
-Overfull \hbox (4.8713pt too wide) in paragraph at lines 455--462
+Overfull \hbox (7.71677pt too wide) in paragraph at lines 461--462
 \T1/phv/m/n/12 Schrift, die Le-se-rich-tung und da-mit die An-ord-nung der Ele-
 men-te und Text-Alternativen
  []
 
 [35
 
-] [36 <./gmap.png>] [37]
+] [36 <./gmap.png>]
+\openout3 = `thesis.pyg'.
+
+runsystem(pygmentize -l JavaScript -f latex -P commandprefix=PYG -F tokenmerge 
+-o _minted-thesis/905B01580D678E6CE95F623D192D5E1C4B13BB335BAE229FD41364586D22F
+CE6.pygtex thesis.pyg)...executed.
+
+
+(_minted-thesis/905B01580D678E6CE95F623D192D5E1C4B13BB335BAE229FD41364586D22FCE
+6.pygtex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37] [38] [39]
 chapter 7.
-[38
+[40
 
 ]
 chapter without number
 
-Overfull \hbox (19.75487pt too wide) in paragraph at lines 471--471
+Overfull \hbox (22.60033pt too wide) in paragraph at lines 508--508
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4642138092470272$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
-[39
+[41
 
 ]
-Overfull \hbox (4.1918pt too wide) in paragraph at lines 471--471
+Overfull \hbox (0.6926pt too wide) in paragraph at lines 508--508
+[]\T1/phv/m/n/12 Eric Bi-del-man.   Cu-stom Ele-ments v1: Reu-sa-ble Web Com-p
+onents. In: (2016).
+ []
+
+
+Overfull \hbox (7.03726pt too wide) in paragraph at lines 508--508
 \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / / developers . g
 oogle . com / web / fundamentals / getting -[] started /
  []
 
 
-Overfull \hbox (1.73439pt too wide) in paragraph at lines 471--471
+Overfull \hbox (4.57985pt too wide) in paragraph at lines 508--508
 \T1/cmtt/m/n/12 status . mozilla . org / %7B % 5C # %7Dcustom -[] elements$ \T1
 /phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
 
-Overfull \hbox (19.75487pt too wide) in paragraph at lines 471--471
+Overfull \hbox (22.60033pt too wide) in paragraph at lines 508--508
 \T1/cmtt/m/n/12 / / www . chromestatus . com / feature / 4696261944934400$ \T1/
 phv/m/n/12 (be-sucht am 03.11.2016). 
  []
 
 
-Overfull \hbox (0.53418pt too wide) in paragraph at lines 471--471
+Overfull \hbox (3.37964pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/n/12 ACHTUNGw3c. \T1/phv/m/sl/12 WEB COM-PONENTS CUR-RENT STA-TUS\T
 1/phv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https
  :
  []
 
 
-Overfull \hbox (5.79611pt too wide) in paragraph at lines 471--471
+Overfull \hbox (8.64157pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/n/12 ACHTUNGmicrosoft. \T1/phv/m/sl/12 Win-dows 10 build 10547\T1/p
 hv/m/n/12 . 9999. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : 
 / / developer .
  []
 
-[40]
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 470.
+[42]
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 507.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 470.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 507.
 
-Overfull \hbox (4.1918pt too wide) in paragraph at lines 471--471
+Overfull \hbox (7.03726pt too wide) in paragraph at lines 508--508
 \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / / developers . g
 oogle . com / web / fundamentals / getting -[] started /
  []
 
 
-Overfull \hbox (3.32715pt too wide) in paragraph at lines 471--471
+Overfull \hbox (6.1726pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/n/12 Björn Beh-rendt. \T1/phv/m/sl/12 Application-Programming-Inter
 face (API) De-fi-ni-ti-on\T1/phv/m/n/12 . 2016. \T1/phv/m/sc/12 url\T1/phv/m/n/
 12 :
  []
 
 
-Overfull \hbox (14.87326pt too wide) in paragraph at lines 471--471
+Overfull \hbox (17.71872pt too wide) in paragraph at lines 508--508
 \T1/cmtt/m/n/12 http : / / www . gruenderszene . de / lexikon / begriffe / appl
 ication -[] programming -[]
  []
 
-[41]
-Overfull \hbox (19.32516pt too wide) in paragraph at lines 471--471
+[43]
+Overfull \hbox (22.17062pt too wide) in paragraph at lines 508--508
 \T1/phv/m/sl/12 zep-te -- Ana-ly-sen\T1/phv/m/n/12 . Sprin-ger Fach-me-di-en Wi
 es-ba-den, 2013. \T1/phv/m/sc/12 isbn\T1/phv/m/n/12 : 9783658030339. 
  []
 
 
-Overfull \hbox (1.05899pt too wide) in paragraph at lines 471--471
+Overfull \hbox (3.90445pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/n/12 O Meidl. \T1/phv/m/sl/12 Glo-bal Web-si-te: Web-de-sign im in-
 ter-na-tio-na-len Um-feld\T1/phv/m/n/12 . Sprin-ger Fach-
  []
 
 
-Overfull \hbox (8.05779pt too wide) in paragraph at lines 471--471
-\T1/phv/m/n/12 me-di-en Wies-ba-den, 2013. \T1/phv/m/sc/12 isbn\T1/phv/m/n/12 :
- 9783658028671. \T1/phv/m/sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / 
-/ books . google .
- []
-
-
-Overfull \hbox (13.43681pt too wide) in paragraph at lines 471--471
+Overfull \hbox (16.28227pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/n/12 O. V. \T1/phv/m/sl/12 El Shaab\T1/phv/m/n/12 . 2016. \T1/phv/m
 /sc/12 url\T1/phv/m/n/12 : $\T1/cmtt/m/n/12 http : / / www . elshaab . org/$ \T
 1/phv/m/n/12 (be-sucht am 17.11.2016). 
  []
 
 
-Overfull \hbox (16.7547pt too wide) in paragraph at lines 471--471
+Overfull \hbox (19.60016pt too wide) in paragraph at lines 508--508
 []\T1/phv/m/sl/12 Custom Ele-ments\T1/phv/m/n/12 . \T1/phv/m/sc/12 url\T1/phv/m
 /n/12 : $\T1/cmtt/m/n/12 https : / / customelements . io/$ \T1/phv/m/n/12 (be-s
 ucht am 21.11.2016). 
  []
 
-[42] (thesis.aux)
+
+Overfull \hbox (42.78036pt too wide) in paragraph at lines 508--508
+[]\T1/phv/m/sl/12 Style Re-fe-rence\T1/phv/m/n/12 . 2016. \T1/phv/m/sc/12 url\T
+1/phv/m/n/12 : $\T1/cmtt/m/n/12 https : / / developers . google . com / maps / 
+documentation /
+ []
+
+runsystem(del _minted-thesis\AEF917AF41750DA08BBD11C9BDAE875ED302DD58CEA8DA1A9F
+3ADC06F714F739.pygtex)...executed.
+
+runsystem(del _minted-thesis\4723A54A92C678A42748EB33FB235FB74B13BB335BAE229FD4
+1364586D22FCE6.pygtex)...executed.
+
+runsystem(del _minted-thesis\197B7A7FE87F3A89FA5E2783850A3F774B13BB335BAE229FD4
+1364586D22FCE6.pygtex)...executed.
+
+runsystem(del _minted-thesis\154260B84F396E29703F1E047A684870D302DD58CEA8DA1A9F
+3ADC06F714F739.pygtex)...executed.
+
+runsystem(del _minted-thesis\B8E312D7850F70D63821C3AC36ECE9B5D302DD58CEA8DA1A9F
+3ADC06F714F739.pygtex)...executed.
+
+runsystem(del _minted-thesis\9E7F0995A67514068581B6746C7F2951D302DD58CEA8DA1A9F
+3ADC06F714F739.pygtex)...executed.
+
+runsystem(del _minted-thesis\CF033CDB24AEACF14E6A31B0E0A9E4F44B13BB335BAE229FD4
+1364586D22FCE6.pygtex)...executed.
+
+[44] (thesis.aux)
 runsystem(del thesis.pyg)...executed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1602,10 +1674,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17260 strings out of 493334
- 307557 string characters out of 3139239
- 885010 words of memory out of 3000000
- 20483 multiletter control sequences out of 15000+200000
+ 17280 strings out of 493334
+ 308772 string characters out of 3139239
+ 885208 words of memory out of 3000000
+ 20493 multiletter control sequences out of 15000+200000
  40726 words of font info for 52 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  49i,10n,78p,8819b,3145s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1618,9 +1690,9 @@ k\ljfour\jknappen\ec\dpi600\ecrm0600.pk><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (42 pages, 816355 bytes).
+Output written on thesis.pdf (44 pages, 820568 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
+ 302 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

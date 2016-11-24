@@ -5,7 +5,7 @@
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof, headsepline=true]{scrreprt}
 
 \usepackage[a4paper, includeheadfoot, %bindingoffset=3cm, 
-left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
+left=2.8cm, right=2.8cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 %Header
 \usepackage[automark]{scrpage2}
@@ -232,7 +232,7 @@ customElements.define('new-custom-element', NewCustomElement);
 		\emph{\ac{HTML} Imports} ist eine Technologie zum Importieren von externen \ac{HTML} Dokumenten in ein \ac{HTML} Dokument. Hier ist zu unterscheiden zwischen importierenden und importierten \ac{HTML} Dokumenten. Die importierenden Dokumente besitzen einen Link, welcher mindestens die \ac{URL} des \emph{Imports} und die Eigenschaft \emph{rel=\enquote{import}} besitzt,also ein Link eines bestimmten Typ ist, siehe Listing \ref{lst:htmImp}.\cite[vgl.]{Glazkov2016} 
 		\begin{listing}
 			\begin{HTMLcode*}{}
- <link rel='import' href='/imports/imported-document.html'>
+ <link rel="import" href="/imports/imported-document.html">
 				\end{HTMLcode*}
 			\caption{Standard HTML Import}
 			\label{lst:htmImp}
@@ -253,8 +253,8 @@ var elem = importedDocument.querySelector('div.element');
 		Das \ac{HTML5} Feature \emph{Template} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden.\cite[vgl. S.177]{Cameron2015} Dies bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt.\cite[vgl.]{Potschien2013} 
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
-var inhalt = document.querySelector('template').content;
-document.querySelector('body').appendChild(inhalt);
+var inhalt = document.querySelector("template").content;
+document.querySelector("body").appendChild(inhalt);
 			\end{JavaScriptcode*}
 			\caption{JavaScript Code für das Hinzufügen eines Templates in das DOM}
 			\label{lst:htmTem}
@@ -274,8 +274,8 @@ document.querySelector('body').appendChild(inhalt);
 			\begin{JavaScriptcode*}{}
 var header = document.createElement('header');
 var shadowRoot = header.attachShadow({mode: 'open'});
-var headline = document.createElement('h1');
-var headlineText = document.createTextNode('headline');
+var headline = document.createElement("h1");
+var headlineText = document.createTextNode("headline");
 headline.appendChild(headlineText);
 shadowRoot.appendChild(headline);
 			\end{JavaScriptcode*}
@@ -287,10 +287,10 @@ shadowRoot.appendChild(headline);
 			\emph{Shadow \ac{DOM}} kann auch mit anderen \ac{DOM} erweitert werden. Der Entwickler kann dem Nutzer seines \emph{Web Component} ermöglichen, diesen zu erweitern. Hierfür werden \emph{Slots} verwendet. 
 			\begin{listing}
 				\begin{HTMLcode*}{}
-<ul id='contacts'>
+<ul id="contacts">
    <li>
-      <slot name='title'>Kein Titel</slot>
-      <slot name='name'>
+      <slot name="title">Kein Titel</slot>
+      <slot name="name">
          <p>Achtung<p>
          <h1>Kein Name<h1>
       </slot>
@@ -303,9 +303,9 @@ shadowRoot.appendChild(headline);
 			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, also die Ersatzfunktion, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Die Ersatzfunktion kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist.\cite[vgl.]{Bidelman2016} In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt. Wie hier in Zeile fünf und sechs zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim übersetzen des Programmcodes der Applikation werden alle Elemente, welche die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} übersetzt. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \emph{DOM} geschrieben.
 			\begin{listing}
 				\begin{HTMLcode*}{}
-<span slot='title'>Dr.</span>
-<span slot='title'>Phil.</span>
-<span slot='name'>Michael</span>
+<span slot="title">Dr.</span>
+<span slot="title">Phil.</span>
+<span slot="name">Michael</span>
 				\end{HTMLcode*}
 				\caption{Befüllen der Slot Elemente im DOM}
 				\label{lst:sloNutLigDom}
@@ -313,13 +313,13 @@ shadowRoot.appendChild(headline);
 			In Listing \ref{lst:renDom} ist der von den zwei vorhergehenden Listings kombinierte und gerenderte Inhalt zu sehen. Dies ist der \ac{DOM}, den man beispielsweise in einer Webseite sehen würde. Hier ist gut zu erkennen, wie die \emph{Slot} Elemente des \emph{Shadow \ac{DOM}} mit den später erstellten Elementen befüllt werden. Alle Elemente innerhalb des \emph{Web Component} mit dem Attribut \enquote{slot} werden in diesen übersetzt.
 			\begin{listing}
 				\begin{HTMLcode*}{}
-<ul id='contacts'>
+<ul id="contacts">
    <li>
-      <slot name='title'>
+      <slot name="title">
 	     <span>Dr.</span>
 	     <span>Phil.</span>
 	  </slot>
-      <slot name='name'>
+      <slot name="name">
 	     <span>Michael</span>
       </slot>
    </li>
@@ -452,56 +452,19 @@ function restCall (url){
 		\subsection{google-map}
 			\subsubsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
+			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons und in der Suchleiste angleichen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Suchleiste inklusive der Einstellungen, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\begin{figure}
 				\centering
 				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmap.png}
 				\caption{Google Map Ansicht\cite{gooMapOri}}
 				\label{img:gmap}
 			\end{figure}
-			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons und in der Suchleiste angleichen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Suchleiste inklusive der Einstellungen, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsubsection{Umsetzung Programmierung}
-			Zuerst wird die Anpassung des Kontrastwerts vorgenommen. Hier sollte zu Beginn auf die Erstellung einer \enquote{Google Map} genauer eingegangen werden. Dabei wird eine Instanz der Klasse \emph{google.maps.Map} erstellt. Diese kann mithilfe optionaler Parameter erstellt werden. Einer dieser Parameter sind die sogenannten \emph{styles}. Hier können einzelne Merkmale oder die gesamte Karte mit eigenen Gestaltungseinstellungen versehen werden. Ein Merkmal sind bestimmte geographische Eigenschaften der Karte, wie beispielsweise Straßen, Parks oder Seen, sie werden als \emph{featureType} definiert. Danach können noch einzelne Elemente dieser Eigenschaften gewählt werden, wie beispielsweise Bezeichner oder geographische Elemente. diese werden als \emph{elementType} bezeichnet. Zuletzt kann somit das Aussehen dieser Elemente der Merkmale über verschiedene Gestaltungsoptionen angepasst werden.\cite{gmapStyle}
-					\begin{listing}
-				\begin{JavaScriptcode*}{}
-var stylesArray = [{
-   featureType: 'water',
-   stylers: [
-   {'color': '#000000'}
-   ]},{
-   featureType: 'landscape',
-   stylers: [
-   {'color': '#000000'}
-   ]},{
-   featureType: 'road',
-   stylers: [
-   {'color': '#ffffff'}
-   ]},{
-   featureType: 'transit',
-   stylers: [
-   {'color': '#ffffff' }
-   ]
-   },{
-   featureType: 'poi',
-   stylers: [
-   {'visibility': 'off'}
-   ]},{
-   featureType: 'administrative',
-   stylers: [
-   {'color': '#ffff00'}
-   ]}
-];
-				\end{JavaScriptcode*}
-				\caption{Der Programmcode um die Gestaltung an einen erhöhten Kontrastwert anzupassen}
-				\label{lst:gooMapCon}
-			\end{listing}
-		In Listing \ref{lst:gooMapCon} ist der Programmcode, der einen erhöhten Kontrast der Karte erreicht dargestellt. Die hier erstellte Datengruppe wird als \emph{styles} Parameter beim Instanziieren der \emph{google.maps.Map} Klasse übergeben. Den Merkmalen der Karte werden verschiedene Farben zugeordnet, diese werden so gewählt, dass sie einen hohen Kontrast erzeugen und sich somit gut voneinander unterscheiden lassen.
-			
+			Zuerst wird die Anpassung Kontrastwert vorgenommen. Hier sollte zu Beginn auf die Erstellung einer \enquote{Google Map} genauer eingegangen werden.
 		\subsection{Web Component Zwei}
 		\subsection{Web Component Drei}
 \chapter{Vergleich}
-	\section{Polymer}
-	Die \emph{Polymer} Bibliothek stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen. Diese Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren.\cite{polymer} Die verwendeten Technologien der Bibliothek ähneln den \emph{Web Components}, oder es werden direkt die Technologien der \emph{Web Components} genutzt.
-	\subsection{Polymer Technologie}
+	\section{Vergleich mit Polymer}
 	
 
 	\printbibliography

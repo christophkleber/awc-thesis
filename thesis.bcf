@@ -2181,6 +2181,8 @@
     <bcf:citekey order="64">gooMap</bcf:citekey>
     <bcf:citekey order="65">gooMapOri</bcf:citekey>
     <bcf:citekey order="66">gooMapOri</bcf:citekey>
+    <bcf:citekey order="67">gmapStyle</bcf:citekey>
+    <bcf:citekey order="68">polymer</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
