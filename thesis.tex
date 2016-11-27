@@ -146,14 +146,12 @@ This thesis is about Web Components.
 \tableofcontents
 
 \chapter{Adaptivität}
-	\section{Begriffsklärung}
-	Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit mehrdeutig und abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\cite[S. 45]{woeller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\cite[][S. 112]{loeser2013web}
-	In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\cite[S. 1]{Kobsa1993}
-	\newline In den verschiedenen Auslegungen des Wortes ist ein Muster zu erkennen. Adaptivität kann definiert werden als die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\cite[vgl.]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise die Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenzen angepasst werden und Farbstile und Kontraste angepasst werden.
-	\newline
-	Hier stellt sich jedoch die Frage, wie im Zusammenhang von Internetanwendungen eine Adaptivität bereitgestellt werden kann und insbesondere, an welche Aspekte sie sich anpassen soll. Hierfür muss die Umgebung, der Nutzer und auch dessen Arbeitsaufgaben erforscht und definiert werden.
+Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit mehrdeutig und abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\cite[S. 45]{woeller2014tiefenpsychologisch} Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen].}\cite[][S. 112]{loeser2013web}
+In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden.\enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breiten Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können.}\cite[S. 1]{Kobsa1993}
+\newline In den verschiedenen Auslegungen des Wortes ist ein Muster zu erkennen. Adaptivität kann definiert werden als die Fähigkeit eines Objekts, dies kann beispielsweise eine Person oder ein System sein, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung anpassen oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Dies kann automatisch geschehen. So passt sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss.\cite[vgl.]{Rixecker2016} Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist dies der Fall, kann der Nutzer beispielsweise die Benutzeroberfläche an seine eigenen Vorlieben anpassen. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenzen angepasst werden und Farbstile und Kontraste angepasst werden.
+\newline Hier stellt sich jedoch die Frage, wie im Zusammenhang von Internetanwendungen eine Adaptivität bereitgestellt werden kann und insbesondere, an welche Aspekte sie sich anpassen soll. Hierfür muss die Umgebung, der Nutzer und auch dessen Arbeitsaufgaben erforscht und definiert werden.
 	\section{Nutzungskontext}
-	Die Betrachtung des Nutzungskontext bietet diese Möglichkeit. Der Nutzungskontext wird nach der DIN EN ISO 9241-210 von den Benutzermerkmalen, Arbeitsaufgaben und der organisatorischen, technischen und physischen Umgebung bestimmt. Im folgenden wird ein Überblick dieser Beschreibung gegeben.
+	Die Betrachtung des Nutzungskontext bietet diese Möglichkeit. Der Nutzungskontext wird nach der DIN EN ISO 9241-210 von den Benutzermerkmalen, Arbeitsaufgaben und der organisatorischen, technischen und physischen Umgebung bestimmt. Im folgenden wird ein Überblick dieser Beschreibung gegeben.\cite[vgl. S.15 ff.]{hoffmann2014venus}
 	\begin{description}  
 		\item  [Nutzer und sonstige Interessengruppen] 
 		Zu Beginn sollten die Nutzergruppen und weitere Interessengruppen identifiziert und deren wesentliche Ziele und Einschränkungen beschrieben werden.
@@ -165,7 +163,7 @@ This thesis is about Web Components.
 		Auf der einen Seite sollten die Ziele der Nutzer beschrieben werden, auf der anderen Seite die Gesamtziele des Systems. Danach sollten die Arbeitsaufgaben betrachtet und nach ihren Merkmalen untersucht werden, beispielsweise wie oft eine Aufgabe ausgeführt werden soll.
 			
 		\item [Umgebung(en) des Systems]
-		Die Umgebung lässt sich in die technische Umgebung, also die der Computerkomponenten und Anwendungen, die physikalische Umgebung, also Aspekte wie beispielsweise Beleuchtung und soziale und kulturelle Umgebung aufteilen.Zur kulturellen Umgebung zählen beispielsweise die Arbeitsweise und Einstellungen der Umgebung des Systems.\cite[vgl. S.15 ff.]{hoffmann2014venus}
+		Die Umgebung lässt sich in die technische Umgebung, also die der Computerkomponenten und Anwendungen, die physikalische Umgebung, also Aspekte wie beispielsweise Beleuchtung und soziale und kulturelle Umgebung aufteilen.Zur kulturellen Umgebung zählen beispielsweise die Arbeitsweise und Einstellungen der Umgebung des Systems.
 	\end{description}
 	Insgesamt lässt sich somit sagen, dass die Adaptivität an den Nutzungskontext ausgerichtet werden kann. Verschiedene Merkmale des Nutzungskontext haben Einfluss darauf, wie die Adaptivität, passend zur Situation, erfolgen sollte.
 		
@@ -174,7 +172,7 @@ This thesis is about Web Components.
 	\section{Geschichte der Web Components}
 	\label{ref:gesVonWebCom}
 	\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \emph{\ac{HTML} Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt.\cite[vgl.]{Cooney2012} Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen, um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browserkompatibilität eingegangen.
-		\subsection{Custom Elements !v0 und v1!}
+		\subsection{Custom Elements}
 		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \emph{Chrome} in der Version 33 und \emph{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \emph{Opera for Android} in der Version 37 und von \emph{Chrome for Android} in der Version 53 unterstützt.\cite[vgl.]{C2015} Im \emph{Android} Browser wird diese Version schon seit 2014 unterstützt, in der \emph{Android} Version 4.4.4. Im \emph{Samsung Internet} wird sie seit 2016 in der Version 4 genutzt.\cite[vgl.]{cusEleCanIUse} Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API}.\cite[vgl.]{Bidelman2016cusElev1} Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt.\cite[vgl.]{firefox} Die Version v1 wird derzeit nur von den Browsern \emph{Chrome} und \emph{Opera} unterstützt. Das erste mal wurde sie im Jahr 2016 in der \emph{Chrome} Version 54 und in der \emph{Opera} Version 41 genutzt. \cite[vgl.]{C2016}
 		\subsection{HTML Imports}
 		\emph{\ac{HTML} Imports} wurden in den Browsern \emph{Chrome} und \emph{Opera} zuerst 2014 unterstützt. Die \emph{Imports} wurden als Erstes in der \emph{Chrome} Version 36 und in der \emph{Opera} Version 23 genutzt. Gegenwärtig wird die Technologie von den zuvor erwähnten Browsern auch in den mobilen Browser-Varianten unterstützt, in den Versionen 53 des \emph{Chromium} und 37 des \emph{Opera for Android}.\cite[vgl.]{Morrita2015} Der \emph{Android} Browser unterstützt \emph{\ac{HTML} Imports} seit 2016 in der Version 53. Der Browser des \emph{Android} Betriebssystems ist ab dem Jahr 2016 in der Version 53 kongruent mit dem Chromium Browser. \emph{Samsung Internet} unterstützt die \emph{Imports} seit 2016 in der Version 4.\cite[vgl.]{htmlTemplCaniuse}
@@ -188,10 +186,10 @@ This thesis is about Web Components.
 		\subsection{Shadow DOM}
 		Der \emph{Shadow \ac{DOM}} existiert in der Version v0 und in der Version v1. Die Version v0 wird seit 2014 vom \emph{Chrome} in der Version 35 und \emph{Opera} Browser in der Version 21 unterstützt. Mit der Safari Version 10 kann der \emph{Shadom \ac{DOM}} seit 2016  genutzt werden.\cite[vgl.]{NiwaShaDom} Die mobilen Varianten der Browser unterstützen das \emph{Shadow \ac{DOM}} seit 2016, \emph{Opera} in der Version 37 und \emph{Chrome} in der Version 53, somit auch der \emph{Android} Browser.\cite[vgl.]{Hayato2016} Die Version v0 wird von der Version v1 abgelöst, welche verschiedene Neuerungen in der Syntax, aber auch in der Unterstützung von bestimmten Funktionen aufweist. So kann beispielsweise in der v0 ein \emph{shadow root} immer nur als \enquote{open} definiert werden, in der v1 kann er auch als \enquote{closed} \emph{shadow root} erstellt werden.\cite[vgl.]{Ito2016}
 		Die Version v1 wird noch nicht in so großem Ausmaß wie die Version v0 unterstützt. Vollständig wird sie nur vom \emph{Chrome} 53 und \emph{Opera} 40 Browser unterstützt, jeweils seit 2016. In den mobilen Versionen wird sie nur von dem \emph{Chromium} und somit auch auf \emph{Android} in der Version 53 unterstützt.\cite[vlg.]{Hayato2016a}
-	\section{Vergleich Webentwicklung mit Web Components und ohne}
+	\section{Webentwicklung mithilfe der Web Components}
 	Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms}.\cite[S.15]{stuart2013roadmap} Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Diese können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die Stil-Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinflussen oder das JavaScript, welches eine bestimmte Funktion hat, an einer anderen Stelle für welche es nicht programmiert wurde, Einfluss nehmen. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
-	Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft) native Implementierung verschiedener Techniken anzugehen, welche eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen.			
-		\subsection{Vorteil: Wenn Browserunterstützung gegeben: native, kein Framework}
+	Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft) native Implementierung verschiedener Techniken anzugehen, die eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen. Nachfolgend wird auf die daraus resultierenden Vor- und Nachteile eingegangen. 			
+		\subsection{Native Browserunterstützung}
 		Aufgrund der Erkenntnisse der Geschichte von \emph{Web Components} in Kapitel \ref{ref:gesVonWebCom} ist eine große Wahrscheinlichkeit gegeben, dass die Technologien der \emph{Web Components} in Zukunft nativ von den verschiedenen Browsern unterstützt werden.
 		Sollte dieser Fall eintreffen ergibt sich daraus ein großer Vorteil. Es muss bei der Nutzung nativer, also von den Browsern implementierten Techniken, kein externer Programmcode genutzt werden um bestimmte Funktionen abzudecken. Viele Funktionalitäten können einfach über die Nutzung nativer Methoden abgebildet werden. Deshalb müssen weniger Funktionen selbst geschrieben werden und weniger, beziehungsweise unter Umständen keine \emph{Frameworks} genutzt werden. Dies verkleinert das Laden von externen Programmcode. Darüber hinaus ist die Syntax und Funktionsweise bei nativen Funktionen bekannt und eindeutig. Daraus ergeben sich weniger Inkonsistenzen in der Programmierung und eine leichtere Verständlichkeit. Im Gegensatz dazu muss bei vielen \emph{Frameworks} eine jeweils eigene Syntax benutzt werden.
 		\subsection{Kapselung}
@@ -205,8 +203,9 @@ This thesis is about Web Components.
 		Auch wenn \emph{Web Components} sehr viele Vorteile aufweisen, ist es ein Problem wenn die Techniken (noch) nicht in allen Browsern unterstützt werden oder unterschiedlich implementiert sind. Wie in Kapitel \ref{ref:gesVonWebCom} dargelegt, sind einige der Techniken noch nicht von allen Browsern unterstützt, oder unterscheiden sich in deren Umsetzung. Dies kann zu Inkonsistenzen oder dem nicht funktionieren einer Applikation führen. Dies kann jedoch umgangen werden, indem \emph{Polyfills} verwendet werden. Das sind in diesem Zusammenhang Programmcodes, welche die Funktionen oder Teile einer Technologie, die nativ noch nicht von einem Browser unterstützt wird, nachstellen. Diese können dann verwendet werden um Nutzern aller Browser den Gebrauch Technologien zu ermöglichen.\cite[vgl. S.4]{satrom2014building} Das \emph{webcomponents.js} ist ein Set von \emph{Polyfills} und ermöglicht den Nutzern die Verwendung von \emph{Web Components} in allen modernen Browsern.\cite[vgl.]{webComJs}
 			
 	\section{Technik der Web Components}
+	Im folgenden werden die technischen Grundlagen der \emph{Web Components} und insbesondere deren Syntax erforscht und durch Beispiele erläutert.
 		\subsection{Custom Elements}
-		Das \emph{Custom Element} ist eine \emph{\ac{API}}, welches das Bilden eigener, voll funktionstüchtiger \emph{\ac{DOM}} Elemente ermöglicht.\cite[vgl.]{Denicola2016} Die \ac{API} beschreibt in diesem Zusammenhang eine Schnittstelle, welche einem anderen Programm ein Werkzeug zur Verfügung stellt, um sich an das eigene Softwaresystem anbinden zu können.\cite[vgl.]{Behrendt2016} Somit ermöglicht eine \ac{API} einen Austausch von Informationen zwischen verschiedenen Programmen oder Systemen.	
+		Das \emph{Custom Element} ist eine \ac{API}, welches das Bilden eigener, voll funktionstüchtiger \ac{DOM} Elemente ermöglicht.\cite[vgl.]{Denicola2016} Die \ac{API} beschreibt in diesem Zusammenhang eine Schnittstelle, welche einem anderen Programm ein Werkzeug zur Verfügung stellt, um sich an das eigene Softwaresystem anbinden zu können.\cite[vgl.]{Behrendt2016} Somit ermöglicht eine \ac{API} einen Austausch von Informationen zwischen verschiedenen Programmen oder Systemen.	
 		Die \emph{Custom Element \ac{API}} ermöglicht den Nutzern die Auszeichnungsprache \ac{HTML} zu erweitern.\cite[vgl.]{Argelius2016} Es können bestehende \ac{HTML} Elemente erweitert, oder neue hinzugefügt werden. Jedes neue oder erweiterte Element wird unter einem \emph{Tag} Namen registriert. Dies ermöglicht eine Kapselung des erstellen Programmiercodes in Elemente. In Listing \ref{lst:cusEleJav} ist ein JavaScript Programmcode dargestellt, welcher ein leeres \emph{Custom Element} definiert und und unter dem Namen \enquote{new-custom-element} registriert wird.
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
@@ -261,13 +260,16 @@ document.querySelector('body').appendChild(inhalt);
 		\end{listing}
 		In \ref{lst:htmTem} sieht man den \emph{JavaScript} Programmcode um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur JavaScript Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{Body} der Seite, also dem eigentlichen Inhalt hinzugefügt zu werden. In diesem Moment werden auch die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
 		\subsection{Shadow DOM}
-		\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\cite[Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, dessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}. Dies ist in Abbildung \ref{img:shaDom} dargestellt.\cite[vgl. S.22]{patel2015learning} 
-		\begin{figure}
+		\enquote{Das \emph{Shadow \ac{DOM}} beschreibt die Fähigkeit eines Browsers, eine neue, völlig abgekapselte Knotenstruktur im bestehenden \ac{DOM} zu erzeugen.}\cite[Kap. 11.1.4]{gasston2014moderne} Dies bedeutet, dass neben dem normalen \emph{Document tree}, dessen Wurzelknoten ein Dokument ist, noch der \emph{Shadow tree} besteht. Der Wurzelknoten des letzteren ist kein Dokument, sondern der \emph{Shadow root}.
+		\iffalse
+			Dies ist in Abbildung \ref{img:shaDom} dargestellt.\cite[vgl. S.22]{patel2015learning} 
+			\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{shaDom.png}
 			\caption{DOM und Shadow \ac{DOM} \cite[S. 22]{patel2015learning}}
 			\label{img:shaDom}
-		\end{figure}
+			\end{figure}
+		\fi
 		Die Folge dieser Kapselung ist, dass alles was dem \emph{Shadow tree} hinzugefügt wird, nur lokal Einfluss auf diesen hat. Die Gestaltung von Webelementen im \emph{Shadow root} wird dadurch vereinfacht.
 		\ac{CSS} Selektoren können dadurch nicht von außerhalb des \emph{Shadow roots} auf diesen zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}. Genauso verhält es sich mit dem Zugriff auf die \ac{DOM} Elemente des \emph{Shadow root}. Sie können nicht von außerhalb angesprochen werden, beispielsweise durch die Funktion \emph{document.querySelector()}, sondern können nur von Funktionen innerhalb des \emph{Shadow root} angesprochen werden.\cite[vgl.]{Bidelman2016}
 		\begin{listing}
@@ -328,43 +330,50 @@ shadowRoot.appendChild(headline);
 				\caption{Gerenderter DOM}
 				\label{lst:renDom}
 			\end{listing}
-		
+\chapter{Polymer}
+Die \emph{Polymer} Bibliothek stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen. Diese Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren.\cite[vgl.]{polymerFeaOve} Die verwendeten Technologien der Bibliothek ähneln den \emph{Web Components}, oder es werden direkt die Technologien der \emph{Web Components} genutzt.
+	\section{Polymer Technologie}
+	Ähnlich der \emph{Web Components} Technologie, muss mithilfe der \emph{Polymer} Bibliothek ein vom Entwickler neu erstelltes \emph{custom element} zuerst registriert werden. 
+	\begin{listing}
+	\begin{JavaScriptcode*}{}
+MyElement = Polymer({
+	is: 'my-element'
+});
+// Instanziierung mit createElement
+var elem = document.createElement('my-element');
+// Instanziierung über Konstruktor
+var elem2 = new MyElement();
+	\end{JavaScriptcode*}
+	\caption{Polymer custom element Registrierung}
+	\label{lst:polCusEle}
+	\end{listing}
+Die \enquote{Polymer} Funktion registriert das Element im Browser und gibt einen Konstruktor zurück der genutzt werden kann um Instanzen des Elements zu erstellen. Wie in Listing \ref{lst:polCusEle} in Zeile zwei zusehen, spezifiziert das \enquote{is} Argument der Funktion den Namen der \ac{HTML} Kennzeichnung (\emph{tag}). In Zeile fünf und sieben sind die beiden Möglichkeiten dargestellt ein Element zu registrieren. Einmal über die \enquote{createElement} Funktion oder über den \enquote{new} Operator. In der \enquote{Polymer} Funktion kann das Argument \enquote{extends} hinzugefügt. Dieses kann mit einem Wert befüllt werden, der einem Standard \ac{HTML} Element Bezeichner entspricht, beispielsweise \enquote{input}. Dadurch kann dieses Element erweitert werden. Bei der Instanziierung über den Konstruktor wird genauso wie in Listing \ref{lst:polCusEle} verfahren, bei der Instanziierung durch \enquote{createElement} muss als erstes Argument der Funktion das zu erweiternde Element und als zweites Argument der \enquote{is} Wert des neu erstellten Argument übergeben werden. Beispielsweise \enquote{var elem = document.createElement('input', 'my-input');
+} 
+\chapter{Darwin}	
 \chapter{Methodik dieser Arbeit}
 \chapter{Adaptivität an den Nutzer}
 Das Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components} die sich adaptiv an den Nutzer anpassen basiert auf drei Schritten. Als erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität. \newline
-Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, adaptive Elemente von Webseiten, aussehen wird.
-	\section{Präferenzen von Nutzern}
-	Um eine Adaptivität zu ermöglichen, muss definiert werden, welche Bestandteile der Anwendung sich dynamisch verhalten, also an den Nutzer anpassen. Dazu mehr in Kapitel \ref{ref:konVonAda}. Vorher muss definiert werden, wie die Applikation insgesamt reagiert, also inwiefern sie ihren Zustand an den jeweiligen Nutzer anpasst. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
-	\section{Identifikation passender Preference Terms}
-	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Hier stellt sich die Frage, auf welcher Basis die Vorlieben und Einschränkungen definiert und organisiert werden.
-		\subsection{WCAG Guidelines}
-		Die \ac{WCAG 2.0} versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten.
-			\subsubsection{Richtlinie 1.1 Text-Alternativen}
-			Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können. 
-			\subsubsection{Richtlinie 1.2 zeitbasierte Medien}
-			Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
-			\subsubsection{Richtlinie 1.3 Anpassbar}
-			Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein sein.
-			\subsubsection{Richtlinie 1.4 Unterscheidbar}
-			Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
-			\subsubsection{Richtlinie 2.1 Zugänglichkeit mit der Tastatur}
-			Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.
-			\subsubsection{Richtlinie 2.2 Ausreichend Zeit}
-			Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
-			\subsubsection{Richtlinie 2.3 Anfälle}
-			Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
-			\subsubsection{Richtlinie 2.4 Navigierbar}
-			Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
-			\subsubsection{Richtlinie 3.1 Lesbarkeit}
-			Der textbasierte Inhalt sollte lesbar und verständlich sein.
-			\subsubsection{Richtlinie 3.2 Vorhersehbar}
-			Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und funktionieren.
-			\subsubsection{Richtlinie 3.3 Hilfestellung bei der Eingabe}
-			Dem Nutzer soll geholfen werden, Fehler zu vermeiden und zu korrigieren.
-			\subsubsection{Richtlinie 4.1 Kompatibel}
-			Die Kompatibilität mit heutigen und zukünftigen Benutzeragenten und unterstützenden Technologien soll maximiert werden.			
-			\cite[vgl.]{wcag}
-		\subsection{Folgerung für Merkmale der Anwendung}
+Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, die adaptiven Elemente einer Internetseite, aussehen wird.
+	\section{Die Präferenzen der Nutzer}
+	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese Unterscheidung abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Diese Paare werden gesammelt für jeden einzelnen Nutzer gespeichert. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
+		\subsection{WCAG Richtlinien}
+		Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten. Im folgenden werden die Richtlinien aufgezählt und kurz beschrieben.\cite[vgl.]{wcag}
+		\begin{description}
+			\item [Richtlinie 1.1 Text-Alternativen] Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können.
+			\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
+			\item[Richtlinie 1.3 Anpassbar] Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein sein.
+			\item[Richtlinie 1.4 Unterscheidbar] Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
+			\item[Richtlinie 2.1 Zugänglichkeit mit der Tastatur] Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.	
+			\item[Richtlinie 2.2 Ausreichend Zeit] Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
+			\item[Richtlinie 2.3 Anfälle] Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
+			\item[Richtlinie 2.4 Navigierbar] Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
+			\item[Richtlinie 3.1 Lesbarkeit] Der textbasierte Inhalt sollte lesbar und verständlich sein.	
+			\item[Richtlinie 3.2 Vorhersehbar] Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und funktionieren.
+			\item[Richtlinie 3.3 Hilfestellung bei der Eingabe] Dem Nutzer soll geholfen werden, Fehler zu vermeiden und zu korrigieren.
+			\item[Richtlinie 4.1 Kompatibel] Die Kompatibilität mit heutigen und zukünftigen Benutzeragenten und unterstützenden Technologien soll maximiert werden.
+		\end{description}
+		\subsection{Folgerung für die Präferenzen}
+		Auf Basis der vorhergehenden Kapiteln und weiterer Beobachtungen wird nun erforscht, welche Merkmale des \emph{Web Component} sich in welcher Art und Weise anpassen soll, um eine sinnvolle Adaptivität zu erreichen.
 			\subsubsection{Kontrast}
 			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden.\cite[vgl S.234]{balzert2009webdesign}
 			\subsubsection{Schrift}
@@ -373,7 +382,6 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 			\subsubsection{Leserichtung}
 			\label{ref:lesRic}
 			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten, geschrieben  \cite[vgl S.148]{emrich2013interkulturelles}
-			
 			\subsubsection{Anordnung der Elemente}
 			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf.\cite[vgl. S.47 f.]{meidl2013global}
 			\begin{figure}
@@ -395,7 +403,7 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 		\subsection{Herunterladen der Nutzer Präferenzen}
 		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
 			\subsubsection{Was bedeutet REST}
-			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien.
+			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien.\cite[vgl. S.77]{chauhan2014asp} 
 			\begin{description}  
 				\item  [Adressierbarkeit von Ressourcen]
 				Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
@@ -411,7 +419,7 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 				Es werden keine Zustände auf dem \emph{Server} gespeichert. Zustandsinformationen werden vom \emph{Client} gehandhabt und bei Bedarf an den Server gesendet.
 				
 				\item [Cashing möglich]
-				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	\cite[vgl. S.77]{chauhan2014asp} 
+				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	
 			\end{description}
 		\subsubsection{Der Client}
 		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf der \emph{jQuery.ajax()} Funktion. Dies ist eine Funktion des \emph{jQuery Frameworks} , welche eine asynchrone Anfrage an einen Ort stellt, basierend auf dem \ac{HTTP} Protokoll.\cite[vgl.]{jquAja}
@@ -445,20 +453,18 @@ function restCall (url){
 		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
 \chapter{Adaptivität von bestehenden Web Components}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt.\cite{cusEleIo}
-	\section{Die Elemente}
 	Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, der die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht. Diese Karte kann personalisiert und durch Wegbeschreibungen oder Markierungen ergänzt werden.\cite{gooMap}
-	
-	\section{Anpassung dieser Web Components}
+	\section{Anpassung der Web Components}
 		\subsection{google-map}
 			\subsubsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
 			\begin{figure}
 				\centering
 				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmap.png}
-				\caption{Google Map Ansicht\cite{gooMapOri}}
+				\caption{Google Map Web Component Ansicht}
 				\label{img:gmap}
 			\end{figure}
-			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons und in der Suchleiste angleichen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Suchleiste inklusive der Einstellungen, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
+			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons auch anpassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsubsection{Umsetzung Programmierung}
 			Zuerst wird die Anpassung des Kontrastwerts vorgenommen. Hier sollte zu Beginn auf die Erstellung einer \enquote{Google Map} genauer eingegangen werden. Dabei wird eine Instanz der Klasse \emph{google.maps.Map} erstellt. Diese kann mithilfe optionaler Parameter erstellt werden. Einer dieser Parameter sind die sogenannten \emph{styles}. Hier können einzelne Merkmale oder die gesamte Karte mit eigenen Gestaltungseinstellungen versehen werden. Ein Merkmal sind bestimmte geographische Eigenschaften der Karte, wie beispielsweise Straßen, Parks oder Seen, sie werden als \emph{featureType} definiert. Danach können noch einzelne Elemente dieser Eigenschaften gewählt werden, wie beispielsweise Bezeichner oder geographische Elemente. diese werden als \emph{elementType} bezeichnet. Zuletzt kann somit das Aussehen dieser Elemente der Merkmale über verschiedene Gestaltungsoptionen angepasst werden.\cite{gmapStyle}
 					\begin{listing}
@@ -499,9 +505,7 @@ var stylesArray = [{
 		\subsection{Web Component Zwei}
 		\subsection{Web Component Drei}
 \chapter{Vergleich}
-	\section{Polymer}
-	Die \emph{Polymer} Bibliothek stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen. Diese Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren.\cite{polymer} Die verwendeten Technologien der Bibliothek ähneln den \emph{Web Components}, oder es werden direkt die Technologien der \emph{Web Components} genutzt.
-	\subsection{Polymer Technologie}
+	
 	
 
 	\printbibliography
