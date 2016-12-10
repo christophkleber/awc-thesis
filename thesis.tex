@@ -80,30 +80,92 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 \usepackage[onehalfspacing]{setspace} %Zeilenabstand
 
 
+%\usepackage{apacite}
+%\bibliographystyle{apacite} 
+%%http://www.ctan.org/tex-archive/biblio/bibtex/contrib/apacite/apacite.pdf 
+%\bibliography{library} % database is "thesis.bib" located in a "bibtex" subfolder 
+
+
+
 \usepackage[
-	backend=biber,
-	style=numeric,
-	sorting=none
-	]{biblatex}
+backend=biber,
+style=numeric,
+sorting=none,
+language=german,
+urldate=long
+]{biblatex}
+
+\DefineBibliographyStrings{german}{%
+	andothers = {et al.},
+	and = {\&},
+}
+\DeclareFieldFormat{url}{\url{#1}}
+
+\usepackage{url}
+\urlstyle{same}
+
+
+
+\DeclareNameAlias{}{last-first} %Name in Literaturverzeichnis umdrehen
+\DeclareBibliographyDriver{book}{%
+	\printnames{author}%
+	\newunit\newblock
+	\newunit
+	\printfield[parens]{year}%
+	\newunit\newblock
+	\printfield{title}%
+	\newunit\newblock
+	\printlist{publisher}%
+	\newunit
+	\printlist{location}%
+	\finentry}
+
+\DeclareBibliographyDriver{misc}{%
+	\printnames{author}%
+	\newunit\newblock
+	\printfield[parens]{year}%
+	\newunit\newblock
+	\printfield{title}%
+	\newunit
+	\hspace{0.2cm}Abgerufen am
+	\printfield{urlday}%
+	\newunit
+	\printfield{urlmonth}%
+	\newunit
+	\printfield{urlyear}%
+	\newunit
+	\hspace{0.2cm}Abgerufen von	
+	\printfield{url}%
+	\finentry}
+
+\AtEveryBibitem{
+	
+	%	\clearname{translator}%
+	%	\clearlist{publisher}%
+	\clearfield{isbn} %isbn ausblenden
+	\clearfield{doi} %isbn ausblenden	
+	
+}
 \addbibresource{library.bib}
 
+%Abkürzungen
 \usepackage{acronym}
 
 % Neues cite-Kommando oder altes \footcite-Kommando überschreiben
-\DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
-{\usebibmacro{prenote}}                                 
-{\usebibmacro{citeindex}%
-	\setunit{\addnbspace}
-	\printnames{labelname}%
-	\setunit{\labelnamepunct}
-	\newunit
-	\printfield{year}
-}
-{\addsemicolon\space}
-{\usebibmacro{postnote}}
+%\DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
+%{\usebibmacro{prenote}}                                 
+%{\usebibmacro{citeindex}%
+%	\setunit{\addnbspace}
+%	\printnames{labelname}%
+%	\setunit{\labelnamepunct}
+%	\newunit
+%	\printfield{year}
+%}
+%{\addsemicolon\space}
+%{\usebibmacro{postnote}}
 
 
-\renewcommand{\smfootcite}[2][2]{\relax}
+%\renewcommand{\smfootcite}[2][2]{\relax}
 
 
 
