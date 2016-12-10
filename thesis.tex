@@ -35,7 +35,7 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 \setcounter{tocdepth}{3}% Include \subsubsection in ToC
 \setcounter{secnumdepth}{3}% Number \subsubsection
-\setuptoc{toc}{numbered} % Adds ToC to ToC toDo: remove Pagenumber of ToC in ToC
+\setuptoc{toc}{} % Adds ToC to ToC toDo: remove Pagenumber of ToC in ToC
 
 \usepackage[ngerman]{babel} %Deutsch
 
@@ -102,6 +102,13 @@ urldate=long
 \DeclareFieldFormat{url}{\url{#1}}
 
 \usepackage{url}
+%\usepackage[draft=false]{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+
+\usepackage[anythingbreaks]{breakurl}
+
+ 
+
 \urlstyle{same}
 
 
@@ -169,22 +176,23 @@ urldate=long
 
 
 
-
+\pagenumbering{Roman} % Switch Roman
 
 \title{Erstellung von adaptiven Web Components}
 \author{Christoph Kleber}
 \date{\today}
 
 \begin{document}
+
 \maketitle
 
 \chapter*{Kurzfassung}
 \addcontentsline{toc}{chapter}{Kurzfassung}
-In dieser Arbeit geht es um Web Components.
+In dieser Arbeit geht es um Web Components...
 	
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-This thesis is about Web Components.
+This thesis is about Web Components...
 
 \listoflistings
 \listoffigures
@@ -207,7 +215,11 @@ This thesis is about Web Components.
 
 \tableofcontents
 
+
+
+
 \chapter{Adaptivität}
+\pagenumbering{arabic} % Switch to normal numbers
 Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit mehrdeutig und abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\cite[S. 45]{woeller2014tiefenpsychologisch}. Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen]}\cite[][S. 112]{loeser2013web}.
 In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden: \enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breitem Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können}\cite[S. 1]{Kobsa1993}.
 \newline In den verschiedenen Auslegungen des Wortes ist ein Muster zu erkennen. Adaptivität kann definiert werden als die Fähigkeit eines Objekts, zum Beispiel eine Person oder ein System, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung, oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Das kann auch automatisch geschehen. So gleicht sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss\cite{Rixecker2016}. Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist das der Fall, kann der Nutzer beispielsweise die Benutzeroberfläche nach seinen eigenen Vorlieben einrichten. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenzen aufgebaut werden und Farbstile und Kontraste verändert werden.
@@ -269,10 +281,8 @@ customElements.define('new-custom-element', NewCustomElement);
 		\end{listing}
 		Für \emph{Custom Elements} sind mehrere \emph{Callbacks} verfügbar. \emph{Callback} Funktionen beschreiben hier Funktionen, die bei bestimmten Ereignissen des Lebenskreislaufs der Applikation von außerhalb des \emph{Custom Elements} aufgerufen werden. Im Folgenden werden diese Funktionen aufgelistet\cite{Argelius2016}.
 		\begin{description}  
-			\item  [\emph{connectedCallback()}] Diese Funktion wird aufgerufen, wenn das \emph{Custom Element} an den \ac{DOM} angehängt wird.
-			
-			\item [\emph{disconnectedCallback()}] Diese Funktion wird aufgerufen, wenn das \emph{Custom Element} vom \ac{DOM} wieder losgelöst wird. 
-			
+			\item  [\emph{connectedCallback()}] Diese Funktion wird aufgerufen, wenn das \emph{Custom Element} an den \ac{DOM} angehängt wird.			
+			\item [\emph{disconnectedCallback()}] Diese Funktion wird aufgerufen, wenn das \emph{Custom Element} vom \ac{DOM} wieder losgelöst wird. 			
 			\item  [\emph{attributeChangedCallback(name, prevValue, newValue)}] Diese Funktion wird aufgerufen, wenn sich ein Attribut ändert; jedoch nur für Attribute aufgerufen, die in einer statischen \emph{get} Funktion mit Namen \emph{observedAttributes} definiert wurden.
 		\end{description}
 		\subsection{HTML Imports}
@@ -303,7 +313,7 @@ var elem = importedDocument.querySelector('div.element');
 var inhalt = document.querySelector('template').content;
 document.querySelector('body').appendChild(inhalt);
 			\end{JavaScriptcode*}
-			\caption[Hinzuügen eines Templates]{JavaScript Programmcode für das Hinzufügen eines Templates in das DOM}
+			\caption[Hinzufügen eines Templates]{JavaScript Programmcode für das Hinzufügen eines Templates in das DOM}
 			\label{lst:htmTem}
 		\end{listing}
 		In Listing \ref{lst:htmTem} sieht man den JavaScript Programmcode um ein vorhandenes \emph{Template} zum \ac{DOM} hinzuzufügen. In Zeile eins wird der Inhalt des \emph{Templates} zur JavaScript Variable \enquote{inhalt} hinzugefügt, um dann in der nächsten Zeile an den \emph{body} der Seite, also dem eigentlichen Inhalt hinzugefügt zu werden. In diesem Moment werden ebenso die Bilder des \emph{Templates} geladen und eventuelle Skripte ausgeführt.
@@ -429,11 +439,11 @@ Die \emph{Polymer} Bibliothek stellt eine Sammlung von Funktionen bereit um \emp
 		\caption{Polymer custom element Registrierung}
 		\label{lst:polCusEle}
 		\end{listing}
-Die \enquote{Polymer} Funktion erstellt einen Prototypen eines Elements, registriert diesen im Browser und gibt einen Konstruktor zurück, der genutzt werden kann um Instanzen des Elements zu erstellen. Wie in Listing \ref{lst:polCusEle} in Zeile zwei zu sehen, spezifiziert das \enquote{is} Argument der Funktion den Namen der \ac{HTML} Kennzeichnung (\emph{tag}). In Zeile fünf und sieben sind die beiden Möglichkeiten dargestellt ein Element zu registrieren, also eine Instanz zu erstellen. Einmal über die \enquote{createElement} Funktion oder über den \enquote{new} Operator. In der \enquote{Polymer} Funktion kann das Argument \enquote{extends} hinzugefügt werden. Dieses kann mit einem Wert befüllt werden, der einem Standard \ac{HTML} Element Bezeichner entspricht, beispielsweise \enquote{input}. Dadurch kann dieses Standard \ac{HTML} Element erweitert werden. Bei der Instanziierung über den Konstruktor wird dann genauso wie in Listing \ref{lst:polCusEle} verfahren, bei der Instanziierung durch \enquote{createElement} muss als Erstes Argument der Funktion zusätzlich das zu erweiternde Element und als zweites Argument der \enquote{is} Wert des neu erstellten \emph{custom element} übergeben werden. Beispielsweise \enquote{var elem = document.createElement('input', 'my-input');
+Die \enquote{Polymer} Funktion erstellt einen Prototypen eines Elements, registriert diesen im Browser und gibt einen Konstruktor zurück, der genutzt werden kann um Instanzen des Elements zu erstellen. Wie in Listing \ref{lst:polCusEle} in Zeile zwei zu sehen, spezifiziert das \enquote{is} Argument der Funktion den Namen der \ac{HTML} Kennzeichnung (\emph{tag}). In Zeile fünf und sieben sind die beiden Möglichkeiten dargestellt ein Element zu registrieren, also eine Instanz zu erstellen. Einmal über die \enquote{createElement} Funktion oder über den \enquote{new} Operator. In der \enquote{Polymer} Funktion kann das Argument \enquote{extends} hinzugefügt werden. Dieses kann mit einem Wert befüllt werden, der einem Standard \ac{HTML} Element Bezeichner entspricht, beispielsweise \enquote{input}. Dadurch kann dieses Standard \ac{HTML} Element erweitert werden. Bei der Instanziierung über den Konstruktor wird dann genauso wie in Listing \ref{lst:polCusEle} verfahren, bei der Instanziierung durch \enquote{createElement} muss als Erstes Argument der Funktion zusätzlich das zu erweiternde Element und als zweites Argument der \enquote{is} Wert des neu erstellten \emph{custom element} übergeben werden, beispielsweise \enquote{var elem = document.createElement('input', 'my-input');
 }\cite{polyReg}.
 \newpage
 \subsection{Eigenschaften der Elemente}
-Der Prototyp kann mit Eigenschaften versehen werden. Hierfür wird das \enquote{properties} Objekt genutzt. Hier können beliebig viele Eigenschaften des Elements definiert werden. Darüber hinaus können zu jeder Eigenschaft verschiedene Schlüssel hinzugefügt werden.
+Der Prototyp kann mit Eigenschaften versehen werden. Hierfür wird das \enquote{properties} Objekt genutzt. Es können beliebig viele Eigenschaften des Elements definiert und zu jeder Eigenschaft verschiedene Schlüssel hinzugefügt werden.
 \begin{listing}
 	\begin{JavaScriptcode*}{}
 Polymer({
@@ -468,7 +478,7 @@ elem.speak();
 	\end{JavaScriptcode*}
 	\caption{Polymer Instanzmethoden}
 	\label{lst:polMeth}
-\end{listing} In Zeile neun wird dann die Methode von einer Instanz aufgerufen. Darüber hinaus stehen viele verschiedene Methoden standardmäßig jedem Prototyp zur Verfügung. Diese können für verschiedene Zwecke genutzt werden\cite{polyInstMeth}.
+\end{listing} In Zeile neun wird dann die Methode von einer Instanz aufgerufen. Zudem stehen viele verschiedene Methoden standardmäßig jedem Prototyp zur Verfügung. Diese können für verschiedene Zwecke genutzt werden\cite{polyInstMeth}.
 \subsection{Polymer DOM}
 Polymer unterstützt verschiedene \ac{DOM} Implementierungen. Wird vom genutzten Browser \emph{shadow DOM}, die Technologie aus dem Bereich der \emph{Web Components} unterstützt, kann diese verwendet werden. Unterstützt der Browser dies nicht, wird eine angepasste Implementierung in \emph{Polymer} genutzt, der \emph{shady DOM}. Insgesamt sind beide Möglichkeiten in \emph{Polymer} dem lokalen \ac{DOM} zugeordnet und werden im weiteren so genannt\cite{polLocDom}.
 \begin{listing}
@@ -485,7 +495,7 @@ Polymer unterstützt verschiedene \ac{DOM} Implementierungen. Wird vom genutzten
 	\caption{Polymer dom-module}
 	\label{lst:polLocDom}
 \end{listing}
-In Listing \ref{lst:polLocDom} ist der Programmcode zur Erstellung eines lokalen \ac{DOM} von \emph{Polymer} dargestellt. Das Element zur Erstellung dieses wird \enquote{dom-module} genannt. Das Element muss im \enquote{id} Attribut denselben Wert enthalten wie der Prototyp im \enquote{is} Argument, um eine Zuordnung zu ermöglichen. Es enthält ein \enquote{template} Element in Zeile zwei, dessen Inhalt wird dann in den lokalen \ac{DOM} der Instanz des Prototyps geschrieben. \newline
+In Listing \ref{lst:polLocDom} ist der Programmcode zur Erstellung eines lokalen \ac{DOM} von \emph{Polymer} dargestellt. Das Element zur Erstellung dieses wird \enquote{dom-module} genannt. Das Element muss im \enquote{id} Attribut den gleichen Wert enthalten wie der Prototyp im \enquote{is} Argument, um eine Zuordnung zu ermöglichen. Es enthält ein \enquote{template} Element in Zeile zwei, dessen Inhalt wird dann in den lokalen \ac{DOM} der Instanz des Prototyps geschrieben. \newline
 \emph{Polymer} Elemente können durch Stil-Regeln ergänzt werden. Diese sollten, wie standardmäßig bei der Verwendung von \ac{CSS}, innerhalb \enquote{<style>} und darüber hinaus innerhalb des \enquote{<template>} Tags gesetzt werden.
 \iffalse
 	\newline
@@ -509,14 +519,16 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{Shady DOM}, eine Kapselun
 \end{listing}
 Diese werden in der in Listing \ref{lst:benCss} dargestellten Form, im Bereich der Stil-Eigenschaften, bei der Erstellung eines \emph{Polymer} Elements definiert. Wie in Zeile sechs zu sehen ist kann auch, falls der Nutzer der Eigenschaft keinen Wert zuweist ein Standard Wert gesetzt werden. Hier ist der Standardwert \enquote{blue}. An einer Stelle oberhalb des \ac{DOM} kann dann die \ac{CSS} Eigenschaft \enquote{--my-element-title-color} vom Nutzer des Elements mit einem Wert belegt werden. Dadurch wird ab dann jedes Element das mit dieser benutzerdefinierten Eigenschaft belegt ist, mit dem vom Nutzer gesetzten Wert ausgezeichnet. Beispielsweise kann der \enquote{:host} Selektor mit der Eigenschaft \enquote{--my-element-title-color: green} ausgezeichnet werden. Dadurch werden alle Elemente innerhalb des \emph{Shadow root}, mit der benutzerdefinierten Eigenschaft \enquote{--my-element-title-color} auf den Wert \enquote{green} gesetzt.
 \chapter{Darwin}	
+Kapitel über das AWC-Framework
 \chapter{Methodik dieser Arbeit}
+Kapitel über die Methodik
 \chapter{Adaptivität an den Nutzer}
-Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components} die sich adaptiv an den Nutzer anpassen basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
+Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components}, die sich adaptiv an den Nutzer anpassen basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
 Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als Nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, die adaptiven Elemente einer Internetseite, aussehen wird.
 	\section{Präferenzen der Nutzer}
 	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese Unterscheidung abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Diese Paare werden gesammelt für jeden einzelnen Nutzer gespeichert. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
 		\subsection{WCAG Richtlinien}
-		Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Hierfür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten. Im Folgenden werden die Richtlinien aufgezählt und kurz beschrieben\cite{wcag}.
+		Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Dafür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten. Im Folgenden werden die Richtlinien aufgezählt und kurz beschrieben\cite{wcag}.
 		\begin{description}
 			\item [Richtlinie 1.1 Text-Alternativen] Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können.
 			\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
@@ -534,13 +546,13 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 		\subsection{Folgerung für Präferenzen}
 		Auf Basis der vorhergehenden Kapiteln und weiterer Beobachtungen wird nun erforscht, welche Merkmale des \emph{Web Component} sich in welcher Art und Weise anpassen soll, um eine sinnvolle Adaptivität zu erreichen.
 			\subsubsection{Kontrast}
-			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden\cite[vgl S.234]{balzert2009webdesign}.
+			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden\cite[S.234]{balzert2009webdesign}.
 			\subsubsection{Schrift}
-			Die Wahl einer serifen oder grotesken, also serifenlosen Schriftart hat, wenn davon ausgegangen wird eine als allgemein lesbar bekannte Schriftart zu verwenden, keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes\cite[S.157-161]{barrierefreiheit}. Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
-			Die Schriftgröße kann jedoch auch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert\cite[S.152]{barrierefreiheit}. Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
+			Wenn davon ausgegangen wird, dass eine als allgemein lesbar bekannte Schriftart verwendet wird, hat die Wahl einer serifen oder serifenlosen Schriftart keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes\cite[S.157-161]{barrierefreiheit}. Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
+			Die Schriftgröße kann jedoch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße, die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert\cite[S.152]{barrierefreiheit}. Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
 			\subsubsection{Leserichtung}
 			\label{ref:lesRic}
-			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten, geschrieben\cite[vgl S.148]{emrich2013interkulturelles}.
+			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten aufgebaut\cite[S.148]{emrich2013interkulturelles}.
 			\subsubsection{Anordnung der Elemente}
 			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf\cite[S.47 f.]{meidl2013global}.
 			\begin{figure}
@@ -553,8 +565,7 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 			\subsubsection{Text-Alternativen}
 			Die Richtlinie 1.1 definiert, dass zu jedem Text eine Alternative geboten wird. Darüber hinaus sollen die nicht textbasierten Inhalte nach Bedarf durch einen Text dargestellt werden können. Dem Nutzer sollte ermöglicht werden in seinen Präferenzen anzugeben, ob er den Text, oder dessen Alternativen angezeigt bekommen möchte.
 			\subsubsection{Geschwindigkeit}
-			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manchen Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen. Beispielsweise werden bestimmte Navigationselemente durch ein Verweilen der Maus auf diesen ausgeklappt. Sobald die Maus nicht mehr auf dem Element verweilt wird es wieder eingeklappt. Hier sollte es dem Nutzer ermöglicht werden die Zeitspanne anzupassen bevor das Element wieder einklappt, da es ihm andernfalls nicht möglich sein könnte das Element schnell genug zu nutzen.
-		
+			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manche Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen. Beispielsweise werden bestimmte Navigationselemente durch ein Verweilen der Maus auf diesen ausgeklappt. Sobald die Maus nicht mehr auf dem Element verweilt wird es wieder eingeklappt. Hier sollte es dem Nutzer ermöglicht werden die Zeitspanne anzupassen bevor das Element wieder einklappt, da es ihm andernfalls nicht möglich sein könnte das Element schnell genug zu betätigen.		
 			
 		\subsection{Speichern der Nutzer Präferenzen}
 		Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen.
@@ -609,10 +620,10 @@ function restCall (url){
 			\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
 			\label{lst:jquAja}
 		\end{listing}
-		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
+		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
 \chapter{Adaptivität von bestehenden Web Components}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt\cite{cusEleIo}.
-	Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, der die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht. Diese Karte kann personalisiert und durch Wegbeschreibungen oder Markierungen ergänzt werden\cite{gooMap}.
+	Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, das die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht\cite{gooMap}.
 		\section{google-map}
 			\subsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
@@ -622,9 +633,19 @@ function restCall (url){
 				\caption[Google Map Web Component]{Google Map Web Component Ansicht}
 				\label{img:gmap}
 			\end{figure}
-			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}, im weiteren Karte genannt. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons auch anpassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen oder großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text angepasst werden und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
+			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons einstellen lassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen, großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige, standardmäßige, Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsection{Einrichtung des Google Map Web Component}
-			Das \emph{Google Map Web Component} ist auf GitHub gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt und um die Abhängigkeiten des \emph{Web Component} zu installieren wurde Bower genutzt. \emph{Bower} ist ein Paketverwartungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten bestehen aus \enquote{Polymer/polymer\#\^1.2.3}, \enquote{GoogleWebComponents/google-apis\#\^1.1.1}, \enquote{PolymerElements/iron-resizable-behavior\#\^1.0.0} und \enquote{PolymerElements/iron-resizable-behavior\#\^1.0.0}.
+			Das \emph{Google Map Web Component} ist auf GitHub gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt und um die Abhängigkeiten des \emph{Web Component} zu installieren wurde Bower genutzt. \emph{Bower} ist ein Paketverwartungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
+			\begin{itemize}
+				\item
+				\enquote{Polymer/polymer\#\^1.2.3},
+				\item
+				\enquote{GoogleWebComponents/google-apis\#\^1.1.1},
+				\item
+				\enquote{PolymerElements/iron-resizable-behavior\#\^1.0.0}
+				\item
+				\enquote{PolymerElements/iron-selector\#\^1.0.5}
+			\end{itemize}
 			Wenn das \emph{Web Component} eingebunden ist, kann es unter dem \ac{HTML} Tag \enquote{<google-map>} genutzt werden. Dieses muss mit einem \emph{Google} \ac{API} Schlüssel, mit dem Namen \enquote{Google Maps JavaScript API} instanziiert werden. Dieser wurde über ein \emph{Google} Konto generiert und daraufhin in das \emph{Web Component} eingebunden. 
 			\subsection{Umsetzung Programmierung}
 			Im weiteren wird die konzipierte Adaptivität des bestehenden \emph{Web Component} im Programmcode umgesetzt.
@@ -673,7 +694,7 @@ var stylesArray = [{featureType: 'water', stylers: [
 
 
 \chapter{Vergleich}
-	
+Kapitel über den Vergleich
 	
 
 	\printbibliography
