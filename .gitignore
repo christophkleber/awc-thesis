@@ -205,3 +205,6 @@ TSWLatexianTemp*
 
 #temporary files
 thesis.tex.*
+
+#test files
+test.*
