@@ -88,11 +88,12 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 
 \usepackage[
-backend=biber,
-style=numeric,
-sorting=none,
-language=german,
-urldate=long
+	backend=biber,
+	style=numeric,
+	sorting=none,
+	language=german,
+	urldate=comp,
+	doi=false
 ]{biblatex}
 
 \DefineBibliographyStrings{german}{%
@@ -107,41 +108,36 @@ urldate=long
 
 \usepackage[anythingbreaks]{breakurl}
 
- 
-
 \urlstyle{same}
-
-
 
 \DeclareNameAlias{}{last-first} %Name in Literaturverzeichnis umdrehen
 \DeclareBibliographyDriver{book}{%
 	\printnames{author}%
-	\newunit\newblock
-	\newunit
+	\setunit*{\addperiod\addspace}%
 	\printfield[parens]{year}%
-	\newunit\newblock
+	\setunit*{\addperiod\addspace}%
 	\printfield{title}%
-	\newunit\newblock
+	\setunit*{\addperiod\addspace}%
 	\printlist{publisher}%
-	\newunit
+	\setunit*{\addperiod\addspace}%
 	\printlist{location}%
 	\finentry}
 
 \DeclareBibliographyDriver{misc}{%
 	\printnames{author}%
-	\newunit\newblock
+	\setunit*{\addperiod\addspace}%
 	\printfield[parens]{year}%
-	\newunit\newblock
+	\setunit*{\addperiod\addspace}%
 	\printfield{title}%
-	\newunit
-	\hspace{0.2cm}Abgerufen am
+	\setunit*{\addperiod\addspace}%
+	\printtext{Abgerufen am}
 	\printfield{urlday}%
-	\newunit
+	\setunit*{\addperiod}%
 	\printfield{urlmonth}%
-	\newunit
+	\setunit*{\addperiod}%
 	\printfield{urlyear}%
-	\newunit
-	\hspace{0.2cm}Abgerufen von	
+	\setunit*{\newline}%
+	\printtext{Abgerufen von}
 	\printfield{url}%
 	\finentry}
 
@@ -150,7 +146,7 @@ urldate=long
 	%	\clearname{translator}%
 	%	\clearlist{publisher}%
 	\clearfield{isbn} %isbn ausblenden
-	\clearfield{doi} %isbn ausblenden	
+	\clearfield{doi} %doi ausblenden	
 	
 }
 \addbibresource{library.bib}
@@ -635,7 +631,7 @@ function restCall (url){
 			\end{figure}
 			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, die Schrift, die Leserichtung und damit die Anordnung der Elemente und Text-Alternativen genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons einstellen lassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen, großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige, standardmäßige, Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Bilder oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsection{Einrichtung des Google Map Web Component}
-			Das \emph{Google Map Web Component} ist auf GitHub gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt und um die Abhängigkeiten des \emph{Web Component} zu installieren wurde Bower genutzt. \emph{Bower} ist ein Paketverwartungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
+			Das \emph{Google Map Web Component} ist auf GitHub gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt. Das bedeutet, dass der Stand der eigentlichen Entwicklern kopiert wird und eigene Änderungen im weiteren darauf aufbauen. Um die Abhängigkeiten des \emph{Web Component} zu installieren wurde Bower genutzt. \emph{Bower} ist ein Paketverwaltungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
 			\begin{itemize}
 				\item
 				\enquote{Polymer/polymer\#\^1.2.3},
@@ -681,14 +677,14 @@ var stylesArray = [{featureType: 'water', stylers: [
 				\caption[Anpassung zur Erhöhung des Kontrastwerts]{JavaScript Programmcode zur Gestaltung und Anpassung eines erhöhten Kontrastwerts}
 				\label{lst:gooMapCon}
 			\end{listing}
-		In Listing \ref{lst:gooMapCon} ist ein Ausschnitt des Programmcodes, der einen erhöhten Kontrast der Karte erreicht, dargestellt. Die hier erstellte Datengruppe wird als \enquote{styles} Parameter beim Instanziieren der \enquote{google.maps.Map} Klasse übergeben. Den Merkmalen der Karte werden verschiedene Farben zugeordnet, diese werden so gewählt, dass sie einen hohen Kontrast erzeugen und sich somit gut voneinander unterscheiden lassen. Diese Datengruppe soll jedoch nur verwendet werden wenn ein erhöhter Kontrast für den Nutzer erwünscht ist. Dafür wird dem \enquote{google-map} Element eine neue Eigenschaft \enquote{moreContrast} hinzugefügt. Diese ist vom Datentyp Boolean und der Standardwert ist \enquote{falsch}. Wird sie beim Einbinden des \emph{Web Component} gesetzt, wechselt ihr Wert auf \enquote{wahr}. 
-		Die Methode \enquote{\_getMapOptions} ist in diesem Element \enquote{google-map} schon vorhanden. Diese erstellt eine Datengruppe \enquote{mapOptions}. Dieser wird der Parameter \enquote{styles} übergeben. Um eine Adaptivität zu ermöglichen wird hier dem Parameter der Rückgabewert der Methode \enquote{\_changeContrast()} übergeben. Diese frägt zu Beginn ab, ob die Eigenschaft \enquote{moreContrast} auf \enquote{wahr} gesetzt ist. Ist dies der Fall wird die vorher beschriebene Datengruppe für den erhöhten Kontrast an den \enquote{styles} Parameter übergeben, andernfalls wird der Standardwert übergeben. Somit wird insgesamt ein erhöhter Kontrast beim Setzen des Parameters \enquote{moreContrast} erreicht.
+		In Listing \ref{lst:gooMapCon} ist ein Ausschnitt des Programmcodes der einen erhöhten Kontrast der Karte erreicht, dargestellt. Die hier erstellte Datengruppe wird als \enquote{styles} Parameter beim Instanziieren der \enquote{google.maps.Map} Klasse übergeben. Den Merkmalen der Karte werden verschiedene Farben zugeordnet, diese werden so gewählt, dass sie einen hohen Kontrast erzeugen und sich somit gut voneinander unterscheiden lassen. Diese Datengruppe soll jedoch nur verwendet werden wenn ein erhöhter Kontrast für den Nutzer erwünscht ist. Dafür wird dem \enquote{google-map} Element eine neue Eigenschaft \enquote{moreContrast} hinzugefügt. Diese ist vom Datentyp Boolean und der Standardwert ist \enquote{falsch}. Wird sie beim Einbinden des \emph{Web Component} gesetzt, wechselt ihr Wert auf \enquote{wahr}. 
+		Die Methode \enquote{\_getMapOptions()} ist in diesem Element \enquote{google-map} schon vorhanden. Diese erstellt eine Datengruppe \enquote{mapOptions}. Dieser wird der Parameter \enquote{styles} übergeben. Um eine Adaptivität zu ermöglichen wird hier dem Parameter der Rückgabewert der Methode \enquote{\_changeContrast()} übergeben. Diese frägt zu Beginn ab, ob die Eigenschaft \enquote{moreContrast} auf \enquote{wahr} gesetzt ist. Ist dies der Fall wird die vorher beschriebene Datengruppe für den erhöhten Kontrast an den \enquote{styles} Parameter übergeben, andernfalls wird der Standardwert überreicht. Somit wird insgesamt ein erhöhter Kontrast beim Setzen des Parameters \enquote{moreContrast} erreicht.
 		\subsubsection{Schriftgröße}
-		Um die Adaptivität der Schriftgröße zu ermöglichen wird die Methode \enquote{\_changeFontSize} genutzt. Diese wartet zu Beginn auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Dies bedeutet dass alle Elemente der Karte geladen wurden. Daraufhin fragt sie den im Parameter \enquote{fontSize} gesetzten Wert ab. Anhand dieses Wertes werden Schriftgrößen für die verschiedenen Elemente der Karte gesetzt. Der Parameter \enquote{fontSize} kann die Werte \enquote{m},\enquote{l} oder \enquote{xl} enthalten. Von \enquote{m} zu \enquote{xl} werden die Schriftgrößen immer größer. Der Standardwert ist \enquote{m}, in diesem Fall wird die Schriftgröße nicht geändert. Danach werden die gesetzten Schriftgrößen auf die Kartenelemente übernommen. Darüber hinaus werden die Elemente bei Bedarf verschoben um ein Überlappen dieser zu verhindern.
+		Um die Adaptivität der Schriftgröße zu ermöglichen wird die Methode \enquote{\_changeFontSize()} genutzt. Diese wartet zu Beginn auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Diese bedeutet, dass alle Elemente der Karte geladen wurden. Daraufhin fragt sie den im Parameter \enquote{fontSize} gesetzten Wert ab. Anhand dieses Wertes werden Schriftgrößen für die verschiedenen Elemente der Karte gesetzt. Der Parameter \enquote{fontSize} kann die Werte \enquote{m},\enquote{l} oder \enquote{xl} enthalten. Von \enquote{m} bis \enquote{xl} werden die Schriftgrößen immer größer. Der Standardwert ist \enquote{m}, in diesem Fall wird die Schriftgröße nicht geändert. Danach werden die gesetzten Schriftgrößen auf die Kartenelemente übernommen. Darüber hinaus werden die Elemente bei Bedarf verschoben um ein Überlappen dieser zu verhindern.
 		\subsubsection{Schriftart}
-		Die Schriftart kann sich auch an den Nutzer anpassen. Dies ermöglicht die Methode \enquote{\_changeFontStyle}. Diese wartet auch auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Daraufhin wird abgefragt ob der Parameter \enquote{fontFamiliy} des \emph{Web Component} gesetzt ist. Ist dies der Fall wird der Wert des Parameters genutzt um die Schriftart der \enquote{google-map} auf eine serife oder serifenlose zu ändern.
+		Die Schriftart kann sich auch an den Nutzer anpassen. Dies ermöglicht die Methode \enquote{\_changeFontStyle()}. Diese wartet auch auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Daraufhin wird abgefragt ob der Parameter \enquote{fontFamily} des \emph{Web Component} gesetzt ist. Ist dies der Fall wird der Wert des Parameters genutzt um die Schriftart der \enquote{google-map} auf eine serife oder serifenlose zu ändern.
 		\subsubsection{Leserichtung}
-		Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine Sätze ändert die Leserichtung daran nichts. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection} wartet auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \emph{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Hierfür wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, geordnet.
+		Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection()} wartet auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \emph{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Hierfür wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet.
 		
 			
 
