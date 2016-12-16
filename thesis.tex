@@ -60,6 +60,7 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 \usepackage[chapter]{minted} %Code Formatierung
 \newminted{JavaScript}{frame=single,framesep=10pt, linenos, breaklines=true}
 \newminted{HTML}{frame=single,framesep=10pt, linenos, breaklines=true}
+\newminted{CSS}{frame=single,framesep=10pt, linenos, breaklines=true}
 
 \usepackage{caption}
 \DeclareCaptionFont{black}{\footnotesize\color{black}}
@@ -579,8 +580,36 @@ _buildHtml(data) {
 	In der Klasse \enquote{Component} wird über die Registrierung eines \enquote{EventListener} für jedes \emph{Web Component} dieses Ereignis empfangen. Daraufhin wird die Methode \enquote{\_adaptiveChangeCallback} aufgerufen. Diese führt die zu Beginn die Methode \enquote{\_pipeCallback} mit dem Parameter \enquote{onAdaptiveChange} aus, dadurch werden etwaige Callback Funktionen des Elements mit dem Namen dieses Parameters ausgeführt. Danach fügt sie die neuen \enquote{data} Werte mit den vorhandenen des \emph{Web Component} zusammen und bildet das Element mit den Werten neu.
 	\newline
 	Die Methode \enquote{updateAll} ändert die Eigenschaften aller auf der Seite vorhandenen \emph{Web Components}. Als Parameter erwartet sie das \enquote{data} Objekt mit den neuen Werten für die Eigenschaften der Elemente. Wird sie aufgerufen prüft sie zu Beginn auch über die Methode \enquote{\_hasAdaptiveWebComps}, ob der Browser die Funktionalitäten, welche zur Adaptivität benötigt werden, besitzt. Daraufhin werden alle \emph{Web Components} der Anwendung gesammelt und wiederum das Ereignis \enquote{adaptiveUpdate} an jedes dieser Elemente gesendet. Bei diesem Ereignis werden auch die neuen Werte in Form des \enquote{data} Objekts angehängt. Dieses Ereignis wird wie in Kapitel \ref{sec:adaDerEle} von den \emph{Web Components} empfangen und verarbeitet. Letztendlich wird das Element mit den neuen Werten auch wieder neu gebildet und hat sich somit adaptiv angepasst.
-	\subsection{Anzeige der Adaptivität}
-	
+	\newline
+	Zuletzt muss jedes \emph{Web Component}, beziehungsweise dessen Darstellung, auf diese Anpassung reagieren. Im Werkszustand besitzen diese verschiedene CSS-Klassen. In Listing \ref{lst:temAwcImg} ist der \ac{HTML} Inhalt des \enquote{awc-image} dargestellt.
+	\begin{listing}
+		\begin{HTMLcode*}{}
+<template>
+   <img class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}" src="/assets/img/carole.png" alt="Carole">
+</template>
+		\end{HTMLcode*}
+		\caption[HTML Programmcode awc-image]{HTML Programmcode des Templates des awc-image}
+		\label{lst:temAwcImg}
+	\end{listing}
+	In diesem besitzt das img-Element einige CSS Klassen. Klassen die zur Bereitstellung der Adaptivität genutzt werden, starten mit dem Namen der Präferenz und einem Unterstrich, beispielsweise \enquote{contrast\_} und sind gefolgt von einem \emph{Handlebar} Platzhalter, dessen Inhalt wiederum der Name der Präferenz ist, hier \enquote{\{\{contrast\}\}}. Jede Neubildung oder Änderung des Elements ändert mithilfe des \emph{Handlebar} Frameworks die CSS-Klassen des Elements. Je nach gesetzter CSS Klasse wird das Element dann anders dargestellt. 
+	\begin{listing}
+		\begin{CSScode*}{}
+.contrast_, .contrast_normal {
+   -webkit-filter: none;
+   filter: none;
+   background: #fff;
+}
+.contrast_high {
+   -webkit-filter: grayscale(100%) contrast(130%);
+   filter: grayscale(100%) contrast(130%);
+   background: #000;
+}
+		\end{CSScode*}
+		\caption[CSS Programmcode awc-image]{CSS Programmcode des Templates des awc-image}
+		\label{lst:cssAwcIma}
+	\end{listing}
+	In Listing \ref{lst:cssAwcIma} sind die Darstellungseigenschaften des \emph{Web Component} gezeigt. Sie bestimmen inwiefern sich die Darstellung ändert. So wird in der Standarddarstellung des Kontrastwerts (\enquote{contrast\_} und \enquote{contrast\_normal}) ein weißer Hintergrund und kein CSS-Filter genutzt. Ist jedoch die \ac{CSS} Klasse \enquote{contrast\_high} gesetzt, ist die Präferenz des Nutzers ein erhöhter Kontrastwert. Dann wird ein \ac{CSS} Filter \enquote{grayscale(100\%) contrast(130\%)} und eine schwarze Hintergrundfarbe genutzt. Dies erhöht den Kontrast der Darstellung des Elements.
+
 \chapter{Methodik dieser Arbeit}
 Kapitel über die Methodik
 \chapter{Adaptivität an den Nutzer}
