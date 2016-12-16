@@ -267,12 +267,12 @@ In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden:
 		Die \emph{Custom Element} \ac{API} ermöglicht den Nutzern die Auszeichnungsprache \ac{HTML} zu erweitern\cite{Argelius2016}. Es können bestehende \ac{HTML} Elemente erweitert, oder neue hinzugefügt werden. Jedes neue oder erweiterte Element wird unter einem \emph{Tag} Namen registriert. Dies ermöglicht eine Kapselung des erstellen Programmiercodes in Elemente. In Listing \ref{lst:cusEleJav} ist ein JavaScript Programmcode dargestellt, der ein leeres \emph{Custom Element} definiert und unter dem Namen \enquote{new-custom-element} registriert wird.
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
-class NewCustomElement extends HTMLElement {
+class NewCustomElement extends HTMLElement { //Definition custom element
 	constructor() {
 		super();
 	}
 }
-customElements.define('new-custom-element', NewCustomElement);
+customElements.define('new-custom-element', NewCustomElement); //Registrierung custom element
 			\end{JavaScriptcode*}
 			\caption{Custom Element JavaScript}
 			\label{lst:cusEleJav}
@@ -296,9 +296,9 @@ customElements.define('new-custom-element', NewCustomElement);
 		Um auf den Inhalt des importierten Dokuments zuzugreifen wird JavaScript verwendet. Wie in Listing \ref{lst:htmImpJav} dargestellt, wird zuerst nach dem Link Element gesucht, welches die Eigenschaft rel=\enquote{import} besitzt. Daraufhin wird dieses Dokument importiert und ein bestimmter Teil des Dokuments als JavaScript Variable \enquote{elem} gespeichert. Hier wird ein div Element, das mit der Klasse \enquote{element} ausgezeichnet ist, gespeichert. Anschließend kann dies in der importierenden Seite genutzt werden. 
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
-var link = document.querySelector('link[rel=import]');
-var importedDocument = link.import;
-var elem = importedDocument.querySelector('div.element');
+var link = document.querySelector('link[rel=import]'); //durchsucht nach zu importierendem Link
+var importedDocument = link.import; //importiert den Inhalt des Links
+var elem = importedDocument.querySelector('div.element');  //Selektiert Element der importierten Komponente
 			\end{JavaScriptcode*}
 			\caption[Zugriff auf importiertes Dokument]{JavaScript Programmcode für Zugriff auf Inhalt des importierten Dokuments}
 			\label{lst:htmImpJav}
@@ -330,12 +330,12 @@ document.querySelector('body').appendChild(inhalt);
 		\ac{CSS} Selektoren können dadurch nicht von außerhalb des \emph{Shadow roots} auf diesen zugreifen und Selektoren, die innerhalb dieses definiert werden haben keinen Einfluss auf den normalen \ac{DOM}. Genauso verhält es sich mit dem Zugriff auf die \ac{DOM} Elemente des \emph{Shadow root}. Sie können nicht von außerhalb angesprochen werden, beispielsweise durch die Funktion \enquote{document.querySelector()}, sondern können nur von Funktionen innerhalb des \emph{Shadow root} angesprochen werden\cite{Bidelman2016}.
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
-var header = document.createElement('header');
-var shadowRoot = header.attachShadow({mode: 'open'});
-var headline = document.createElement('h1');
+var header = document.createElement('header'); 
+var shadowRoot = header.attachShadow({mode: 'open'}); //shadow root an header angefügt
+var headline = document.createElement('h1'); 
 var headlineText = document.createTextNode('headline');
 headline.appendChild(headlineText);
-shadowRoot.appendChild(headline);
+shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 			\end{JavaScriptcode*}
 				\caption[Erstellung eines Shadow DOM]{JavaScript Programmcode für die Erstellung eines Shadow DOM}
 				\label{lst:javShaDom}
@@ -347,8 +347,8 @@ shadowRoot.appendChild(headline);
 				\begin{HTMLcode*}{}
 <ul id='contacts'>
    <li>
-      <slot name='title'>Kein Titel</slot>
-      <slot name='name'>
+      <slot name='title'>Kein Titel</slot> <!-- Slot Element title mit Platzhalter 'Kein Titel' -->
+      <slot name='name'> <!-- Slot Element mit Platzhalter -->
          <p>Achtung<p>
          <h1>Kein Name<h1>
       </slot>
@@ -361,9 +361,9 @@ shadowRoot.appendChild(headline);
 			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, welcher im \emph{Shadow \ac{DOM}} später gerendert wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, also die Ersatzfunktion, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Die Ersatzfunktion kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist\cite{Bidelman2016}. In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt. Wie hier in Zeile fünf und sechs zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim Übersetzen des Programmcodes der Applikation werden alle Elemente, die die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} übersetzt. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \emph{DOM} geschrieben.
 			\begin{listing}
 				\begin{HTMLcode*}{}
-<span slot='title'>Dr.</span>
-<span slot='title'>Phil.</span>
-<span slot='name'>Michael</span>
+<span slot='title'>Dr.</span> <!-- Element mit Slot Attribut -->
+<span slot='title'>Phil.</span> <!-- Element mit Slot Attribut -->
+<span slot='name'>Michael</span> <!-- Element mit Slot Attribut -->
 				\end{HTMLcode*}
 				\caption{Befüllen der Slot Elemente im DOM}
 				\label{lst:sloNutLigDom}
@@ -373,11 +373,11 @@ shadowRoot.appendChild(headline);
 				\begin{HTMLcode*}{}
 <ul id='contacts'>
    <li>
-      <slot name='title'>
+      <slot name='title'> <!-- Übersetztes Slot Element title -->
 	     <span>Dr.</span>
 	     <span>Phil.</span>
 	  </slot>
-      <slot name='name'>
+      <slot name='name'> <!-- Übersetztes Slot Element name -->
 	     <span>Michael</span>
       </slot>
    </li>
@@ -392,10 +392,10 @@ shadowRoot.appendChild(headline);
 		\begin{listing}
 		\begin{HTMLcode*}{}
 <style>		
-:host(:hover) {
+:host(:hover) { /* :host Selektor bei hover Zustand */
    opacity: 1;
 }
-:host(.blue) {
+:host(.blue) { /* :host Selektor bei Vorhandensein der Klasse blue */
    color: blue;
 }
 </style>
@@ -445,9 +445,9 @@ Der Prototyp kann mit Eigenschaften versehen werden. Hierfür wird das \enquote{
 \begin{listing}
 	\begin{JavaScriptcode*}{}
 Polymer({
-   is: 'my-element',
-   properties: {
-      user: String,
+   is: 'my-element', //Bezeichner des Elements
+   properties: {  //Eigenschaften des Elements
+      user: String, //Eigenschaft mit Datentyp
       isHappy: Boolean,
       count: {
          type: Array,
@@ -466,7 +466,7 @@ Um den späteren Instanzen Methoden zur Verfügung zu stellen, können diese dem
 	\begin{JavaScriptcode*}{}
 Polymer({
    is: 'my-element',
-   speak: function(){
+   speak: function(){  //Methode des Elements
    console.log('speak');
    }
 });
@@ -481,9 +481,9 @@ elem.speak();
 Polymer unterstützt verschiedene \ac{DOM} Implementierungen. Wird vom genutzten Browser \emph{shadow DOM}, die Technologie aus dem Bereich der \emph{Web Components} unterstützt, kann diese verwendet werden. Unterstützt der Browser dies nicht, wird eine angepasste Implementierung in \emph{Polymer} genutzt, der \emph{shady DOM}. Insgesamt sind beide Möglichkeiten in \emph{Polymer} dem lokalen \ac{DOM} zugeordnet und werden im weiteren so genannt\cite{polLocDom}.
 \begin{listing}
 	\begin{HTMLcode*}{}
-<dom-module id='my-element'>
-   <template>I am my-element!</template>
-   <script>
+<dom-module id='my-element'> <!-- Wird zu lokalem DOM übersetzt -->
+   <template>I am my-element!</template>  <!-- Template Inhalt des Elements -->
+   <script>  // Skript des Elements
       Polymer({
       is: 'my-element'
       });
@@ -505,10 +505,10 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{Shady DOM}, eine Kapselun
 	\begin{HTMLcode*}{}
 <style>
 .title {
-	color: var(--my-element-title-color);
+	color: var(--my-element-title-color); /* Benutzerdefinierte Eigenschaft */
 }
 .smalltext {
-	color: var(--my-element-title-color, blue);
+	color: var(--my-element-title-color, blue); /* Benutzerdefinierte Eigenschaft mit Standardwert */
 }
 </style>
 	\end{HTMLcode*}
@@ -525,13 +525,13 @@ Um ein neues adaptives \emph{Web Component} zu erstellen wird die Klasse \enquot
 	 \begin{listing}
 	 	\begin{JavaScriptcode*}{}
 new Component('awc-image', HTMLElement,
-   // Model:
+   // Modell des Elements:
    {
       'contrast': 'normal',
       'size': 'normal',
       'reading_direction': 'ltr'
    },
-   // Behaviour:
+   // Verhalten des Elements:
    {
       onAdaptiveChange: function() {
       console.log('onAdaptiveChange');
@@ -585,7 +585,7 @@ _buildHtml(data) {
 	\begin{listing}
 		\begin{HTMLcode*}{}
 <template>
-   <img class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}" src="/assets/img/carole.png" alt="Carole">
+   <img class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}" src="/assets/img/carole.png" alt="Carole"> <!-- Element mit CSS Klassen und Handlerbar Platzhaltern -->
 </template>
 		\end{HTMLcode*}
 		\caption[HTML Programmcode awc-image]{HTML Programmcode des Templates des awc-image}
@@ -594,21 +594,21 @@ _buildHtml(data) {
 	In diesem besitzt das img-Element einige CSS Klassen. Klassen die zur Bereitstellung der Adaptivität genutzt werden, starten mit dem Namen der Präferenz und einem Unterstrich, beispielsweise \enquote{contrast\_} und sind gefolgt von einem \emph{Handlebar} Platzhalter, dessen Inhalt wiederum der Name der Präferenz ist, hier \enquote{\{\{contrast\}\}}. Jede Neubildung oder Änderung des Elements ändert mithilfe des \emph{Handlebar} Frameworks die CSS-Klassen des Elements. Je nach gesetzter CSS Klasse wird das Element dann anders dargestellt. 
 	\begin{listing}
 		\begin{CSScode*}{}
-.contrast_, .contrast_normal {
+.contrast_, .contrast_normal { /* Standardkontrastwert */
    -webkit-filter: none;
    filter: none;
    background: #fff;
 }
-.contrast_high {
+.contrast_high { /* Erhöhter Kontrastwert */
    -webkit-filter: grayscale(100%) contrast(130%);
    filter: grayscale(100%) contrast(130%);
    background: #000;
 }
 		\end{CSScode*}
-		\caption[CSS Programmcode awc-image]{CSS Programmcode des Templates des awc-image}
+		\caption[CSS Programmcode awc-image]{Ausschnitt des CSS Programmcode des Templates des awc-image}
 		\label{lst:cssAwcIma}
 	\end{listing}
-	In Listing \ref{lst:cssAwcIma} sind die Darstellungseigenschaften des \emph{Web Component} gezeigt. Sie bestimmen inwiefern sich die Darstellung ändert. So wird in der Standarddarstellung des Kontrastwerts (\enquote{contrast\_} und \enquote{contrast\_normal}) ein weißer Hintergrund und kein CSS-Filter genutzt. Ist jedoch die \ac{CSS} Klasse \enquote{contrast\_high} gesetzt, ist die Präferenz des Nutzers ein erhöhter Kontrastwert. Dann wird ein \ac{CSS} Filter \enquote{grayscale(100\%) contrast(130\%)} und eine schwarze Hintergrundfarbe genutzt. Dies erhöht den Kontrast der Darstellung des Elements.
+	In Listing \ref{lst:cssAwcIma} sind ein Ausschnitt der Darstellungseigenschaften des \emph{Web Component} gezeigt. Sie bestimmen inwiefern sich die Darstellung ändert. So wird in der Standarddarstellung des Kontrastwerts (\enquote{contrast\_} und \enquote{contrast\_normal}) ein weißer Hintergrund und kein CSS-Filter genutzt. Ist jedoch die \ac{CSS} Klasse \enquote{contrast\_high} gesetzt, ist die Präferenz des Nutzers ein erhöhter Kontrastwert. Dann wird ein \ac{CSS} Filter \enquote{grayscale(100\%) contrast(130\%)} und eine schwarze Hintergrundfarbe genutzt. Dies erhöht den Kontrast der Darstellung des Elements.
 
 \chapter{Methodik dieser Arbeit}
 Kapitel über die Methodik
