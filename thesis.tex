@@ -207,6 +207,7 @@ This thesis is about Web Components...
 	\acro{HTTP}{Hypertext Transfer Protocol}
 	\acro{JSON}{JavaScript Object Notation}
 	\acro{WCAG 2.0}{Web Content Accessibility Guidelines 2.0}
+	\acro{AWC Framework}{Adaptive Web Components Framework}
 \end{acronym}
 
 \tableofcontents
@@ -514,8 +515,72 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{Shady DOM}, eine Kapselun
 	\label{lst:benCss}
 \end{listing}
 Diese werden in der in Listing \ref{lst:benCss} dargestellten Form, im Bereich der Stil-Eigenschaften, bei der Erstellung eines \emph{Polymer} Elements definiert. Wie in Zeile sechs zu sehen ist kann auch, falls der Nutzer der Eigenschaft keinen Wert zuweist ein Standard Wert gesetzt werden. Hier ist der Standardwert \enquote{blue}. An einer Stelle oberhalb des \ac{DOM} kann dann die \ac{CSS} Eigenschaft \enquote{--my-element-title-color} vom Nutzer des Elements mit einem Wert belegt werden. Dadurch wird ab dann jedes Element das mit dieser benutzerdefinierten Eigenschaft belegt ist, mit dem vom Nutzer gesetzten Wert ausgezeichnet. Beispielsweise kann der \enquote{:host} Selektor mit der Eigenschaft \enquote{--my-element-title-color: green} ausgezeichnet werden. Dadurch werden alle Elemente innerhalb des \emph{Shadow root}, mit der benutzerdefinierten Eigenschaft \enquote{--my-element-title-color} auf den Wert \enquote{green} gesetzt.
-\chapter{Darwin}	
-Kapitel über das AWC-Framework
+\chapter{Das AWC Framework}	
+Das \ac{AWC Framework} wurde von der \emph{REMEX} Forschungsgruppe entwickelt. Das JavaScript Framework wird auch mit der Bezeichnung \emph{Darwin.js} beschrieben. Es soll die Implementierung von adaptiven Benutzeroberflächen ermöglichen, basierend auf der Technik der \emph{Web Components}. Die Oberflächen richten sich somit nach den Bedürfnissen und der Zusammenstellung der Präferenzen eines Nutzers, um die Zugänglichkeit, Gebrauchstauglichkeit und das Nutzungserlebnis zu verbessern\cite{gitHubAwc}\cite{darwin}. Im folgenden wird die verwendete Technik des \ac{AWC Framework} erläutert. 
+\section{Darwin.js Technologie}
+Um ein neues adaptives \emph{Web Component} zu erstellen wird die Klasse \enquote{Component} und von dieser der Konstruktor genutzt. Diesem können vier Parameter übergeben werden. Sie setzen sich aus \enquote{\_htmlTag}, \enquote{\_baseClass}, \enquote{\_data} und \enquote{\_options} zusammen. Zu Beginn nutzt der Konstruktor die Methode \enquote{testBrowserSupport()} um abzufragen, ob die Technologien der \emph{Web Components} vom Browser unterstützt werden. Ist dies nicht der Fall wird ein Fehler geworfen. Danach wird mit den übergebenen Parametern weitergearbeitet.
+	\subsection{Registrierung eines Elements}
+	 Der Parameter \enquote{\_htmlTag} definiert den Bezeichner unter dem das neue Element registriert wird, während der Parameter \enquote{\_baseClass} definiert, welches \ac{HTML} Element als Basis genutzt wird und erweitert wird. Hier kann zum Beispiel das \enquote{Button} Element definiert werden. Das Elternelement aller \ac{HTML} Elemente ist das \enquote{HTMLElement}, dieses kann auch ausgebaut werden, wenn kein bestimmtes, schon bestehendes Element erweitert werden soll. In Listing \ref{lst:awcErs} ist der Programmcode dargestellt, der ein neues Element erstellt. Hier wird das Element unter dem Bezeichner \enquote{awc-image} und als Erweiterung des \enquote{HTMLElement} registriert.
+	 \begin{listing}
+	 	\begin{JavaScriptcode*}{}
+new Component('awc-image', HTMLElement,
+   // Model:
+   {
+      'contrast': 'normal',
+      'size': 'normal',
+      'reading_direction': 'ltr'
+   },
+   // Behaviour:
+   {
+      onAdaptiveChange: function() {
+      console.log('onAdaptiveChange');
+      console.log(this);
+   }
+});
+	 	\end{JavaScriptcode*}
+	 	\caption[Web Component basierend auf Darwin.js]{JavaScript Programmcode zum Erstellen eines Web Components basierend auf Darwin.js}
+	 	\label{lst:awcErs}  
+	\end{listing}
+	\subsection{Eigenschaften der Elemente}
+	Dem \enquote{\_data} Parameter werden die initialen Modell Daten übergeben. Hier können die eigentlichen Präferenzen oder Einstellungen der späteren Nutzer mit initialen Werten gespeichert werden. Es können beliebig viele Präferenzen-Wert Paare übergeben werden. In Listing \ref{lst:awcErs} werden beispielsweise die Präferenzen \enquote{contrast}, \enquote{size} und \enquote{reading\_direction} gesetzt.
+	\subsection{Methoden der Elemente}
+	Dem \enquote{\_options} Parameter können optional Methoden übergeben werden. Dadurch erhält das \emph{Web Component} initial diese Funktionalität und kann zur Laufzeit verwendet werden. Bei der Erstellung des \enquote{awc-image} in Listing \ref{lst:awcErs} wird beispielsweise die Methode \enquote{onAdaptiveChange} übergeben. Diese wird somit dem \emph{Web Component} zugeordnet.
+	\subsection{Bilden eines Elements}
+	Um das Element letztendlich zu bilden werden verschiedene Schritte im Konstruktor der \enquote{Component} Klasse durchgeführt. Zu Beginn muss ein \emph{Shadow root} geschaffen werden, das wird in Listing \ref{lst:shaRoo} dargestellt.
+	\begin{listing}
+		\begin{JavaScriptcode*}{}
+this.root = this.attachShadow({
+   mode: 'open' //Offener Shadow Root
+});
+		\end{JavaScriptcode*}
+		\caption[Erstellung des Shadow roots]{JavaScript Programmcode zum Erstellen des Shadow roots}
+		\label{lst:shaRoo}  
+	\end{listing}
+	Daraufhin wird der zu importierende \emph{Link}, passend zum \enquote{\_htmlTag}, gewählt. Von diesem \emph{Link} wird das \emph{Template} Element gespeichert. Daraufhin wir die Funktion \enquote{\_buildHtml} mit dem Parameter \enquote{data} aufgerufen. Diese ist in Listing \ref{lst:bilDar} dargestellt.
+		\begin{listing}
+		\begin{JavaScriptcode*}{}
+_buildHtml(data) {
+   this.root.innerHTML = ''; //leerer Shadow Root
+   let instance = this.template.content.cloneNode(true); //Kopieren des Inhalts
+   let div = document.createElement('div'); 
+   div.appendChild(instance); //Inhalt wird als Kind an das div angehängt
+   let handlebar = window.Handlebars.compile(div.innerHTML); //Inhalt des div wird mit Handlebars kompiliert
+   let buildHtml = handlebar(data); //Kompilierter Code wird mit data Werten ausgeführt
+   this.root.innerHTML = buildHtml; //Shadow Root wird befüllt
+}
+		\end{JavaScriptcode*}
+		\caption[Bilden des Web Components]{JavaScript Programmcode zum Bilden eines Web Components basierend auf Darwin.js}
+		\label{lst:bilDar}
+		\end{listing}
+	Hier wird in Zeile eins der Inhalt des \emph{Shadow Root} geleert. Daraufhin wird der Datenknoten des Inhalts des \emph{Templates} kopiert. Dieser wird dann als Kind eines neu erstellten div Elements in Zeile fünf hinzugefügt. Daraufhin wird der Inhalt dieses divs mithilfe des \emph{Handlebar} Frameworks kompiliert. \emph{Handlebar} ermöglicht semantische \emph{Templates} zu erstellen. In diesen \emph{Templates} können Ausdrücke innerhalb vier geschweifter Klammern gesetzt werden, beispielsweise wie: \enquote{\{\{Inhalt\}\}}. Diese funktionieren als Platzhalter und werden beim kompilieren durch die gesetzten Werte ersetzt\cite{handlebars}. In Zeile sieben wird daraufhin der kompilierte Inhalt mit dem \enquote{data} Objekt als Parameter ausgeführt. Dadurch werden alle Platzhalter des \emph{Templates} durch die richtigen Werte ersetzt. Zuletzt wird der Inhalt des \emph{Shadow Root} mit dem kompilierten Inhalt, also dem Programmcode des \emph{Web Component}, befüllt.
+	\subsection{Adaptivität der Elemente}
+	\label{sec:adaDerEle}
+	Die Adaptivität der Elemente wird über verschiedene Aktualisierungsmethoden ermöglicht. Diese werden in der Klasse \enquote{Components} definiert. Die Methode \enquote{update} ändert die Eigenschaften aller \emph{Web Components} einer bestimmten Art, zum Beispiel alle \enquote{awc-image} Elemente. Sie erwartet zwei Parameter, den \enquote{htmlTag} der zu verändernden Elemente und \enquote{data}, die neuen Werte der Elemente. Zu Beginn wird die Methode \enquote{\_hasAdaptiveWebComps} genutzt um abzufragen, ob der Browser die Funktionalitäten, welche zur Adaptivität benötigt werden, besitzt. Wenn dies zutrifft werden alle Elemente gesammelt welche den bestimmten \enquote{htmlTag} besitzen. Daraufhin wird an jedes dieser Elemente ein Ereignis mit der Bezeichnung \enquote{adaptiveUpdate} gesendet, dem das \enquote{data} Objekt angehängt wird.
+	In der Klasse \enquote{Component} wird über die Registrierung eines \enquote{EventListener} für jedes \emph{Web Component} dieses Ereignis empfangen. Daraufhin wird die Methode \enquote{\_adaptiveChangeCallback} aufgerufen. Diese führt die zu Beginn die Methode \enquote{\_pipeCallback} mit dem Parameter \enquote{onAdaptiveChange} aus, dadurch werden etwaige Callback Funktionen des Elements mit dem Namen dieses Parameters ausgeführt. Danach fügt sie die neuen \enquote{data} Werte mit den vorhandenen des \emph{Web Component} zusammen und bildet das Element mit den Werten neu.
+	\newline
+	Die Methode \enquote{updateAll} ändert die Eigenschaften aller auf der Seite vorhandenen \emph{Web Components}. Als Parameter erwartet sie das \enquote{data} Objekt mit den neuen Werten für die Eigenschaften der Elemente. Wird sie aufgerufen prüft sie zu Beginn auch über die Methode \enquote{\_hasAdaptiveWebComps}, ob der Browser die Funktionalitäten, welche zur Adaptivität benötigt werden, besitzt. Daraufhin werden alle \emph{Web Components} der Anwendung gesammelt und wiederum das Ereignis \enquote{adaptiveUpdate} an jedes dieser Elemente gesendet. Bei diesem Ereignis werden auch die neuen Werte in Form des \enquote{data} Objekts angehängt. Dieses Ereignis wird wie in Kapitel \ref{sec:adaDerEle} von den \emph{Web Components} empfangen und verarbeitet. Letztendlich wird das Element mit den neuen Werten auch wieder neu gebildet und hat sich somit adaptiv angepasst.
+	\subsection{Anzeige der Adaptivität}
+	
 \chapter{Methodik dieser Arbeit}
 Kapitel über die Methodik
 \chapter{Adaptivität an den Nutzer}
@@ -623,8 +688,7 @@ function restCall (url){
 		\section{google-map}
 			\subsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
-			\begin{figure}
-				\centering
+			\begin{figure}				\centering
 				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmap.png}
 				\caption[Google Map Web Component]{Google Map Web Component Ansicht}
 				\label{img:gmap}
@@ -680,12 +744,17 @@ var stylesArray = [{featureType: 'water', stylers: [
 		In Listing \ref{lst:gooMapCon} ist ein Ausschnitt des Programmcodes der einen erhöhten Kontrast der Karte erreicht, dargestellt. Die hier erstellte Datengruppe wird als \enquote{styles} Parameter beim Instanziieren der \enquote{google.maps.Map} Klasse übergeben. Den Merkmalen der Karte werden verschiedene Farben zugeordnet, diese werden so gewählt, dass sie einen hohen Kontrast erzeugen und sich somit gut voneinander unterscheiden lassen. Diese Datengruppe soll jedoch nur verwendet werden wenn ein erhöhter Kontrast für den Nutzer erwünscht ist. Dafür wird dem \enquote{google-map} Element eine neue Eigenschaft \enquote{moreContrast} hinzugefügt. Diese ist vom Datentyp Boolean und der Standardwert ist \enquote{falsch}. Wird sie beim Einbinden des \emph{Web Component} gesetzt, wechselt ihr Wert auf \enquote{wahr}. 
 		Die Methode \enquote{\_getMapOptions()} ist in diesem Element \enquote{google-map} schon vorhanden. Diese erstellt eine Datengruppe \enquote{mapOptions}. Dieser wird der Parameter \enquote{styles} übergeben. Um eine Adaptivität zu ermöglichen wird hier dem Parameter der Rückgabewert der Methode \enquote{\_changeContrast()} übergeben. Diese frägt zu Beginn ab, ob die Eigenschaft \enquote{moreContrast} auf \enquote{wahr} gesetzt ist. Ist dies der Fall wird die vorher beschriebene Datengruppe für den erhöhten Kontrast an den \enquote{styles} Parameter übergeben, andernfalls wird der Standardwert überreicht. Somit wird insgesamt ein erhöhter Kontrast beim Setzen des Parameters \enquote{moreContrast} erreicht.
 		\subsubsection{Schriftgröße}
+		\label{sec:fontsize}
 		Um die Adaptivität der Schriftgröße zu ermöglichen wird die Methode \enquote{\_changeFontSize()} genutzt. Diese wartet zu Beginn auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Diese bedeutet, dass alle Elemente der Karte geladen wurden. Daraufhin fragt sie den im Parameter \enquote{fontSize} gesetzten Wert ab. Anhand dieses Wertes werden Schriftgrößen für die verschiedenen Elemente der Karte gesetzt. Der Parameter \enquote{fontSize} kann die Werte \enquote{m},\enquote{l} oder \enquote{xl} enthalten. Von \enquote{m} bis \enquote{xl} werden die Schriftgrößen immer größer. Der Standardwert ist \enquote{m}, in diesem Fall wird die Schriftgröße nicht geändert. Danach werden die gesetzten Schriftgrößen auf die Kartenelemente übernommen. Darüber hinaus werden die Elemente bei Bedarf verschoben um ein Überlappen dieser zu verhindern.
 		\subsubsection{Schriftart}
 		Die Schriftart kann sich auch an den Nutzer anpassen. Dies ermöglicht die Methode \enquote{\_changeFontStyle()}. Diese wartet auch auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Daraufhin wird abgefragt ob der Parameter \enquote{fontFamily} des \emph{Web Component} gesetzt ist. Ist dies der Fall wird der Wert des Parameters genutzt um die Schriftart der \enquote{google-map} auf eine serife oder serifenlose zu ändern.
 		\subsubsection{Leserichtung}
-		Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection()} wartet auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \emph{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Hierfür wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet.
-		
+		Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection()} wartet auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \emph{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Hierfür wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet. Von dieser Änderung der Anordnung betroffen sind die beiden Schalter der Ansichtseinstellungen der Karte. Hier kann zwischen dem \enquote{Karte} und \enquote{Satellit} Wert gewählt werden. Darüber hinaus sind die Einstellungen der Vergrößerungsstufe und das Symbol der \enquote{Google Street View} von der Änderung betroffen.
+		\subsubsection{Text-Alternativen}
+		In einem adaptiven \emph{Web Component} sollte es ermöglicht werden, Symbole durch Texte darzustellen oder Texte durch Symbole zu ersetzen. In diesem \emph{Web Component} wird dafür die Methode \enquote{\_changeTextAlternatives} verwendet. Sie wartet auch auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach frägt sie den Wert des Parameters \enquote{textAlternatives} ab. Dieser ist ein Parameter vom Datentyp String. Wenn dieser Parameter den Wert \enquote{text} enthält, werden die Symbole der Kartensteuerung durch Text ersetzt. Die Steuerung der Vergrößerungsstufe erfolgt standardmäßig über ein Plus und ein Minus Symbol, wobei das Plus für Vergrößerung und das Minus für Verkleinerung steht. Diese werden durch die Texte \enquote{Vergrößern} und \enquote{Verkleinern} ersetzt. Da diese Texte je nach gewählter Schriftgröße eine unterschiedliche Breite und Höhe haben, siehe Kapitel
+		\ref{sec:fontsize}, müssen die Größen der umgebenden Elemente angepasst werden. Diese bilden einen Rahmen um den Text oder ändern die Hintergrundfarbe der Texte. Dafür wird der Wert des Parameters \enquote{fontSize} abgefragt und dementsprechend die Höhe und Breite angepasst. Die Elemente der \enquote{Google Map} sind absolut positioniert. Deshalb läuft ein zu langer Text aus dem Sichtbereich des Nutzers oder überlappt andere Elemente. Um dies zu unterbinden wird in der \enquote{\_changeTextAlternatives} Methode abgefragt welche Leserichtung derzeit verwendet wird und aufgrund dieser Auskunft werden die Text-Alternativen so positioniert, dass sie immer komplett sichtbar sind. Das Symbol der kleinen Person für die Steuerung der \enquote{Street-View} Funktion kann nicht durch Text ersetzt werden. Da dieses Symbol mit der Maus auf eine bestimmte Stelle bewegt werden muss um die Funktion an genau dieser Stelle zu aktivieren, kann kein Text verwendet werden, da dieser zu breit wäre und die Stelle nicht eindeutig identifizierbar wäre. 
+		\newline
+		Ist der Wert des Parameters \enquote{textAlternatives} \enquote{symbol}, sollten alle Steuerungselemente die aus Text bestehen und durch Symbole ersetzt werden können, durch solche ausgetauscht werden. Dies trifft auf die Steuerung des Aussehens der Karte, die Elemente \enquote{Karte} und \enquote{Satellit} zu. Die Bibliothek \enquote{Font Awesome} wird als Quelle für die Symbole genutzt. Diese wird als eine Formatvorlage in die \ac{HTML} Seite geladen und einzelne Symbole können dann über \ac{CSS} Selektoren ausgewählt werden. Für die Einstellung Karte wird das Symbol \enquote{fa-map} genutzt und für die Einstellung Satellit das Symbol \enquote{fa-globe}. 
 			
 
 
