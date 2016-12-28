@@ -7,6 +7,8 @@
 \usepackage[a4paper, includeheadfoot, %bindingoffset=3cm, 
 left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
+
+
 %Header
 \usepackage[automark]{scrpage2}
 \pagestyle{scrheadings}
@@ -57,7 +59,7 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 
 
-\usepackage[chapter]{minted} %Code Formatierung
+\usepackage[chapter, cache=false]{minted} %Code Formatierung
 \newminted{JavaScript}{frame=single,framesep=10pt, linenos, breaklines=true}
 \newminted{HTML}{frame=single,framesep=10pt, linenos, breaklines=true}
 \newminted{CSS}{frame=single,framesep=10pt, linenos, breaklines=true}
@@ -178,6 +180,7 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 \title{Konzeption und Entwicklung von adaptiven Web Components}
 \author{Christoph Kleber}
 \date{\today}
+
 
 \begin{document}
 
@@ -726,7 +729,7 @@ function restCall (url){
 			\end{figure}
 			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, Text- und Symbol-Alternativen, die Schrift und die Leserichtung und damit auf die Anordnung der Elemente genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons einstellen lassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen, großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige, standardmäßige, Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Abbildungen oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsection{Einrichtung des Google Map Web Component}
-			Das \emph{Google Map Web Component} ist auf GitHub gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt. Das bedeutet, dass der Stand der eigentlichen Entwicklern kopiert wird und eigene Änderungen im weiteren darauf aufbauen. Um die Abhängigkeiten des \emph{Web Component} zu installieren wurde \emph{Bower} genutzt. \emph{Bower} ist ein Paketverwaltungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
+			Das \emph{Google Map Web Component} ist auf \enquote{GitHub} gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt. Das bedeutet, dass der Stand der eigentlichen Entwicklern kopiert wird und eigene Änderungen im weiteren darauf aufbauen. Um die Abhängigkeiten des \emph{Web Component} zu installieren wurde \emph{Bower} genutzt. \emph{Bower} ist ein Paketverwaltungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
 			\begin{itemize}
 				\item
 				\enquote{Polymer/polymer\#\^1.2.3},
@@ -803,7 +806,7 @@ var stylesArray = [{featureType: 'water', stylers: [
 		Auf die Schrift der Texte sollte Einfluss genommen werden können. So sollte die Schriftart und insbesondere die Schriftgröße anpassbar sein. Die Schriftart sollte zwischen einer serifen und einer serifenlosen Art wechseln, die Größe sollte sich zwischen der Standardgröße, einer großen und einer sehr großen Schriftgröße wechseln lassen. Hiervon sind Datenelemente und die Bezeichner des Kalenders betroffen. Auch der Text des derzeitig ausgewählten Datums sollte sich anpassen können.
 		Um sich an die Leserichtung des Nutzers anzupassen, sollte Einfluss auf die Anordnung der Texte und auch Elemente genommen werden. Der Standardzustand der Komponente ist die Leserichtung von links nach rechts, hier wird das ausgewählte Datum auf der linken Seite und der Kalender auf der rechten Seite dargestellt. Auch werden die Wochentage des Kalenders von links nach rechts gelesen. Diese Elemente sollten sich bei einer Leserichtung von rechts nach links verschieben lassen.  
 		\subsection{Einrichtung des Paper Date Picker Web Component}
-		Das \emph{Paper Date Picker Web Component} ist auf GitHub gespeichert. Es wurde wiederum ein \enquote{fork} durchgeführt um an diesem weiterarbeiten zu können und es zu erweitern. Für die Abhängigkeiten des Elements wurde wieder \emph{Bower} genutzt. Nachdem es eingebunden ist und alle Abhängigkeiten installiert sind kann das \emph{Web Component} unter dem \ac{HTML} Bezeichner \enquote{<paper-date-picker>} genutzt werden.
+		Das \emph{Paper Date Picker Web Component} ist auf \enquote{GitHub} gespeichert. Es wurde wiederum ein \enquote{fork} durchgeführt um an diesem weiterarbeiten zu können und es zu erweitern. Für die Abhängigkeiten des Elements wurde wieder \emph{Bower} genutzt. Nachdem es eingebunden ist und alle Abhängigkeiten installiert sind kann das \emph{Web Component} unter dem \ac{HTML} Bezeichner \enquote{<paper-date-picker>} genutzt werden.
 		\subsection{Umsetzung der Programmierung}
 		Im folgenden wird die konzipierte Adaptivität des Elements im Programmcode umgesetzt. 
 		\subsubsection{Kontrast}
@@ -850,6 +853,24 @@ _changeFontSize: function () {
 		Diese \ac{CSS} Klassen werden von den Gestaltungsanweisungen der Komponenten \enquote{Paper Date Picker} und \enquote{Paper Calendar} dazu genutzt die Größe der Textelemente anzupassen. Darüber hinaus muss bei der Größe \enquote{xl} der Abstand mancher Elemente zueinander vergrößert werden, um ein Überlappen dieser zu verhindern.
 		\subsubsection{Leserichtung}
 		Die Standard Leserichtung der Komponente ist von links nach rechts. Um diese zu ändern wird die Methode \enquote{\_changeReadingDirection} verwendet. Sie fragt zu Beginn den Wert des Parameters \enquote{readingDirection} ab.  Enthält diese den Wert \enquote{rtl}, also eine erwünschte Leserichtung von rechts nach links, werden zum äußeren \emph{Web Component}, dem \enquote{paper-date-picker} und zu dem inneren \emph{Web Component}, dem \enquote{paper-calendar} die \ac{CSS} Klasse \enquote{rtl} hinzugefügt. In den Gestaltungsanweisungen dieser Komponenten werden die Elemente angewiesen, bei der Existenz der Klasse \enquote{rtl} die Eigenschaft \enquote{flex-direction} bestimmter Elemente auf den Wert \enquote{row-reverse} zu setzen. Dadurch wird der Aufbau des \emph{Web Component} für Nutzer ausgerichtet, die von rechts nach links lesen.
+		\newpage
+		\section{iron-data-table}
+		Die nächste Auswahl fiel auf das Element \enquote{iron-data-table}. Dieses \emph{Web Component} stellt Tabellen dar. Die Tabelleninhalte können frei definiert werden.
+		\begin{figure}[H]		
+			\centering
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{datTab.png}
+			\caption[Iron Data Table]{Iron Data Table Web Component Ansicht}
+			\label{img:datTab}
+		\end{figure}
+		\subsection{Konzeption zur Adaptivität}
+		In der Abbildung \ref{img:datTab} ist das Element, befüllt mit Beispieldaten, dargestellt. Der Aufbau besteht aus der Kopfzeile im oberen Bereich mit den Bezeichnern der Spalten. Darunter ist der eigentliche Inhalt, für jedes Datenelement eine Zeile mit den Werten des Elements zum Bezeichner der jeweiligen Spalte. Jede Zeile besitzt auf der linken Seite einen Kasten, welcher angewählt werden kann und die Funktion besitzt, das Element der jeweiligen Zeile auszuwählen.
+		\newline
+		Das Element nutzt Symbole und Texte. Diese sollten sich adaptiv an den Nutzer anpassen. So sollte sich im Bezug auf die Texte Einfluss auf die Schriftgröße, die Schriftart und Text-alternativen genommen werden. Im Bezug auf die Symbole sollten Alternativen für diese bereitgestellt werden. Allgemein sollte sich der Kontrast des \emph{Web Components} anpassen und der Aufbau an die Leserichtung des Nutzers anpassen lassen.
+		\subsection{Einrichtung des Iron Data Table}
+		Das \emph{Iron Data Table Web Component} ist auf \enquote{GitHub} gespeichert. Hier wurde ein \enquote{fork} durchgeführt um am Programmcode dieses Elements weiterarbeiten zu können. Die Abhängigkeiten werden wieder über \enquote{Bower} installiert. Der \enquote{Iron Data Table} selbst wird aus verschiedenen \emph{Web Components} zusammengesetzt. In der hier verwendeten Zusammenstellung wird das Element \enquote{data-table-colum} und \enquote{iron-data-table} genutzt.  
+		\subsection{Umsetzung der Programmierung}
+		Im folgenden wird die konzipierte Adaptivität der Komponente im Programmcode umgesetzt.
+		\subsubsection{Kontrast}
 
 \chapter{Vergleich}
 Kapitel über den Vergleich
