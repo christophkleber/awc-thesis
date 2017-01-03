@@ -685,35 +685,49 @@ Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den 
 				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	
 			\end{description}
 		\subsubsection{Der Client}
-		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf der \emph{jQuery.ajax()} Funktion. Dies ist eine Funktion des \emph{jQuery Frameworks} , welche eine asynchrone Anfrage an einen Ort stellt, basierend auf dem \ac{HTTP} Protokoll.\cite{jquAja}
+		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf dem \enquote{XMLHTTPRequest} JavaScript Objekt. Es bietet die Möglichkeit eine Anfrage an einen Speicherort, basierend auf dem \ac{HTTP} Protokoll, zu stellen um Daten abzufragen.
+		\newline
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
-function restCall (url){
-   jQuery.ajax({
-      //URL setzen, um Wert von bestimmtem Nutzer anzufragen
-      url: url,
-      data: {
-         format: 'json'
-      },
-      error: function(request, status, error) {
-         //Fehlermeldung ausgeben
-      },
-      dataType: 'json',
-      success: function(data) {
-         //Speichern der empfangenen Beispieldaten
-         var reading_direction = data.reading_direction;
-         var contrast = data.contrast;
-         //Seite entsprechend der empfangenen Präferenzen ändern
-         update(reading_direction, contrast);
-      },
-      type: 'GET'
-   });
+function loadPref() {
+   var xhttpreq = new XMLHttpRequest();
+   try{
+      //Moderner Browser
+      xhttpreq = new XMLHttpRequest();
+   }catch (e){
+      //Internet Explorer 5+
+      try{
+         xhttpreq = new ActiveXObject("Msxml2.XMLHTTP");
+      }catch (e) {
+         //Internet Explorer 5
+         try{
+         	xhttpreq = new ActiveXObject("Microsoft.XMLHTTP");
+         }catch (e){
+            //Wird nicht unterstützt
+            console.log('XMLHTTP not supported: no adaptive prefs');
+            return false;
+         }	
+      }
+   }
+   xhttpreq.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         var jsonObj = JSON.parse(xhttpreq.responseText);
+         var adaptiveElements = document.querySelectorAll('.adaptive-polymer-element');
+         for (var i = 0; i < adaptiveElements.length; i++) {
+            for (var prop in jsonObj[0]) {
+               adaptiveElements[i].setAttribute(prop, jsonObj[0][prop]);
+           }
+         }
+      }
+   };
+   xhttpreq.open("GET", 'Speicherort', true);
+   xhttpreq.send(); 	
 }
 			\end{JavaScriptcode*}
 			\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
 			\label{lst:jquAja}
 		\end{listing}
-		Wie in Listing \ref{lst:jquAja} dargestellt führt die Funktion \enquote{restCall} eine asynchrone Anfrage aus. Sie erwartet ein Argument \enquote{url}. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein. In Zeile fünf und sechs wird das Datenformat der erwarteten Antwort definiert, hier wird das Format \ac{JSON} genutzt. Ab Zeile acht wird die Fehlerbehandlung definiert, hier wird gewählt, was bei einem Fehler, beispielsweise einem nicht Erreichen des Speicherorts, passiert. Bei erfolgter Antwort des Speicherorts wird die \enquote{succes} Funktion aufgerufen. Hier werden die empfangenen Daten zuerst gespeichert, um sie dann in der \enquote{update} Funktion nutzen. Diese passt das \emph{Web Component} adaptiv, entsprechend der Präferenzen des Nutzers an. In Zeile 19 wird definiert, welche Art eines \ac{REST} Aufrufs erfolgen soll. Hier wird ein \emph{GET} Aufruf genutzt, da Daten vom Speicherort abgerufen werden sollen.
+		Die in Listing \ref{lst:jquAja} dargestellte Funktion \enquote{loadPref} führt eine Anfrage an einen Speicherort aus und verändert die adaptiven \emph{Web Components} basierend auf den erhaltenen Daten. Zu Beginn wird die leere Variable \enquote{xhttpreq} erstellt. Daraufhin wird versucht diese in Zeile fünf als ein \enquote{XMLHttpRequest} zu erstellen. Falls ein Fehler geworfen wird deutet dies darauf hin, dass es sich bei dem verwendeten Browser nicht um einen modernen Browser handelt und deshalb das \enquote{XMLHttpRequest} nicht verwendet werden kann. Daraufhin wird in Zeile zehn versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Msxml2.XMLHTTP} zu erstellen. Wird hier wiederum ein Fehler geworfen handelt es sich wahrscheinlich um eine Version des \enquote{Internet Explorer} mit einer kleineren Versionsnummer als fünf. Dann wird in Zeile 13 versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Microsoft.XMLHTTP} zu erstellen. Kann auch dies nicht ohne Fehler funktionieren wird das Laden der Präferenzen nicht vom Browser unterstützt und die Funktion abgebrochen. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden alle auf der Seite vorhandenen adaptiven Komponenten gesammelt. Diesen werden jeweils die Präferenzen der Nutzer als Attribute und deren Werte als Attribut-Werte hinzugefügt. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein\cite{xmlhttp}.
 \chapter{Adaptivität von bestehenden Web Components}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt\cite{cusEleIo}.
 		\section{google-map}
@@ -853,7 +867,7 @@ _changeFontSize: function () {
 		Die Standard Leserichtung der Komponente ist von links nach rechts. Um diese zu ändern wird die Methode \enquote{\_changeReadingDirection} verwendet. Sie fragt zu Beginn den Wert des Parameters \enquote{readingDirection} ab.  Enthält diese den Wert \enquote{rtl}, also eine erwünschte Leserichtung von rechts nach links, werden zum äußeren \emph{Web Component}, dem \enquote{paper-date-picker} und zu dem inneren \emph{Web Component}, dem \enquote{paper-calendar} die \ac{CSS} Klasse \enquote{rtl} hinzugefügt. In den Gestaltungsanweisungen dieser Komponenten werden die Elemente angewiesen, bei der Existenz der Klasse \enquote{rtl} die Eigenschaft \enquote{flex-direction} bestimmter Elemente auf den Wert \enquote{row-reverse} zu setzen. Dadurch wird der Aufbau des \emph{Web Component} für Nutzer ausgerichtet, die von rechts nach links lesen.
 		\newpage
 		\section{iron-data-table}
-		Die nächste Auswahl fiel auf das Element \enquote{iron-data-table}. Dieses \emph{Web Component} stellt Tabellen dar. Die Tabelleninhalte können frei definiert werden.
+		Die nächste Auswahl fiel auf das Element \enquote{iron-data-table}\cite{saulis}. Dieses \emph{Web Component} stellt Tabellen dar. Die Tabelleninhalte können frei definiert werden.
 		\begin{figure}[H]		
 			\centering
 			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{datTab.png}
@@ -878,7 +892,7 @@ _changeFontSize: function () {
 		\subsubsection{Schriftgröße}
 		Auch die Größe der Schrift sollte sich adaptiv an den Nutzer anpassen. Hierfür wird die Methode \enquote{\_changeFontSize} genutzt. Sie fragt den Wert des Parameters \enquote{fontSize} ab. Dessen Standardwert ist \enquote{m}. Ist der Wert auf \enquote{l} oder \enquote{xl} gesetzt wird die Schriftgröße um zwei oder vier Pixel erhöht. Dies wird ermöglicht durch das Hinzufügen von den CSS Klassen \enquote{l} oder \enquote{xl} zu dem \enquote{iron-data-table} Element. Diese werden dann über Gestaltungsanweisungen des \emph{Web Component} genutzt um die Anweisung zur \enquote{font-size} zu ändern.
 		\subsubsection{Leserichtung}
-		An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im Element \enquote{data-table-row} werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich auf der rechten Seite.
+		An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im den \enquote{data-table-row} Elementen werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich bei einer Leserichtung von rechts nach links auf der rechten Seite.
 
 \chapter{Vergleich}
 Kapitel über den Vergleich
