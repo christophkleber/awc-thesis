@@ -216,9 +216,10 @@ The subject of this thesis is a relative new topic of frontend web development, 
 
 
 
-
-\chapter{Adaptivität}
+\chapter{Einleitung}
 \pagenumbering{arabic} % Switch to normal numbers
+Im ersten Kapitel dieser Arbeit wird der Aufbau der Abhandlung beschrieben. Daraufhin wird im zweiten Kapitel auf die Adaptivität eingegangen. Hier wird der Begriff und dessen Umsetzung erläutert. Danach wird der Nutzungskontext im Zusammenhang der Adaptivität beschrieben. Im dritten Kapitel wird die Adaptivität einer Internetseite an einen Nutzer konzipiert. Hier werden die \ac{WCAG 2.0} im Zusammenhang mit Präferenzen von Nutzern besprochen und daraus Folgerungen für die Präferenzwerte zur Adaptivität erstellt. Das vierte Kapitel erörtert die Zusammenstellung dieser Präferenzen. Es wird referiert wie diese aufgebaut sind, gespeichert und heruntergeladen werden können um dann genutzt zu werden. Das fünfte Kapitel behandelt die \emph{Web Components}. Es wird auf die Geschichte, die Technik und die Webentwicklung mithilfe dieser Elemente eingegangen. Das sechste Kapitel berichtet über die \emph{Polymer} Bibliothek und deren Technik. Das siebte Kapitel behandelt das \emph{AWC Framework} und dessen Technologie, insbesondere wie die Adaptivität ermöglicht wird. Im neunten Kapitel werden bestehende Web Components zur Ermöglichung der Adaptivität erweitert. Zu jedem Element wird jeweils die Adaptivität konzipiert und im Programmcode umgesetzt. Das zehnte Kapitel evaluiert die Möglichkeit der Anpassung zur Adaptivität der vorhergehenden Elemente. Das elfte Kapitel beschreibt ein Fazit. 
+\chapter{Adaptivität}
 Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit mehrdeutig und abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\cite[S. 45]{woeller2014tiefenpsychologisch}. Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen]}\cite[][S. 112]{loeser2013web}.
 In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden: \enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breitem Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können}\cite[S. 1]{Kobsa1993}.
 \newline In den verschiedenen Auslegungen des Wortes ist ein Muster zu erkennen. Adaptivität kann definiert werden als die Fähigkeit eines Objekts, zum Beispiel eine Person oder ein System, sich an seine Umgebung anzupassen. Diese Anpassung basiert auf bestimmten Einflüssen, so kann sich eine Datenbank an äußere Einflüsse, wie beispielsweise ihre Einsatzumgebung, oder ein Softwaresystem an die Vorlieben seines Nutzers anpassen. Das kann auch automatisch geschehen. So gleicht sich beispielsweise der Inhalt der Seite \enquote{Facebook} aufgrund eines Algorithmus an den einzelnen Nutzer an, ohne dass dieser bestimmte Einstellungen vornehmen muss\cite{Rixecker2016}. Die Möglichkeit zur Adaptivität kann jedoch auch dem Nutzer bereitgestellt werden. Ist das der Fall, kann der Nutzer beispielsweise die Benutzeroberfläche nach seinen eigenen Vorlieben einrichten. So kann zum Beispiel die Benutzeroberfläche der Entwicklungsumgebung \enquote{JetBrains PhpStorm} anhand persönlicher Präferenzen aufgebaut werden und Farbstile und Kontraste verändert werden.
@@ -239,6 +240,135 @@ In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden:
 		Die Umgebung lässt sich in die technische Umgebung, also die der Computerkomponenten und Anwendungen, die physikalische Umgebung, also Aspekte wie beispielsweise Beleuchtung und soziale und kulturelle Umgebung aufteilen. Zur kulturellen Umgebung zählen beispielsweise die Arbeitsweise und Einstellungen der Umgebung des Systems.
 	\end{description}
 	Insgesamt lässt sich somit sagen, dass die Adaptivität an den Nutzungskontext ausgerichtet werden kann. Verschiedene Merkmale des Nutzungskontext haben Einfluss darauf, wie die Adaptivität, passend zur Situation, erfolgen sollte.
+\chapter{Adaptivität an den Nutzer}
+Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components}, die sich adaptiv an den Nutzer anpassen basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
+Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als Nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, die adaptiven Elemente einer Internetseite, aussehen wird.
+\section{Präferenzen der Nutzer}
+Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese Unterscheidung abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Diese Paare werden gesammelt für jeden einzelnen Nutzer gespeichert. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
+\section{WCAG Richtlinien}
+Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Dafür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten. Im Folgenden werden die Richtlinien aufgezählt und kurz beschrieben\cite{wcag}.
+\begin{description}
+	\item [Richtlinie 1.1 Text-Alternativen] Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können.
+	\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
+	\item[Richtlinie 1.3 Anpassbar] Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein.
+	\item[Richtlinie 1.4 Unterscheidbar] Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
+	\item[Richtlinie 2.1 Zugänglichkeit mit der Tastatur] Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.	
+	\item[Richtlinie 2.2 Ausreichend Zeit] Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
+	\item[Richtlinie 2.3 Anfälle] Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
+	\item[Richtlinie 2.4 Navigierbar] Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
+	\item[Richtlinie 3.1 Lesbarkeit] Der textbasierte Inhalt sollte lesbar und verständlich sein.	
+	\item[Richtlinie 3.2 Vorhersehbar] Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und funktionieren.
+	\item[Richtlinie 3.3 Hilfestellung bei der Eingabe] Dem Nutzer soll geholfen werden, Fehler zu vermeiden und zu korrigieren.
+	\item[Richtlinie 4.1 Kompatibel] Die Kompatibilität mit heutigen und zukünftigen Benutzeragenten und unterstützenden Technologien soll maximiert werden.
+\end{description}
+\section{Folgerung für Präferenzen}
+\label{sec:folFuePra}
+Auf Basis der vorhergehenden Kapiteln und weiterer Beobachtungen wird nun erforscht, welche Merkmale des \emph{Web Component} sich in welcher Art und Weise anpassen soll, um eine sinnvolle Adaptivität zu erreichen.
+\subsection{Kontrast}
+Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden\cite[S.234]{balzert2009webdesign}.
+\subsection{Schrift}
+Wenn davon ausgegangen wird, dass eine als allgemein lesbar bekannte Schriftart verwendet wird, hat die Wahl einer serifen oder serifenlosen Schriftart keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes\cite[S.157-161]{barrierefreiheit}. Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
+Die Schriftgröße kann jedoch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße, die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert\cite[S.152]{barrierefreiheit}. Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
+\subsection{Leserichtung}
+\label{ref:lesRic}
+Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten aufgebaut\cite[S.148]{emrich2013interkulturelles}.
+\subsection{Anordnung der Elemente}
+Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf\cite[S.47 f.]{meidl2013global}.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{leserichtung.png}
+	\caption[Einfluss der Leserichtung auf Anordnung der Elemente]{Einfluss der Leserichtung auf die Anordnung der Elemente\cite{elShaab}\cite{zeitOnline}}
+	\label{img:lesRic}
+\end{figure}
+Ein Beispiel dazu bilden die deutsche und ägyptische Nachrichtenseite \enquote{Zeit Online} und \enquote{Al Shaab}, dargestellt in Abbildung  \ref{img:lesRic}. Hier ist im oberen Bereich die Kopfzeile der arabischsprachigen und darunter die Kopfzeile der deutschsprachigen Internetseite abgebildet. Hier sieht man ganz klar, wie im arabischsprachigen Bereich die Elemente eher nach rechts ausgerichtet sind und wichtige Elemente, wie beispielsweise der Name der Zeitung ganz rechts oben angeordnet sind. Im deutschsprachigem Internetauftritt sind die Elemente nach links ausgerichtet und der Name der Webseite ist weit oben links.
+\subsection{Text-Alternativen}
+Die Richtlinie 1.1 definiert, dass zu jedem Text eine Alternative geboten wird. Darüber hinaus sollen die nicht textbasierten Inhalte nach Bedarf durch einen Text dargestellt werden können. Dem Nutzer sollte ermöglicht werden in seinen Präferenzen anzugeben, ob er den Text, oder dessen Alternativen angezeigt bekommen möchte.
+\subsection{Geschwindigkeit}
+Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manche Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen. Beispielsweise werden bestimmte Navigationselemente durch ein Verweilen der Maus auf diesen ausgeklappt. Sobald die Maus nicht mehr auf dem Element verweilt wird es wieder eingeklappt. Hier sollte es dem Nutzer ermöglicht werden die Zeitspanne anzupassen bevor das Element wieder einklappt, da es ihm andernfalls nicht möglich sein könnte das Element schnell genug zu betätigen.
+\chapter{Preference Sets}
+Die in Kapitel \ref{sec:folFuePra} erarbeiteten Präferenzen betreffen die Nutzer der adaptiven Webseite. Jeder Nutzer hat zu verschiedenen Präferenzen verschiedene Werte. Deshalb ist es notwendig die gesamten Präferenzen jedes einzelnen Nutzers zu speichern um sie später bei Aufruf der Webseite zu nutzen. Diese Sammlung der Präferenzen wird im weiteren Zusammenstellung der Präferenzen beziehungsweise \emph{Preference Sets} genannt. 
+\section{Speichern der Nutzer Präferenzen}
+Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen. Hier werden diese über die Versionsverwaltung \emph{Git} auf der Internetseite \emph{GitHub} gespeichert. Dafür wurde ein Repository mit Namen \enquote{data} erstellt. In diesem werden einzelne Nutzer und damit deren Zusammenstellung der Präferenzen als einzelne \ac{JSON} Dateien gespeichert. Diese können dann über einen bestimmten Link aufgerufen werden und so später beim Herunterladen der Präferenzen angesteuert werden. In Listing \ref{lst:jsonPreSet} ist ein Beispiel dieser Zusammenstellung dargestellt. Sie kann über den Link \enquote{https://raw.githubusercontent.com/christophkleber/data/master/person-one.json} aufgerufen werden. Diese liegt im \ac{JSON} Format vor. Zu jeder vom Nutzer genutzten Präferenz, also dem Bezeichner, wird ein Wert zugeordnet. Beispielsweise ist in Zeile drei zur Präferenz \enquote{text-alternatives} der Wert \enquote{symbol} gesetzt. 
+\begin{listing}
+	\begin{JavaScriptcode*}{}
+[
+   {
+      "text-alternatives": "symbol",
+      "more-contrast": "true",
+      "font-size": "l",
+      "reading-direction": "rtl"
+   }
+]
+	\end{JavaScriptcode*}
+	\caption[Beispiel eines Preference Sets]{JSON Datei eines Preference Sets eines Nutzers}
+	\label{lst:jsonPreSet}
+\end{listing}
+
+\section{Herunterladen der Nutzer Präferenzen}
+Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
+\subsection{Was bedeutet REST}
+\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien\cite[S.77]{chauhan2014asp}.
+\begin{description}  
+	\item  [Adressierbarkeit von Ressourcen]
+	Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
+	
+	\item [Einfache und einheitliche Schnittstelle]
+	Das \ac{REST} Protokoll basiert auf dem \ac{HTML} Protokoll. Es werden die von der \ac{HTTP}-Technologie bekannten Methoden verwendet. Dies macht \ac{REST} Protokoll 
+	simpel und einheitlich.
+	
+	\item  [Repräsentation] 
+	Die Ressourcen können in verschiedenen Formen repräsentiert werden. Bei Änderung oder Anfrage der Ressource wird immer eine Repräsentation genutzt. Somit kann in einer Anfrage definiert werden, in welcher Form der Repräsentation die Antwort erfolgen soll.
+	
+	\item [Zustandslos]
+	Es werden keine Zustände auf dem \emph{Server} gespeichert. Zustandsinformationen werden vom \emph{Client} gehandhabt und bei Bedarf an den Server gesendet.
+	
+	\item [Cashing möglich]
+	Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	
+\end{description}
+\subsection{Der Client}
+Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf dem \enquote{XMLHTTPRequest} JavaScript Objekt. Es bietet die Möglichkeit eine Anfrage an einen Speicherort, basierend auf dem \ac{HTTP} Protokoll, zu stellen um Daten abzufragen.
+\newline
+\begin{listing}
+	\begin{JavaScriptcode*}{}
+function loadPref() {
+   var xhttpreq = new XMLHttpRequest();
+   try{
+      //Moderner Browser
+      xhttpreq = new XMLHttpRequest();
+   }catch (e){
+      //Internet Explorer 5+
+      try{
+         xhttpreq = new ActiveXObject("Msxml2.XMLHTTP");
+      }catch (e) {
+         //Internet Explorer 5
+         try{
+            xhttpreq = new ActiveXObject("Microsoft.XMLHTTP");
+         }catch (e){
+             //Wird nicht unterstützt
+             console.log('XMLHTTP not supported: no adaptive prefs');
+             return false;
+         }
+      }
+   }
+   xhttpreq.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         var jsonObj = JSON.parse(xhttpreq.responseText);
+         var adaptiveElements = document.querySelectorAll('.adaptive-polymer-element');
+         for (var i = 0; i < adaptiveElements.length; i++) {
+            for (var prop in jsonObj[0]) {
+               adaptiveElements[i].setAttribute(prop, jsonObj[0][prop]);
+            }
+         }
+      }
+   };
+   xhttpreq.open("GET", 'Speicherort', true);
+   xhttpreq.send(); 	
+}
+	\end{JavaScriptcode*}
+	\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
+	\label{lst:jquAja}
+\end{listing}
+Die in Listing \ref{lst:jquAja} dargestellte Funktion \enquote{loadPref} führt eine Anfrage an einen Speicherort aus und verändert die adaptiven \emph{Web Components} basierend auf den erhaltenen Daten. Zu Beginn wird die leere Variable \enquote{xhttpreq} erstellt. Daraufhin wird versucht diese in Zeile fünf als ein \enquote{XMLHttpRequest} zu erstellen. Falls ein Fehler geworfen wird deutet dies darauf hin, dass es sich bei dem verwendeten Browser nicht um einen modernen Browser handelt und deshalb das \enquote{XMLHttpRequest} nicht verwendet werden kann. Daraufhin wird in Zeile zehn versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Msxml2.XMLHTTP} zu erstellen. Wird hier wiederum ein Fehler geworfen handelt es sich wahrscheinlich um eine Version des \enquote{Internet Explorer} mit einer kleineren Versionsnummer als fünf. Dann wird in Zeile 13 versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Microsoft.XMLHTTP} zu erstellen. Kann auch dies nicht ohne Fehler funktionieren wird das Laden der Präferenzen nicht vom Browser unterstützt und die Funktion abgebrochen. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden alle auf der Seite vorhandenen adaptiven Komponenten gesammelt. Diesen werden jeweils die Präferenzen der Nutzer als Attribute und deren Werte als Attribut-Werte hinzugefügt. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein\cite{xmlhttp}.
 		
 \chapter{Web Components}
 	\emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen\cite[S. 1]{patel2015learning}. Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \emph{\ac{HTML} Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen\cite[S.2]{patel2015learning}.
@@ -615,119 +745,8 @@ _buildHtml(data) {
 
 \chapter{Methodik dieser Arbeit}
 Kapitel über die Methodik
-\chapter{Adaptivität an den Nutzer}
-Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components}, die sich adaptiv an den Nutzer anpassen basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden, muss aus dem Netz erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die sich bei Bedarf anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an die Elemente der Internetseite gestellt, die zu den jeweiligen Präferenzen und damit Nutzern, passenden Funktionen auszuführen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
-Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als Nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, die adaptiven Elemente einer Internetseite, aussehen wird.
-	\section{Präferenzen der Nutzer}
-	Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese Unterscheidung abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Diese Paare werden gesammelt für jeden einzelnen Nutzer gespeichert. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert(\emph{Preference Set}).
-		\subsection{WCAG Richtlinien}
-		Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Dafür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise Anwendungen sich adaptiv an verschiedene Nutzer anpassen sollten. Im Folgenden werden die Richtlinien aufgezählt und kurz beschrieben\cite{wcag}.
-		\begin{description}
-			\item [Richtlinie 1.1 Text-Alternativen] Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können.
-			\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
-			\item[Richtlinie 1.3 Anpassbar] Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein.
-			\item[Richtlinie 1.4 Unterscheidbar] Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
-			\item[Richtlinie 2.1 Zugänglichkeit mit der Tastatur] Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.	
-			\item[Richtlinie 2.2 Ausreichend Zeit] Den Nutzern soll genügend Zeit zur Verfügung gestellt werden um den Inhalt zu lesen und nutzen.
-			\item[Richtlinie 2.3 Anfälle] Der Inhalt sollte nicht in der Weise dargestellt werden, die bekannt dafür ist Anfälle auszulösen.
-			\item[Richtlinie 2.4 Navigierbar] Es soll den Nutzern ermöglicht werden in der Anwendung zu navigieren, Inhalt zu finden und zu ermitteln an welcher Stelle sie sich befinden.
-			\item[Richtlinie 3.1 Lesbarkeit] Der textbasierte Inhalt sollte lesbar und verständlich sein.	
-			\item[Richtlinie 3.2 Vorhersehbar] Internetseiten sollen in einer vorhersehbaren Art und Weise auftreten und funktionieren.
-			\item[Richtlinie 3.3 Hilfestellung bei der Eingabe] Dem Nutzer soll geholfen werden, Fehler zu vermeiden und zu korrigieren.
-			\item[Richtlinie 4.1 Kompatibel] Die Kompatibilität mit heutigen und zukünftigen Benutzeragenten und unterstützenden Technologien soll maximiert werden.
-		\end{description}
-		\subsection{Folgerung für Präferenzen}
-		Auf Basis der vorhergehenden Kapiteln und weiterer Beobachtungen wird nun erforscht, welche Merkmale des \emph{Web Component} sich in welcher Art und Weise anpassen soll, um eine sinnvolle Adaptivität zu erreichen.
-			\subsubsection{Kontrast}
-			Um die \ac{WCAG 2.0} Richtlinie 1.4 zu erfüllen, sollte der Kontrast sich an den Nutzer anpassen. Der Bezeichner Kontrast definiert, ob und inwiefern der Nutzer einen Kontrastwert nutzen möchte, welcher vom Standard Kontrastwert abweicht. Beispielsweise erleichtert ein hoher Kontrast farbenblinden Nutzern Objekte vom Hintergrund zu unterscheiden. Für Nutzer ohne diese Einschränkung sind zu hohe Kontraste jedoch störend, da sie das Auge schnell ermüden\cite[S.234]{balzert2009webdesign}.
-			\subsubsection{Schrift}
-			Wenn davon ausgegangen wird, dass eine als allgemein lesbar bekannte Schriftart verwendet wird, hat die Wahl einer serifen oder serifenlosen Schriftart keinen bestätigten Einfluss auf die Richtlinie 3.1, die Lesbarkeit eines Textes\cite[S.157-161]{barrierefreiheit}. Jedoch kann, um eine Adaptivität der Schriftart zu ermöglichen, dem Nutzer die Wahl gelassen werden, ob er eine serife oder groteske Schriftart nutzen möchte.
-			Die Schriftgröße kann jedoch Einfluss auf die Richtlinie 3.1 nehmen. So kann eine zu große Schriftgröße, genauso wie eine zu kleine Schriftgröße, die Lesbarkeit beeinträchtigen. Insbesondere älteren Menschen oder Nutzern mit Sehbeeinträchtigungen wird das Lesen eines Textes durch eine anpassbare Schriftart erleichtert\cite[S.152]{barrierefreiheit}. Somit ermöglicht ein Bezeichner Schriftgröße, zu welchem der Nutzer einen Wert wählen kann eine nützliche Adaptivität der Anwendung. 
-			\subsubsection{Leserichtung}
-			\label{ref:lesRic}
-			Um die Richtlinie 3.1, die Lesbarkeit, zu erfüllen, sollte die Leserichtung sich an den Nutzer anpassen. Ohne diese Anpassung könnten Missverständnisse und Irritationen entstehen, da Texte von einer anderen Seite gelesen werden. So wird beispielsweise die arabische und hebräische von rechts oben nach links unten, die westliche von links oben nach rechts unten aufgebaut\cite[S.148]{emrich2013interkulturelles}.
-			\subsubsection{Anordnung der Elemente}
-			Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nutzers und damit seine Leserichtung nicht nur einen Einfluss auf die Texte haben sollte, sondern insgesamt einen Einfluss auf die Gestaltung der Internetseite haben sollte. Aufgrund der Leserichtung fallen Elemente eines Internetauftritts an verschiedenen Stellen unterschiedlich auf. So ziehen bei einer Leserichtung von links nach rechts Elemente in der linken oberen Ecke eher die Aufmerksamkeit auf sich als Elemente in der rechten oberen Ecke, da diese erst danach gelesen werden. Im Gegensatz dazu fallen bei der Leserichtung von rechts nach links Elemente in der rechten oberen Seite schneller auf\cite[S.47 f.]{meidl2013global}.
-			\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{leserichtung.png}
-				\caption[Einfluss der Leserichtung auf Anordnung der Elemente]{Einfluss der Leserichtung auf die Anordnung der Elemente\cite{elShaab}\cite{zeitOnline}}
-				\label{img:lesRic}
-			\end{figure}
-			Ein Beispiel dazu bilden die deutsche und ägyptische Nachrichtenseite \enquote{Zeit Online} und \enquote{Al Shaab}, dargestellt in Abbildung  \ref{img:lesRic}. Hier ist im oberen Bereich die Kopfzeile der arabischsprachigen und darunter die Kopfzeile der deutschsprachigen Internetseite abgebildet. Hier sieht man ganz klar, wie im arabischsprachigen Bereich die Elemente eher nach rechts ausgerichtet sind und wichtige Elemente, wie beispielsweise der Name der Zeitung ganz rechts oben angeordnet sind. Im deutschsprachigem Internetauftritt sind die Elemente nach links ausgerichtet und der Name der Webseite ist weit oben links.
-			\subsubsection{Text-Alternativen}
-			Die Richtlinie 1.1 definiert, dass zu jedem Text eine Alternative geboten wird. Darüber hinaus sollen die nicht textbasierten Inhalte nach Bedarf durch einen Text dargestellt werden können. Dem Nutzer sollte ermöglicht werden in seinen Präferenzen anzugeben, ob er den Text, oder dessen Alternativen angezeigt bekommen möchte.
-			\subsubsection{Geschwindigkeit}
-			Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen und zu nutzen. Dies sollte adaptiv an den Nutzer angepasst werden, da manche Nutzer mehr oder weniger Zeit für eine bestimmte Aufgabe benötigen. Beispielsweise werden bestimmte Navigationselemente durch ein Verweilen der Maus auf diesen ausgeklappt. Sobald die Maus nicht mehr auf dem Element verweilt wird es wieder eingeklappt. Hier sollte es dem Nutzer ermöglicht werden die Zeitspanne anzupassen bevor das Element wieder einklappt, da es ihm andernfalls nicht möglich sein könnte das Element schnell genug zu betätigen.		
-			
-		\subsection{Speichern der Nutzer Präferenzen}
-		Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen.
-		
-		\subsection{Herunterladen der Nutzer Präferenzen}
-		Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
-			\subsubsection{Was bedeutet REST}
-			\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien\cite[S.77]{chauhan2014asp}.
-			\begin{description}  
-				\item  [Adressierbarkeit von Ressourcen]
-				Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
-				
-				\item [Einfache und einheitliche Schnittstelle]
-				Das \ac{REST} Protokoll basiert auf dem \ac{HTML} Protokoll. Es werden die von der \ac{HTTP}-Technologie bekannten Methoden verwendet. Dies macht \ac{REST} Protokoll 
-				simpel und einheitlich.
-				
-				\item  [Repräsentation] 
-				Die Ressourcen können in verschiedenen Formen repräsentiert werden. Bei Änderung oder Anfrage der Ressource wird immer eine Repräsentation genutzt. Somit kann in einer Anfrage definiert werden, in welcher Form der Repräsentation die Antwort erfolgen soll.
-				
-				\item [Zustandslos]
-				Es werden keine Zustände auf dem \emph{Server} gespeichert. Zustandsinformationen werden vom \emph{Client} gehandhabt und bei Bedarf an den Server gesendet.
-				
-				\item [Cashing möglich]
-				Der \emph{Client} sollte die Möglichkeit haben,  die Antworten für späteren Gebrauch zu speichern.	
-			\end{description}
-		\subsubsection{Der Client}
-		Die Funktion um die Präferenzen eines bestimmten Nutzers abzufragen basiert auf dem \enquote{XMLHTTPRequest} JavaScript Objekt. Es bietet die Möglichkeit eine Anfrage an einen Speicherort, basierend auf dem \ac{HTTP} Protokoll, zu stellen um Daten abzufragen.
-		\newline
-		\begin{listing}
-			\begin{JavaScriptcode*}{}
-function loadPref() {
-   var xhttpreq = new XMLHttpRequest();
-   try{
-      //Moderner Browser
-      xhttpreq = new XMLHttpRequest();
-   }catch (e){
-      //Internet Explorer 5+
-      try{
-         xhttpreq = new ActiveXObject("Msxml2.XMLHTTP");
-      }catch (e) {
-         //Internet Explorer 5
-         try{
-         	xhttpreq = new ActiveXObject("Microsoft.XMLHTTP");
-         }catch (e){
-            //Wird nicht unterstützt
-            console.log('XMLHTTP not supported: no adaptive prefs');
-            return false;
-         }	
-      }
-   }
-   xhttpreq.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-         var jsonObj = JSON.parse(xhttpreq.responseText);
-         var adaptiveElements = document.querySelectorAll('.adaptive-polymer-element');
-         for (var i = 0; i < adaptiveElements.length; i++) {
-            for (var prop in jsonObj[0]) {
-               adaptiveElements[i].setAttribute(prop, jsonObj[0][prop]);
-           }
-         }
-      }
-   };
-   xhttpreq.open("GET", 'Speicherort', true);
-   xhttpreq.send(); 	
-}
-			\end{JavaScriptcode*}
-			\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
-			\label{lst:jquAja}
-		\end{listing}
-		Die in Listing \ref{lst:jquAja} dargestellte Funktion \enquote{loadPref} führt eine Anfrage an einen Speicherort aus und verändert die adaptiven \emph{Web Components} basierend auf den erhaltenen Daten. Zu Beginn wird die leere Variable \enquote{xhttpreq} erstellt. Daraufhin wird versucht diese in Zeile fünf als ein \enquote{XMLHttpRequest} zu erstellen. Falls ein Fehler geworfen wird deutet dies darauf hin, dass es sich bei dem verwendeten Browser nicht um einen modernen Browser handelt und deshalb das \enquote{XMLHttpRequest} nicht verwendet werden kann. Daraufhin wird in Zeile zehn versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Msxml2.XMLHTTP} zu erstellen. Wird hier wiederum ein Fehler geworfen handelt es sich wahrscheinlich um eine Version des \enquote{Internet Explorer} mit einer kleineren Versionsnummer als fünf. Dann wird in Zeile 13 versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Microsoft.XMLHTTP} zu erstellen. Kann auch dies nicht ohne Fehler funktionieren wird das Laden der Präferenzen nicht vom Browser unterstützt und die Funktion abgebrochen. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden alle auf der Seite vorhandenen adaptiven Komponenten gesammelt. Diesen werden jeweils die Präferenzen der Nutzer als Attribute und deren Werte als Attribut-Werte hinzugefügt. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein\cite{xmlhttp}.
+	
+	
 \chapter{Adaptivität von bestehenden Web Components}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt\cite{cusEleIo}.
 		\section{google-map}
@@ -894,8 +913,9 @@ _changeFontSize: function () {
 		\subsubsection{Leserichtung}
 		An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im den \enquote{data-table-row} Elementen werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich bei einer Leserichtung von rechts nach links auf der rechten Seite.
 
-\chapter{Vergleich}
-Kapitel über den Vergleich
+\chapter{Evaluation}
+\chapter{Fazit}
+
 	
 
 	\printbibliography
