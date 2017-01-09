@@ -172,19 +172,22 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 
 %\renewcommand{\smfootcite}[2][2]{\relax}
+\usepackage{pdfpages}
 
 
+%\pagenumbering{Roman} % Switch Roman
 
-\pagenumbering{Roman} % Switch Roman
+%\title{Konzeption und Entwicklung \\ von adaptiven Web Components}
+%\subtitle{Bachelorarbeit}
+%\author{im Studiengang \\ Mobile Medien \\ vorgelegt von \\ Christoph Kleber \\ Matr.-Nr.: 26982}
+%\date{am \today \\ an der Hochschule der Medien Stuttgart}
+%\publishers{Erstprüfer: Prof. Dr. Gottfried Zimmermann \\ Zweitprüfer: Darius Morawiec}
 
-\title{Konzeption und Entwicklung von adaptiven Web Components}
-\author{Christoph Kleber}
-\date{\today}
 
 
 \begin{document}
+\includepdf{title.pdf}
 
-\maketitle
 
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
@@ -217,8 +220,8 @@ The subject of this thesis is a relative new topic of frontend web development, 
 
 
 \chapter{Einleitung}
-\pagenumbering{arabic} % Switch to normal numbers
-Im ersten Kapitel dieser Arbeit wird der Aufbau der Abhandlung beschrieben. Daraufhin wird im zweiten Kapitel auf die Adaptivität eingegangen. Hier wird der Begriff und dessen Umsetzung erläutert. Danach wird der Nutzungskontext im Zusammenhang der Adaptivität beschrieben. Im dritten Kapitel wird die Adaptivität einer Internetseite an einen Nutzer konzipiert. Hier werden die \ac{WCAG 2.0} im Zusammenhang mit Präferenzen von Nutzern besprochen und daraus Folgerungen für die Präferenzwerte zur Adaptivität erstellt. Das vierte Kapitel erörtert die Zusammenstellung dieser Präferenzen. Es wird referiert wie diese aufgebaut sind, gespeichert und heruntergeladen werden können um dann genutzt zu werden. Das fünfte Kapitel behandelt die \emph{Web Components}. Es wird auf die Geschichte, die Technik und die Webentwicklung mithilfe dieser Elemente eingegangen. Das sechste Kapitel berichtet über die \emph{Polymer} Bibliothek und deren Technik. Das siebte Kapitel behandelt das \emph{AWC Framework} und dessen Technologie, insbesondere wie die Adaptivität ermöglicht wird. Im neunten Kapitel werden bestehende Web Components zur Ermöglichung der Adaptivität erweitert. Zu jedem Element wird jeweils die Adaptivität konzipiert und im Programmcode umgesetzt. Das zehnte Kapitel evaluiert die Möglichkeit der Anpassung zur Adaptivität der vorhergehenden Elemente. Das elfte Kapitel beschreibt ein Fazit. 
+%\pagenumbering{arabic} % Switch to normal numbers
+Im Folgenden wird der Aufbau dieser Arbeit vorgestellt. Im ersten Kapitel wird der Aufbau der Abhandlung beschrieben. Daraufhin wird im zweiten Kapitel auf die Adaptivität eingegangen. Hier wird der Begriff und dessen Umsetzung erläutert. Danach wird der Nutzungskontext im Zusammenhang der Adaptivität beschrieben. Im dritten Kapitel wird die Adaptivität einer Internetseite an einen Nutzer konzipiert. Hier werden die \ac{WCAG 2.0} im Zusammenhang mit Präferenzen von Nutzern besprochen und daraus Folgerungen für die Präferenzwerte zur Adaptivität erstellt. Das vierte Kapitel erörtert die Zusammenstellung dieser Präferenzen. Es wird referiert wie diese aufgebaut sind, gespeichert und heruntergeladen werden können um dann genutzt zu werden. Das fünfte Kapitel behandelt die \emph{Web Components}. Es wird auf die Geschichte, die Technik und die Webentwicklung mithilfe dieser Elemente eingegangen. Das sechste Kapitel berichtet über die \emph{Polymer} Bibliothek und deren Technik. Das siebte Kapitel behandelt das \emph{AWC Framework} und dessen Technologie, insbesondere wie die Adaptivität ermöglicht wird. Im neunten Kapitel werden bestehende Web Components zur Ermöglichung der Adaptivität erweitert. Zu jedem Element wird jeweils die Adaptivität konzipiert und im Programmcode umgesetzt. Das zehnte Kapitel evaluiert die Möglichkeit der Anpassung zur Adaptivität der vorhergehenden Elemente. Das elfte Kapitel beschreibt ein Fazit. 
 \chapter{Adaptivität}
 Der Begriff Adaptivität wird in vielen verschiedenen Kontexten genutzt. Die Bedeutung ist somit mehrdeutig und abhängig vom Umfeld. Beispielsweise wird in der Psychotherapie unter Adaptivität im therapeutischen Vorgehen eine \enquote{Grundhaltung [beschrieben], welche die Bereitschaft impliziert, unter stetiger Reflexion der Prozesse von Übertragung und Gegenübertragung flexibel auf die jeweils aktuellen Bedürfnisse des Patienten einzugehen}\cite[S. 45]{woeller2014tiefenpsychologisch}. Im Kontext von Datenbanken und der \enquote{Adaptivität an unterschiedliche Anforderungen} wird von Verfahren gesprochen, die \enquote{die Anpassungsfähigkeit an unterschiedliche Anforderungen und damit auch an verschiedene Einsatzumgebungen [erhöhen]}\cite[][S. 112]{loeser2013web}.
 In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden: \enquote{Interaktive Softwaresysteme werden von Benutzern mit unterschiedlichsten Zielen, Interessen, Fähigkeiten, Erfahrenheitsgraden und Präferenzen verwendet. Um einem möglichst breitem Personenkreis zugänglich zu sein, bieten viele derzeit erhältliche Programme bereits die Möglichkeit, daß Benutzer (oder Systemadministratoren) in bestimmtem Ausmaß eine Anpassung des Programms an die jeweiligen individuellen Präferenzen vornehmen können}\cite[S. 1]{Kobsa1993}.
@@ -353,12 +356,6 @@ function loadPref() {
    xhttpreq.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
          var jsonObj = JSON.parse(xhttpreq.responseText);
-         var adaptiveElements = document.querySelectorAll('.adaptive-polymer-element');
-         for (var i = 0; i < adaptiveElements.length; i++) {
-            for (var prop in jsonObj[0]) {
-               adaptiveElements[i].setAttribute(prop, jsonObj[0][prop]);
-            }
-         }
       }
    };
    xhttpreq.open("GET", 'Speicherort', true);
@@ -368,7 +365,7 @@ function loadPref() {
 	\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
 	\label{lst:jquAja}
 \end{listing}
-Die in Listing \ref{lst:jquAja} dargestellte Funktion \enquote{loadPref} führt eine Anfrage an einen Speicherort aus und verändert die adaptiven \emph{Web Components} basierend auf den erhaltenen Daten. Zu Beginn wird die leere Variable \enquote{xhttpreq} erstellt. Daraufhin wird versucht diese in Zeile fünf als ein \enquote{XMLHttpRequest} zu erstellen. Falls ein Fehler geworfen wird deutet dies darauf hin, dass es sich bei dem verwendeten Browser nicht um einen modernen Browser handelt und deshalb das \enquote{XMLHttpRequest} nicht verwendet werden kann. Daraufhin wird in Zeile zehn versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Msxml2.XMLHTTP} zu erstellen. Wird hier wiederum ein Fehler geworfen handelt es sich wahrscheinlich um eine Version des \enquote{Internet Explorer} mit einer kleineren Versionsnummer als fünf. Dann wird in Zeile 13 versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Microsoft.XMLHTTP} zu erstellen. Kann auch dies nicht ohne Fehler funktionieren wird das Laden der Präferenzen nicht vom Browser unterstützt und die Funktion abgebrochen. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden alle auf der Seite vorhandenen adaptiven Komponenten gesammelt. Diesen werden jeweils die Präferenzen der Nutzer als Attribute und deren Werte als Attribut-Werte hinzugefügt. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein\cite{xmlhttp}.
+Die in Listing \ref{lst:jquAja} dargestellte Funktion \enquote{loadPref} führt eine Anfrage an einen Speicherort aus und verändert die adaptiven \emph{Web Components} basierend auf den erhaltenen Daten. Zu Beginn wird die leere Variable \enquote{xhttpreq} erstellt. Daraufhin wird versucht diese in Zeile fünf als ein \enquote{XMLHttpRequest} zu erstellen. Falls ein Fehler geworfen wird deutet dies darauf hin, dass es sich bei dem verwendeten Browser nicht um einen modernen Browser handelt und deshalb das \enquote{XMLHttpRequest} nicht verwendet werden kann. Daraufhin wird in Zeile zehn versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Msxml2.XMLHTTP} zu erstellen. Wird hier wiederum ein Fehler geworfen handelt es sich wahrscheinlich um eine Version des \enquote{Internet Explorer} mit einer kleineren Versionsnummer als fünf. Dann wird in Zeile 13 versucht \enquote{xhttpreq} als ein \enquote{ActiveXObject} der Art \enquote{Microsoft.XMLHTTP} zu erstellen. Kann auch dies nicht ohne Fehler funktionieren wird das Laden der Präferenzen nicht vom Browser unterstützt und die Funktion abgebrochen. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden die übertragenen Daten in der Variable \enquote{jsonObj} gespeichert und können weiter verwendet werden. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen und den gewünschten Nutzer anzufragen. Ein Beispiel dieses Speicherorts könnte \newline \enquote{http://www.speicherort.de/praeferenzen/nutzer1} sein\cite{xmlhttp}.
 		
 \chapter{Web Components}
 	\emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen\cite[S. 1]{patel2015learning}. Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \emph{\ac{HTML} Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen\cite[S.2]{patel2015learning}.
@@ -535,6 +532,51 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 		\label{lst:hosSel}
 		\end{listing}
 		In Listing \ref{lst:hosSel} ist dargestellt in welcher Form Einfluss genommen werden kann. So spricht der Selektor in Zeile zwei nur den \emph{Web Component} an, während die Maus sich über diesem befindet. Der Selektor in Zeile fünf spricht nur den \emph{Web Component} an, wenn dieser die Klasse \enquote{blue} erhalten hat.
+		\section{Ein vollständiges Web Component}
+		Die in den vorherigen Kapiteln erwähnten Technologien werden nun kombiniert, um beispielhaft ein vollständiges \emph{Web Component} zu erstellen. 		\begin{listing}
+			\begin{HTMLcode*}{}
+<template>
+   <style>
+      p {color: red}
+   </style>
+   <p>Dies ist ein Web Component.</p>
+</template>
+<script>
+   class Example extends HTMLElement {
+      constructor() {
+         super();
+         var template = document.currentScript.ownerDocument.querySelector('template');
+         var clone = document.importNode(template.content, true);
+         this.createShadowRoot().appendChild(clone);
+      }
+   }
+customElements.define('example-component', Example);
+</script>
+			\end{HTMLcode*}
+			\caption{Beispiel Web Component}
+			\label{lst:beiWebCom}
+		\end{listing}
+		In Listing \ref{lst:beiWebCom} ist der \ac{HTML} Programmcode dieser Komponente dargestellt. Hier werden die vorher erwähnten Technologien \emph{Custom Elements}, \emph{Templates} und \emph{Shadow DOM} genutzt. In Zeile eins wird ein \emph{Template} erstellt. Der Inhalt dessen besteht aus den \ac{CSS} Gestaltungsanweisungen und einem Paragraph mit dem Text \enquote{Dies ist ein Web Component.}. Ab Zeile sieben wird der JavaScript Programmcode definiert. Dieser erstellt in Zeile acht die Klasse \enquote{example}, welche ein \enquote{HTMLElement} erweitert. Diese besitzt einen Konstruktor. In diesem wird zuerst die \enquote{super} Funktion des erweiterten Element aufgerufen. Danach wird das \emph{Template} Element ausgewählt, dessen Inhalt kopiert und in den neu erstellen \emph{Shadow Root} eingefügt. In der Zeile 16 wird dann die definierte Komponente zu den \enquote{customElements} unter dem Namen \enquote{example-component} hinzugefügt. Daraufhin kann diese, nachdem die \ac{HTML} Datei importiert wurde, in \ac{HTML} Dokumenten unter dem Bezeichner \enquote{example-component} genutzt werden.
+\begin{listing}[H]
+	\begin{HTMLcode*}{}
+<head>
+   <link rel='import' href='comps/example-component.html'>
+</head>
+<body>
+   <p>Normaler Inhalt der Seite.</p>
+   <example-component></example-component>
+</body>
+	\end{HTMLcode*}
+	\caption{Nutzung des example-component}
+	\label{lst:nutExaCom}
+\end{listing}
+In Listing \ref{lst:nutExaCom} ist der gesamte \enquote{body} und ein Ausschnitt des \enquote{head} einer \ac{HTML} Datei dargestellt. Diese importiert das in Listing \ref{lst:beiWebCom} erstellte \emph{Web Component} und nutzt es dann unter dem definierten Bezeichner \enquote{example-component}. 
+	\begin{figure}				\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{beiWebCom.png}
+	\caption[Ansicht example-component]{Ansicht des Beispiel Web Components}
+	\label{img:beiWebCom}
+\end{figure}
+Abbildung \ref{img:beiWebCom} zeigt dann die im Browser angezeigte Ansicht des in Listing \ref{lst:nutExaCom} genutzten \emph{Web Components}. Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angezeigt. Nur dieser Paragraph, also das eigentliche \emph{Web Component} wird in rot dargestellt, da diese Gestaltungsanweisung innerhalb der Komponente gesetzt wurde und somit nur diese betrifft. 
 		\section{Webentwicklung mithilfe der Web Components}
 		Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms}\cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können sich diese gegenseitig beeinflussen. So können die Stil-Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen oder das JavaScript, das eine bestimmte Funktion hat, an einer anderen Stelle für die es nicht programmiert wurde, Einfluss nehmen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
 		Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft) native Implementierung verschiedener Techniken anzugehen, die eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen. Nachfolgend wird auf die daraus resultierenden Vor- und Nachteile eingegangen. 			
@@ -550,8 +592,12 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 			Die Wartbarkeit von Web-Applikationen wird erleichtert, da die \emph{Web Components} in \emph{Templates} organisiert sind\cite[S.2]{patel2015learning}. Das sorgt dafür, dass der Programmcode einzelner Komponenten separat gespeichert und somit leichter wiedergefunden und geändert werden kann.
 			\subsection{Browserunterstützung}
 			Auch wenn \emph{Web Components} sehr viele Vorteile aufweisen, ist es ein Problem wenn die Techniken (noch) nicht in allen Browsern unterstützt werden oder unterschiedlich implementiert sind. Wie in Kapitel \ref{ref:gesVonWebCom} dargelegt, werden einige der Techniken noch nicht von allen Browsern unterstützt oder unterscheiden sich in deren Umsetzung. Dies kann zu Inkonsistenzen oder dem nicht Funktionieren einer Applikation führen. Durch Verwendung von  \emph{Polyfills} kann man dies jedoch umgehen. Das sind in diesem Zusammenhang Programmcodes, die die Funktionen oder Teile einer Technologie, die nativ noch nicht von einem Browser unterstützt wird, nachstellen. Sie können dann verwendet werden um Nutzern aller Browser den Gebrauch der Technologien zu ermöglichen\cite[S.4]{satrom2014building}. Das \emph{webcomponents.js} ist ein Set von \emph{Polyfills} und ermöglicht den Nutzern die Verwendung von \emph{Web Components} in allen modernen Browsern\cite{webComJs}.
+	\section{Adaptivität der Web Components?}
+	Nachdem die Technik, die Vor- und Nachteile von \emph{Web Components} evaluiert wurden stellt sich die Frage, inwiefern diese zur Adaptivität geeignet sind. An dieser Stelle lässt sich diese Frage noch nicht vollständig beantworten. Um eine Komponente adaptiv zu gestalten muss es möglich sein auf den Aufbau, das Aussehen und unter Umständen den Inhalt dieser Einfluss nehmen zu können.
+	\newline
+	Den Aufbau und das Aussehen adaptiv anzupassen könnten die \ac{CSS} Gestaltungsanweisungen innerhalb der \emph{Web Components} ermöglichen. Hier könnten je nach Nutzer andere Gestaltungsanweisungen erfolgen, um die Komponente an den Nutzer anzupassen. Um Einfluss auf den Inhalt nehmen zu können, könnten Methoden innerhalb der Komponente definiert werden, die Inhalt, anhand den Präferenzen des Nutzers, hinzufügen, weglassen oder ändern. Durch den gekapselten Zustand könnten sich bei richtiger Anwendung nur die \emph{Web Components} an den Nutzer adaptiv anpassen und keine anderen Teile der Webseite ungewollt verändern. Dies würde auch ermöglichen jedes einzelne \emph{Web Component} unabhängig zu verändern, da unter Umständen jedes dieser anderweitig angepasst werden müsste um die Präferenzen der Nutzer zu erfüllen. Um jedoch diese Anpassung innerhalb der \emph{Web Components} durchzuführen muss auch auf innerhalb der Komponenten zugegriffen werden können. Dazu können HTML-Attribute genutzt werden. Diese würden von \enquote{außen} zu dem \emph{Web Component} hinzugefügt werden und dann innerhalb dieses verwendet werden um bestimmte Anpassungen durchzuführen. Falls alle diese Techniken korrekt genutzt werden und sich nicht gegenseitig negativ beeinflussen, kann es möglich sein \emph{Web Components} zur Adaptivität zu erweitern.
 \chapter{Polymer}
-Die \emph{Polymer} Bibliothek stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen. Diese Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren\cite{polymerFeaOve}.
+Die \emph{Polymer} Bibliothek ist eine Möglichkeit \emph{Web Components} zu nutzen. Sie stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen und bietet darüber hinaus verschiedene nützliche Funktionen an. Diese Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren\cite{polymerFeaOve}.
 	\section{Polymer Technologie} Die verwendeten Technologien der Bibliothek ähneln den \emph{Web Components} oder es werden direkt die Technologien der \emph{Web Components} genutzt. Im Folgenden wird die Technologie der Version 1.x erläutert.
 		\subsection{Ein Element registrieren}
 		Ähnlich der \emph{Web Components} Technologie, muss mithilfe der \emph{Polymer} Bibliothek ein vom Entwickler neu erstelltes \emph{custom element} zuerst registriert werden. 
@@ -650,7 +696,7 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{Shady DOM}, eine Kapselun
 \end{listing}
 Diese werden in der in Listing \ref{lst:benCss} dargestellten Form, im Bereich der Stil-Eigenschaften, bei der Erstellung eines \emph{Polymer} Elements definiert. Wie in Zeile sechs zu sehen ist kann auch, falls der Nutzer der Eigenschaft keinen Wert zuweist ein Standard Wert gesetzt werden. Hier ist der Standardwert \enquote{blue}. An einer Stelle oberhalb des \ac{DOM} kann dann die \ac{CSS} Eigenschaft \enquote{--my-element-title-color} vom Nutzer des Elements mit einem Wert belegt werden. Dadurch wird ab dann jedes Element das mit dieser benutzerdefinierten Eigenschaft belegt ist, mit dem vom Nutzer gesetzten Wert ausgezeichnet. Beispielsweise kann der \enquote{:host} Selektor mit der Eigenschaft \enquote{--my-element-title-color: green} ausgezeichnet werden. Dadurch werden alle Elemente innerhalb des \emph{Shadow root}, mit der benutzerdefinierten Eigenschaft \enquote{--my-element-title-color} auf den Wert \enquote{green} gesetzt.
 \chapter{Das AWC Framework}	
-Das \ac{AWC Framework} wurde von der \emph{REMEX} Forschungsgruppe entwickelt. Das JavaScript Framework wird auch mit der Bezeichnung \emph{Darwin.js} beschrieben. Es soll die Implementierung von adaptiven Benutzeroberflächen ermöglichen, basierend auf der Technik der \emph{Web Components}. Die Oberflächen richten sich somit nach den Bedürfnissen und der Zusammenstellung der Präferenzen eines Nutzers, um die Zugänglichkeit, Gebrauchstauglichkeit und das Nutzungserlebnis zu verbessern\cite{gitHubAwc}\cite{darwin}. Im folgenden wird die verwendete Technik des \ac{AWC Framework} erläutert. 
+Das \ac{AWC Framework} ist ein weitere Möglichkeit mit \emph{Web Components} zu arbeiten. Es wurde von der \emph{REMEX} Forschungsgruppe entwickelt. Das JavaScript Framework wird auch mit der Bezeichnung \emph{Darwin.js} beschrieben. Es soll die Implementierung von adaptiven Benutzeroberflächen ermöglichen, basierend auf der Technik der \emph{Web Components}. Die Oberflächen richten sich somit nach den Bedürfnissen und der Zusammenstellung der Präferenzen eines Nutzers, um die Zugänglichkeit, Gebrauchstauglichkeit und das Nutzungserlebnis zu verbessern\cite{gitHubAwc}\cite{darwin}. Im folgenden wird die verwendete Technik des \ac{AWC Framework} erläutert. 
 \section{Darwin.js Technologie}
 Um ein neues adaptives \emph{Web Component} zu erstellen wird die Klasse \enquote{Component} und von dieser der Konstruktor genutzt. Diesem können vier Parameter übergeben werden. Sie setzen sich aus \enquote{\_htmlTag}, \enquote{\_baseClass}, \enquote{\_data} und \enquote{\_options} zusammen. Zu Beginn nutzt der Konstruktor die Methode \enquote{testBrowserSupport()} um abzufragen, ob die Technologien der \emph{Web Components} vom Browser unterstützt werden. Ist dies nicht der Fall wird ein Fehler geworfen. Danach wird mit den übergebenen Parametern weitergearbeitet.
 	\subsection{Registrierung eines Elements}
@@ -753,7 +799,7 @@ Kapitel über die Methodik
 			Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, das die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht\cite{gooMap}.
 			\subsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
-			\begin{figure}				\centering
+			\begin{figure}	f			\centering
 				\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmap.png}
 				\caption[Google Map Web Component]{Google Map Web Component Ansicht}
 				\label{img:gmap}
