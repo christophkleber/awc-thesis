@@ -5,7 +5,7 @@
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof, headsepline=true]{scrreprt}
 
 \usepackage[a4paper, includeheadfoot, %bindingoffset=3cm, 
-left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
+left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 
 
@@ -187,6 +187,12 @@ left=2.75cm, right=2.75cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 \begin{document}
 \includepdf{title.pdf}
+
+
+\includepdf{erklaerung.pdf}
+
+
+
 
 
 \chapter*{Abstract}
@@ -578,7 +584,7 @@ In Listing \ref{lst:nutExaCom} ist der gesamte \enquote{body} und ein Ausschnitt
 \end{figure}
 Abbildung \ref{img:beiWebCom} zeigt dann die im Browser angezeigte Ansicht des in Listing \ref{lst:nutExaCom} genutzten \emph{Web Components}. Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angezeigt. Nur dieser Paragraph, also das eigentliche \emph{Web Component} wird in rot dargestellt, da diese Gestaltungsanweisung innerhalb der Komponente gesetzt wurde und somit nur diese betrifft. 
 		\section{Webentwicklung mithilfe der Web Components}
-		Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms}\cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können sich diese gegenseitig beeinflussen. So können die Stil-Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen oder das JavaScript, das eine bestimmte Funktion hat, an einer anderen Stelle für die es nicht programmiert wurde, Einfluss nehmen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
+		Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms} \cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können sich diese gegenseitig beeinflussen. So können die Stil-Regeln verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen oder das JavaScript, das eine bestimmte Funktion hat, an einer anderen Stelle für die es nicht programmiert wurde, Einfluss nehmen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
 		Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft) native Implementierung verschiedener Techniken anzugehen, die eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen. Nachfolgend wird auf die daraus resultierenden Vor- und Nachteile eingegangen. 			
 			\subsection{Native Browserunterstützung}
 			Aufgrund der Erkenntnisse der Geschichte von \emph{Web Components} in Kapitel \ref{ref:gesVonWebCom} ist eine gewisse Wahrscheinlichkeit gegeben, dass die Technologien der \emph{Web Components} in Zukunft nativ von den verschiedenen Browsern unterstützt werden.
@@ -795,7 +801,7 @@ Kapitel über die Methodik
 	
 \chapter{Adaptivität von bestehenden Web Components}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt\cite{cusEleIo}.
-		\section{google-map}
+		\section{Google Map}
 			Die erste Auswahl ist das Element \enquote{google-map}. Es ist ein \emph{Web Component}, das die Anzeige einer \emph{Google Map}, also einer Karte, ermöglicht\cite{gooMap}.
 			\subsection{Konzeption zur Adaptivität}
 			\label{ref:konVonAda}
@@ -806,18 +812,7 @@ Kapitel über die Methodik
 			\end{figure}
 			Abbildung \ref{img:gmap} zeigt die Ansicht einer \enquote{Google Map}. Sie nutzt einerseits farbige Abbildungen und Symbole, andererseits auch verschiedene Texte. Um eine Adaptivität zu ermöglichen, sollte Einfluss auf den Kontrast, Text- und Symbol-Alternativen, die Schrift und die Leserichtung und damit auf die Anordnung der Elemente genommen werden. Der Kontrast der Kartenelemente sollte sich adaptiv an den Nutzer anpassen. Hier sollten die Straßen, Gebäude, Grünflächen und ähnliche Elemente, welche durch Farbunterschiede dargestellt werden, sich stark voneinander abheben können, um allen Nutzern das Lesen der Karte zu ermöglichen. Des weiteren sollte sich die Schrift, also die Bezeichner der Kartenelemente, wie Städte, Straßen oder besondere Gebäude anpassen. Auch sollte sich die Schrift auf den Buttons einstellen lassen. Hier sollte es dem Nutzer ermöglicht werden zwischen einer kleinen, großen und einer serifen oder grotesken Schriftart zu wählen. Um sich an die Leserichtung des Anwenders anzupassen muss zum einen der Text und zum anderen der Aufbau des \emph{Web Components} sich verändern. So sollten das wichtigste Element, die Einstellungsleiste, bei einer Leserichtung von links nach rechts in der linken oberen Ecke befinden und bei einer Leserichtung von rechts nach links in der rechten oben Ecke befinden. Dementsprechend würden sich der derzeitige, standardmäßige, Aufbau der Karte bei einer Leserichtung von rechts nach links spiegeln. Zuletzt sollten für die Texte Text-Alternativen geboten werden und Bestandteile der Karte welche eine Funktion erfüllen und nur durch Abbildungen oder Symbole dargestellt werden, auch als Text angeboten werden. 
 			\subsection{Einrichtung des Google Map Web Component}
-			Das \emph{Google Map Web Component} ist auf \enquote{GitHub} gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt. Das bedeutet, dass der Stand der eigentlichen Entwicklern kopiert wird und eigene Änderungen im weiteren darauf aufbauen. Um die Abhängigkeiten des \emph{Web Component} zu installieren wurde \emph{Bower} genutzt. \emph{Bower} ist ein Paketverwaltungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}. Die Abhängigkeiten setzen sich aus den folgenden Elementen zusammen:
-			\begin{itemize}
-				\item
-				\enquote{Polymer/polymer\#\^1.2.3},
-				\item
-				\enquote{GoogleWebComponents/google-apis\#\^1.1.1},
-				\item
-				\enquote{PolymerElements/iron-resizable-behavior\#\^1.0.0}
-				\item
-				\enquote{PolymerElements/iron-selector\#\^1.0.5}
-			\end{itemize}
-			Wenn das \emph{Web Component} eingebunden ist, kann es unter dem \ac{HTML} Tag \enquote{<google-map>} genutzt werden. Dieses muss mit einem \emph{Google} \ac{API} Schlüssel, mit dem Namen \enquote{Google Maps JavaScript API} instanziiert werden. Dieser wurde über ein \emph{Google} Konto generiert und daraufhin in das \emph{Web Component} eingebunden. 
+			Das \emph{Google Map Web Component} ist auf \enquote{GitHub} gespeichert. Um die Möglichkeit zu erlangen es anzupassen wurde ein \enquote{fork} durchgeführt. Das bedeutet, dass der Stand der eigentlichen Entwicklern kopiert wird und eigene Änderungen im weiteren darauf aufbauen. Um die Abhängigkeiten des \emph{Web Component} zu installieren wurde \emph{Bower} genutzt. \emph{Bower} ist ein Paketverwaltungsprogramm, welches das Aktualisieren und Installieren von Bibliotheken und Frameworks unterstützt. Dabei wird \emph{Bower} als ein Kommandozeilenprogramm genutzt\cite{bower}.Die \enquote{Google Map} selbst wird aus verschiedenen \emph{Web Components} zusammengesetzt. In der hier verwendeten Zusammenstellung werden die Elemente \enquote{google-map} und \enquote{google-maps-api} genutzt. Falls \enquote{Marker} gesetzt werden wird das Element \enquote{iron-selector} auch genutzt. Wenn das \emph{Web Component} eingebunden ist, kann es unter dem \ac{HTML} Tag \enquote{<google-map>} genutzt werden. Dieses muss mit einem \emph{Google} \ac{API} Schlüssel, mit dem Namen \enquote{Google Maps JavaScript API} instanziiert werden. Dieser wurde über ein \emph{Google} Konto generiert und daraufhin in das \emph{Web Component} eingebunden. 
 			\subsection{Umsetzung der Programmierung}
 			Im weiteren wird die konzipierte Adaptivität des bestehenden \emph{Web Component} im Programmcode umgesetzt.
 			\subsubsection{Kontrast}
@@ -867,7 +862,7 @@ var stylesArray = [{featureType: 'water', stylers: [
 		\subsubsection{Leserichtung}
 		Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection} wartet auf die Benachrichtigung des Ereignisses \enquote{tilesloaded} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \emph{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Hierfür wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet. Von dieser Änderung der Anordnung betroffen sind die beiden Schalter der Ansichtseinstellungen der Karte. Hier kann zwischen dem \enquote{Karte} und \enquote{Satellit} Wert gewählt werden. Darüber hinaus sind die Einstellungen der Vergrößerungsstufe und das Symbol der \enquote{Google Street View} von der Änderung betroffen. Auch die Methode \enquote{\_changeReadingDirection} wird zur Methode \enquote{\_initGMap} hinzugefügt.
 		\newpage
-	\section{paper-date-picker}
+	\section{Paper Date Picker}
 		Als nächstes wurde das \enquote{paper-date-picker} Element ausgewählt.\cite{datPic} Es ermöglicht die Anzeige eines Kalenders. Von diesem Kalender kann ein einzelner Tag vom Nutzer ausgewählt werden. Dieser wird dann mit erweiterten Informationen angezeigt.
 		\begin{figure}[H]		
 			\centering
@@ -883,7 +878,7 @@ var stylesArray = [{featureType: 'water', stylers: [
 		Auf die Schrift der Texte sollte Einfluss genommen werden können. So sollte die Schriftart und insbesondere die Schriftgröße anpassbar sein. Die Schriftart sollte zwischen einer serifen und einer serifenlosen Art wechseln, die Größe sollte sich zwischen der Standardgröße, einer großen und einer sehr großen Schriftgröße wechseln lassen. Hiervon sind Datenelemente und die Bezeichner des Kalenders betroffen. Auch der Text des derzeitig ausgewählten Datums sollte sich anpassen können.
 		Um sich an die Leserichtung des Nutzers anzupassen, sollte Einfluss auf die Anordnung der Texte und auch Elemente genommen werden. Der Standardzustand der Komponente ist die Leserichtung von links nach rechts, hier wird das ausgewählte Datum auf der linken Seite und der Kalender auf der rechten Seite dargestellt. Auch werden die Wochentage des Kalenders von links nach rechts gelesen. Diese Elemente sollten sich bei einer Leserichtung von rechts nach links verschieben lassen.  
 		\subsection{Einrichtung des Paper Date Picker Web Component}
-		Das \emph{Paper Date Picker Web Component} ist auf \enquote{GitHub} gespeichert. Es wurde wiederum ein \enquote{fork} durchgeführt um an diesem weiterarbeiten zu können und es zu erweitern. Für die Abhängigkeiten des Elements wurde wieder \emph{Bower} genutzt. Nachdem es eingebunden ist und alle Abhängigkeiten installiert sind kann das \emph{Web Component} unter dem \ac{HTML} Bezeichner \enquote{<paper-date-picker>} genutzt werden.
+		Das \emph{Paper Date Picker Web Component} ist auf \enquote{GitHub} gespeichert. Es wurde wiederum ein \enquote{fork} durchgeführt um an diesem weiterarbeiten zu können und es zu erweitern. Für die Abhängigkeiten des Elements wurde wieder \emph{Bower} genutzt. Das \enquote{Paper Date Picker} Element wird selbst aus verschiedenen \emph{Web Components} zusammengesetzt. In der hier verwendeten Zusammenstellung werden insgesamt die Elemente \enquote{paper-date-picker}, \enquote{paper-calendar}, \enquote{paper-year-list}, \enquote{iron-media-query}, \enquote{neon-animated-pages} und \enquote{neon-animatable} genutzt. Nachdem es eingebunden ist und alle Abhängigkeiten installiert sind kann das \emph{Web Component} unter dem \ac{HTML} Bezeichner \enquote{<paper-date-picker>} genutzt werden.
 		\subsection{Umsetzung der Programmierung}
 		Im folgenden wird die konzipierte Adaptivität des Elements im Programmcode umgesetzt. 
 		\subsubsection{Kontrast}
@@ -931,7 +926,7 @@ _changeFontSize: function () {
 		\subsubsection{Leserichtung}
 		Die Standard Leserichtung der Komponente ist von links nach rechts. Um diese zu ändern wird die Methode \enquote{\_changeReadingDirection} verwendet. Sie fragt zu Beginn den Wert des Parameters \enquote{readingDirection} ab.  Enthält diese den Wert \enquote{rtl}, also eine erwünschte Leserichtung von rechts nach links, werden zum äußeren \emph{Web Component}, dem \enquote{paper-date-picker} und zu dem inneren \emph{Web Component}, dem \enquote{paper-calendar} die \ac{CSS} Klasse \enquote{rtl} hinzugefügt. In den Gestaltungsanweisungen dieser Komponenten werden die Elemente angewiesen, bei der Existenz der Klasse \enquote{rtl} die Eigenschaft \enquote{flex-direction} bestimmter Elemente auf den Wert \enquote{row-reverse} zu setzen. Dadurch wird der Aufbau des \emph{Web Component} für Nutzer ausgerichtet, die von rechts nach links lesen.
 		\newpage
-		\section{iron-data-table}
+		\section{Iron Data Table}
 		Die nächste Auswahl fiel auf das Element \enquote{iron-data-table}\cite{saulis}. Dieses \emph{Web Component} stellt Tabellen dar. Die Tabelleninhalte können frei definiert werden.
 		\begin{figure}[H]		
 			\centering
@@ -959,7 +954,16 @@ _changeFontSize: function () {
 		\subsubsection{Leserichtung}
 		An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im den \enquote{data-table-row} Elementen werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich bei einer Leserichtung von rechts nach links auf der rechten Seite.
 
-\chapter{Evaluation}
+\chapter{Evaluation der umgesetzten Adaptivität}
+Nachdem einige vorhandene \emph{Web Components}, realisiert mithilfe der \emph{Polymer} Bibliothek, zur Adaptivität angepasst wurden, wird im folgenden darauf eingegangen, inwiefern die Adaptivität möglich war und inwiefern Hindernisse oder Möglichkeiten vorlagen.
+	\section{Iron Data Table}
+	\label{sec:evaIroDatTab}
+	Die Adaptivität dieses Elements wird über das Hinzufügen von \ac{CSS} Klassen realisiert. Je nach gewählter Präferenz werden verschiedene Klassen an die \emph{Web Components} angehängt und diese innerhalb der Komponenten genutzt um das Aussehen, den Aufbau oder den Inhalt anzupassen. Dies stellt jedoch das erste Problem dar. Jede Tabelle ist aus mehreren \emph{Web Components} zusammengesetzt. Es ist nicht möglich die Gestaltungsanweisungen in einer Komponente für alle Komponenten zu setzen, da \emph{Web Components} über den \emph{Shadow DOM} gekapselt sind und somit die Anweisungen nicht außerhalb der eigenen Komponente genutzt werden können. Deshalb müssen erstens die Methoden zum Hinzufügen der \ac{CSS} Klassen in einer Komponente definiert werden, während die Methoden die Klassen auch zu anderen \emph{Web Components} hinzufügen müssen. Dies führt dazu, dass die Adaptivität nur vollständig gewährleistet ist, wenn die Zusammenstellung der verschiedenen \emph{Web Components} in dieser bestimmten Form vorliegt. Zweitens müssen die Gestaltungsanweisungen zu jeder Komponente innerhalb dieser gesetzt werden. Dies führt dazu, dass der Programmcode der eine Adaptivität ermöglicht, auf verschiedene Komponenten und damit Dateien verteilt werden muss und somit schwer wartbar ist. 
+	\section{Paper Date Picker} 
+	Auch die Adaptivität dieses Elements wird über das Hinzufügen von \ac{CSS} Klassen realisiert. Wiederum werden die Präferenzen des Nutzers anhand von \ac{CSS} Klassen an die Komponenten hinzugefügt. Hier entsteht dasselbe Problem wie im Kapitel \ref{sec:evaIroDatTab}, da der \enquote{Paper Date Picker} auch aus verschiedenen \emph{Web Components} besteht. So sind auch die Methoden zum Hinzufügen der Klassen in nur einer Komponente, welche wiederum diese Klassen an andere Komponenten hinzufügen. Deshalb müssen die verschiedenen \emph{Web Components} in einer bestimmten Zusammenstellung vorliegen. Auch müssen die Gestaltungsanweisungen in jeder Komponente einzeln gesetzt werden was wiederum die Wartbarkeit mindert.
+	\section{Google Map}
+	
+
 \chapter{Fazit}
 
 	
