@@ -823,32 +823,37 @@ _buildHtml(data) {
 			Im weiteren wird die konzipierte Adaptivität des bestehenden \emph{Web Component} im Programmcode umgesetzt.
 			\subsubsection{Kontrast}
 			Zuerst wird die Anpassung des Kontrastwerts vorgenommen. Hier sollte zu Beginn auf die Erstellung einer \enquote{Google Map} genauer eingegangen werden. Dabei wird eine Instanz der Klasse \enquote{google.maps.Map} erstellt. Diese kann mithilfe optionaler Parameter erstellt werden. Einer dieser Parameter sind die sogenannten \enquote{styles}. Hier können einzelne Merkmale oder die gesamte Karte mit eigenen Gestaltungseinstellungen versehen werden. Ein Merkmal sind bestimmte geographische Eigenschaften der Karte, wie beispielsweise Straßen, Parks oder Seen, sie werden als \enquote{featureType} definiert. Danach können noch einzelne Elemente dieser Eigenschaften gewählt werden, wie beispielsweise Bezeichner oder geographische Elemente. Diese werden als \enquote{elementType} bezeichnet. Zuletzt kann somit das Aussehen dieser Elemente der Merkmale über verschiedene Gestaltungsoptionen angepasst werden\cite{gmapStyle}.
-					\begin{listing}
+					\begin{listing}[H]
 				\begin{JavaScriptcode*}{}
-var stylesArray = [{featureType: 'water', stylers: [
-	{'color': '#004d99'}
-	]},{	featureType: 'landscape', stylers: [
-	{'color': '#000000'}
-	]},{	featureType: 'road', stylers: [
-	{'color': '#ffffff'}
-	]},{	featureType: 'road',
-	elementType: 'labels.text.stroke', stylers: [
-	{'color': '#00cc00'}
-	]},{	featureType: 'road',
-	elementType: 'labels.text.fill', stylers: [
-	{'color': '#000000'}
-	]},{	featureType: 'transit', stylers: [
-	{'color': '#ffffff' }
-	]},{	featureType: 'poi',	stylers: [
-	{'visibility': 'off'}
-	]},{	featureType: 'administrative',
-	elementType: 'labels.text.stroke', stylers: [
-	{'color': '#ffff00'}
-	]},{ 	featureType: 'administrative',
-	elementType: 'labels.text.fill', stylers: [
-	{'color': '#000000'}
-	]}
-];
+gmapstyles =
+[
+   {
+      "featureType": "administrative",
+      "elementType": "labels.text.fill",
+      "stylers": [
+         {
+            "color": "#000000"
+         }
+      ]
+   },
+   {
+      "featureType": "administrative",
+	  "elementType": "labels.text.stroke",
+	  "stylers": [
+	     {
+            "color": "#ffff00"
+         }
+      ]
+   },
+   {
+      "featureType": "landscape",
+      "stylers": [
+         {
+            "color": "#000000"
+         }
+      ]
+   }
+]
 				\end{JavaScriptcode*}
 				\caption[Anpassung zur Erhöhung des Kontrastwerts]{JavaScript Programmcode zur Gestaltung und Anpassung eines erhöhten Kontrastwerts}
 				\label{lst:gooMapCon}
