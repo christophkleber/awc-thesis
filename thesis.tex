@@ -187,6 +187,13 @@ left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 %\publishers{Erstprüfer: Prof. Dr. Gottfried Zimmermann \\ Zweitprüfer: Darius Morawiec}
 
 
+%HEADING Farbe
+\usepackage{xcolor}
+
+\definecolor{headingblue}{rgb}{0.0, 0.48, 0.65}
+\addtokomafont{sectioning}{\color{headingblue}}
+
+
 
 \begin{document}
 \includepdf{title2.pdf}
@@ -852,7 +859,8 @@ _buildHtml(data) {
 	Auch die Größe der Schrift sollte sich adaptiv an den Nutzer anpassen. Hierfür wird die Methode \enquote{\_changeFontSize} des \enquote{iron-data-table} Elements genutzt. Sie fragt den Wert des Parameters \enquote{fontSize} ab. Dessen Standardwert ist \enquote{m}. Ist der Wert auf \enquote{l} oder \enquote{xl} gesetzt wird die Schriftgröße um zwei oder vier Pixel erhöht. Dies wird ermöglicht durch das Hinzufügen von den CSS Klassen \enquote{l} oder \enquote{xl} zu dem \enquote{iron-data-table} Element. Diese werden dann über Gestaltungsanweisungen des \emph{Web Component} genutzt um die Anweisung zur \enquote{font-size} zu ändern.
 	\subsubsection{Leserichtung}
 	An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} des \enquote{iron-data-table} Elements angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im den \enquote{data-table-row} Elementen werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich bei einer Leserichtung von rechts nach links auf der rechten Seite.
-	\section{Ergebnis}
+	\newpage
+	\subsection{Beispiel-Ergebnis der Adaptivität}
 	In der Abbildung \ref{img:datTabErg} ist das adaptive \enquote{Iron Data Table} Element  dargestellt. Die Abbildung basiert auf dem vorher ausgewählten und daraufhin zur Adaptivität erweiterten Element. 
 	\begin{figure}[H]		
 		\centering
@@ -860,7 +868,7 @@ _buildHtml(data) {
 		\caption[Adaptiver Iron Data Table]{Adaptiver Iron Data Table Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
 		\label{img:datTabErg}
 	\end{figure}\noindent
-	Das Element wurde hier an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine erhöhte Schriftgröße und eine Leserichtung von rechts nach links enthalten. 
+	Das Element wurde hier beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine erhöhte Schriftgröße und eine Leserichtung von rechts nach links enthalten. 
 	\newpage	
 	\section{Paper Date Picker}
 	Als nächstes wurde das \enquote{paper-date-picker} Element ausgewählt \cite{datPic}. Es ermöglicht die Anzeige eines Kalenders. Von diesem Kalender kann ein einzelner Tag vom Nutzer ausgewählt werden, dieser wird dann mit erweiterten Informationen angezeigt.
@@ -869,7 +877,7 @@ _buildHtml(data) {
 		Es nutzt Texte und Symbole. Die Adaptivität dieses Elements sollte durch eine mögliche Veränderung des Kontrastes, der Schrift, wenn möglich der Bereitstellung von Text- und Symbol-Alternativen und der Leserichtung und dadurch wiederum der Anordnung der Elemente ermöglicht werden.
 		\begin{figure}[H]		
 			\centering
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{datPic.png}
+			\includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{datPic.png}
 			\caption[Paper Date Picker]{Paper Date Picker Web Component Ansicht \cite{papDatPicGit}}
 			\label{img:datPic}
 		\end{figure}\noindent
@@ -926,15 +934,16 @@ _changeFontSize: function () {
 		Diese \ac{CSS} Klassen werden von den Gestaltungsanweisungen der Komponenten \enquote{paper-date-picker} und \enquote{paper-calendar} dazu genutzt die Größe der Textelemente anzupassen. Darüber hinaus muss bei der Größe \enquote{xl} der Abstand mancher Elemente zueinander vergrößert werden, um ein sich gegenseitiges Überdecken  dieser zu verhindern.
 		\subsubsection{Leserichtung}
 		Die Standard Leserichtung der Komponente ist von links nach rechts. Um diese zu ändern wird die Methode \enquote{\_changeReadingDirection} des \enquote{paper-date-picker} Elements verwendet. Sie fragt zu Beginn den Wert des Parameters \enquote{readingDirection} ab. Enthält dieser den Wert \enquote{rtl}, also eine erwünschte Leserichtung von rechts nach links, werden zum äußeren \emph{Web Component}, dem \enquote{paper-date-picker} und zu dem inneren \emph{Web Component}, dem \enquote{paper-calendar} die \ac{CSS} Klasse \enquote{rtl} hinzugefügt. In den Gestaltungsanweisungen dieser Komponenten werden die Elemente angewiesen, bei der Existenz der Klasse \enquote{rtl} die Eigenschaft \enquote{flex-direction} bestimmter Elemente auf den Wert \enquote{row-reverse} zu setzen. Dadurch wird der Aufbau des \emph{Web Component} für Nutzer ausgerichtet, die von rechts nach links lesen.
-	\subsection{Ergebnis}
+		\newpage
+	\subsection{Beispiel-Ergebnis der Adaptivität}
 	In der Abbildung \ref{img:datPicErg} ist das adaptive \enquote{Adaptiver Paper Date Picker} Element  dargestellt.
 	\begin{figure}[H]		
 		\centering
-		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{datPicErg.png}
+		\includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{datPicErg.png}
 		\caption[Adaptiver Paper Date Picker]{Adaptiver Paper Date Picker Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
 		\label{img:datPicErg}
 	\end{figure}\noindent
-	Das Element wurde hier an einen Nutzer angepasst, dessen Präferenzwerte eine serife Schriftart, und Text-Alternativen statt Symbole enthalten. 
+	Das Element wurde hier beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte eine serife Schriftart und Text-Alternativen statt Symbole enthalten. 
 	\newpage
 	
 	\section{Google Map}
@@ -997,7 +1006,17 @@ Die Methode \enquote{\_getMapOptions} ist in dem Element \enquote{google-map} sc
 	Die Schriftart kann sich auch an den Nutzer anpassen. Dies ermöglicht die Methode \enquote{\_changeFontStyle} des \enquote{google-map} Elements. Diese wartet auch auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Daraufhin wird abgefragt ob der Parameter \enquote{fontStyle} des \emph{Web Component} gesetzt ist. Ist dies der Fall wird der Wert des Parameters genutzt um die Schriftart der \enquote{google-map} auf eine serife oder serifenlose zu ändern. Eine Änderung findet nur statt wenn der Wert auf \enquote{serif} gesetzt ist, da im Standardzustand des \emph{Web Component} eine serifenlose Schriftart genutzt wird. Die Methode wird auch zur \enquote{\_initGMap} Methode hinzugefügt.
 	\subsubsection{Leserichtung}
 	Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze, hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection} des \enquote{google-map} Elements wartet auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente, falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \enquote{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Deshalb wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet. Von dieser Änderung der Anordnung betroffen sind die beiden Schalter der Ansichtseinstellungen der Karte. Hier kann zwischen dem \enquote{Karte} und \enquote{Satellit} Wert gewählt werden. Darüber hinaus sind die Einstellungen der Vergrößerungsstufe und das Symbol der \enquote{Google Street View} von der Änderung betroffen. Auch die Methode \enquote{\_changeReadingDirection} wird zur Methode \enquote{\_initGMap} hinzugefügt.
-	\newpage
+\subsection{Beispiel-Ergebnis der Adaptivität}
+In der Abbildung \ref{img:gmapErg} ist das adaptive \enquote{Google Map} Element  dargestellt.
+\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{gmapErg.png}
+	\caption[Adaptive Google Map]{Adaptive Google Map Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
+	\label{img:gmapErg}
+\end{figure}\noindent
+Das Element wurde hier an beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine Leserichtung von rechts nach links und Symbol-Alternativen statt Texte enthalten. 
+\newpage
+
 \chapter{Evaluation der Adaptivitäts-Anpassungen}
 Nachdem einige vorhandene \emph{Web Components}, realisiert mithilfe der \enquote{Polymer} Bibliothek, zur Adaptivität angepasst wurden, wird im folgenden darauf eingegangen, inwiefern die Adaptivität möglich ist und ob Hindernisse oder Möglichkeiten vorliegen.
 	\section{Iron Data Table}
