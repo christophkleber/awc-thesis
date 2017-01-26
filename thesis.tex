@@ -157,6 +157,9 @@ left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 %Abkürzungen
 \usepackage{acronym}
+\renewcommand*{\acffont}[1]{\textit{#1}}
+\renewcommand*{\acfsfont}[1]{\textnormal{#1}}
+
 
 % Neues cite-Kommando oder altes \footcite-Kommando überschreiben
 %\DeclareCiteCommand{\smfootcite}[\mkbibfootnote]
@@ -177,7 +180,7 @@ left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 
 
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
-\renewcommand{\labelenumiii}{}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
 %\pagenumbering{Roman} % Switch Roman
 
 %\title{Konzeption und Entwicklung \\ von adaptiven Web Components}
@@ -190,8 +193,8 @@ left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 %HEADING Farbe
 \usepackage{xcolor}
 
-\definecolor{headingblue}{rgb}{0.0, 0.48, 0.65}
-\addtokomafont{sectioning}{\color{headingblue}}
+%\definecolor{headingblue}{rgb}{0.0, 0.48, 0.65}
+%\addtokomafont{sectioning}{\color{headingblue}}
 
 
 
@@ -271,7 +274,7 @@ In der Softwareentwicklung kann Adaptivität folgendermaßen beschrieben werden:
 	\end{description}
 	Insgesamt lässt sich somit sagen, dass die Adaptivität an den Nutzungskontext ausgerichtet werden kann. Verschiedene Merkmale des Nutzungskontext haben Einfluss darauf, wie die Adaptivität, passend zur Situation, erfolgen sollte.
 \chapter{Adaptivität an den Nutzer}
-Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components}, die sich adaptiv an den Nutzer anpassen, basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden muss immer und von überall erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die bei Bedarf ausgeführt werden oder sich anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an alle adaptiven Elemente der Internetseite erteilt. Dieser beauftragt, die Funktionen auszuführen, die zu den jeweiligen Präferenzen und somit Nutzern passen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
+Nachdem evaluiert wurde an welche Merkmale sich eine Adaptivität anpassen kann wird folgend die Anpassung selbst erläutert. Die Reaktion einer Internetseite, beziehungsweise von deren \emph{Web Components}, die sich adaptiv an den Nutzer anpassen, basiert auf mehreren Schritten. Als Erstes werden Einstellungen und Vorlieben der Nutzer gesammelt und in einer für Maschinen verständlichen Form gespeichert. Der Ort an dem diese gespeichert werden muss immer und von überall erreichbar sein. Als Nächstes müssen die Elemente der Internetseite darauf vorbereitet werden sich anzupassen. Dafür werden Funktionen und Ressourcen bereitgestellt, die bei Bedarf ausgeführt werden oder sich anpassen können. Nachdem dies erfolgt ist, kann die Internetseite, bei Aufruf durch einen bestimmten Nutzer eine Anforderung an den Speicherort stellen, die Informationen des bestimmten Nutzers zu übertragen. Daraufhin wird ein Befehl an alle adaptiven Elemente der Internetseite erteilt. Dieser beauftragt, die Funktionen auszuführen, die zu den jeweiligen Präferenzen und somit Nutzern passen. Dabei verändert sich das Aussehen und unter Umständen der Inhalt der Seite und beweist seine Adaptivität.\newline
 Nachfolgend wird in dieser Arbeit darauf eingegangen in welcher Art sich an den Nutzer angepasst werden soll und wie diese Werte gespeichert und abgerufen werden. Als Nächstes wird konfiguriert, wie sich die \emph{Web Components} an die entsprechenden Präferenzen anpassen werden und zuletzt wie das Ergebnis, die adaptiven Elemente einer Internetseite, aussehen wird.
 \section{Präferenzen der Nutzer}
 Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendung. Somit unterscheidet sich die gesamte Nutzerschaft. Um diese Unterscheidung abzubilden werden verschiedene Bezeichner definiert. Jeder Nutzer hat bei jedem dieser Bezeichner einen Wert. Somit wird ein Bezeichner-Wert Paar gebildet. Diese Paare werden gesammelt für jeden einzelnen Nutzer gespeichert. Hierfür werden alle Präferenzen eines Nutzers in einer Zusammenstellung gesammelt und notiert (\emph{Preference Set}).
@@ -337,9 +340,10 @@ die Adresse \enquote{https://raw.githubusercontent.com/christophkleber/data/mast
 \end{listing}\noindent
 
 \section{Herunterladen der Nutzer Präferenzen}
+\label{sec:herPre}
 Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
 \subsection{Was bedeutet REST}
-\emph{\ac{REST}} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien \cite[S.77]{chauhan2014asp}.
+Um einen geeigneten \emph{REST-Client} zu erstellen muss genauer auf das \emph{REST} Protokoll eingegangen werden. \ac{REST} ist ein Protokoll um Daten in einer verteilten Umgebung auszutauschen. Es basiert auf den folgenden Prinzipien \cite[S.77]{chauhan2014asp}.
 \begin{description}  
 	\item  [Adressierbarkeit von Ressourcen]
 	Jede Ressource sollte von einem einzigartigen Bezeichner identifiziert werden können.
@@ -400,14 +404,14 @@ Diese Objektzuweisung versucht die Funktion unabhängig vom genutzten Browser nu
 Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/1} sein \cite{xmlhttp}.
 		
 \chapter{Web Components}
-	\emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen \cite[S.1]{patel2015learning}. Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \emph{\ac{HTML} Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen \cite[S.2]{patel2015learning}.
+	Im Folgenden wird auf den Themenbereich der späteren Anwendung der Adaptivität eingegangen, den \emph{Web Components}. \emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen \cite[S.1]{patel2015learning}. Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \ac{HTML} \emph{Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen \cite[S.2]{patel2015learning}.
 	\section{Geschichte der Web Components}
 	\label{ref:gesVonWebCom}
-	\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \emph{\ac{HTML} Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt \cite{Cooney2012}. Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browserkompatibilität eingegangen.
+	\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \ac{HTML} \emph{Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt \cite{Cooney2012}. Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browserkompatibilität eingegangen.
 		\subsection{Custom Elements}
-		\emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \enquote{Chrome} in der Version 33 und \enquote{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \enquote{Opera for Android} in der Version 37 und von \enquote{Chrome for Android} in der Version 53 verwendet \cite{C2015}. Im \enquote{Android} Browser ist diese Version schon seit 2014 in Gebrauch, in der \enquote{Android} Version 4.4.4. Im \enquote{Samsung Internet} wird sie seit 2016 in der Version 4 genutzt \cite{cusEleCanIUse}. Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API} \cite{Bidelman2016cusElev1}. Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt \cite{firefox}, im Gegensatz zur Version v1. \enquote{Chrome} und \enquote{Opera} unterstützen diese. Das erste mal wurde sie im Jahr 2016 in der \enquote{Chrome} Version 54 und in der \enquote{Opera} Version 41 genutzt \cite{C2016}.
+		Eine Technologie der \emph{Web Components}, die \emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \enquote{Chrome} in der Version 33 und \enquote{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \enquote{Opera for Android} in der Version 37 und von \enquote{Chrome for Android} in der Version 53 verwendet \cite{C2015}. Im \enquote{Android} Browser ist diese Version schon seit 2014 in Gebrauch, in der \enquote{Android} Version 4.4.4. Im \enquote{Samsung Internet} wird sie seit 2016 in der Version 4 genutzt \cite{cusEleCanIUse}. Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API} \cite{Bidelman2016cusElev1}. Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt \cite{firefox}, im Gegensatz zur Version v1. \enquote{Chrome} und \enquote{Opera} unterstützen diese. Das erste mal wurde sie im Jahr 2016 in der \enquote{Chrome} Version 54 und in der \enquote{Opera} Version 41 genutzt \cite{C2016}.
 		\subsection{HTML Imports}
-		\emph{\ac{HTML} Imports} wurden in den Browsern \enquote{Chrome} und \enquote{Opera} zuerst 2014 verwendet. Die \emph{Imports} wurden als Erstes in der \enquote{Chrome} Version 36 und in der \enquote{Opera} Version 23 genutzt. Gegenwärtig wird die Technologie von den zuvor erwähnten Browsern auch in den mobilen Browser-Varianten unterstützt, in den Versionen 53 des \enquote{Chromium} und 37 des \enquote{Opera for Android} \cite{Morrita2015}. Der \enquote{Android} Browser hat die  \emph{\ac{HTML} Imports} seit 2016 in Gebrauch, in der Version 53. Der Browser des \enquote{Android} Betriebssystems ist ab dem Jahr 2016 in der Version 53 kongruent mit dem Chromium Browser. \enquote{Samsung Internet} unterstützt die \emph{Imports} seit 2016 in der Version 4 \cite{htmlTemplCaniuse}.
+		\ac{HTML} \emph{Imports} wurden in den Browsern \enquote{Chrome} und \enquote{Opera} zuerst 2014 verwendet. Die \emph{Imports} wurden als Erstes in der \enquote{Chrome} Version 36 und in der \enquote{Opera} Version 23 genutzt. Gegenwärtig wird die Technologie von den zuvor erwähnten Browsern auch in den mobilen Browser-Varianten unterstützt, in den Versionen 53 des \enquote{Chromium} und 37 des \enquote{Opera for Android} \cite{Morrita2015}. Der \enquote{Android} Browser hat die \ac{HTML} \emph{Imports} seit 2016 in Gebrauch, in der Version 53. Der Browser des \enquote{Android} Betriebssystems ist ab dem Jahr 2016 in der Version 53 kongruent mit dem Chromium Browser. \enquote{Samsung Internet} unterstützt die \emph{Imports} seit 2016 in der Version 4 \cite{htmlTemplCaniuse}.
 		\subsection{Decorators}
 		\label{sec:dec}
 		\emph{Decorators} erscheinen nur in Dokumenten und Artikeln, sie wurden nie von Browsern implementiert. So wird im Jahr 2012 in einem \enquote{Working Draft} des \ac{W3C} von einem Beispiel gesprochen: \enquote{Here is an example of how decorators could be used to implement a simple variant of the details element} \cite{Cooney2012}. Dies zeigt, dass an dieser Stelle noch keine Implementierung der Technologie vorliegt. Auch in einem Arbeitsentwurf des \ac{W3C} vom Jahr 2013 wird davon gesprochen, dass \enquote{Decorators, unlike other parts of Web Components, do not have a specification yet} \cite{Cooney2013}.
@@ -422,7 +426,7 @@ Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/1} sein \ci
 	
 			
 	\section{Technik der Web Components}
-	Im Folgenden werden die technischen Grundlagen der \emph{Web Components} und insbesondere deren Syntax erforscht und durch Beispiele erläutert.
+	Im Folgenden werden die technischen Grundlagen der \emph{Web Components} und insbesondere deren Syntax und Funktionsweise erforscht und durch Beispiele erläutert.
 		\subsection{Custom Elements}
 		Das Bilden voll funktionstüchtiger \ac{DOM} Elemente ermöglicht die \emph{Custom Element} \ac{API} \cite{Denicola2016}. Eine \ac{API} beschreibt in diesem Zusammenhang eine Schnittstelle, die einem anderen Programm ein Werkzeug zur Verfügung stellt, um sich an das eigene Softwaresystem anbinden zu können \cite{Behrendt2016}. Somit ermöglicht eine \ac{API} einen Austausch von Informationen zwischen verschiedenen Programmen oder Systemen.	
 		Die \emph{Custom Element} \ac{API} ermöglicht den Nutzern die Auszeichnungsprache \ac{HTML} zu erweitern \cite{Argelius2016}. Es können bestehende \ac{HTML} Elemente erweitert, oder neue hinzugefügt werden. Jedes neue oder erweiterte Element wird unter einem \emph{Tag} Namen registriert. Dies ermöglicht eine Kapselung des erstellen Programmiercodes in Elemente. In Listing \ref{lst:cusEleJav} ist JavaScript Programmcode dargestellt, der ein leeres \emph{Custom Element} definiert und unter dem Namen \enquote{new-custom-element} registriert wird. Hier wird das Standard \enquote{HTMLElement} erweitert, es wird kein spezielles Element erweitert wie beispielsweise ein \enquote{Button}.
@@ -445,7 +449,7 @@ customElements.define('new-custom-element', NewCustomElement); //Registrierung c
 			\item  [\emph{attributeChangedCallback(name, prevValue, newValue)}] Diese Funktion wird aufgerufen, wenn sich ein Attribut ändert; wird jedoch nur für Attribute aufgerufen, die in einer statischen \emph{get} Funktion mit Namen \emph{observedAttributes} definiert wurden.
 		\end{description}
 		\subsection{HTML Imports}
-		\emph{\ac{HTML} Imports} ist eine Technologie zum Importieren von externen \ac{HTML} Dokumenten in ein \ac{HTML} Dokument. Hier unterscheidet man zwischen importierenden und importierten \ac{HTML} Dokumenten. Die importierenden Dokumente besitzen einen Link, der mindestens die \ac{URL} des \emph{Imports} und die Eigenschaft \enquote{rel='import'} besitzt, also ein Link eines bestimmten Typ ist \cite{Glazkov2016}(siehe Listing \ref{lst:htmImp}). 
+		\ac{HTML} \emph{Imports} ist eine Technologie zum Importieren von externen \ac{HTML} Dokumenten in ein \ac{HTML} Dokument. Hier unterscheidet man zwischen importierenden und importierten \ac{HTML} Dokumenten. Die importierenden Dokumente besitzen einen Link, der mindestens die \ac{URL} des \emph{Imports} und die Eigenschaft \enquote{rel='import'} besitzt, also ein Link eines bestimmten Typ ist \cite{Glazkov2016}(siehe Listing \ref{lst:htmImp}). 
 		\begin{listing}
 			\begin{HTMLcode*}{}
  <link rel='import' href='/imports/imported-document.html'>
@@ -832,6 +836,7 @@ _buildHtml(data) {
 
 	
 \chapter{Adaptivität von bestehenden Web Components}
+\label{sec:adaVonBesWebCom}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt \cite{cusEleIo}. In dieser Ausarbeitung wird nur deutschsprachiger Text beachtet, da eine korrekte Übersetzung sehr vieler möglicher Sprachen schwer durchführbar ist und für eine beispielhafte Konzeption und Programmierung von Adaptivität nicht notwendig ist.
 	\section{Iron Data Table}
 	Die erste Auswahl fiel auf das Element \enquote{iron-data-table} \cite{saulis}. Dieses \emph{Web Component} stellt Tabellen dar. Die Tabelleninhalte können frei definiert werden.
@@ -1031,7 +1036,7 @@ Nachdem einige vorhandene \emph{Web Components}, realisiert mithilfe der \enquot
 	
 
 \chapter{Fazit}
-Mithilfe von \emph{Web Components} ist eine kompakte Wiederverwendbarkeit von Komponenten möglich. Diese können beliebig oft und an verschiedenen Stellen von Webanwendungen eingesetzt werden. Diese Abhandlung führt zu dem Schluss, dass es insgesamt möglich ist diese zur Adaptivität zu erweitern. Dafür wird Programmcode innerhalb der Definition des \emph{Web Component} genutzt. In Kapitel \ref{sec:shaDowWebCom} ist dargelegt, dass diese Definition nur Einfluss auf diese eine bestimmte Art eines \emph{Web Component} hat, es kann bei richtiger Anwendung der Technologien ausgeschlossen werden dass Seiteneffekte von diesem auf andere Elemente einer Anwendung auftreten. Der Programmcode reagiert auf von außerhalb gesetzte Eigenschaften, die Präferenzen des Nutzers. Diese Präferenzen können in einer eindeutigen Art und Weise gespeichert werden, in der Form von \emph{Preference Sets}, um später die Eigenschaften der \emph{Web Components} zu bestimmen.
+Mithilfe von \emph{Web Components} ist eine kompakte Wiederverwendbarkeit von Komponenten möglich. Diese können beliebig oft und an verschiedenen Stellen von Webanwendungen eingesetzt werden. Diese Abhandlung führt zu dem Schluss, dass es insgesamt möglich ist diese zur Adaptivität zu erweitern. Dafür wird Programmcode innerhalb der Definition des \emph{Web Component} genutzt. In Kapitel \ref{sec:shaDowWebCom} ist dargelegt, dass diese Definition nur Einfluss auf diese eine bestimmte Art eines \emph{Web Component} hat, es kann bei richtiger Anwendung der Technologien ausgeschlossen werden dass Seiteneffekte von diesem auf andere Elemente einer Anwendung auftreten. Der Programmcode reagiert auf von außerhalb gesetzte Eigenschaften, die Präferenzen des Nutzers. Diese Präferenzen können in einer eindeutigen Art und Weise gespeichert werden, in der Form von \emph{Preference Sets}, um später die Eigenschaften der \emph{Web Components} zu bestimmen. Das Herunterladen dieser \emph{Preference Sets} erfolgt über einen \emph{REST-Call}, dargelegt in Kapitel \ref{sec:herPre}. Insgesamt können somit \emph{Web Components} über Methoden und Variablen erweitert werden, erörtert in Kapitel \ref{sec:adaVonBesWebCom}, sich an die Präferenzen eines Nutzers anzupassen. Diese Anpassung zur Adaptivität erfolgt beim Aufruf einer Internetseite für jedes \emph{Web Component} einzeln und jedes dieser Komponenten kann beliebig oft in einer Internetseite eingebunden werden.
 \newline
 Jedoch ist eine lückenlose Adaptivität nur unter bestimmten Voraussetzungen möglich. Zuerst müssen die Präferenzen eindeutig definiert werden. Die Bezeichnungen der Präferenzen und auch die Werte dieser müssen eine allgemeingültige, als für jeden Nutzer gleiche, Bedeutung haben. Des weiteren müssen einige Konventionen bei der Erstellung von \emph{Web Components} beachtet werden. Erstens sollten einzelne \emph{Web Components} nicht aus zu vielen Komponenten zusammengesetzt werden. Wie in Kapitel \ref{sec:evaIroDatTab} dargelegt, muss die Erweiterung zur Adaptivität in jedem dieser Elemente einzeln definiert werden,  dies vermindert die Wartbarkeit und es können bei bestimmten Zusammenstellungen dieser einzelnen Komponenten ungewollte Seiteneffekte entstehen. Zweitens sollte möglichst die gesamte Komponente im \emph{Template} definiert werden und möglichst wenig zur Laufzeit erweitert oder verändert werden. Dadurch liegt das \emph{Web Component} zu Beginn im (möglichst) vollständigen Zustand vor und die Konzipierung zur Erweiterung zur Adaptivität kann das gesamte Elemente beachten. Wie Kapitel \ref{sec:fazGogMap} aufgezeigt, ist es problematisch wenn einzelne und insbesondere unterschiedliche Teile der Komponente zur Laufzeit nachgeladen werden, da diese die Definition von Adaptivität im Programmcode erschweren. Dieses Kapitel legt dar, dass Veränderungen zur Laufzeit bestimmte Anpassungen zur Adaptivität überschreiben und die Adaptivität annullieren können.
 \newline
@@ -1040,45 +1045,52 @@ In der Zukunft der Webentwicklung könnte, wie in Kapitel \ref{sec:natBro} darge
 \chapter*{Anhang}
 \markboth{Anhang}{Anhang}
 \addcontentsline{toc}{chapter}{Anhang}
-Im Folgenden wird eine Übersicht der Daten auf der beigelegten CD gegeben. Die Ordnerstruktur setzt sich zusammen aus:
+Im Folgenden wird eine Übersicht der Daten auf der beigelegten CD gegeben. Die Ordnerstruktur setzt sich wie folgt zusammen.
 \begin{enumerate}
-\item Elemente zur Ermöglichung von Adaptivität
-\begin{enumerate}
-	\item rest-client
-	\item Preference Sets
-\end{enumerate} 
-\item Erweiterte Web Components
+	\item Programmcode
 	\begin{enumerate}
-	\item iron-data-table 
-	\begin{itemize}
-		\item demo
-		\item test
-	\end{itemize}
-	\item paper-date-picker
-	\begin{itemize}
-		\item demo
-		\item test
-	\end{itemize}
-	\item google-map
-	\begin{itemize}
-		\item css
-		\item demo
-		\item test
-		\item tmp
-	\end{itemize}
-	\end{enumerate} 
-\item Demonstration
-	\begin{enumerate}
-		\item Demonstrationswebseite
-		\begin{itemize}
-			\item css
-			\item imports
-			\item javascript
-		\end{itemize}
-		\item Demonstrationsvideo
+		\item Globale Lizenz des erstellten Programmcodes
+		\item Elemente zur Ermöglichung von Adaptivität
+		\begin{enumerate}
+			\item REST-client
+			\item Preference Sets
+		\end{enumerate} 
+		\item Erweiterte Web Components
+		\begin{enumerate}
+			\item iron-data-table 
+			\begin{itemize}
+				\item bower\_components
+				\item demo
+				\item test
+			\end{itemize}
+			\item paper-date-picker
+			\begin{itemize}
+				\item bower\_components
+				\item demo
+				\item test
+			\end{itemize}
+			\item google-map
+			\begin{itemize}
+				\item bower\_components
+				\item css
+				\item demo
+				\item test
+				\item tmp
+			\end{itemize}
+		\end{enumerate} 
+			\item Demonstrationswebseite
+			\begin{itemize}
+				\item bower\_components
+				\item css
+				\item imports
+				\item javascript
+			\end{itemize}
 	\end{enumerate}
-\item Thesis
+	\item Demonstrationsvideo
+	\item GitHub Links
+	\item Thesis
 \end{enumerate}
+
 
 	
 \end{document}
