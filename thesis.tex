@@ -323,16 +323,15 @@ Die in Kapitel \ref{sec:folFuePra} erarbeiteten Präferenzen betreffen die Nutze
 \section{Speichern der Nutzer Präferenzen}
 Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen. Exemplarisch werden diese über die Versionsverwaltung \emph{Git} auf der Internetseite \enquote{GitHub} gespeichert. Dafür wurde ein \emph{Repository}, also eine Art neues Projekt auf \enquote{GitHub}, mit Namen \enquote{data} erstellt. In diesem werden für einzelne Nutzer und damit deren Zusammenstellung der Präferenzen einzelne  Dateien gespeichert. Diese können dann über eine bestimmte Adresse aufgerufen werden und sind so später beim gewünschten Herunterladen der Präferenzen ansteuerbar. In Listing \ref{lst:jsonPreSet} ist ein Beispiel dieser Zusammenstellung dargestellt. Sie kann über
 \newline
-die Adresse \enquote{https://raw.githubusercontent.com/christophkleber/data/master/1} aufgerufen werden. Hier ist zu beachten, dass der einzelne Nutzer durch eine Identifikationsnummer repräsentiert wird, hier die Nummer \enquote{1}. Im späteren realen Gebrauch würde jeder Nutzer eine eindeutige, unter Umständen längere, Identifikationsnummer erhalten. Dies ermöglicht, dass der Nutzer selbst anonym bleibt und dessen Präferenzen nur anhand dieser Nummern abgerufen werden können. Zu jeder vom Nutzer genutzten Präferenz, also dem Bezeichner, wird ein Wert zugeordnet. Beispielsweise ist in Zeile drei zur Präferenz \enquote{text-alternatives} der Wert \enquote{symbol} gesetzt. 
+die Adresse \enquote{https://raw.githubusercontent.com/christophkleber/data/master/1} aufgerufen werden. Hier ist zu beachten, dass der einzelne Nutzer durch eine Identifikationsnummer repräsentiert wird, hier die Nummer \enquote{1}. Im späteren realen Gebrauch würde jeder Nutzer eine eindeutige, unter Umständen längere, Identifikationsnummer erhalten. Dies ermöglicht, dass der Nutzer selbst anonym bleibt und dessen Präferenzen nur anhand dieser Nummern abgerufen werden können. Zu jeder vom Nutzer genutzten Präferenz, also dem Bezeichner, wird ein Wert zugeordnet. Beispielsweise ist in Zeile drei zur Präferenz \enquote{more-contrast} der Wert \enquote{true} gesetzt. 
 \begin{listing}
 	\begin{JavaScriptcode*}{}
 [
-   {
-      "text-alternatives": "symbol",
-      "more-contrast": "true",
-      "font-size": "l",
-      "reading-direction": "rtl"
-   }
+	{
+		"more-contrast": "true",
+		"font-size": "xl",
+		"reading-direction": "rtl"
+	}
 ]
 	\end{JavaScriptcode*}
 	\caption[Beispiel eines Preference Sets]{Preference Set eines Nutzers}
@@ -374,11 +373,11 @@ function loadPref(prefSet) {
 	}catch (e){
 		//Internet Explorer 5+
 		try{
-			xhttpreq = new ActiveXObject("Msxml2.XMLHTTP");
+			xhttpreq = new ActiveXObject('Msxml2.XMLHTTP');
 		}catch (e) {
 			//Internet Explorer 5
 			try{
-				xhttpreq = new ActiveXObject("Microsoft.XMLHTTP");
+				xhttpreq = new ActiveXObject('Microsoft.XMLHTTP');
 			}catch (e){
 				//Wird nicht unterstützt
 				console.log('XMLHTTP not supported: no adaptive prefs');
@@ -392,7 +391,7 @@ function loadPref(prefSet) {
 			//Aufruf einer Funktion um mit Präferenzen weiter zu arbeiten
 		}
 	};
-	xhttpreq.open("GET", 'Speicherort/' + prefSet, true);
+	xhttpreq.open('GET', 'Speicherort/' + prefSet, true);
 	xhttpreq.send(); 	
 }
 	\end{JavaScriptcode*}
@@ -429,8 +428,8 @@ Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/1} sein \ci
 	Im Folgenden werden die technischen Grundlagen der \emph{Web Components} und insbesondere deren Syntax und Funktionsweise erforscht und durch Beispiele erläutert.
 		\subsection{Custom Elements}
 		Das Bilden voll funktionstüchtiger \ac{DOM} Elemente ermöglicht die \emph{Custom Element} \ac{API} \cite{Denicola2016}. Eine \ac{API} beschreibt in diesem Zusammenhang eine Schnittstelle, die einem anderen Programm ein Werkzeug zur Verfügung stellt, um sich an das eigene Softwaresystem anbinden zu können \cite{Behrendt2016}. Somit ermöglicht eine \ac{API} einen Austausch von Informationen zwischen verschiedenen Programmen oder Systemen.	
-		Die \emph{Custom Element} \ac{API} ermöglicht den Nutzern die Auszeichnungsprache \ac{HTML} zu erweitern \cite{Argelius2016}. Es können bestehende \ac{HTML} Elemente erweitert, oder neue hinzugefügt werden. Jedes neue oder erweiterte Element wird unter einem \emph{Tag} Namen registriert. Dies ermöglicht eine Kapselung des erstellen Programmiercodes in Elemente. In Listing \ref{lst:cusEleJav} ist JavaScript Programmcode dargestellt, der ein leeres \emph{Custom Element} definiert und unter dem Namen \enquote{new-custom-element} registriert wird. Hier wird das Standard \enquote{HTMLElement} erweitert, es wird kein spezielles Element erweitert wie beispielsweise ein \enquote{Button}.
-		\begin{listing}
+		Die \emph{Custom Element} \ac{API} ermöglicht den Nutzern die Auszeichnungsprache \ac{HTML} zu erweitern \cite{Argelius2016}. Es können bestehende \ac{HTML} Elemente erweitert, oder neue hinzugefügt werden. Jedes neue oder erweiterte Element wird unter einem \emph{Tag} Namen registriert. Dies ermöglicht eine Kapselung des erstellen Programmiercodes in Elemente. In Listing \ref{lst:cusEleJav} ist JavaScript Programmcode dargestellt, der ein leeres \emph{Custom Element} definiert und unter dem Namen \enquote{new-custom-element} registriert wird.
+		\begin{listing}[H]
 			\begin{JavaScriptcode*}{}
 class NewCustomElement extends HTMLElement { //Definition custom element
 	constructor() {
@@ -442,6 +441,7 @@ customElements.define('new-custom-element', NewCustomElement); //Registrierung c
 			\caption[Erstellung Custom Element]{JavaScript Programmcode zum Erstellen eines Custom Elements}
 			\label{lst:cusEleJav}
 		\end{listing}\noindent
+		Hier wird das Standard \enquote{HTMLElement} erweitert, es wird kein spezielles Element erweitert wie beispielsweise ein \enquote{Button}.
 		Für \emph{Custom Elements} sind mehrere \emph{Callbacks} verfügbar. \emph{Callback} Funktionen beschreiben hier Funktionen, die bei bestimmten Ereignissen des Lebenskreislaufs der Applikation von außerhalb des \emph{Custom Elements} aufgerufen werden. Im Folgenden werden diese Funktionen aufgelistet \cite{Argelius2016}.
 		\begin{description}  
 			\item  [\emph{connectedCallback}] Diese Funktion wird aufgerufen, wenn das \emph{Custom Element} an den \ac{DOM} angehängt wird.			
@@ -452,7 +452,7 @@ customElements.define('new-custom-element', NewCustomElement); //Registrierung c
 		\ac{HTML} \emph{Imports} ist eine Technologie zum Importieren von externen \ac{HTML} Dokumenten in ein \ac{HTML} Dokument. Hier unterscheidet man zwischen importierenden und importierten \ac{HTML} Dokumenten. Die importierenden Dokumente besitzen einen Link, der mindestens die \ac{URL} des \emph{Imports} und die Eigenschaft \enquote{rel='import'} besitzt, also ein Link eines bestimmten Typ ist \cite{Glazkov2016}(siehe Listing \ref{lst:htmImp}). 
 		\begin{listing}
 			\begin{HTMLcode*}{}
- <link rel='import' href='/imports/imported-document.html'>
+ <link rel='import' href='imports/imported-document.html'>
 				\end{HTMLcode*}
 			\caption{Standard HTML Import}
 			\label{lst:htmImp}
@@ -470,7 +470,7 @@ var elem = importedDocument.querySelector('div.element');  //Selektiert Element 
 		\end{listing}\noindent 
 		\subsection{Templates}
 		\label{subsec:Templates}
-		Das \ac{HTML5} Feature \emph{Template} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden \cite[S.177]{Cameron2015}. Das bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt \cite{Potschien2013}.
+		Die \ac{HTML5} Funktion \emph{Template} ermöglicht Teile einer Seite unabhängig vom \ac{DOM} zu erstellen. Diese können dann später programmatisch zum \ac{DOM} hinzugefügt werden \cite[S.177]{Cameron2015}. Das bedeutet, dass der Inhalt des \emph{Templates}, bis er zum \ac{DOM} hinzugefügt wird, nicht in der Webanwendung angezeigt wird und auch nicht über \ac{DOM} Selektoren angesteuert werden kann. Gegebenenfalls im \emph{Template} enthaltene Bilder werden nicht geladen und Skripte nicht ausgeführt \cite{Potschien2013}.
 		\begin{listing}
 			\begin{JavaScriptcode*}{}
 var inhalt = document.querySelector('template').content;
@@ -516,7 +516,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
       <slot name='title'>Kein Titel</slot> <!-- Slot Element title mit Platzhalter 'Kein Titel' -->
       <slot name='name'> <!-- Slot Element mit Platzhalter -->
          <p>Achtung<p>
-         <h1>Kein Name<h1>
+         <h1>Kein Name</h1>
       </slot>
    </li>
 </ul>
@@ -561,8 +561,8 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 		\begin{listing}
 		\begin{HTMLcode*}{}
 <style>		
-:host(:hover) { /* :host Selektor bei hover Zustand */
-   opacity: 1;
+:host(.active) { /* :host Selektor bei Vorhandensein der Klasse active */
+   color: green;
 }
 :host(.blue) { /* :host Selektor bei Vorhandensein der Klasse blue */
    color: blue;
@@ -572,7 +572,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 		\caption{Der :host Selektor}
 		\label{lst:hosSel}
 		\end{listing}\noindent
-		In Listing \ref{lst:hosSel} ist dargestellt in welcher Form Einfluss genommen werden kann. So spricht der Selektor in Zeile zwei nur den \emph{Web Component} an, während die Maus sich über diesem befindet. Der Selektor in Zeile fünf spricht nur den \emph{Web Component} an, wenn dieser die Klasse \enquote{blue} besitzt.
+		In Listing \ref{lst:hosSel} ist dargestellt in welcher Form Einfluss genommen werden kann. So spricht der Selektor in Zeile zwei nur den \emph{Web Component} an, der die Klasse \enquote{active} besitzt. Der Selektor in Zeile fünf spricht nur den \emph{Web Component} an, wenn dieser die Klasse \enquote{blue} besitzt.
 		\section{Ein vollständiges Web Component}
 		Die in den vorherigen Kapiteln erwähnten Technologien werden nun kombiniert, um beispielhaft ein vollständiges \emph{Web Component} zu erstellen. 		\begin{listing}
 			\begin{HTMLcode*}{}
@@ -580,7 +580,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
    <style>
       p {color: red}
    </style>
-   <p>This is a web component.</p>
+   <p>Dies ist ein Web Component.</p>
 </template>
 <script>
 class Example extends HTMLElement {
@@ -604,7 +604,7 @@ customElements.define('example-component', Example);
    <link rel='import' href='comps/example-component.html'>
 </head>
 <body>
-   <p>Normal content of page</p>
+   <p>Normaler Inhalt der Internetseite.</p>
    <example-component></example-component>
 </body>
 	\end{HTMLcode*}
@@ -621,7 +621,7 @@ Abbildung \ref{img:beiWebCom} zeigt dann die im Browser angezeigte Ansicht des i
 \end{figure}\noindent
 Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angezeigt. Nur dieser Paragraph, also das eigentliche \emph{Web Component} wird in rot dargestellt, da diese Gestaltungsanweisung innerhalb der Komponente gesetzt wurde und somit nur diese betrifft. 
 		\section{Webentwicklung mithilfe der Web Components}
-		Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms} \cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die Gestaltungsanweisungen verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen. Auch kann der  JavaScript Programmcode, der eine bestimmte Funktion hat, an einer anderen nicht beabsichtigten, Stelle Einfluss nehmen. An dieser Stelle könnte er eine vollkommen andere Funktion ausüben und Inkonsistenzen hervorrufen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
+		Aktuell werden \emph{Web Components} in der Webentwicklung in geringer Häufigkeit genutzt. Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms} \cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die Gestaltungsanweisungen verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen. Auch kann der  JavaScript Programmcode, der eine bestimmte Funktion hat, an einer anderen nicht beabsichtigten, Stelle Einfluss nehmen. An dieser Stelle könnte er eine vollkommen andere Funktion ausüben und Inkonsistenzen hervorrufen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
 		Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft möglicherweise native) Implementierung verschiedener Techniken anzugehen, die eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen. Nachfolgend wird auf die daraus resultierenden Vor- und Nachteile eingegangen. 			
 			\subsection{Native Browserunterstützung}
 			\label{sec:natBro}
@@ -642,7 +642,7 @@ Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angez
 	\newline
 	Den Aufbau und das Aussehen adaptiv anzupassen könnten die \ac{CSS} Gestaltungsanweisungen innerhalb der \emph{Web Components} ermöglichen. Hier könnten je nach Nutzer andere Gestaltungsanweisungen erfolgen, um die Komponente an den Nutzer anzupassen. Um Einfluss auf den Inhalt nehmen zu können, könnten Methoden innerhalb der Komponente definiert werden, die Inhalt, anhand den Präferenzen des Nutzers, hinzufügen, weglassen oder ändern. Durch den gekapselten Zustand könnten sich bei richtiger Anwendung nur die \emph{Web Components} an den Nutzer adaptiv anpassen und keine anderen Teile der Webseite ungewollt verändern. Dies würde auch ermöglichen jedes einzelne \emph{Web Component} unabhängig zu verändern. Da unter Umständen jedes einzelne \emph{Web Component} anderweitig angepasst werden müsste um die Präferenzen der Nutzer zu erfüllen ist dies eine wichtige Eigenschaft. Um jedoch diese Anpassung innerhalb der \emph{Web Components} durchzuführen muss auch auf innerhalb der Komponenten zugegriffen werden können. Dazu können HTML-Attribute genutzt werden. Diese würden von \enquote{außen} dem \emph{Web Component} hinzugefügt werden und dann innerhalb dieses verwendet werden um bestimmte Anpassungen durchzuführen. Falls alle diese Techniken korrekt genutzt werden und sich nicht gegenseitig negativ beeinflussen, kann es möglich sein \emph{Web Components} zur Adaptivität zu erweitern.
 \chapter{Polymer}
-Die \enquote{Polymer} Bibliothek ist eine Möglichkeit \emph{Web Components} zu nutzen. Sie stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen und bietet darüber hinaus verschiedene nützliche Funktionen an. Die mithilfe dieser Bibliothek erstellten Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren \cite{polymerFeaOve}.
+Die \enquote{Polymer} Bibliothek bietet eine Möglichkeit \emph{Web Components} zu nutzen. Sie stellt eine Sammlung von Funktionen bereit um \emph{custom elements} zu erstellen und bietet darüber hinaus verschiedene nützliche Funktionen an. Die mithilfe dieser Bibliothek erstellten Elemente sollen letztendlich wie normale \ac{DOM} Bestandteile funktionieren \cite{polymerFeaOve}.
 	\section{Polymer Technologie} Die verwendeten Technologien der Bibliothek um \emph{Web Components} zu erstellen ähneln den der \emph{Web Components} oder es werden direkt die Technologien der \emph{Web Components} genutzt. Im Folgenden wird die Technik der Version 1.0 erläutert.
 		\subsection{Ein Element registrieren}
 		Ähnlich der \emph{Web Components} Technologie, muss mithilfe der \enquote{Polymer} Bibliothek ein vom Entwickler neu erstelltes \enquote{Custom Element} zuerst registriert werden. 
@@ -690,7 +690,7 @@ Um den späteren Instanzen Methoden zur Verfügung zu stellen, können diese dem
 Polymer({
    is: 'my-element',
    speak: function(){  //Methode des Elements
-   console.log('speak');
+	   console.log('speak');
    }
 });
 //Nachdem das Element instanziiert ist, kann die Methode aufgerufen werden.
@@ -732,7 +732,7 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{shady DOM}, eine Kapselun
 	color: var(--my-element-title-color); /* Benutzerdefinierte Eigenschaft */
 }
 .smalltext {
-	color: var(--my-element-title-color, blue); /* Benutzerdefinierte Eigenschaft mit Standardwert */
+	color: var(--my-element-smalltext-color, blue); /* Benutzerdefinierte Eigenschaft mit Standardwert */
 }
 </style>
 	\end{HTMLcode*}
@@ -741,7 +741,7 @@ Kongruent zum \emph{Shadow DOM}, ermöglicht der \emph{shady DOM}, eine Kapselun
 \end{listing}\noindent
 Diese werden in der in Listing \ref{lst:benCss} dargestellten Form, im Bereich der Stil-Eigenschaften, bei der Erstellung eines \enquote{Polymer} Elements definiert. Wie in Zeile sechs zu sehen ist kann auch, falls der Nutzer der Eigenschaft keinen Wert zuweist ein Standard Wert gesetzt werden. Hier ist der Standardwert \enquote{blue}. An einer Stelle oberhalb des \ac{DOM} kann dann die \ac{CSS} Eigenschaft \enquote{--my-element-title-color} vom Nutzer des Elements mit einem Wert belegt werden. Dadurch wird ab dann jedes Element das mit dieser benutzerdefinierten Eigenschaft belegt ist, mit dem vom Nutzer gesetzten Wert ausgezeichnet. Beispielsweise kann der \enquote{:host} Selektor mit der Eigenschaft \enquote{--my-element-title-color: green} ausgezeichnet werden. Dadurch werden alle Elemente innerhalb des \emph{shadow root}, mit der benutzerdefinierten Eigenschaft \enquote{--my-element-title-color} auf den Wert \enquote{green} gesetzt.
 \chapter{Das AWC Framework}	
-Das \ac{AWC Framework} ist ein weitere Möglichkeit mit \emph{Web Components} zu arbeiten. Es wurde von der \enquote{REMEX} Forschungsgruppe entwickelt. Das JavaScript \emph{Framework} wird auch mit der Bezeichnung \enquote{Darwin.js} beschrieben. Es soll die Implementierung von adaptiven Benutzeroberflächen ermöglichen, basierend auf der Technik der \emph{Web Components}. Die Oberflächen richten sich somit nach den Bedürfnissen und der Zusammenstellung der Präferenzen eines Nutzers, um die Zugänglichkeit, Gebrauchstauglichkeit und das Nutzungserlebnis zu verbessern \cite{darwin}. Im Folgenden wird die verwendete Technik des \ac{AWC Framework} auf Basis des auf \enquote{GitHub} vorhandenen Programmcodes erläutert \cite{gitHubAwc}. 
+Das \ac{AWC Framework} ist eine weitere Möglichkeit mit \emph{Web Components} zu arbeiten. Es wurde von der \enquote{REMEX} Forschungsgruppe entwickelt. Das JavaScript \emph{Framework} wird auch mit der Bezeichnung \enquote{Darwin.js} beschrieben. Es soll die Implementierung von adaptiven Benutzeroberflächen ermöglichen, basierend auf der Technik der \emph{Web Components}. Die Oberflächen richten sich somit nach den Bedürfnissen und der Zusammenstellung der Präferenzen eines Nutzers, um die Zugänglichkeit, Gebrauchstauglichkeit und das Nutzungserlebnis zu verbessern \cite{darwin}. Im Folgenden wird die verwendete Technik des \ac{AWC Framework} auf Basis des auf \enquote{GitHub} vorhandenen Programmcodes erläutert \cite{gitHubAwc}. 
 \section{Darwin.js Technologie}
 Um ein neues adaptives \emph{Web Component} zu erstellen wird die Klasse \enquote{Component} und von dieser der Konstruktor genutzt. Diesem können vier Parameter übergeben werden. Sie setzen sich aus \enquote{\_htmlTag}, \enquote{\_baseClass}, \enquote{\_data} und \enquote{\_options} zusammen. Zu Beginn nutzt der Konstruktor die Methode \enquote{testBrowserSupport} um abzufragen, ob die Technologien der \emph{Web Components} vom Browser unterstützt werden. Ist dies nicht der Fall tritt eine Fehlermeldung auf. Danach wird mit den übergebenen Parametern weitergearbeitet.
 	\subsection{Registrierung eines Elements}
@@ -833,8 +833,41 @@ _buildHtml(data) {
 		\label{lst:cssAwcIma}
 	\end{listing}\noindent
 	In Listing \ref{lst:cssAwcIma} sind ein Ausschnitt der Darstellungseigenschaften des \emph{Web Component} gezeigt. Sie bestimmen inwiefern sich die Darstellung ändert. So wird in der Standarddarstellung des Kontrastwerts (\enquote{contrast\_} und \enquote{contrast\_normal}) ein weißer Hintergrund und kein CSS-Filter genutzt. Ist jedoch die \ac{CSS} Klasse \enquote{contrast\_high} gesetzt, ist die Präferenz des Nutzers ein erhöhter Kontrastwert. Dann wird ein \ac{CSS} Filter \enquote{grayscale(100\%) contrast(130\%)} und eine schwarze Hintergrundfarbe genutzt. Dies erhöht den Kontrast der Darstellung des Elements.
-
-	
+\section{Beispiel eines AWC Web Component}
+	Mithilfe des AWC \emph{Frameworks} wird im Folgenden ein \emph{Web Component} erstellt. Es wird unter dem Namen \enquote{awc-input} registriert und hat die Funktion einen Benutzer nach einer Frage zu einem von ihm zu wählenden Thema zu befragen.
+	\begin{listing}
+	\begin{HTMLcode*}{}
+<div class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}">
+	<p>Hello{{ name }}, please enter your topic:</p>  <input name="topic" type="text">
+	<p>Your question is:</p> <textarea name="question" cols="40" rows="5"></textarea>
+	<button type="button">Submit</button>
+</div>
+	\end{HTMLcode*}
+	\caption[HTML Programmcode awc-input]{HTML Programmcode des awc-input}
+	\label{lst:awcInp}
+\end{listing}\noindent
+	In Listing \ref{lst:awcInp} ist ein Ausschnitt des Elements, der HTML Programmcode des Elements, dargestellt. Hier wird in Zeile zwei ein \enquote{input} Feld erstellt, das den Nutzer nach dem gewünschten Thema fragt, in Zeile drei wird ein \enquote{textarea} Feld erstellt, das den Nutzer nach seiner Frage bittet. Zuletzt wird in Zeile vier ein \enquote{button} erstellt, der, bei Anbindung an das \emph{Backend}, die Frage abschickt. In Listing \ref{lst:awcInpJavScr} ist der JavaScript Programmcode des Elements dargestellt.
+	\begin{listing}
+		\begin{JavaScriptcode*}{}
+new Component('awc-input', HTMLElement,
+	// Model:
+	{
+		'contrast': 'normal',
+		'reading_direction': 'ltr',
+		'size': 'normal'
+	},
+	// Behaviour:
+	{
+		onAdaptiveChange: function() {
+			console.log('onAdaptiveChange');
+			console.log(this);
+		}
+	});
+		\end{JavaScriptcode*}
+		\caption[JavaScript Programmcode awc-input]{JavaScript Programmcode des awc-input}
+		\label{lst:awcInpJavScr}
+	\end{listing}\noindent
+	Hier wird das Element unter dem Namen \enquote{awc-input} registriert und seine standardmäßigen Werte der Präferenzen gesetzt. Die Präferenzen des Elements können dann über das AWC \emph{Framework} verändert werden, dabei werden seine Klassen geändert. Daraufhin ändert das Element sein Aussehen aufgrund dieser Klassen, anhand von Gestaltungsanweisungen.
 \chapter{Adaptivität von bestehenden Web Components}
 \label{sec:adaVonBesWebCom}
 	In den folgenden Kapiteln werden bestehende \emph{Web Components} ausgewählt, untersucht und um eine Adaptivität zu ermöglichen, angepasst. Hierfür werden Elemente aus dem Katalog der Internetseite \enquote{customelements.io} gewählt \cite{cusEleIo}. In dieser Ausarbeitung wird nur deutschsprachiger Text beachtet, da eine korrekte Übersetzung sehr vieler möglicher Sprachen schwer durchführbar ist und für eine beispielhafte Konzeption und Programmierung von Adaptivität nicht notwendig ist.
@@ -903,7 +936,7 @@ _buildHtml(data) {
 			\begin{listing}
 			\begin{CSScode*}{}
 :host(.serif) span, :host(.serif) #heading.paper-date-picker .year.paper-date-picker{
-	font-family: '"Times New Roman", Times, serif';
+	font-family: ''Times New Roman', Times, serif';
 }
 			\end{CSScode*}
 			\caption[CSS des Paper Date Picker für serife Schriftart]{Ausschnitt der CSS Gestaltungsanweisungen des Paper Date Picker für eine serife Schriftart}
@@ -1050,6 +1083,22 @@ Im Folgenden wird eine Übersicht der Daten auf der beigelegten CD gegeben. Die 
 	\item Programmcode
 	\begin{enumerate}
 		\item Globale Lizenz des erstellten Programmcodes
+		\item Beispielprogrammcode
+		\begin{enumerate}
+			\item Genutzte Beispiele
+				\begin{itemize}
+					\item imports
+					\item polymer
+				\end{itemize}
+			\item AWC
+			\begin{itemize}
+				\item assets
+				\item comps
+				\item lib
+				\item spec
+				\item src
+			\end{itemize}
+		\end{enumerate}
 		\item Elemente zur Ermöglichung von Adaptivität
 		\begin{enumerate}
 			\item REST-client
