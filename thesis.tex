@@ -5,7 +5,7 @@
 \documentclass[12pt, paper=a4, bibtotoc, toc=listof, headsepline=true, numbers=endperiod]{scrreprt}
 
 \usepackage[a4paper, includeheadfoot, %bindingoffset=3cm, 
-left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
+left=3.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm, headsep=0.8cm]{geometry}
 
 
 
@@ -142,6 +142,7 @@ left=3.5cm, right=2cm, top=2.5cm, bottom=3cm, headsep=0.8cm]{geometry}
 	\printfield{urlyear}%
 	\setunit*{\newline}%
 	\printtext{Abgerufen von}
+	\setunit*{\newline}%
 	\printfield{url}%
 	\finentry}
 
@@ -243,13 +244,13 @@ The subject of this bachelor thesis is a relative new topic of frontend web deve
 
 \chapter{Einleitung}
 %\pagenumbering{arabic} % Switch to normal numbers
-Im Folgenden wird der Aufbau dieser Arbeit vorgestellt. Im ersten Kapitel wird der Aufbau der Abhandlung beschrieben. Daraufhin wird im zweiten Kapitel genutzte Methodik dieser Arbeit beschrieben. Im dritten Kapitel wird auf die Adaptivität eingegangen. Hier wird der Begriff und dessen Umsetzung erläutert. Danach wird der Nutzungskontext im Zusammenhang der Adaptivität beschrieben. Im vierten Kapitel wird die Adaptivität einer Internetseite an einen Nutzer konzipiert. Hier werden die \ac{WCAG 2.0} im Zusammenhang mit Präferenzen von Nutzern besprochen und daraus Folgerungen für die Präferenzwerte zur Adaptivität erstellt. Das fünften Kapitel erörtert die Zusammenstellung dieser Präferenzen. Es wird referiert wie diese aufgebaut sind, gespeichert und heruntergeladen werden können, um dann genutzt zu werden. Das sechste Kapitel behandelt die \emph{Web Components}. Es wird auf die Geschichte, die Technik und die Webentwicklung mithilfe dieser Elemente eingegangen. Das siebte Kapitel berichtet über die \enquote{Polymer} Bibliothek und deren Technik. Das achte Kapitel behandelt das \emph{AWC Framework} und dessen Technologie, insbesondere wie die Adaptivität ermöglicht wird. Im neunte Kapitel werden bestehende Web Components zur Ermöglichung der Adaptivität erweitert. Zu jedem Element wird jeweils die Adaptivität konzipiert und im Programmcode umgesetzt. Das zehnte Kapitel evaluiert die Möglichkeit der Anpassung zur Adaptivität der vorhergehenden Elemente. Das elfte Kapitel beschreibt ein Fazit auf Basis der vorhergehenden Kapitel. 
+Im Folgenden wird der Aufbau dieser Arbeit vorgestellt. Im ersten Kapitel wird der Aufbau der Abhandlung beschrieben. Daraufhin wird im zweiten Kapitel die genutzte Methodik dieser Arbeit beschrieben. Im dritten Kapitel wird auf die Adaptivität eingegangen. Hier wird dieser Begriff und dessen Umsetzung erläutert. Danach wird der Nutzungskontext im Zusammenhang der Adaptivität beschrieben. Im vierten Kapitel wird die Adaptivität einer Internetseite an einen Nutzer konzipiert. Hier werden die \ac{WCAG 2.0} im Zusammenhang mit Präferenzen von Nutzern besprochen und daraus Folgerungen für die Präferenzwerte zur Adaptivität erstellt. Das fünfte Kapitel erörtert die Zusammenstellung dieser Präferenzen. Es wird referiert wie diese aufgebaut sind, gespeichert und heruntergeladen werden können, um dann genutzt zu werden. Das sechste Kapitel behandelt die \emph{Web Components}. Es wird auf die Geschichte, die Technik und die Webentwicklung mithilfe dieser Elemente eingegangen. Das siebte Kapitel berichtet über die \enquote{Polymer} Bibliothek und deren Technik. Das achte Kapitel behandelt das \emph{AWC Framework} und dessen Technologie, insbesondere wie die Adaptivität ermöglicht wird. Im neunten Kapitel werden bestehende Web Components zur Ermöglichung der Adaptivität erweitert. Zu jedem Element wird jeweils die Adaptivität konzipiert und im Programmcode umgesetzt. Das zehnte Kapitel evaluiert die Möglichkeit der Anpassung zur Adaptivität der vorhergehenden Elemente. Das elfte Kapitel beschreibt ein Fazit auf Basis der vorhergehenden Kapitel. 
 
 \chapter{Methodik dieser Arbeit}
 Im Folgenden wird die Methodik dieser Abhandlung beschrieben. Sie lässt sich in zwei Bereiche aufteilen, \enquote{Adaptivität} und \enquote{Web Components}.
 Beginnend mit dem Bereich \enquote{Adaptivität} wird zuerst vorhandene Literatur gesammelt. Diese besteht zum Großteil aus Abhandlungen, Webseiten, Büchern und insbesondere auch Richtlinien zur barrierefreien Gestaltung. Aus dieser Literatur werden Ergebnisse zusammengetragen und mithilfe von persönlicher Interpretation verdichtet. Dadurch werden Präferenzen zur möglichen Adaptivität von Elementen erstellt und evaluiert.
 \newline
-Der Bereich \enquote{Web Components} setzt sich aus einem Theorie- und einem Praxisteil zusammen. Im Theorie-Teil wird wiederum vorhandene Literatur gesammelt. Diese besteht aus Abhandlungen und zum großen Teil aus Programmdokumentationen und Anleitungen. Diese wird als Basis genutzt, die Technologien der \emph{Web Components} und mögliche nutzbare \emph{Frameworks} zu erforschen. Mit diesen Technologien und \emph{Frameworks} werden verschiedene Tests durchgeführt und Beispiel-Komponenten erstellt, um die Technologien zu erschließen. Die Ergebnisse, eine Kombination aus der Literatur und der Arbeit am Programmcode, werden daraufhin gesammelt. Der Praxisteil beginnt mit der Sammlung und dem Testen von vorhandenen \emph{Web Components}. Von diesen werden einige ausgewählt um diese zu erweitern. Anhand einer Kombination des Theorie-Teils des Bereichs \enquote{Web Components}, also der Arbeit mit den Technologien, und den aus dem Bereich der \enquote{Adaptivität} gezogenen Schlüsse, werden Folgerungen gezogen wie eine Adaptivität konzipiert und insbesondere wie sie im Programmcode umgesetzt werden kann. Dadurch entstehen bei Gelingen adaptive \emph{Web Components}. Daraufhin werden diese und auch der Prozess der Erstellung dieser evaluiert.
+Der Bereich \enquote{Web Components} setzt sich aus einem Theorie- und einem Praxisteil zusammen. Im Theorie-Teil wird wiederum vorhandene Literatur gesammelt. Diese besteht aus Abhandlungen und zum großen Teil aus Programmdokumentationen und Anleitungen. Diese wird als Basis genutzt, die Technologien der \emph{Web Components} und mögliche nutzbare \emph{Frameworks} zu erforschen. Mit diesen Technologien und \emph{Frameworks} werden verschiedene Tests durchgeführt und Beispiel-Komponenten erstellt, um die Technologien zu erschließen. Die Ergebnisse, eine Kombination aus der Literatur und der Arbeit am Programmcode, werden daraufhin gesammelt. Der Praxisteil beginnt mit der Sammlung und dem Testen von vorhandenen \emph{Web Components}. Von diesen werden einige ausgewählt um diese zu erweitern. Anhand einer Kombination des Theorie-Teils des Bereichs \enquote{Web Components}, also der Arbeit mit den Technologien, und den aus dem Bereich der \enquote{Adaptivität} gezogenen Schlüsse, werden Folgerungen gezogen wie eine Adaptivität konzipiert und insbesondere wie sie im Programmcode umgesetzt werden kann. Dadurch entstehen bei Gelingen adaptive \emph{Web Components}. Daraufhin werden die Komponenten und der Prozess der Erstellung dieser evaluiert.
 
 
 \chapter{Adaptivität}
@@ -282,7 +283,7 @@ Jeder Nutzer hat eigene Vorlieben und Einschränkungen beim Nutzen einer Anwendu
 Um mehr über mögliche Präferenzen in Erfahrung zu bringen werden im folgenden die \ac{WCAG 2.0} Richtlinien betrachtet. Diese versuchen das Internet für alle Personen, unabhängig ihrer Einschränkung, zugänglicher zu machen. Dafür schaffen sie Prinzipien und Richtlinien, auf Basis derer Internetseiten konzipiert werden können. Diese können sehr gut verwendet werden um herauszufinden, in welcher Art und Weise sich Anwendungen adaptiv an verschiedene Nutzer anpassen sollten. Im Folgenden werden die Richtlinien aufgezählt und kurz beschrieben \cite{wcag}.
 \begin{description}
 	\item [Richtlinie 1.1 Text-Alternativen] Für Texte einer Anwendung sollen nicht aus Text bestehende Alternativen angeboten werden, beispielsweise große Druckbuchstaben, Brailleschrift, Sprache, Symbole oder einfachere Sprache. Parallel dazu sollen nicht textbasierte Inhalte auch durch eine textbasierte Alternative dargestellt werden können.
-	\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für zeitbasierte Medien geschaffen werden.
+	\item[Richtlinie 1.2 zeitbasierte Medien] Es sollen Alternativen für Zeit-basierte Medien geschaffen werden.
 	\item[Richtlinie 1.3 Anpassbar] Die Möglichkeit den Inhalt der Internetseite in verschiedenen Arten darzustellen, ohne Informationen oder Struktur zu verlieren, soll vorhanden sein.
 	\item[Richtlinie 1.4 Unterscheidbar] Den Nutzern soll es erleichtert werden den Vordergrund vom Hintergrund zu unterscheiden. Dies soll bei visuellen und Audio-Elementen kongruent erfolgen. 
 	\item[Richtlinie 2.1 Zugänglichkeit mit der Tastatur] Die gesamte Funktionalität der Anwendung sollte auch mit der Tastatur verwendet werden können.	
@@ -310,7 +311,7 @@ Kongruent zum Kapitel \ref{ref:lesRic} ist zu bemerken, dass die Sprache des Nut
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{leserichtung.png}
-	\caption[Einfluss der Leserichtung auf Anordnung der Elemente]{Einfluss der Leserichtung auf die Anordnung der Elemente \cite{elShaab} \cite{zeitOnline}}
+	\caption[Einfluss Leserichtung auf Anordnung der Elemente]{Einfluss der Leserichtung auf die Anordnung der Elemente \cite{elShaab} \cite{zeitOnline}}
 	\label{img:lesRic}
 \end{figure}\noindent
 Ein Beispiel dazu bilden die deutsche und ägyptische Nachrichtenseite \enquote{Zeit Online} und \enquote{Al Shaab}, dargestellt in Abbildung  \ref{img:lesRic}. Hier ist im oberen Bereich die Kopfzeile der arabischsprachigen und darunter die Kopfzeile der deutschsprachigen Internetseite abgebildet. Hier sieht man ganz klar, wie im arabischsprachigen Bereich die Elemente eher nach rechts ausgerichtet sind und wichtige Elemente, wie beispielsweise der Name der Zeitung ganz rechts oben angeordnet sind. Im deutschsprachigem Internetauftritt sind die Elemente nach links ausgerichtet und der Name der Webseite ist weit oben links.
@@ -321,23 +322,23 @@ Die Richtlinie 2.2 sichert dem Nutzer ausreichend Zeit zu, den Inhalt zu lesen u
 \chapter{Preference Sets}
 Die in Kapitel \ref{sec:folFuePra} erarbeiteten Präferenzen betreffen die Nutzer der adaptiven Webseite. Jeder Nutzer hat zu verschiedenen Präferenzen verschiedene Werte. Deshalb ist es notwendig die gesamten Präferenzen jedes einzelnen Nutzers zu speichern um sie später bei Aufruf der Webseite zu nutzen. Diese Sammlung der Präferenzen wird im weiteren Zusammenstellung der Präferenzen beziehungsweise \emph{Preference Set} genannt. 
 \section{Speichern der Nutzer Präferenzen}
-Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen. Exemplarisch werden diese über die Versionsverwaltung \emph{Git} auf der Internetseite \enquote{GitHub} gespeichert. Dafür wurde ein \emph{Repository}, also eine Art neues Projekt auf \enquote{GitHub}, mit Namen \enquote{data} erstellt. In diesem werden für einzelne Nutzer und damit deren Zusammenstellung der Präferenzen einzelne  Dateien gespeichert. Diese können dann über eine bestimmte Adresse aufgerufen werden und sind so später beim gewünschten Herunterladen der Präferenzen ansteuerbar. In Listing \ref{lst:jsonPreSet} ist ein Beispiel dieser Zusammenstellung dargestellt. Sie kann über
-\newline
-die Adresse \enquote{https://raw.githubusercontent.com/christophkleber/data/master/1} aufgerufen werden. Hier ist zu beachten, dass der einzelne Nutzer durch eine Identifikationsnummer repräsentiert wird, hier die Nummer \enquote{1}. Im späteren realen Gebrauch würde jeder Nutzer eine eindeutige, unter Umständen längere, Identifikationsnummer erhalten. Dies ermöglicht, dass der Nutzer selbst anonym bleibt und dessen Präferenzen nur anhand dieser Nummern abgerufen werden können. Zu jeder vom Nutzer genutzten Präferenz, also dem Bezeichner, wird ein Wert zugeordnet. Beispielsweise ist in Zeile drei zur Präferenz \enquote{more-contrast} der Wert \enquote{true} gesetzt. 
+Die Präferenzen der verschiedenen Nutzer, also die Bezeichner-Wert Paare müssen gespeichert werden. Der Speicherort muss an das Netz angeschlossen sein, da die Werte zur Laufzeit der Anwendung, beziehungsweise beim Laden der Internetseite abgerufen werden müssen. Exemplarisch werden diese über die Versionsverwaltung \emph{Git} auf der Internetseite \enquote{GitHub} gespeichert. Dafür wurde ein \emph{Repository}, also eine Art neues Projekt auf \enquote{GitHub}, mit Namen \enquote{data} erstellt. In diesem werden für einzelne Nutzer und damit deren Zusammenstellung der Präferenzen einzelne  Dateien gespeichert. Diese können dann über eine bestimmte Adresse aufgerufen werden und sind so später beim gewünschten Herunterladen der Präferenzen ansteuerbar. In Listing \ref{lst:jsonPreSet} ist ein Beispiel dieser Zusammenstellung dargestellt.
 \begin{listing}
 	\begin{JavaScriptcode*}{}
-[
-	{
-		"more-contrast": "true",
-		"font-size": "xl",
-		"reading-direction": "rtl"
-	}
-]
+		[
+		{
+			"more-contrast": "true",
+			"font-size": "xl",
+			"reading-direction": "rtl"
+		}
+		]
 	\end{JavaScriptcode*}
 	\caption[Beispiel eines Preference Sets]{Preference Set eines Nutzers}
 	\label{lst:jsonPreSet}
 \end{listing}\noindent
-
+Sie kann über die Adresse 
+\newline
+\enquote{https://raw.githubusercontent.com/christophkleber/data/master/1} aufgerufen werden. Hier ist zu beachten, dass der einzelne Nutzer durch eine Identifikationsnummer repräsentiert wird, hier die Nummer \enquote{1}. Im späteren realen Gebrauch würde jeder Nutzer eine eindeutige, unter Umständen längere, Identifikationsnummer erhalten. Dies ermöglicht, dass der Nutzer selbst anonym bleibt und dessen Präferenzen nur anhand dieser Nummern abgerufen werden können. Zu jeder vom Nutzer genutzten Präferenz, also dem Bezeichner, wird ein Wert zugeordnet. Beispielsweise ist in Zeile drei zur Präferenz \enquote{more-contrast} der Wert \enquote{true} gesetzt. 
 \section{Herunterladen der Nutzer Präferenzen}
 \label{sec:herPre}
 Um die Präferenzen der Nutzer zu verwenden und auf Basis dieser die Webseite anzupassen, muss eine Möglichkeit geschaffen werden, die Zusammenstellung der Präferenzen beim Aufruf der Anwendung abzufragen. Hierfür wird ein \emph{REST-Client} verwendet. Dieser sendet beim Aufruf der Anwendung einen Befehl an einen bestimmten, an das Netz angeschlossenen, Ort. Dabei wird diesem Ort mitgeteilt, für welche Person die Zusammenstellung angefragt wird. Daraufhin erhält die Anwendung als Antwort alle Präferenzen der mitgeteilten Person und kann auf Basis dieser die Anwendung anpassen.
@@ -398,15 +399,13 @@ function loadPref(prefSet) {
 	\caption[Abfragen der Nutzerpräferenzen]{JavaScript Programmcode zum Abfragen der Nutzerpräferenzen}
 	\label{lst:jquAja}
 \end{listing}\noindent
-Diese Objektzuweisung versucht die Funktion unabhängig vom genutzten Browser nutzbar zu machen, obwohl die \emph{Web Components} allgemein nur auf modernen Browsern unterstützt werden. Jedoch können auch \emph{Web Components} unter bestimmten Voraussetzungen und mit der Nutzung von \emph{Polyfills} auch auf älteren Browsern genutzt werden. Mehr dazu in Kapitel \ref{sec:broUnt}. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden die übertragenen Daten in der Variable \enquote{jsonObj} gespeichert und können weiter verwendet werden. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln, werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen anzufragen. Zu diesem \enquote{Speicherort} wird der Parameter \enquote{prefSet} angefügt. Dieser beschreibt dann die Auswahl der Präferenzen des einzelnen Nutzers. Ein Beispiel dieses
-\newline 
-Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/1} sein \cite{xmlhttp}.
+Diese Objektzuweisung versucht die Funktion unabhängig vom genutzten Browser nutzbar zu machen, obwohl die \emph{Web Components} allgemein nur auf modernen Browsern unterstützt werden. Jedoch können auch \emph{Web Components} unter bestimmten Voraussetzungen und mit der Nutzung von \emph{Polyfills} auch auf älteren Browsern genutzt werden. Mehr dazu in Kapitel \ref{sec:broUnt}. Unabhängig vom letztendlich zugewiesenen Objekt an die Variable \enquote{xhttpreq}, außer die Funktion wurde abgebrochen,  wird die Funktion \enquote{onreadystatechange} aufgerufen. Sie wartet auf einen Statuswechsel und prüft ob der \enquote{readyState} im Wert \enquote{4} vorliegt und gleichzeitig der Status im Wert \enquote{200}. Dies bedeutet, dass der Status der Anfrage \enquote{done} ist und die \ac{HTTP} Anfrage auch erfolgreich war und somit die Daten abgerufen werden konnten. Daraufhin werden die übertragenen Daten in der Variable \enquote{jsonObj} gespeichert und können weiter verwendet werden. Um die asynchrone Anfrage letztendlich abzuschicken und in den auf Antwort wartenden Zustand zu wechseln, werden in den letzten zwei Zeilen die Funktionen \enquote{open} und \enquote{send} aufgerufen. \enquote{open} enthält als Argumente die Art des Aufrufs, hier \enquote{get} und als letztes Argument \enquote{true}, damit der Aufruf asynchron durchgeführt wird. Ein weiteres Argument ist die \ac{URL}. Sie wird in diesem Listing stellvertretend als \enquote{Speicherort} bezeichnet. Dieses Argument wird gesetzt um einen entsprechenden Speicherort der Zusammenstellung der Präferenzen anzufragen. Zu diesem \enquote{Speicherort} wird der Parameter \enquote{prefSet} angefügt. Dieser beschreibt dann die Auswahl der Präferenzen des einzelnen Nutzers. Ein Beispiel dieses Speicherorts könnte \enquote{http://www.speicherort.de/praeferenzen/1} sein \cite{xmlhttp}.
 		
 \chapter{Web Components}
 	Im Folgenden wird auf den Themenbereich der späteren Anwendung der Adaptivität eingegangen, den \emph{Web Components}. \emph{Web Components} sind eine \ac{W3C} Spezifikation. Diese soll es ermöglichen, eigenständige und wiederverwertbare Komponenten für Web Anwendungen zu erstellen \cite[S.1]{patel2015learning}. Sie setzen sich zusammen aus den vier Technologien \emph{Custom Elements}, \ac{HTML} \emph{Imports}, \emph{Templates} und \emph{Shadow \ac{DOM}}. Das Nutzen dieser Technologie soll Applikationen im Web leichter wiederverwertbar, wartbar, unabhängiger und kapselbar machen \cite[S.2]{patel2015learning}.
 	\section{Geschichte der Web Components}
 	\label{ref:gesVonWebCom}
-	\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \ac{HTML} \emph{Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt \cite{Cooney2012}. Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browserkompatibilität eingegangen.
+	\emph{Web Components} wurden vom \ac{W3C} das erste Mal im Jahr 2012 als ein \emph{Working Draft}, also Arbeitsentwurf, erwähnt. Hier wurde es auch \emph{Component model for the web} genannt und bestand aus den vier Technologien \emph{Templates}, \emph{Decorators}, \emph{Custom Elements} und \emph{Shadow DOM}. In der derzeitigen Version der \emph{Web Components} wird die \emph{Decorators} Technologie nicht mehr verwendet. Die \ac{HTML} \emph{Import} Technologie wurde jedoch zu den \emph{Web Components} ergänzt \cite{Cooney2012}. Da die \emph{Web Components} aus verschiedenen Technologien zusammengesetzt sind, wird in dem nächsten Abschnitt auf die Geschichte der einzelnen Technologien eingegangen um einen Überblick zu verschaffen. Hierbei wird insbesondere auf die erste Unterstützung der Technologien in den verschiedenen Browsern und die heutige Browser-Kompatibilität eingegangen.
 		\subsection{Custom Elements}
 		Eine Technologie der \emph{Web Components}, die \emph{Custom Elements} liegen in der Version v0 und in der Version v1 vor. Die Version v0 wurde das erste Mal im Jahr 2014 von den Browsern \enquote{Chrome} in der Version 33 und \enquote{Opera} in der Version 20 unterstützt. In den mobilen Varianten dieser Browser  wird sie seit 2016 von \enquote{Opera for Android} in der Version 37 und von \enquote{Chrome for Android} in der Version 53 verwendet \cite{C2015}. Im \enquote{Android} Browser ist diese Version schon seit 2014 in Gebrauch, in der \enquote{Android} Version 4.4.4. Im \enquote{Samsung Internet} wird sie seit 2016 in der Version 4 genutzt \cite{cusEleCanIUse}. Die Version v0 wird von der Version v1 abgelöst, hier ergeben sich einige Änderungen in der Syntax der \ac{API} \cite{Bidelman2016cusElev1}. Derzeit wird sie nicht per Standardeinstellung von anderen Browsern unterstützt \cite{firefox}, im Gegensatz zur Version v1. \enquote{Chrome} und \enquote{Opera} unterstützen diese. Das erste mal wurde sie im Jahr 2016 in der \enquote{Chrome} Version 54 und in der \enquote{Opera} Version 41 genutzt \cite{C2016}.
 		\subsection{HTML Imports}
@@ -454,7 +453,7 @@ customElements.define('new-custom-element', NewCustomElement); //Registrierung c
 			\begin{HTMLcode*}{}
  <link rel='import' href='imports/imported-document.html'>
 				\end{HTMLcode*}
-			\caption{Standard HTML Import}
+			\caption[Standard HTML Import]{HTML Programmcode zum Standardmäßigen HTML Import}
 			\label{lst:htmImp}
 		\end{listing}\noindent
 		Die importierten Dokumente haben keinen außergewöhnlichen Aufbau im Vergleich zu normalen \ac{HTML} Dokumenten, sie können aus \ac{HTML}, \ac{CSS} oder JavaScript Elementen bestehen. Es kann auch die \emph{Template} Technologie verwendet werden, dazu mehr in Kapitel \ref{subsec:Templates}.
@@ -521,7 +520,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
    </li>
 </ul>
 				\end{HTMLcode*}
-				\caption[Slot Elemente im Shadow DOM]{Nutzung von Slot Platzhalter-Elementen im Shadow DOM}
+				\caption[Slot Elemente im Shadow DOM]{HTML Programmcode zur Nutzung von Slot Platzhalter-Elementen im Shadow DOM}
 				\label{lst:sloNutShaDom}
 			\end{listing}\noindent
 			In Listing \ref{lst:sloNutShaDom} ist der \ac{HTML} Programmcode des \emph{Web Component} dargestellt, der im \emph{Shadow \ac{DOM}} später ausgeführt wird. Hier ist die Verwendung des \emph{Slot} Elements interessant. Dieses kann beim Einbinden des \emph{Web Component} später ausgestattet werden. Wird das Platzhalter-Element später nicht befüllt, wird das \emph{Fallback}, also die Ersatzfunktion, der Inhalt innerhalb des Elements, hier beispielsweise \enquote{Kein Titel} genutzt. Die Ersatzfunktion kann auch aus einem eigenen \ac{DOM} Baum bestehen, wie im \emph{Slot} \enquote{name} zu sehen ist \cite{Bidelman2016}. In Listing \ref{lst:sloNutLigDom} werden die, in Listing \ref{lst:sloNutShaDom} erstellten Platzhalter-Elemente, beim Verwenden des \emph{Web Component} in beispielsweise einer Webseite befüllt.
@@ -531,7 +530,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 <span slot='title'>Phil.</span> <!-- Element mit Slot Attribut -->
 <span slot='name'>Michael</span> <!-- Element mit Slot Attribut -->
 				\end{HTMLcode*}
-				\caption{Befüllen der Slot Elemente im DOM}
+				\caption[Befüllen der Slot Elemente im DOM]{HTML Programmcode zum Befüllen der Slot Elemente im DOM}
 				\label{lst:sloNutLigDom}
 			\end{listing}\noindent
 		Wie hier in Zeile eins und zwei zu sehen ist, können einzelne Slots auch mit mehreren Elementen befüllt werden. Beim Übersetzen des Programmcodes der Applikation werden alle Elemente, welche die passenden \emph{Slot} Attribute aufweisen in den \ac{DOM} übersetzt. Wenn im \emph{Shadow \ac{DOM}} ein \emph{Slot} Platzhalter ohne ein \enquote{name} Attribut definiert wird, werden alle vom Nutzer innerhalb des \emph{Web Components} erstellten Elemente in den \ac{DOM} geschrieben.
@@ -555,7 +554,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 		\end{listing}\noindent
 		Dies ist der \ac{DOM}, den man beispielsweise in einer Webseite sehen würde. Hier ist gut zu erkennen, wie die \emph{Slot} Elemente des \emph{Shadow \ac{DOM}} mit den später erstellten Elementen befüllt werden. Alle Elemente innerhalb des \emph{Web Component} mit dem Attribut \enquote{slot} werden in diesen übertragen.
 		\subsubsection{Shadow DOM Gestaltungsanweisungen}
-		Wie auf den vorherigen Seiten erklärt, ist der \emph{shadow tree} vom normalen \ac{DOM} abgekapselt. Dies hat zur Folge, dass \ac{CSS} Gestaltungsanweisungen, definiert im eigenen \emph{Component}, nur Einfluss auf den \emph{shadow tree} des eigenen \emph{Web Component} haben. Es können \ac{CSS} Selektoren verwendet werden, die auch außerhalb des Element bestehen. Trotzdem haben diese nur Einfluss auf die Elemente innerhalb des \emph{Web Component}.  
+		Wie auf den vorherigen Seiten erklärt, ist der \emph{shadow tree} vom normalen \ac{DOM} ab gekapselt Dies hat zur Folge, dass \ac{CSS} Gestaltungsanweisungen, definiert im eigenen \emph{Component}, nur Einfluss auf den \emph{shadow tree} des eigenen \emph{Web Component} haben. Es können \ac{CSS} Selektoren verwendet werden, die auch außerhalb des Element bestehen. Trotzdem haben diese nur Einfluss auf die Elemente innerhalb des \emph{Web Component}.  
 		 \newline
 		Eine Besonderheit der Gestaltungsanweisungen des \emph{Shadow DOM} sind dessen Selektoren. Der \enquote{:host} Selektor definiert den Stil für das Element, in welchem der \emph{shadow tree} bereitgestellt wird, somit für den \emph{Web Component}. Dieser wirkt nur in dem Kontext eines \emph{shadow root}. Dadurch kann der Stil des eigenen \emph{Web Component} verändert werden. Eine Eigenschaft des \enquote{:host} Selektors ist, dass die Seite, die das \emph{Web Component} enthält, stärkeren Einfluss auf diesen Selektor besitzt und somit den Stil überschreiben kann. Damit ermöglicht es den Nutzern eines \emph{Web Component}, diesen von außen nach eigenen Wünschen anzupassen. Darüber hinaus kann der \enquote{:host} Selektor erweitert werden. So können über die Form \enquote{:host(<selector>)} bestimmte Stil Eigenschaften gesetzt werden, die nur Anwendung finden wenn das \emph{Web Component} bestimmte Eigenschaften erfüllt. 
 		\begin{listing}
@@ -569,7 +568,7 @@ shadowRoot.appendChild(headline); //Elemente als Kinder in shadow root angefügt
 }
 </style>
 		\end{HTMLcode*}
-		\caption{Der :host Selektor}
+		\caption[Der :host Selektor]{CSS Gestaltungsanweisungen: Der :host Selektor}
 		\label{lst:hosSel}
 		\end{listing}\noindent
 		In Listing \ref{lst:hosSel} ist dargestellt in welcher Form Einfluss genommen werden kann. So spricht der Selektor in Zeile zwei nur den \emph{Web Component} an, der die Klasse \enquote{active} besitzt. Der Selektor in Zeile fünf spricht nur den \emph{Web Component} an, wenn dieser die Klasse \enquote{blue} besitzt.
@@ -623,7 +622,7 @@ Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angez
 		\section{Webentwicklung mithilfe der Web Components}
 		Aktuell werden \emph{Web Components} in der Webentwicklung in geringer Häufigkeit genutzt. Das \emph{Frontend} von modernen Webseiten basiert heutzutage hauptsächlich auf den Technologien \ac{HTML}, \ac{CSS} und JavaScript. Meistens werden darüber hinaus noch verschiedene \emph{Frameworks} verwendet. \enquote{A computer system framework has a layered structure that can incorporate servers, operating systems, client machines, and applications. The framework can provide a set of functions to definde application interfaces, the interrelationships between applications, and internal communications between clients and external to online platforms} \cite[S.15]{stuart2013roadmap}. Ein \emph{Framework} ist somit ein System, das den Entwicklern bestimmte Funktionalitäten zur Verfügung stellt, ohne dass dieser sie selbst programmieren muss. Sie können beispielsweise die Hilfe bei der Interaktion mit dem \ac{DOM} sein, wie das JavaScript \emph{Framework} \enquote{jQuery}, ein \enquote{Slide-Element} bereitstellen wie das \emph{Framework} \enquote{Slider} oder zur Diagrammerstellung genutzt werden wie das \emph{Framework} \enquote{D3}. Hier ergibt sich ein Problem. Wenn in einer Applikation mehrere \emph{Frameworks} und Technologien für verschiedene Funktionen verwendet werden, können diese sich gegenseitig beeinflussen. So können die Gestaltungsanweisungen verschiedener Teile der Webseite sich unbeabsichtigt beeinträchtigen. Auch kann der  JavaScript Programmcode, der eine bestimmte Funktion hat, an einer anderen nicht beabsichtigten, Stelle Einfluss nehmen. An dieser Stelle könnte er eine vollkommen andere Funktion ausüben und Inkonsistenzen hervorrufen. Viele dieser Probleme resultieren daraus, dass verschiedene \emph{Frameworks} für Variablen oder Funktionen die gleiche Benennung nutzen und somit manche Elemente doppelt benannt und damit auch doppelt angesprochen werden. Darüber hinaus können viele Teile der Webseite weder wiederverwendet, noch gut gewartet werden, da sie großen Einfluss aufeinander nehmen und somit sehr ineinander verschachtelt sind.
 		Die \emph{Web Components} versuchen diese Probleme durch eine (in Zukunft möglicherweise native) Implementierung verschiedener Techniken anzugehen, die eine Kapselung, eine Wiederverwendung und eine leichtere Wartbarkeit von Programmcode ermöglichen sollen. Nachfolgend wird auf die daraus resultierenden Vor- und Nachteile eingegangen. 			
-			\subsection{Native Browserunterstützung}
+			\subsection{Native Browser-Unterstützung}
 			\label{sec:natBro}
 			Aufgrund der Erkenntnisse der Geschichte von \emph{Web Components} in Kapitel \ref{ref:gesVonWebCom} ist eine gewisse Wahrscheinlichkeit gegeben, dass die Technologien der \emph{Web Components} in Zukunft nativ von den verschiedenen Browsern unterstützt werden. Diese Konklusion basiert vor allem auf der Tatsache, dass verschiedene Techniken der \emph{Web Components} schon in manchen Browsern nativ unterstützt werden.
 			Sollte dieser Fall eintreffen ergibt sich daraus ein großer Vorteil. Es muss bei der Nutzung nativer, also von den Browsern implementierten Techniken, kein externer Programmcode genutzt werden um bestimmte Funktionen abzudecken. Viele Funktionalitäten können einfach über die Nutzung nativer Methoden abgebildet werden. Deshalb müssen weniger Funktionen selbst geschrieben und weniger, beziehungsweise unter Umständen keine \emph{Frameworks} genutzt werden. Dies verkleinert das Laden vom externen Programmcode. Außerdem ist die Syntax und Funktionsweise bei nativen Funktionen bekannt und eindeutig. Daraus ergeben sich weniger Inkonsistenzen in der Programmierung und eine leichtere Verständlichkeit. Im Gegensatz dazu muss bei vielen \emph{Frameworks} eine jeweils eigene Syntax benutzt werden.
@@ -634,7 +633,7 @@ Hier wird der Text \enquote{Dies ist ein Web Component.} als ein Paragraph angez
 			Die Theorie der \emph{Web Components} ist die Erstellung von verschiedenen Komponenten, die wiederverwendet werden können. Dies hat zum einen den großen Vorteil, dass es eine Interoperabilität zwischen \emph{Frameworks} ermöglicht \cite[S.2]{patel2015learning}. Dadurch ist man nicht an ein bestimmtes \emph{Framework} gebunden und kann auch mit Elementen außerhalb dieses Ökosystems interagieren und Komponenten wiederverwenden. Zum anderen können die \emph{Web Components} aufgrund ihrer Definitionsart an theoretisch allen Stellen einer Anwendung wiederverwendet werden, was eine Arbeitserleichterung und auch Verminderung des Programmcodes hervorruft. 
 			\subsection{Wartbarkeit}
 			Die Wartbarkeit von Web-Applikationen wird erleichtert, da die \emph{Web Components} in \emph{Templates} organisiert sind \cite[S.2]{patel2015learning}. Das sorgt dafür, dass der Programmcode einzelner Komponenten separat gespeichert und somit leichter wiedergefunden und geändert werden kann. Insbesondere bei großen Projekten führt dies zu einer großen Arbeitserleichterung.
-			\subsection{Browserunterstützung}
+			\subsection{Browser-Unterstützung}
 			\label{sec:broUnt}
 			Auch wenn \emph{Web Components} sehr viele Vorteile aufweisen, ist es ein Problem wenn die Techniken (noch) nicht in allen Browsern unterstützt werden oder unterschiedlich implementiert sind. Wie in Kapitel \ref{ref:gesVonWebCom} dargelegt, werden einige der Techniken noch nicht von allen Browsern unterstützt oder unterscheiden sich in deren Umsetzung. Dies kann zu Inkonsistenzen oder dem nicht Funktionieren einer Applikation führen. Durch Verwendung von  \emph{Polyfills} kann man dies jedoch umgehen. Das sind in diesem Zusammenhang Programmcodes, welche die Funktionen oder Teile einer Technologie, die nativ noch nicht von einem Browser unterstützt wird, nachstellen. Sie können dann verwendet werden um Nutzern aller Browser den Gebrauch der Technologien zu ermöglichen \cite[S.4]{satrom2014building}. Das \enquote{webcomponents.js} ist ein Set von \emph{Polyfills} und ermöglicht den Nutzern die Verwendung von \emph{Web Components} in allen modernen Browsern \cite{webComJs}.
 	\section{Adaptivität der Web Components?}
@@ -656,7 +655,7 @@ var elem = document.createElement('my-element');
 // Instanziierung über Konstruktor
 var elem2 = new MyElement();
 		\end{JavaScriptcode*}
-		\caption{Polymer custom element Registrierung}
+		\caption[Polymer custom element Registrierung]{JavaScript Programmcode der Polymer custom element Registrierung}
 		\label{lst:polCusEle}
 		\end{listing}\noindent
 Die \enquote{Polymer} Funktion erstellt einen Prototypen eines Elements, registriert diesen im Browser und gibt einen Konstruktor zurück, der genutzt werden kann um Instanzen des Elements zu erstellen. Wie in Listing \ref{lst:polCusEle} in Zeile zwei zu sehen, spezifiziert das \enquote{is} Argument der Funktion den Namen der \ac{HTML} Kennzeichnung (\emph{tag}). In Zeile fünf und sieben sind die beiden Möglichkeiten dargestellt ein Element zu registrieren, also eine Instanz zu erstellen. Einmal über die \enquote{createElement} Funktion oder über den \enquote{new} Operator. In der \enquote{Polymer} Funktion kann das Argument \enquote{extends} hinzugefügt werden. Dieses kann mit einem Wert befüllt werden, der einem Standard \ac{HTML} Element Bezeichner entspricht, beispielsweise \enquote{input}. Dadurch kann dieses Standard \ac{HTML} Element erweitert werden. Bei der Instanziierung über den Konstruktor wird dann genauso wie in Listing \ref{lst:polCusEle} verfahren, bei der Instanziierung durch \enquote{createElement} muss als erstes Argument der Funktion zusätzlich das zu erweiternde Element und als zweites Argument der \enquote{is} Wert des neu erstellten \enquote{Custom Element} übergeben werden, beispielsweise \enquote{var elem = document.createElement('input', 'my-input');} \cite{polyReg}.
@@ -664,7 +663,7 @@ Die \enquote{Polymer} Funktion erstellt einen Prototypen eines Elements, registr
 \label{sec:polLau}
 Um auf die Laufzeit und die Reaktion der Elemente auf deren Zustände im Lebenszyklus zu reagieren stellt \enquote{Polymer} verschiedene \emph{Callback} bereit. Diese werden vom Element selbst ausgeführt, wenn bestimmte Zustände vorliegen. Die \enquote{ready} Funktion wird beispielsweise ausgeführt, wenn der gesamte lokale \ac{DOM} des Elements initialisiert und die Eigenschaftswerte gesetzt wurden. Ein weiteres Beispiel ist die \enquote{attached} Funktion, sie wird aufgerufen wenn das Element an das \enquote{document} hinzugefügt wird. Sie wird in jedem Fall nicht ausgeführt, bevor die \enquote{ready} Rückruffunktion ausgeführt wurde \cite{polyReg}.
 \subsection{Eigenschaften der Elemente}
-Der Prototyp kann mit Eigenschaften versehen werden. Hierfür wird das \enquote{properties} Objekt genutzt. Es können beliebig viele Eigenschaften des Elements definiert und zu jeder Eigenschaft verschiedene Schlüssel hinzugefügt werden.
+Der Prototyp kann mit Eigenschaften versehen werden. Hierfür wird das \enquote{properties} Objekt genutzt. Es können beliebig viele Eigenschaften des Elements definiert und zu jeder Eigenschaft verschiedene Schlüssel hinzugefügt werden. Der \enquote{type} Schlüssel definiert beispielsweise den Typ des Attributs, in Listing \ref{lst:polProp} ist die Eigenschaft \enquote{user} beispielsweise vom Typ \enquote{String} und die Eigenschaft \enquote{isHappy} vom Typ \enquote{Boolean}.
 \begin{listing}[H]
 	\begin{JavaScriptcode*}{}
 Polymer({
@@ -679,10 +678,10 @@ Polymer({
    }
 });
 	\end{JavaScriptcode*}
-	\caption{Polymer properties Objekt}
+	\caption[Polymer properties Objekt]{JavaScript Programmcode des Polymer properties Objekt}
 	\label{lst:polProp}
 \end{listing}\noindent
-Der \enquote{type} Schlüssel definiert beispielsweise den Typ des Attributs, in Listing \ref{lst:polProp} ist die Eigenschaft \enquote{user} beispielsweise vom Typ \enquote{String} und die Eigenschaft \enquote{isHappy} vom Typ \enquote{Boolean}. Als weiteres Beispiel definiert der \enquote{value} Schlüssel den Standardwert der Eigenschaft, bei der Eigenschaft \enquote{count} die in der Funktion erstellte leere Datengruppe \cite{polyProp}.
+Als weiteres Beispiel definiert der \enquote{value} Schlüssel den Standardwert der Eigenschaft, bei der Eigenschaft \enquote{count} die in der Funktion erstellte leere Datengruppe \cite{polyProp}.
 \subsection{Methoden der Elemente}
 Um den späteren Instanzen Methoden zur Verfügung zu stellen, können diese dem Prototyp des Elements hinzugefügt werden.
 \begin{listing}[H]
@@ -697,7 +696,7 @@ Polymer({
 var elem = document.querySelector('my-element');
 elem.speak();
 	\end{JavaScriptcode*}
-	\caption{Polymer Instanzmethoden}
+	\caption[Polymer Instanz-Methoden]{JavaScript Programmcode der Polymer Instanz-Methoden}
 	\label{lst:polMeth}
 \end{listing}\noindent
 In Listing \ref{lst:polMeth} wird dem Prototyp die Methode \enquote{speak} zur Verfügung gestellt. In Zeile neun wird dann die Methode von einer Instanz aufgerufen. Zudem stehen viele verschiedene Methoden standardmäßig jedem Prototyp zur Verfügung. Diese können für verschiedene Zwecke genutzt werden \cite{polyInstMeth}.
@@ -797,7 +796,7 @@ _buildHtml(data) {
 		\caption[Bilden des Web Components]{JavaScript Programmcode zum Bilden eines Web Components basierend auf Darwin.js}
 		\label{lst:bilDar}
 		\end{listing}\noindent
-	Hier wird in Zeile eins der Inhalt des \emph{shadow root} geleert. Daraufhin wird der Datenknoten des Inhalts des \emph{Templates} kopiert. Dieser wird dann als Kind eines neu erstellten div Elements in Zeile fünf hinzugefügt. Daraufhin wird der Inhalt dieses divs mithilfe des \enquote{Handlebar} \emph{Frameworks} kompiliert. \enquote{Handlebar} ermöglicht semantische \emph{Templates} zu erstellen. In diesen \emph{Templates} können Ausdrücke innerhalb vier geschweifter Klammern gesetzt werden, beispielsweise wie: \enquote{\{\{Inhalt\}\}}. Diese funktionieren als Platzhalter und werden beim Kompilieren durch die gesetzten Werte ersetzt \cite{handlebars}. In Zeile sieben wird daraufhin der kompilierte Inhalt mit dem \enquote{data} Objekt als Parameter ausgeführt. Dadurch werden alle Platzhalter des \emph{Templates} durch die richtigen Werte ersetzt. Zuletzt wird der Inhalt des \emph{shadow root} mit dem kompilierten Inhalt, also dem Programmcode des \emph{Web Component}, befüllt.
+	Hier wird in Zeile eins der Inhalt des \emph{shadow root} geleert. Daraufhin wird der Datenknoten des Inhalts des \emph{Templates} kopiert. Dieser wird dann als Kind eines neu erstellten \emph{div} Elements in Zeile fünf hinzugefügt. Daraufhin wird der Inhalt dieses \emph{divs} mithilfe des \enquote{Handlebar} \emph{Frameworks} kompiliert. \enquote{Handlebar} ermöglicht semantische \emph{Templates} zu erstellen. In diesen \emph{Templates} können Ausdrücke innerhalb vier geschweifter Klammern gesetzt werden, beispielsweise wie: \enquote{\{\{Inhalt\}\}}. Diese funktionieren als Platzhalter und werden beim Kompilieren durch die gesetzten Werte ersetzt \cite{handlebars}. In Zeile sieben wird daraufhin der kompilierte Inhalt mit dem \enquote{data} Objekt als Parameter ausgeführt. Dadurch werden alle Platzhalter des \emph{Templates} durch die richtigen Werte ersetzt. Zuletzt wird der Inhalt des \emph{shadow root} mit dem kompilierten Inhalt, also dem Programmcode des \emph{Web Component}, befüllt.
 	\subsection{Adaptivität der Elemente}
 	\label{sec:adaDerEle}
 	Die Adaptivität der Elemente wird über verschiedene Aktualisierungsmethoden ermöglicht. Diese werden in der Klasse \enquote{Components} definiert. Die Methode \enquote{update} ändert die Eigenschaften aller \emph{Web Components} einer bestimmten Art, zum Beispiel alle \enquote{awc-image} Elemente. Sie erwartet zwei Parameter, den \enquote{htmlTag} der zu verändernden Elemente und \enquote{data}, die neuen Werte der Elemente. Zu Beginn wird die Methode \enquote{\_hasAdaptiveWebComps} genutzt um abzufragen, ob der Browser die Funktionalitäten, die zur Adaptivität benötigt werden, besitzt. Wenn dies zutrifft werden alle Elemente gesammelt, die den bestimmten \enquote{htmlTag} besitzen. Daraufhin wird an jedes dieser Elemente ein Ereignis mit der Bezeichnung \enquote{adaptiveUpdate} gesendet, dem das \enquote{data} Objekt angehängt wird.
@@ -812,7 +811,7 @@ _buildHtml(data) {
    <img class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}" src="/assets/img/carole.png" alt="Carole"> <!-- Element mit CSS Klassen und Handlerbar Platzhaltern -->
 </template>
 		\end{HTMLcode*}
-		\caption[HTML Programmcode awc-image]{HTML Programmcode des Templates des awc-image}
+		\caption[Das awc-image Element]{HTML Programmcode des Templates des awc-image Elements}
 		\label{lst:temAwcImg}
 	\end{listing}\noindent
 	In diesem besitzt das \emph{img} Element einige CSS Klassen. Klassen die zur Bereitstellung der Adaptivität genutzt werden, starten mit dem Namen der Präferenz und einem Unterstrich, beispielsweise \enquote{contrast\_} und sind gefolgt von einem \enquote{Handlebar} Platzhalter, dessen Inhalt wiederum der Name der Präferenz ist, hier \enquote{\{\{contrast\}\}}. Jede Neubildung oder Änderung des Elements ändert mithilfe des \enquote{Handlebar} \emph{Frameworks} die CSS-Klassen des Elements. Je nach gesetzter CSS Klasse wird das Element dann anders dargestellt. 
@@ -829,7 +828,7 @@ _buildHtml(data) {
    background: #000;
 }
 		\end{CSScode*}
-		\caption[CSS Programmcode awc-image]{Ausschnitt des CSS Programmcode des Templates des awc-image}
+		\caption[CSS Programmcode awc-image]{Ausschnitt der CSS Gestaltungsanweisungen des Templates des awc-image}
 		\label{lst:cssAwcIma}
 	\end{listing}\noindent
 	In Listing \ref{lst:cssAwcIma} sind ein Ausschnitt der Darstellungseigenschaften des \emph{Web Component} gezeigt. Sie bestimmen inwiefern sich die Darstellung ändert. So wird in der Standarddarstellung des Kontrastwerts (\enquote{contrast\_} und \enquote{contrast\_normal}) ein weißer Hintergrund und kein CSS-Filter genutzt. Ist jedoch die \ac{CSS} Klasse \enquote{contrast\_high} gesetzt, ist die Präferenz des Nutzers ein erhöhter Kontrastwert. Dann wird ein \ac{CSS} Filter \enquote{grayscale(100\%) contrast(130\%)} und eine schwarze Hintergrundfarbe genutzt. Dies erhöht den Kontrast der Darstellung des Elements.
@@ -838,25 +837,25 @@ _buildHtml(data) {
 	\begin{listing}
 	\begin{HTMLcode*}{}
 <div class="contrast_{{ contrast }} reading_direction_{{ reading_direction }} size_{{ size }}">
-	<p>Hello{{ name }}, please enter your topic:</p>  <input name="topic" type="text">
-	<p>Your question is:</p> <textarea name="question" cols="40" rows="5"></textarea>
-	<button type="button">Submit</button>
+	<p>Hallo{{ name }}, bitte wähle dein Thema:</p>  <input name="topic" type="text">
+	<p>Deine Frage ist:</p> <textarea name="question" cols="40" rows="5"></textarea>
+	<button type="button">Absenden</button>
 </div>
 	\end{HTMLcode*}
-	\caption[HTML Programmcode awc-input]{HTML Programmcode des awc-input}
+	\caption[Das awc-input Element]{HTML Programmcode des awc-input Element}
 	\label{lst:awcInp}
 \end{listing}\noindent
 	In Listing \ref{lst:awcInp} ist ein Ausschnitt des Elements, der HTML Programmcode des Elements, dargestellt. Hier wird in Zeile zwei ein \enquote{input} Feld erstellt, das den Nutzer nach dem gewünschten Thema fragt, in Zeile drei wird ein \enquote{textarea} Feld erstellt, das den Nutzer nach seiner Frage bittet. Zuletzt wird in Zeile vier ein \enquote{button} erstellt, der, bei Anbindung an das \emph{Backend}, die Frage abschickt. In Listing \ref{lst:awcInpJavScr} ist der JavaScript Programmcode des Elements dargestellt.
 	\begin{listing}
 		\begin{JavaScriptcode*}{}
 new Component('awc-input', HTMLElement,
-	// Model:
+	// Modell:
 	{
 		'contrast': 'normal',
 		'reading_direction': 'ltr',
 		'size': 'normal'
 	},
-	// Behaviour:
+	// Verhalten:
 	{
 		onAdaptiveChange: function() {
 			console.log('onAdaptiveChange');
@@ -897,13 +896,12 @@ new Component('awc-input', HTMLElement,
 	Auch die Größe der Schrift sollte sich adaptiv an den Nutzer anpassen. Hierfür wird die Methode \enquote{\_changeFontSize} des \enquote{iron-data-table} Elements genutzt. Sie fragt den Wert des Parameters \enquote{fontSize} ab. Dessen Standardwert ist \enquote{m}. Ist der Wert auf \enquote{l} oder \enquote{xl} gesetzt wird die Schriftgröße um zwei oder vier Pixel erhöht. Dies wird ermöglicht durch das Hinzufügen von den CSS Klassen \enquote{l} oder \enquote{xl} zu dem \enquote{iron-data-table} Element. Diese werden dann über Gestaltungsanweisungen des \emph{Web Component} genutzt um die Anweisung zur \enquote{font-size} zu ändern.
 	\subsubsection{Leserichtung}
 	An die Leserichtung des Nutzers wird sich über die Methode \enquote{\_changeReadingDirection} des \enquote{iron-data-table} Elements angepasst. Sie fragt den Wert des Parameters \enquote{readingDirection} ab. Ist dieser \enquote{rtl}, werden alle \enquote{data-table-row} Elemente gesammelt und jedem dieser die CSS Klasse \enquote{rtl} hinzugefügt. Im den \enquote{data-table-row} Elementen werden diese Klassen in den Gestaltungsanweisungen genutzt, den Wert der \enquote{flex-direction} auf den Wert \enquote{row-reverse} zu setzen um den Aufbau der Zeile zu verändern. Dadurch wird dieser vertikal gespiegelt und das wichtigste Element befindet sich bei einer Leserichtung von rechts nach links auf der rechten Seite.
-	\newpage
 	\subsection{Beispiel-Ergebnis der Adaptivität}
 	In der Abbildung \ref{img:datTabErg} ist das adaptive \enquote{Iron Data Table} Element  dargestellt. Die Abbildung basiert auf dem vorher ausgewählten und daraufhin zur Adaptivität erweiterten Element. 
 	\begin{figure}[H]		
 		\centering
 		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{datTabErg.png}
-		\caption[Adaptiver Iron Data Table]{Adaptiver Iron Data Table Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
+		\caption[Adaptiver Iron Data Table]{Adaptives Iron Data Table Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
 		\label{img:datTabErg}
 	\end{figure}\noindent
 	Das Element wurde hier beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine erhöhte Schriftgröße und eine Leserichtung von rechts nach links enthalten. 
@@ -972,7 +970,6 @@ _changeFontSize: function () {
 		Diese \ac{CSS} Klassen werden von den Gestaltungsanweisungen der Komponenten \enquote{paper-date-picker} und \enquote{paper-calendar} dazu genutzt die Größe der Textelemente anzupassen. Darüber hinaus muss bei der Größe \enquote{xl} der Abstand mancher Elemente zueinander vergrößert werden, um ein sich gegenseitiges Überdecken  dieser zu verhindern.
 		\subsubsection{Leserichtung}
 		Die Standard Leserichtung der Komponente ist von links nach rechts. Um diese zu ändern wird die Methode \enquote{\_changeReadingDirection} des \enquote{paper-date-picker} Elements verwendet. Sie fragt zu Beginn den Wert des Parameters \enquote{readingDirection} ab. Enthält dieser den Wert \enquote{rtl}, also eine erwünschte Leserichtung von rechts nach links, werden zum äußeren \emph{Web Component}, dem \enquote{paper-date-picker} und zu dem inneren \emph{Web Component}, dem \enquote{paper-calendar} die \ac{CSS} Klasse \enquote{rtl} hinzugefügt. In den Gestaltungsanweisungen dieser Komponenten werden die Elemente angewiesen, bei der Existenz der Klasse \enquote{rtl} die Eigenschaft \enquote{flex-direction} bestimmter Elemente auf den Wert \enquote{row-reverse} zu setzen. Dadurch wird der Aufbau des \emph{Web Component} für Nutzer ausgerichtet, die von rechts nach links lesen.
-		\newpage
 	\subsection{Beispiel-Ergebnis der Adaptivität}
 	In der Abbildung \ref{img:datPicErg} ist das adaptive \enquote{Adaptiver Paper Date Picker} Element  dargestellt.
 	\begin{figure}[H]		
@@ -1032,7 +1029,7 @@ gmapstyles =
 		\label{lst:gooMapCon}
 \end{listing}\noindent
 In Listing \ref{lst:gooMapCon} ist ein Ausschnitt des Programmcodes der einen erhöhten Kontrast der Karte erreicht, dargestellt. Die hier erstellte Datengruppe wird als \enquote{styles} Parameter beim Instanziieren der \enquote{google.maps.Map} Klasse übergeben. Den Merkmalen der Karte werden verschiedene Farben zugeordnet, diese werden so gewählt, dass sie einen hohen Kontrast erzeugen und sich somit gut voneinander unterscheiden lassen. Diese Datengruppe soll jedoch nur verwendet werden wenn ein erhöhter Kontrast für den Nutzer erwünscht ist. Dafür wird dem \enquote{google-map} Element eine neue Eigenschaft \enquote{moreContrast} hinzugefügt. Diese ist vom Datentyp Boolean und der Standardwert ist \enquote{falsch}. Wird sie beim Einbinden des \emph{Web Component} gesetzt, wechselt ihr Wert auf \enquote{wahr}. 
-Die Methode \enquote{\_getMapOptions} ist in dem Element \enquote{google-map} schon vor der Anpassung zur Adaptivität vorhanden. Diese erstellt eine Datengruppe \enquote{mapOptions}. Der wird die \enquote{styles} Datengruppe übergeben. Um eine Adaptivität zu ermöglichen wird hier der Datengruppe der Rückgabewert der Methode \enquote{\_changeContrast} des \enquote{google-map} Elements übergeben. Diese fragt zu Beginn ab, ob die Eigenschaft \enquote{moreContrast} auf \enquote{wahr} gesetzt ist. Ist dies der Fall wird die vorher beschriebene Datengruppe für den erhöhten Kontrast an den \enquote{styles} Parameter übergeben, andernfalls wird der Standardwert überreicht. Somit wird insgesamt ein erhöhter Kontrast beim Setzen des Parameters \enquote{moreContrast} erreicht. 
+Die Methode \enquote{\_getMapOptions} ist in dem Element \enquote{google-map} schon vor der Anpassung zur Adaptivität vorhanden. Diese erstellt eine Datengruppe \enquote{mapOptions}. Der wird die \enquote{styles} Datengruppe übergeben. Um eine Adaptivität zu ermöglichen wird hier der Datengruppe der Rückgabe-Wert der Methode \enquote{\_changeContrast} des \enquote{google-map} Elements übergeben. Diese fragt zu Beginn ab, ob die Eigenschaft \enquote{moreContrast} auf \enquote{wahr} gesetzt ist. Ist dies der Fall wird die vorher beschriebene Datengruppe für den erhöhten Kontrast an den \enquote{styles} Parameter übergeben, andernfalls wird der Standardwert überreicht. Somit wird insgesamt ein erhöhter Kontrast beim Setzen des Parameters \enquote{moreContrast} erreicht. 
 	\subsubsection{Text-Alternativen}
 	In einem adaptiven \emph{Web Component} sollte es ermöglicht werden, Symbole oder Abbildungen durch Texte darzustellen oder Texte durch Symbole zu ersetzen, falls dies möglich ist. In diesem \emph{Web Component} wird dafür die Methode \enquote{\_changeTextAlternatives} des \enquote{google-map} Elements verwendet. Diese wartet zu Beginn auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Diese bedeutet, dass alle Elemente der Karte nach einer Aktion wieder inaktiv sind. Dieses Ereignis wurde gewählt, da vor diesem Ereignis von der \enquote{Google Map} oft Änderungen zur Laufzeit entstehen und auf diese reagiert werden müssen. Danach fragt sie den Wert des Parameters \enquote{textAlternatives} ab. Dieser ist ein Parameter vom Datentyp \emph{String}. Wenn dieser Parameter den Wert \enquote{text} enthält, werden die Symbole der Kartensteuerung durch Text ersetzt. Die Steuerung der Vergrößerungsstufe erfolgt standardmäßig über ein Plus und ein Minus Symbol, wobei das Plus für Vergrößerung und das Minus für Verkleinerung steht. Diese werden durch die Texte \enquote{Vergrößern} und \enquote{Verkleinern} ersetzt. Da diese Texte je nach gewählter Schriftgröße eine unterschiedliche Breite und Höhe haben, siehe in nächstem Abschnitt \ref{sec:fontsize}, müssen die Größen der umgebenden Elemente angepasst werden. Diese bilden einen Rahmen um den Text oder ändern die Hintergrundfarbe der Texte. Dafür wird der Wert des Parameters \enquote{fontSize} abgefragt und dementsprechend die Höhe und Breite angepasst. Die Elemente der \enquote{Google Map} sind absolut positioniert. Deshalb läuft ein zu langer Text aus dem Sichtbereich des Nutzers oder überdeckt andere Elemente. Um dies zu unterbinden wird in der \enquote{\_changeTextAlternatives} Methode abgefragt, welche Leserichtung derzeit verwendet wird und aufgrund dieser Auskunft werden die Text-Alternativen so positioniert, dass sie immer komplett sichtbar sind. Das Symbol der kleinen Person für die Steuerung der \enquote{Street-View} Funktion kann nicht durch Text ersetzt werden. Da dieses Symbol mit der Maus auf eine bestimmte Stelle bewegt werden muss um die Funktion an genau dieser Stelle zu aktivieren, kann kein Text verwendet werden, da dieser zu breit wäre und die Stelle nicht eindeutig identifizierbar wäre. 
 	\newline
@@ -1043,7 +1040,33 @@ Die Methode \enquote{\_getMapOptions} ist in dem Element \enquote{google-map} sc
 	\subsubsection{Schriftart}
 	Die Schriftart kann sich auch an den Nutzer anpassen. Dies ermöglicht die Methode \enquote{\_changeFontStyle} des \enquote{google-map} Elements. Diese wartet auch auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Daraufhin wird abgefragt ob der Parameter \enquote{fontStyle} des \emph{Web Component} gesetzt ist. Ist dies der Fall wird der Wert des Parameters genutzt um die Schriftart der \enquote{google-map} auf eine serife oder serifenlose zu ändern. Eine Änderung findet nur statt wenn der Wert auf \enquote{serif} gesetzt ist, da im Standardzustand des \emph{Web Component} eine serifenlose Schriftart genutzt wird. Die Methode wird auch zur \enquote{\_initGMap} Methode hinzugefügt.
 	\subsubsection{Leserichtung}
-	Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze, hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection} des \enquote{google-map} Elements wartet auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente, falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \enquote{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungsereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungsereignis neu gesetzt werden. Deshalb wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet. Von dieser Änderung der Anordnung betroffen sind die beiden Schalter der Ansichtseinstellungen der Karte. Hier kann zwischen dem \enquote{Karte} und \enquote{Satellit} Wert gewählt werden. Darüber hinaus sind die Einstellungen der Vergrößerungsstufe und das Symbol der \enquote{Google Street View} von der Änderung betroffen. Auch die Methode \enquote{\_changeReadingDirection} wird zur Methode \enquote{\_initGMap} hinzugefügt.
+	Die Leserichtung des Nutzers hat primär Einfluss auf den Aufbau von Texten. Da dieses \emph{Web Component} nur einzelne Wörter enthält und keine ganzen Sätze, hat die Leserichtung in diesem Zusammenhang keine große Bedeutung. Jedoch hat sie einen Einfluss auf die Anordnung der Elemente. Die Methode \enquote{\_changeReadingDirection} des \enquote{google-map} Elements wartet auf die Benachrichtigung des Ereignisses \enquote{idle} der \enquote{Google Map}. Danach fragt sie den Wert des Parameters \enquote{readingDirection} ab und ändert die Anordnung der Elemente, falls dieser den Wert \enquote{rtl}, also Leserichtung von rechts nach links, enthält. Der Standardwert des Parameters ist \enquote{ltr}, standardmäßig ist die Anordnung der Elemente nach diesem Wert ausgerichtet. Da die \enquote{Google Maps} \ac{API} bei jedem Vergrößerungs- oder Verkleinerungs-Ereignis die Gestaltungseigenschaften der Elemente und damit ihre Anordnung im \emph{Web Component} neu berechnet, müssen die Auswirkungen der Leserichtung nach jedem Vergrößerungs- oder Verkleinerungs-Ereignis neu gesetzt werden. Deshalb wird auf das Ereignis \enquote{idle} gewartet und danach die Elemente, passend zur Leserichtung, wieder neu geordnet. Von dieser Änderung der Anordnung betroffen sind die beiden Schalter der Ansichtseinstellungen der Karte. Hier kann zwischen dem \enquote{Karte} und \enquote{Satellit} Wert gewählt werden. Darüber hinaus sind die Einstellungen der Vergrößerungsstufe und das Symbol der \enquote{Google Street View} von der Änderung betroffen. Auch die Methode \enquote{\_changeReadingDirection} wird zur Methode \enquote{\_initGMap} hinzugefügt.
+	\subsubsection{Die adaptive Methode}
+	Eine notwendige Besonderheit des \enquote{google-map} Elements ist die Abweichung der \enquote{adaptive} Methode. Jedes der zur Adaptivität erweiterten Elemente besitzt zwar diese Methode, jedoch besitzt sie in den anderen Elemente keine erweiterte Funktion, sondern zählt nur die zur Adaptivität benötigten Methoden auf und führt diese aus. In Listing \ref{lst:gmapAdaMet} ist der Programmcode dieser Methode dargestellt. In Zeile fünf bis acht werden, wie in den anderen erweiterten \emph{Web Components}, die Methoden zur Adaptivität aufgerufen. Die Abweichung dieser Methode beginnt jedoch schon in Zeile zwei. Hier wird der Kontrast-Wert gesetzt. Es wird abgefragt ob das \enquote{map} schon existiert.
+		\begin{listing}[H]
+		\begin{JavaScriptcode*}{}
+adaptive: function(){
+	if (this.map) {
+		this.map.setOptions({styles: this._changeContrast()});
+	}
+	this._changeTextAlternatives();
+	this._changeFontSize();
+	this._changeFontStyle();
+	this._changeReadingDirection();
+	var thisMap = this.map;
+	google.maps.event.trigger(thisMap, 'idle');
+	google.maps.event.addListener(thisMap, 'tilesloaded', function(){
+		setTimeout(function(){
+			google.maps.event.trigger(thisMap, 'idle');
+		}, 100);
+	}.bind(this));
+}
+		\end{JavaScriptcode*}
+		\caption[adaptive Methode der Google Map]{JavaScript Programmcode der Methode adaptive des google-map Elements}
+		\label{lst:gmapAdaMet}
+	\end{listing}\noindent
+	Wenn dies der Fall ist, bedeutet das, dass die \enquote{styles} der Karte schon gesetzt werden. In diesem Fall werden die \enquote{styles} über die Methode \enquote{setOptions} neu gesetzt. Da die Methoden zur Adaptivität auf das \enquote{idle} Ereignis warten, wird nach dem Einbinden der Methoden, in Zeile zehn das \enquote{idle} Ereignis gesendet. Dadurch vollzieht das Element das erste Mal die Anpassung an die Präferenzen des Nutzers. Danach wird definiert, dass, wenn die Meldung \enquote{tilesloaded} eintritt, die Meldung \enquote{idle} nach einem sehr kurzen \emph{TimeOut}, also einer Wartezeit, erfolgen soll. Dadurch wird garantiert, dass die zur Laufzeit überschriebenen Werte auch nach dem Wechseln der Karten-Ansicht, also dem Wechsel zwischen der Satelliten- und der Karten-Ansicht, wieder an die Präferenzen der Nutzer angepasst werden. Die Wartezeit muss genutzt werden, da das Ereignis kurz vor der Anpassung zur Laufzeit durch die \enquote{google-map} erfolgt und somit sonst wieder überschrieben werden würde.
+\newpage
 \subsection{Beispiel-Ergebnis der Adaptivität}
 In der Abbildung \ref{img:gmapErg} ist das adaptive \enquote{Google Map} Element  dargestellt.
 \begin{figure}[H]		
@@ -1052,7 +1075,7 @@ In der Abbildung \ref{img:gmapErg} ist das adaptive \enquote{Google Map} Element
 	\caption[Adaptive Google Map]{Adaptive Google Map Web Component Ansicht Quelle: Bildschirmaufnahme des eigenen, vom Browser übersetzten, Programmcode}
 	\label{img:gmapErg}
 \end{figure}\noindent
-Das Element wurde hier an beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine Leserichtung von rechts nach links und Symbol-Alternativen statt Texte enthalten. 
+Das Element wurde hier beispielhaft an einen Nutzer angepasst, dessen Präferenzwerte einen erhöhten Kontrast, eine Leserichtung von rechts nach links und Symbol-Alternativen statt Texte enthalten. 
 \newpage
 
 \chapter{Evaluation der Adaptivitäts-Anpassungen}
